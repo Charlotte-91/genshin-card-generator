@@ -1,0 +1,99 @@
+@font-face { font-family: roboto-regular; 
+    src: url('./assets/SuezOne-Regular.ttf'); } 
+
+
+header {
+    top: 0;
+    padding: 0px;
+    font-size: 40px;
+    font-family: roboto-regular; 
+    height: 400px;
+    text-align: center;
+    background-color: #464545
+  }
+  .body {
+
+    font-size: 25px;
+    padding: 20px;
+    background-color: #464545;
+}
+
+ 
+.footer {
+
+    bottom: 0;
+    height: 20px;
+    font-size: 15px;
+    color: rgb(36, 34, 34);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #464545
+}
+.button {
+    background-color: #464545;
+    color: white;
+    padding: 10px 150px;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  .container {
+    position: relative;
+    text-align: center;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 40%;
+    margin-top: 6px;
+    text-align: right;
+  }
+  
+  .col-75 {
+    float: right;
+    width: 60%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding: 2px;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
