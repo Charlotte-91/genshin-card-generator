@@ -1,26 +1,24 @@
-<!DOCTYPE html>  
-<html>  
-    <link rel="stylesheet" href="./css/stylesheet.css">
-<head>  
-    <title>  
-    Genshin Impact card generator
-    </title>  
-</head>  
-<header>
-    <img src="./assets/genshin-logo.png" alt="Genshin Impact logo" height="300px">
-</header>
-<div class="body">
-    <div class ="container">
-        <img src="./assets/Form-bg.png" alt="Form background">
-        <div class="centered">
-            <br>
-            <form action="/card_page">
-            <div class ="row">
-                <div class="col-25">
+import logo from './assets/genshin-logo.png';
+import formbg from './assets/Form-bg.png';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" height="280px" />
+      </header>
+      <div class="body">
+        <div class ="container">
+          <img src={formbg} className="Form-bg" alt="Form background"/>
+            <div class="centered">
+              <form action="/card_page">
+                <div class ="row">
+                  <div class="col-25">
                     <label for="card-design">Choose a card design:</label>
-                </div>
+                  </div>
                 <div class="col-75">
-                <select id='card-design' name='card-design'>
+                  <select id='card-design' name='card-design'>
                     <option hidden disabled selected value> -- select an option -- </option>
                     <option value="Aether-cd">Aether</option>
                     <option value="Albedo-cd">Albedo</option>
@@ -52,40 +50,38 @@
                     <option value="Xingqiu-cd">Xingqiu</option>
                     <option value="Xinyan-cd">Xinyan</option>
                     <option value="Zhongli-cd">Zhongli</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-25">
+                  </select>
+                </div>
+              </div>
+            <div class="row">
+              <div class="col-25">
                 <label for="player-name">Player name:</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="player-name" name="player-name"/>
+              </div>
             </div>
-            <div class="col-75">
-                <input type="text" id="player-name" name="player-name">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-25">
-                <label for="UID">UID:</label>
-            </div>
-            <div class="col-75">
-                <input type="text" id="player-name" name="player-name">
-            </div>
-            <br>
-        </div>
-        <div class="row">
+            <div class="row">
+              <div class="col-25">
+                <label for="UID">UID (Optional):</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="player-name" name="player-name"/>
+              </div>
+          </div>
+          <div class="row">
             <div class="col-25">
                 <label for="AR">Adventure Rank:</label>
             </div>
             <div class="col-75">
-                <input type="text" id="AR" name="AR">
+                <input type="text" id="AR" name="AR"/>
             </div>
-            <br>
-        </div>
-        <div class="row">
+          </div>
+          <div class="row">
             <div class="col-25">
-                <label for="team-1">Choose team:</label>
-            </div>
-            <div class="col-75">
+              <label for="team-1">Choose team:</label>
+          </div>
+          <div class="col-75">
             <select id='team-1' name='team-1'>
                     <option hidden disabled selected value> -- select an option -- </option>
                 <option value="Aether-small">Aether</option>
@@ -214,17 +210,24 @@
                 <option value="Xinyan-small">Xinyan</option>
                 <option value="Zhongli-small">Zhongli</option>
             </select>
-            </div>
+          </div>
         </div>
-            <div class="button" type="submit">
-                Submit
-            </div>
-            </form> 
+        <div class="button" type="submit" id="submit">
+          Submit
         </div>
+      </form> 
     </div>
+  </div>
 </div>
 <div class= "footer">
     Genshin Card Generator is not affiliated with or endorsed by miHoYo.
 </div>
+</div>
 
-</html>
+
+
+
+  );
+}
+
+export default App;
