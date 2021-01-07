@@ -1,3 +1,4 @@
+
 <template>
   <div className="App">
       <header className="App-header">
@@ -13,7 +14,7 @@
                     <label for="card-design">Choose a card design:</label>
                   </div>
                 <div class="col-75">
-                  <select id='card-design' name='card-design'>
+                  <select v-model='cardChara'>
                     <option hidden disabled selected value> -- select an option -- </option>
                     <option value="Aether-cd">Aether</option>
                     <option value="Albedo-cd">Albedo</option>
@@ -53,7 +54,7 @@
                 <label for="player-name">Player name:</label>
               </div>
               <div class="col-75">
-                <input type="text" id="player-name" name="player-name"/>
+                <input type="text" v-model="playerName"/>
               </div>
             </div>
             <div class="row">
@@ -61,7 +62,7 @@
                 <label for="UID">UID (Optional):</label>
               </div>
               <div class="col-75">
-                <input type="text" id="player-name" name="player-name"/>
+                <input type="text" v-model="UID"/>
               </div>
           </div>
           <div class="row">
@@ -69,7 +70,7 @@
                 <label for="AR">Adventure Rank:</label>
             </div>
             <div class="col-75">
-                <input type="text" id="AR" name="AR"/>
+                <input type="text" v-model="AR"/>
             </div>
           </div>
           <div class="row">
@@ -77,7 +78,7 @@
               <label for="team-1">Choose team:</label>
           </div>
           <div class="col-75">
-            <select id='team-1' name='team-1'>
+            <select v-model='team1'>
                     <option hidden disabled selected value> -- select an option -- </option>
                 <option value="Aether-small">Aether</option>
                 <option value="Albedo-small">Albedo</option>
@@ -109,7 +110,7 @@
                 <option value="Xinyan-small">Xinyan</option>
                 <option value="Zhongli-small">Zhongli</option>
             </select>
-            <select id='team-2' name='team-2'>
+            <select v-model='team2'>
                     <option hidden disabled selected value> -- select an option -- </option>
                 <option value="Aether-small">Aether</option>
                 <option value="Albedo-small">Albedo</option>
@@ -141,7 +142,7 @@
                 <option value="Xinyan-small">Xinyan</option>
                 <option value="Zhongli-small">Zhongli</option>
             </select>
-            <select id='team-3' name='team-3'>
+            <select v-model='team3'>
                 <option hidden disabled selected value> -- select an option -- </option>
                 <option value="Aether-small">Aether</option>
                 <option value="Albedo-small">Albedo</option>
@@ -173,7 +174,7 @@
                 <option value="Xinyan-small">Xinyan</option>
                 <option value="Zhongli-small">Zhongli</option>
             </select>
-            <select id='team-4' name='team-4'>
+            <select v-model='team4'>
                 <option hidden disabled selected value> -- select an option -- </option>
                 <option value="Aether-small">Aether</option>
                 <option value="Albedo-small">Albedo</option>
@@ -204,13 +205,22 @@
                 <option value="Xingqiu-small">Xingqiu</option>
                 <option value="Xinyan-small">Xinyan</option>
                 <option value="Zhongli-small">Zhongli</option>
-            </select>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="button" type="submit" id="submit">
-          Submit
-        </div>
-      </form> 
+        </form> 
+      <button @click="$router.push({name: 'CardPage', 
+      params: {
+        cardChara : cardChara, 
+        playerName: playerName,
+        UID: UID,
+        AR: AR,
+        team1: team1,
+        team2: team2,
+        team3: team3,
+        team4: team4
+        
+        }})">Submit</button>
     </div>
   </div>
 </div>
@@ -218,16 +228,20 @@
     Genshin Card Generator is not affiliated with or endorsed by miHoYo.
 </div>
 </div>
-
-
-
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    cardChara: String,
+    playerName: String,
+    UID: Number,
+    AR: Number,
+    team1: String,
+    team2: String,
+    team3: String,
+    team4: String
   }
 }
 </script>
@@ -255,6 +269,7 @@ body{
 }
 
 .footer {
+  position: absolute;
   bottom: 0;
   height: 20px;
   font-size: 15px;
@@ -262,7 +277,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 
 }
-.button {
+button {
   background-color: #464545;
   color: white;
   padding: 10px 150px;
