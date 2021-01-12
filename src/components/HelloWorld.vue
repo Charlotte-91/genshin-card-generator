@@ -1,4 +1,3 @@
-
 <template>
   <div className="App">
       <header className="App-header">
@@ -250,24 +249,20 @@ export default {
 <style >
 @font-face { font-family: roboto-regular; 
   src: url('../assets/SuezOne-Regular.ttf'); } 
-
 body{
   background-color:#464545;
 }
-
 .header {
   top: 0;
   padding: 0px;
   font-size: 40px;
   height: 280px;
   text-align: center;
-
 }
 .body {
   font-size: 25px;
   padding: 20px;
 }
-
 .footer {
   position: absolute;
   bottom: 0;
@@ -275,7 +270,6 @@ body{
   font-size: 15px;
   color: rgb(36, 34, 34);
   font-family: Arial, Helvetica, sans-serif;
-
 }
 button {
   background-color: #464545;
@@ -289,16 +283,12 @@ button {
   border-radius: 4px;
   font-family: SuezOne-Regular; 
 }
-
 app {
-
   height:0%
 }
-
 * {
   box-sizing: border-box;
 }
-
 input[type=text], select, textarea {
   width: 75%;
   padding: 12px;
@@ -306,7 +296,6 @@ input[type=text], select, textarea {
   border-radius: 4px;
   resize: vertical;
 }
-
 .container {
   position: relative;
   text-align: center;
@@ -322,7 +311,6 @@ label {
   padding: 12px 12px 12px 0;
   display: inline-block;
 }
-
 .col-25 {
   float: left;
   width: 40%;
@@ -330,13 +318,11 @@ label {
   text-align: right;
   font-family: SuezOne-Regular; 
 }
-
 .col-75 {
   float: right;
   width: 60%;
   margin-top: 6px;
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -344,7 +330,6 @@ label {
   clear: both;
   padding: 2px;
 }
-
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .col-25, .col-75, input[type=submit] {
@@ -352,5 +337,4 @@ label {
     margin-top: 0;
   }
 }
-
 </style>
