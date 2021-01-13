@@ -10,7 +10,7 @@
               <form action="/card_page">
                 <div class ="row">
                   <div class="col-25">
-                    <label for="card-design">Choose a card design:</label>
+                    <label for="card-design">Card design:</label>
                   </div>
                 <div class="col-75">
                   <select v-model='cardChara'>
@@ -25,6 +25,7 @@
                     <option value="Diluc-cd">Diluc</option>
                     <option value="Diona-cd">Diona</option>
                     <option value="Fischl-cd">Fischl</option>
+                    <option value="Ganyu-cd">Ganyu</option>
                     <option value="Jean-cd">Jean</option>
                     <option value="Kaeya-cd">Kaeya</option>
                     <option value="Keqing-cd">Keqing</option>
@@ -65,6 +66,42 @@
               </div>
           </div>
           <div class="row">
+              <div class="col-25">
+                <label for="platform">Platform:</label>
+              </div>
+              <div class="col-75">
+                <select v-model='platform'>
+                    <option hidden disabled selected value> -- select an option -- </option>
+                    <option value="PC">PC</option>
+                    <option value="PS4">PS4</option>
+                    <option value="Android">Android</option>
+                    <option value="iOS">iOS</option>
+                </select>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-25">
+                <label for="server">Server:</label>
+              </div>
+              <div class="col-75">
+                <select v-model='server'>
+                    <option hidden disabled selected value> -- select an option -- </option>
+                    <option value="America">America</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Asia">Asia</option>
+                    <option value="TWHKMO">TW/HK/MO</option>
+                </select>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-25">
+                <label for="twitter">Twitter:</label>
+              </div>
+              <div class="col-75">
+                <input type="text" v-model="twitter"/>
+              </div>
+          </div>
+          <div class="row">
             <div class="col-25">
                 <label for="AR">Adventure Rank:</label>
             </div>
@@ -89,6 +126,7 @@
                 <option value="Diluc-small">Diluc</option>
                 <option value="Diona-small">Diona</option>
                 <option value="Fischl-small">Fischl</option>
+                <option value="Ganyu-small">Ganyu</option>
                 <option value="Jean-small">Jean</option>
                 <option value="Kaeya-small">Kaeya</option>
                 <option value="Keqing-small">Keqing</option>
@@ -121,6 +159,7 @@
                 <option value="Diluc-small">Diluc</option>
                 <option value="Diona-small">Diona</option>
                 <option value="Fischl-small">Fischl</option>
+                <option value="Ganyu-small">Ganyu</option>
                 <option value="Jean-small">Jean</option>
                 <option value="Kaeya-small">Kaeya</option>
                 <option value="Keqing-small">Keqing</option>
@@ -153,6 +192,7 @@
                 <option value="Diluc-small">Diluc</option>
                 <option value="Diona-small">Diona</option>
                 <option value="Fischl-small">Fischl</option>
+                <option value="Ganyu-small">Ganyu</option>
                 <option value="Jean-small">Jean</option>
                 <option value="Kaeya-small">Kaeya</option>
                 <option value="Keqing-small">Keqing</option>
@@ -185,6 +225,7 @@
                 <option value="Diluc-small">Diluc</option>
                 <option value="Diona-small">Diona</option>
                 <option value="Fischl-small">Fischl</option>
+                <option value="Ganyu-small">Ganyu</option>
                 <option value="Jean-small">Jean</option>
                 <option value="Kaeya-small">Kaeya</option>
                 <option value="Keqing-small">Keqing</option>
@@ -217,7 +258,11 @@
         team1: team1,
         team2: team2,
         team3: team3,
-        team4: team4
+        team4: team4,
+        platform: platform,
+        server: server,
+        twitter: twitter
+
         
         }})">Submit</button>
     </div>
@@ -240,7 +285,10 @@ export default {
     team1: String,
     team2: String,
     team3: String,
-    team4: String
+    team4: String,
+    platform: String,
+    server: String,
+    twitter: String
   }
 }
 </script>
@@ -249,6 +297,7 @@ export default {
 <style >
 @font-face { font-family: roboto-regular; 
   src: url('../assets/SuezOne-Regular.ttf'); } 
+  
 body{
   background-color:#464545;
 }
@@ -264,7 +313,8 @@ body{
   padding: 20px;
 }
 .footer {
-  position: absolute;
+  position: bottom;
+  padding: 30px;
   bottom: 0;
   height: 20px;
   font-size: 15px;
