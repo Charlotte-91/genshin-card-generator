@@ -1,11 +1,5 @@
 <template>
   <div className="App">
-
-    <!-- <img :src="require('../assets/card-bgs/' + this.$route.params.charaCard + '.png')" />
-    <img :src="require('../assets/teams/' + this.$route.params.team1 + '.png')" height='200px'/>
-    <img :src="require('../assets/teams/' + this.$route.params.team2 + '.png')" height='200px'/>
-    <img :src="require('../assets/teams/' + this.$route.params.team3 + '.png')" height='200px'/>
-    <img :src="require('../assets/teams/' + this.$route.params.team4 + '.png')" height='200px'/> -->
     <div class="centered">
       <v-stage ref="stage" :config="stageSize">
         <v-layer ref="layer">
@@ -29,14 +23,12 @@
     </div>
   </div>
 </template>
+
 <script>
+// import Vue from 'vue';
+// import VueKonva from 'vue-konva'
 
-//Scripts//
-import Vue from 'vue';
-import VueKonva from 'vue-konva'
-
-Vue.use(VueKonva)
-
+// Vue.use(VueKonva)
 
 export default {
   data() {
@@ -78,7 +70,6 @@ export default {
     team4.onload = () => {
       this.team4 = team4;
     };
-
   }
 };
 </script>

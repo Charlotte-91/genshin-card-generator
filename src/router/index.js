@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Vuelidate from "vuelidate";
+import VueKonva from 'vue-konva';
 
-Vue.use(VueRouter)
+Vue.use(VueKonva);
+Vue.use(VueRouter);
+Vue.use(Vuelidate);
 
 const routes = [
   {
