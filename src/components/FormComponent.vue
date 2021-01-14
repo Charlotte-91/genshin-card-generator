@@ -62,61 +62,6 @@
               </div>
             </div>
 
-            <div class="px-4" :class="{ 'hasError': $v.form.UID.$error }">
-              <div class="row">
-                <div class="col-25">
-                  <label for="UID">UID (Optional):</label>
-                </div>
-                <div class="col-75">
-                  <input type="text" v-model="form.UID"/>
-                </div>
-             </div>
-            </div>
-
-            <div class="px-4" :class="{ 'hasError': $v.form.platform.$error }">
-              <div class="row">
-                <div class="col-25">
-                  <label for="platform">Platform:</label>
-                </div>
-                <div class="col-75">
-                  <select v-model='form.platform'>
-                    <option hidden disabled selected value> -- select an option -- </option>
-                    <option value="PC">PC</option>
-                    <option value="PS4">PS4</option>
-                    <option value="Android">Android</option>
-                    <option value="iOS">iOS</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div class="px-4" :class="{ 'hasError': $v.form.server.$error }">
-              <div class="row">
-                <div class="col-25">
-                  <label for="server">Server:</label>
-                </div>
-                <div class="col-75">
-                  <select v-model='form.server'>
-                    <option hidden disabled selected value> -- select an option -- </option>
-                    <option value="America">America</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Asia">Asia</option>
-                    <option value="TWHKMO">TW/HK/MO</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <div class="px-4" :class="{ 'hasError': $v.form.twitter.$error }">
-              <div class="row">
-                <div class="col-25">
-                  <label for="twitter">Twitter:</label>
-                </div>
-                <div class="col-75">
-                  <input type="text" v-model="form.twitter"/>
-                </div>
-              </div>
-            </div>
 
             <div class="px-4" :class="{ 'hasError': $v.form.AR.$error }">
               <div class="row">
@@ -128,7 +73,6 @@
                 </div>
               </div>
             </div>
-
           
             <div class="row">
               <div class="col-25">
@@ -283,6 +227,67 @@
                 </div>
               </div>
             </div>
+            
+            <input type="checkbox" name="mutliplayer" id="mutliplayer-choice">
+            <label for="multiplayer-choice"> Multiplayer</label>
+          
+            <div class ="reveal-multiplayer">
+              <div class="px-4" :class="{ 'hasError': $v.form.UID.$error }">
+                <div class="row">
+                  <div class="col-25">
+                    <label for="UID">UID:</label>
+                  </div>
+                  <div class="col-75">
+                    <input type="text" v-model="form.UID"/>
+                  </div>
+              </div>
+              </div>
+
+              <div class="px-4" :class="{ 'hasError': $v.form.platform.$error }">
+                <div class="row">
+                  <div class="col-25">
+                    <label for="platform">Platform:</label>
+                  </div>
+                  <div class="col-75">
+                    <select v-model='form.platform'>
+                      <option hidden disabled selected value> -- select an option -- </option>
+                      <option value="PC">PC</option>
+                      <option value="PS4">PS4</option>
+                      <option value="Android">Android</option>
+                      <option value="iOS">iOS</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-4" :class="{ 'hasError': $v.form.server.$error }">
+                <div class="row">
+                  <div class="col-25">
+                    <label for="server">Server:</label>
+                  </div>
+                  <div class="col-75">
+                    <select v-model='form.server'>
+                      <option hidden disabled selected value> -- select an option -- </option>
+                      <option value="America">America</option>
+                      <option value="Europe">Europe</option>
+                      <option value="Asia">Asia</option>
+                      <option value="TWHKMO">TW/HK/MO</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="px-4" :class="{ 'hasError': $v.form.twitter.$error }">
+                <div class="row">
+                  <div class="col-25">
+                    <label for="twitter">Twitter:</label>
+                  </div>
+                  <div class="col-75">
+                    <input type="text" v-model="form.twitter"/>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="text-center">
               <button type="submit" class="button">
                 Submit
@@ -337,15 +342,15 @@ validations: {
     form: {
         cardChara: { required },
         playerName: { required },
-        UID: { required },
+        UID: { },
         AR: { required },
         team1: { required },
         team2: { required },
         team3: { required },
         team4: { required },
-        platform: { required },
-        server: { required },
-        twitter: { required }
+        platform: { },
+        server: { },
+        twitter: {}
     }
   },
   methods: {
@@ -380,6 +385,17 @@ input {
 }
 .hasError label {
   color: red;
+}
+.reveal-multiplayer {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+
+}
+input[type="checkbox"]:checked ~ .reveal-multiplayer {
+  opacity: 1;
+  max-height: 100px; /* little bit of a magic number :( */
+  overflow: visible;
 }
 
 </style>

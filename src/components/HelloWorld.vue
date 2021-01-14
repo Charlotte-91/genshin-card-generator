@@ -27,6 +27,8 @@ export default {
   
 body{
   background-color:#464545;
+  font-family: SuezOne-Regular; 
+  font-size: 30px;
 }
 .header {
   top: 0;
@@ -38,6 +40,7 @@ body{
 .body {
   font-size: 25px;
   padding: 20px;
+  font-family: SuezOne-Regular; 
 }
 .footer {
   position: bottom;
@@ -73,6 +76,7 @@ input[type=text], select, textarea {
   border-radius: 4px;
   resize: vertical;
 }
+
 .container {
   position: relative;
   text-align: center;
