@@ -308,6 +308,11 @@ Vue.use(VueKonva)
 
 export default {
   name: "FormComponent",
+  use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ],
   data() {
     return {
       form: {
@@ -375,7 +380,7 @@ validations: {
   }
 };
 </script>
-<style>
+<style lang="scss">
 input {
   background-color: #f7f7f7;
   border: 1px solid rgb(199, 199, 199);
@@ -390,14 +395,17 @@ input {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-
+  transform: scale(0.8);
+  transition: 0.5s;
+  input[type="radio"]:checked ~ &,
+  input[type="checkbox"]:checked ~ & {
+    opacity: 1;
+    max-height: 100px;
+    overflow: visible;
+    padding: 10px 20px;
+    transform: scale(1);
+  }
 }
-input[type="checkbox"]:checked ~ .reveal-multiplayer {
-  opacity: 1;
-  max-height: 100px; /* little bit of a magic number :( */
-  overflow: visible;
-}
-
 </style>
 
            
