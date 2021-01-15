@@ -56,12 +56,13 @@ button {
   color: white;
   padding: 10px 150px;
   text-align: center;
-  display: inline-block;
   font-size: 30px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
   font-family: SuezOne-Regular; 
+  align-items: center;
+
 }
 app {
   height:0%

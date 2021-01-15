@@ -271,7 +271,7 @@
                       <option value="America">America</option>
                       <option value="Europe">Europe</option>
                       <option value="Asia">Asia</option>
-                      <option value="TWHKMO">TW/HK/MO</option>
+                      <option value="TW/HK/MO">TW/HK/MO</option>
                     </select>
                   </div>
                 </div>
@@ -287,13 +287,13 @@
                   </div>
                 </div>
               </div>
+              
             </div>
-            <div class="text-center">
-              <button type="submit" class="button">
-                Submit
-              </button>
-            </div>
+            
           </form> 
+          <button type="submit" class="button">
+                Submit
+            </button>
       </div>
     </div>
   </div>
@@ -341,7 +341,8 @@ props: {
     team4: String,
     platform: String,
     server: String,
-    twitter: String
+    twitter: String,
+    multiplayer: Boolean
   },
 validations: {
     form: {
@@ -362,20 +363,32 @@ validations: {
     submit() {
       this.$v.form.$touch();
       if(this.$v.form.$error) return
+      if (this.form.UID == '')
+        this.$router.push({name: 'CardPage', 
+        params: {
+          cardChara : this.form.cardChara, 
+          playerName: this.form.playerName,
+          AR: this.form.AR,
+          team1: this.form.team1,
+          team2: this.form.team2,
+          team3: this.form.team3,
+          team4: this.form.team4,
+          }})
+      else
       this.$router.push({name: 'CardPage', 
-      params: {
-        cardChara : this.form.cardChara, 
-        playerName: this.form.playerName,
-        UID: this.form.UID,
-        AR: this.form.AR,
-        team1: this.form.team1,
-        team2: this.form.team2,
-        team3: this.form.team3,
-        team4: this.form.team4,
-        platform: this.form.platform,
-        server: this.form.server,
-        twitter: this.form.twitter
-        }})
+        params: {
+          cardChara : this.form.cardChara, 
+          playerName: this.form.playerName,
+          UID: this.form.UID,
+          AR: this.form.AR,
+          team1: this.form.team1,
+          team2: this.form.team2,
+          team3: this.form.team3,
+          team4: this.form.team4,
+          platform: this.form.platform,
+          server: this.form.server,
+          twitter: this.form.twitter
+          }})
     }
   }
 };
