@@ -289,11 +289,10 @@
               </div>
               
             </div>
-            
-          </form> 
-          <button type="submit" class="button">
+            <button type="submit" class="button">
                 Submit
             </button>
+          </form> 
       </div>
     </div>
   </div>
