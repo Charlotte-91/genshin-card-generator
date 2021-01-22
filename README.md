@@ -25,14 +25,8 @@ Genshin Impact Card Generator
 
 ## To do:
 
-- Make the form dynamic
-- Add required fields to form
-- Add dynamic element to form
-- Add in twitter image share 
-
-- Ammend card backgrounds
-- Create additional card background
-- Resize Character team portraits 
+- Fix login button not centering when multiplayer is selected
+- Add twitter button on card generation page
 
 ## Technologies
 [Node.js](https://nodejs.org/)
@@ -47,6 +41,7 @@ Genshin Impact Card Generator
 
 [Vue share buttons](https://github.com/Alexandrshy/vue-share-buttons)
 
-## License
+## Copyright
 
 Genshin Card Generator is not affiliated with or endorsed by miHoYo.
+Assets used are owned by [miHoYo](https://genshin.mihoyo.com/)
