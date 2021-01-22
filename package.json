@@ -48,7 +48,7 @@
     "rules": {}
   },
   "engines": {
-    "node": "13.3.0"
+    "node": "14.5"
   },
   "browserslist": [
     "> 1%",
