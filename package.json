@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "stack": "heroku-18"
   },
   "dependencies": {
     "canvas": "2.6.1",
@@ -47,8 +48,7 @@
     "rules": {}
   },
   "engines": {
-    "node": "13.3.0",
-    "stack": "heroku-18"
+    "node": "13.3.0"
   },
   "browserslist": [
     "> 1%",
