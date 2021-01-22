@@ -45,6 +45,8 @@ Genshin Impact Card Generator
 
 [Node Canvas](https://github.com/Automattic/node-canvas)
 
+[Vue share buttons](https://github.com/Alexandrshy/vue-share-buttons)
+
 ## License
 
 Genshin Card Generator is not affiliated with or endorsed by miHoYo.
