@@ -5,12 +5,12 @@
         <CardGenerator/>
         <div class= "footer">
           <button @click="$router.push({name: 'Home'})">Back</button>
-          <twitter-button
-            class="share-button--circle"
-            description="Checkout Genshin Impact card generator!" 
-            url="https://genshin-impact-card-generator.herokuapp.com/" 
-            data-hashtags="GenshinImpactCardGeneratdsdsdor" data-show-count="false"
-          />
+            <share-it 
+                  :shareConfig="share" 
+                  text="Check out Genshin Card Generator!"
+                  url="https://genshin-impact-card-generator.herokuapp.com/"
+                  :height="600"
+                  :width="600"/>
           <br>
             Genshin Card Generator is not affiliated with or endorsed by miHoYo.
         </div>
@@ -20,22 +20,36 @@
 </template>
 
 <script>
+
 // @ is an alias to /src
 import CardGenerator from '@/components/CardGenerator.vue'
-import TwitterButton from "vue-share-buttons/src/components/TwitterButton";
+// import shareIt from 'vue-share-it';
+
+
 
 export default {
+  
   name: 'CardPage',
   components: {
     CardGenerator,
-    TwitterButton
+  },
+  data() {
+    return {
+      share: {
+        twitter: {
+          size: "x3",
+          label: 'Share',
+          round: true
+        },
+      }
+    }
   }
-  
 }
 
 </script>
 
-<style >
+<style scoped>
+
 @font-face { font-family: roboto-regular; 
   src: url('../assets/SuezOne-Regular.ttf'); } 
   
@@ -80,57 +94,4 @@ button {
 app {
   height:0%
 }
-* {
-  box-sizing: border-box;
-}
-input[type=text], select, textarea {
-  width: 75%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.container {
-  position: relative;
-  text-align: center;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-}
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-.col-25 {
-  float: left;
-  width: 40%;
-  margin-top: 6px;
-  text-align: right;
-  font-family: SuezOne-Regular; 
-}
-.col-75 {
-  float: right;
-  width: 60%;
-  margin-top: 6px;
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  padding: 2px;
-}
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-
 </style>

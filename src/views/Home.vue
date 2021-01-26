@@ -23,13 +23,13 @@ export default {
 </script>
 
 <style >
-@font-face { font-family: roboto-regular; 
+@font-face { font-family: SuezOne-Regular; 
   src: url('../assets/SuezOne-Regular.ttf'); } 
   
 body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
-  font-size: 30px;
+  font-size: 25px;
 }
 .header {
   top: 0;
@@ -55,14 +55,14 @@ body{
 button {
   background-color: #464545;
   color: white;
-  padding: 10px 150px;
+  padding: 10px 120px;
   text-align: center;
-  font-size: 30px;
-  margin: 4px 2px;
+  font-size: 25px;
+  margin: 30px 100px;
   cursor: pointer;
   border-radius: 4px;
   font-family: SuezOne-Regular; 
-  align-items: center;
+
 }
 app {
   height:0%
@@ -71,7 +71,7 @@ app {
   box-sizing: border-box;
 }
 input[type=text], select, textarea {
-  width: 75%;
+  width: 60%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -96,14 +96,14 @@ label {
 .col-25 {
   float: left;
   width: 40%;
-  margin-top: 6px;
   text-align: right;
   font-family: SuezOne-Regular; 
+  margin-bottom: 2px;
 }
 .col-75 {
   float: right;
   width: 60%;
-  margin-top: 6px;
+  margin-bottom: 2px;
 }
 /* Clear floats after the columns */
 .row:after {

@@ -26,7 +26,12 @@ Genshin Impact Card Generator
 ## To do:
 
 - Fix login button not centering when multiplayer is selected
-- Add twitter button on card generation page
+- Fix twitter button style
+- Add field validation on form for AR, UID
+- Positioning and size of text
+- Max length for text fields 
+- Redirect to homepage when page is refreshed (for card page)
+- Add hashtags to Twitter share button
 
 ## Technologies
 [Node.js](https://nodejs.org/)

@@ -3,7 +3,7 @@
     <div class ="container">
       <img src="../assets/Form-bg.png" className="Form-bg" alt="Form background"/>
         <div class="centered">
-          <div class="summary text-red" v-if="$v.form.$error">
+          <div class="summary-text-red" v-if="$v.form.$error">
             Form has errors
           </div>
           <form @submit.prevent="submit">
@@ -287,11 +287,10 @@
                   </div>
                 </div>
               </div>
-              
             </div>
-            <button type="submit" class="button">
-                Submit
-            </button>
+                <button type="submit" class="button">
+                    Submit
+                </button>
           </form> 
       </div>
     </div>
@@ -362,7 +361,7 @@ validations: {
     submit() {
       this.$v.form.$touch();
       if(this.$v.form.$error) return
-      if (this.form.UID == '')
+      if (this.form.platform == '')
         this.$router.push({name: 'CardPage', 
         params: {
           cardChara : this.form.cardChara, 
