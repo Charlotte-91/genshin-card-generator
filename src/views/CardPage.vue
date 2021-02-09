@@ -2,15 +2,20 @@
   <div class="cardPage">
     <div class='body'>
       <div class="centered">
+        <div class = "savetext">
+          Please right-click  on image and select "Save Image As" to save to your device
+        </div>
         <CardGenerator/>
-        <div class= "footer">
+        
+        <div class= "social">
           <button @click="$router.push({name: 'Home'})">Back</button>
             <share-it 
-                  :shareConfig="share" 
-                  text="Check out Genshin Card Generator!"
-                  url="https://genshin-impact-card-generator.herokuapp.com/"
-                  :height="600"
-                  :width="600"/>
+              :shareConfig="share" 
+              text="Checkout Genshin Card Generator!"
+              url="https://genshin-impact-card-generator.herokuapp.com/"
+            />
+        </div>
+        <div class= "footer">
           <br>
             Genshin Card Generator is not affiliated with or endorsed by miHoYo.
         </div>
@@ -20,30 +25,25 @@
 </template>
 
 <script>
-
-// @ is an alias to /src
 import CardGenerator from '@/components/CardGenerator.vue'
-// import shareIt from 'vue-share-it';
-
-
 
 export default {
-  
   name: 'CardPage',
   components: {
     CardGenerator,
   },
-  data() {
+   data() {
     return {
       share: {
         twitter: {
-          size: "x3",
-          label: 'Share',
-          round: true
+          size: "2x",
         },
-      }
+        facebook: {
+          size: "2x"
+        }
+      } 
     }
-  }
+   }
 }
 
 </script>
@@ -65,19 +65,29 @@ body{
   height: 280px;
   text-align: center;
 }
+.savetext {
+  font-size: 15px;
+  padding: 20px;
+  font-family: SuezOne-Regular; 
+  color: grey;
+  top: 20px;
+}
 .body {
   font-size: 25px;
   padding: 20px;
   font-family: SuezOne-Regular; 
 }
 .footer {
-  position: bottom;
-  padding: 30px;
   bottom: 0;
   height: 20px;
   font-size: 15px;
   color: rgb(36, 34, 34);
   font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+.social {
+
+  align-items: center;
 }
 button {
   background-color: #464545;

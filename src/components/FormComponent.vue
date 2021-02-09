@@ -22,6 +22,7 @@
                     <option value="Beidou-cd">Beidou</option>
                     <option value="Bennet-cd">Bennet</option>
                     <option value="Chongyun-cd">Chongyun</option>
+                    <option value="Dainsleif-cd">Dainsleif</option>
                     <option value="Diluc-cd">Diluc</option>
                     <option value="Diona-cd">Diona</option>
                     <option value="Fischl-cd">Fischl</option>
@@ -299,10 +300,7 @@
 
 <script>
 import { required } from "vuelidate/lib/validators";
-import VueKonva from 'vue-konva'
-import Vue from 'vue';
 
-Vue.use(VueKonva)
 
 export default {
   name: "FormComponent",
