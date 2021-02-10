@@ -2,19 +2,36 @@
   <div class="cardPage">
     <div class='body'>
       <div class="centered">
-        <div class = "savetext">
-          Please right-click  on image and select "Save Image As" to save to your device
+
+        <div v-if="!isMobile()">
+          <div class = "savetext">
+            Please right-click  on image and select "Save Image As" to save to your device
+          </div>
+          <CardGenerator/>
+          <div class= "social">
+            <button @click="$router.push({name: 'Home'})">Back</button>
+              <share-it 
+                :shareConfig="share" 
+                text="Checkout Genshin Card Generator!"
+                url="https://genshin-impact-card-generator.herokuapp.com/"
+              />
+          </div>
         </div>
-        <CardGenerator/>
-        
-        <div class= "social">
-          <button @click="$router.push({name: 'Home'})">Back</button>
-            <share-it 
-              :shareConfig="share" 
-              text="Checkout Genshin Card Generator!"
-              url="https://genshin-impact-card-generator.herokuapp.com/"
-            />
+        <div v-else>
+          <div class = "savetext">
+            Please right-click  on image and select "Save Image As" to save to your device
+          </div>
+          <mobile-card/>
+            <div class= "social">
+              <button class="mobile-button" @click="$router.push({name: 'Home'})">Back</button>
+                <share-it 
+                  :shareConfig="share" 
+                  text="Checkout Genshin Card Generator!"
+                  url="https://genshin-impact-card-generator.herokuapp.com/"
+                />
+            </div>
         </div>
+
         <div class= "footer">
           <br>
             Genshin Card Generator is not affiliated with or endorsed by miHoYo.
@@ -26,11 +43,22 @@
 
 <script>
 import CardGenerator from '@/components/CardGenerator.vue'
+import MobileCard from '@/components/MobileCard.vue'
 
 export default {
   name: 'CardPage',
   components: {
     CardGenerator,
+    MobileCard
+  },
+  methods: {
+    isMobile() {
+      if(/Android|webOS|ipad|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
+    }
   },
    data() {
     return {
@@ -100,6 +128,16 @@ button {
   border-radius: 4px;
   font-family: SuezOne-Regular; 
   align-items: center;
+}
+.mobile-button {
+  background-color: #464545;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 4px;
+  font-family: SuezOne-Regular; 
+  margin: 10px 10px;
 }
 app {
   height:0%

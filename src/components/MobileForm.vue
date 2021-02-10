@@ -1,19 +1,13 @@
 <template>
   <div class="body">
-    <div class ="container">
-      <img src="../assets/Form-bg.png" className="Form-bg" alt="Form background"/>
-        <div class="centered">
-          <div class="summary-text-red" v-if="$v.form.$error">
-            Form has errors
-          </div>
-          <form @submit.prevent="submit">
-            <div class ="row">
-              <div class="px-4" :class="{ 'hasError': $v.form.cardChara.$error }">
-                <div class="col-25">
-                  <label for="card-design">Card design:</label>
-                </div>
-                <div class="col-75">
-                  <select v-model='form.cardChara'>
+    <div class="summary-text-red" v-if="$v.form.$error">
+        Form has errors
+    </div>
+        <form @submit.prevent="submit">
+            <div class="px-4" :class="{ 'hasError': $v.form.cardChara.$error }">
+                <label for="card-design">Card design:</label>
+                <br>
+                <select v-model='form.cardChara'>
                     <option hidden disabled selected value> -- select an option -- </option>
                     <option value="Aether-cd">Aether</option>
                     <option value="Albedo-cd">Albedo</option>
@@ -47,39 +41,25 @@
                     <option value="Xingqiu-cd">Xingqiu</option>
                     <option value="Xinyan-cd">Xinyan</option>
                     <option value="Zhongli-cd">Zhongli</option>
-                  </select>
+                    </select>
                 </div>
-              </div>
-            </div>
 
-            <div class="px-4" :class="{ 'hasError': $v.form.playerName.$error }">
-              <div class="row">
-                <div class="col-25">
-                  <label for="player-name">Player name:</label>
+                <div class="px-4" :class="{ 'hasError': $v.form.playerName.$error }">
+                    <label for="player-name">Player name:</label>
+                    <br>
+                    <input type="text" v-model="form.playerName"/>
                 </div>
-                <div class="col-75">
-                  <input type="text" v-model="form.playerName"/>
-                </div>
-              </div>
-            </div>
 
 
-            <div class="px-4" :class="{ 'hasError': $v.form.AR.$error }">
-              <div class="row">
-                <div class="col-25">
-                  <label for="AR">Adventure Rank:</label>
+
+                <div class="px-4" :class="{ 'hasError': $v.form.AR.$error }">
+                    <label for="AR">Adventure Rank:</label>
+                    <br>
+                    <input type="text" v-model="form.AR"/>
                 </div>
-                <div class="col-75">
-                  <input type="text" v-model="form.AR"/>
-                </div>
-              </div>
-            </div>
           
-            <div class="row">
-              <div class="col-25">
+
                 <label for="team-1">Choose team:</label>
-              </div>
-                <div class="col-75">
                   <div class="px-4" :class="{ 'hasError': $v.form.team1.$error }">
                     <select v-model='form.team1'>
                       <option hidden disabled selected value> -- select an option -- </option>
@@ -115,8 +95,7 @@
                       <option value="Zhongli-small">Zhongli</option>
                     </select>
                   </div>
-                </div>
-                <div class="col-75">
+                    <br>
                   <div class="px-4" :class="{ 'hasError': $v.form.team2.$error }">
                     <select v-model='form.team2'>
                       <option hidden disabled selected value> -- select an option -- </option>
@@ -152,8 +131,7 @@
                       <option value="Zhongli-small">Zhongli</option>
                     </select>
                   </div>
-                </div>
-                <div class="col-75">
+                    <br>
                   <div class="px-4" :class="{ 'hasError': $v.form.team3.$error }">
                     <select v-model='form.team3'>
                       <option hidden disabled selected value> -- select an option -- </option>
@@ -189,8 +167,7 @@
                       <option value="Zhongli-small">Zhongli</option>
                     </select>
                   </div>
-                </div>
-                <div class="col-75">
+                    <br>
                   <div class="px-4" :class="{ 'hasError': $v.form.team4.$error }">
                     <select v-model='form.team4'>
                       <option hidden disabled selected value> -- select an option -- </option>
@@ -226,76 +203,54 @@
                       <option value="Zhongli-small">Zhongli</option>
                     </select>
                 </div>
-              </div>
-            </div>
             
-            <input type="checkbox" name="mutliplayer" id="mutliplayer-choice">
-            <label for="multiplayer-choice"> Multiplayer</label>
+            
+                <input type="checkbox" name="mutliplayer" id="mutliplayer-choice">
+                <label for="multiplayer-choice"> Multiplayer</label>
           
-            <div class ="reveal-multiplayer">
-              <div class="px-4" :class="{ 'hasError': $v.form.UID.$error }">
-                <div class="row">
-                  <div class="col-25">
-                    <label for="UID">UID:</label>
-                  </div>
-                  <div class="col-75">
-                    <input type="text" v-model="form.UID"/>
-                  </div>
-              </div>
-              </div>
+                <div class="reveal-multiplayer">
+                    <div class="px-4" :class="{ 'hasError': $v.form.UID.$error }">
+                        <label for="UID">UID:</label>
+                        <br>
+                        <input type="text" v-model="form.UID"/>
+                    </div>
 
-              <div class="px-4" :class="{ 'hasError': $v.form.platform.$error }">
-                <div class="row">
-                  <div class="col-25">
-                    <label for="platform">Platform:</label>
-                  </div>
-                  <div class="col-75">
-                    <select v-model='form.platform'>
-                      <option hidden disabled selected value> -- select an option -- </option>
-                      <option value="PC">PC</option>
-                      <option value="PS4">PS4</option>
-                      <option value="Android">Android</option>
-                      <option value="iOS">iOS</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
+                    <div class="px-4" :class="{ 'hasError': $v.form.platform.$error }">
+                        <label for="platform">Platform:</label>
+                        <br>
+                        <select v-model='form.platform'>
+                        <option hidden disabled selected value> -- select an option -- </option>
+                        <option value="PC">PC</option>
+                        <option value="PS4">PS4</option>
+                        <option value="Android">Android</option>
+                        <option value="iOS">iOS</option>
+                        </select>
+                    </div>
 
-              <div class="px-4" :class="{ 'hasError': $v.form.server.$error }">
-                <div class="row">
-                  <div class="col-25">
-                    <label for="server">Server:</label>
-                  </div>
-                  <div class="col-75">
-                    <select v-model='form.server'>
-                      <option hidden disabled selected value> -- select an option -- </option>
-                      <option value="America">America</option>
-                      <option value="Europe">Europe</option>
-                      <option value="Asia">Asia</option>
-                      <option value="TW/HK/MO">TW/HK/MO</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
+                    <div class="px-4" :class="{ 'hasError': $v.form.server.$error }">
+                        <label for="server">Server:</label>
+                        <br>
+                        <select v-model='form.server'>
+                        <option hidden disabled selected value> -- select an option -- </option>
+                        <option value="America">America</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                        <option value="TW/HK/MO">TW/HK/MO</option>
+                        </select>
+                    </div>
 
-              <div class="px-4" :class="{ 'hasError': $v.form.twitter.$error }">
-                <div class="row">
-                  <div class="col-25">
-                    <label for="twitter">Twitter:</label>
-                  </div>
-                  <div class="col-75">
-                    <input type="text" v-model="form.twitter"/>
-                  </div>
+                    <div class="px-4" :class="{ 'hasError': $v.form.twitter.$error }">
+                        <label for="twitter">Twitter:</label>
+                        <br>
+                        <input type="text" v-model="form.twitter"/>
+                    </div>
                 </div>
-              </div>
-            </div>
-                <button type="submit" class="button">
-                    Submit
+                <button type="submit" class="mobile-button">
+                        Submit
                 </button>
-          </form> 
-      </div>
-    </div>
-  </div>
+        </form> 
+</div>
+
 </template>
 
 <script>
@@ -389,7 +344,7 @@ validations: {
   }
 };
 </script>
-<style lang="scss" >
+<style lang="scss" scoped>
 input {
   background-color: #f7f7f7;
   border: 1px solid rgb(199, 199, 199);
@@ -404,24 +359,17 @@ input {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transform: scale(0.8);
+  transform: scale(1);
   transition: 0.5s;
   input[type="radio"]:checked ~ &,
   input[type="checkbox"]:checked ~ & {
     opacity: 1;
-    max-height: 100px;
+    max-height: 10000px;
     overflow: visible;
-    padding: 10px 20px;
+    padding: 15px 10px;
     transform: scale(1);
+    width: 100%;
   }
-}
-@font-face { font-family: SuezOne-Regular; 
-  src: url('../assets/SuezOne-Regular.ttf'); } 
-  
-body{
-  background-color:#464545;
-  font-family: SuezOne-Regular; 
-  font-size: 25px;
 }
 .header {
   top: 0;
@@ -429,88 +377,27 @@ body{
   font-size: 40px;
   height: 280px;
   text-align: center;
+  size: relative;
 }
 .body {
-  font-size: 25px;
-  padding: 20px;
-  font-family: SuezOne-Regular; 
+    color: white;
+    position: center;
+    
+    
 }
-.footer {
-  position: bottom;
-  padding: 30px;
-  bottom: 0;
-  height: 20px;
-  font-size: 15px;
-  color: rgb(36, 34, 34);
-  font-family: Arial, Helvetica, sans-serif;
-}
-button {
+.mobile-button {
   background-color: #464545;
   color: white;
-  padding: 10px 120px;
+  padding: 10px 50px;
   text-align: center;
   font-size: 25px;
-  margin: 30px 100px;
-  cursor: pointer;
   border-radius: 4px;
   font-family: SuezOne-Regular; 
+  margin: 10px 10px;
+
 
 }
-app {
-  height:0%
-}
-* {
-  box-sizing: border-box;
-}
-input[type=text], select, textarea {
-  width: 60%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
 
-.container {
-  position: relative;
-  text-align: center;
-}
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-}
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
-.col-25 {
-  float: left;
-  width: 40%;
-  text-align: right;
-  font-family: SuezOne-Regular; 
-  margin-bottom: 2px;
-}
-.col-75 {
-  float: right;
-  width: 60%;
-  margin-bottom: 2px;
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-  padding: 2px;
-}
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
 </style>
 
            
