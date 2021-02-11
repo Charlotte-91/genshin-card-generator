@@ -18,10 +18,9 @@
           </div>
         </div>
         <div v-else>
-          <div class = "savetext">
-            Please right-click  on image and select "Save Image As" to save to your device
+          <div class="image">
+            <mobile-card/>
           </div>
-          <mobile-card/>
             <div class= "social">
               <button class="mobile-button" @click="$router.push({name: 'Home'})">Back</button>
                 <share-it 
@@ -142,4 +141,5 @@ button {
 app {
   height:0%
 }
+
 </style>

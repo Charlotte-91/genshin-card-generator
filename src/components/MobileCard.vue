@@ -1,6 +1,6 @@
 <template>
   <div className="App">
-    <div v-bind:style="{ height: '100vh', width: '100vw' }" ref="container" name="test">
+    <div v-bind:style="{ height: '82vh', width: '99vw' }" ref="container" >
         <v-stage ref="stage" :config="stageSize">
         <v-layer v-if="this.$route.params.platform == undefined" ref="layer">
             <v-image :config="{image: image}"/>
@@ -32,14 +32,12 @@
 </template>
 
 <script>
-const width = window.innerWidth;
-const height = window.innerHeight;
 export default {
   data() {
     return {
       stageSize: {
-        width: width,
-        height: height
+        width: 1200,
+        height: 674
       },
       image: null,
       team1: null,
@@ -48,28 +46,11 @@ export default {
       team4: null
     };
   },
-  methods:  {
-      changeRect: function() {
-        console.log(this.$refs.container)
-      const container = this.$refs.container;
+  mounted() {
+    
 
-      if (!container) {
-        return;
-      }
-
-      const height = container.offsetHeight;
-      const width = container.offsetWidth;
-
-      console.log(height, height);
-      this.stageSize.width = width;
-      this.stageSize.height = height; 
-      }
   },
-   mounted: function() {
-        
-   },
-  created: function() {
-
+  created() {
     if (this.$route.params.UID == undefined) {
       const image = new window.Image();
       image.src = require('../assets/alt-card-bgs/' + this.$route.params.cardChara + '.png');
@@ -123,8 +104,6 @@ export default {
         this.team4 = team4;
       };
     }
-    window.addEventListener("resize", this.changeRect);
-    this.changeRect();
   }
 };
 </script>
