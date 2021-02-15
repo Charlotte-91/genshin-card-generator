@@ -1,6 +1,6 @@
 <template>
   <div className="App">
-    <div v-bind:style="{ height: '82vh', width: '99vw' }" ref="container" >
+    <div v-bind:style="{ height: '90vh', width: '95vw' }" ref="container" >
         <v-stage ref="stage" :config="stageSize">
         <v-layer v-if="this.$route.params.platform == undefined" ref="layer">
             <v-image :config="{image: image}"/>
@@ -28,6 +28,9 @@
         </v-layer>
         </v-stage>
     </div>
+    <div class="save-button">
+      <button class='mobile-button' v-on:click=save()>Save as image</button>
+    </div>
   </div>
 </template>
 
@@ -46,9 +49,23 @@ export default {
       team4: null
     };
   },
-  mounted() {
+  methods: {
+      downloadURI: function (uri, name) {
+        var link = document.createElement('a');
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        // delete link;
+      },
+      save: function () {
+        console.log('clidk')
+        console.log(this.$refs)
+        var dataURL = (this.$refs.stage.getStage()).toDataURL({ pixelRatio: 3 });
+        this.downloadURI(dataURL, 'stage.png');
+      }
     
-
   },
   created() {
     if (this.$route.params.UID == undefined) {
@@ -107,3 +124,21 @@ export default {
   }
 };
 </script>
+<style scoped>
+
+.mobile-button {
+  background-color: #464545;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 4px;
+  font-family: SuezOne-Regular; 
+}
+.save-button {
+  float: bottom;
+  position: absolute;
+  margin: -40px -40px;
+  align-items: center;
+}
+</style>

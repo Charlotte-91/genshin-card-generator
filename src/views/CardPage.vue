@@ -2,38 +2,21 @@
   <div class="cardPage">
     <div class='body'>
       <div class="centered">
-
         <div v-if="!isMobile()">
+          <br>
+          <div class='top-gap'/>
+          <CardGenerator/>
           <div class = "savetext">
             Please right-click  on image and select "Save Image As" to save to your device
           </div>
-          <CardGenerator/>
-          <div class= "social">
-            <button @click="$router.push({name: 'Home'})">Back</button>
-              <share-it 
-                :shareConfig="share" 
-                text="Checkout Genshin Card Generator!"
-                url="https://genshin-impact-card-generator.herokuapp.com/"
-              />
-          </div>
+          <Footer/>
         </div>
         <div v-else>
-          <div class="image">
+          <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+          <div class='cardLayout'>
             <mobile-card/>
           </div>
-            <div class= "social">
-              <button class="mobile-button" @click="$router.push({name: 'Home'})">Back</button>
-                <share-it 
-                  :shareConfig="share" 
-                  text="Checkout Genshin Card Generator!"
-                  url="https://genshin-impact-card-generator.herokuapp.com/"
-                />
-            </div>
-        </div>
-
-        <div class= "footer">
-          <br>
-            Genshin Card Generator is not affiliated with or endorsed by miHoYo.
+          <MobileFooter/>
         </div>
       </div>
     </div>
@@ -43,12 +26,16 @@
 <script>
 import CardGenerator from '@/components/CardGenerator.vue'
 import MobileCard from '@/components/MobileCard.vue'
+import Footer from '@/components/Footer.vue'
+import MobileFooter from '@/components/MobileFooter.vue'
 
 export default {
   name: 'CardPage',
   components: {
     CardGenerator,
-    MobileCard
+    MobileCard,
+    Footer,
+    MobileFooter
   },
   methods: {
     isMobile() {
@@ -85,6 +72,10 @@ body{
   font-family: SuezOne-Regular; 
   font-size: 30px;
 }
+.top-gap {
+  height: 200px;
+
+}
 .header {
   top: 0;
   padding: 0px;
@@ -94,7 +85,7 @@ body{
 }
 .savetext {
   font-size: 15px;
-  padding: 20px;
+  padding: 30px;
   font-family: SuezOne-Regular; 
   color: grey;
   top: 20px;
@@ -111,10 +102,16 @@ body{
   color: rgb(36, 34, 34);
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
+  position: absolute;
+  margin: -200px -5px;
 }
 .social {
-
+  position: bottom;
   align-items: center;
+  position: absolute;
+}
+.cardLayout {
+  margin: 90px 10px;
 }
 button {
   background-color: #464545;
