@@ -10,7 +10,8 @@
           </div>
         <div class= "footer">
           <br>
-            Genshin Card Generator is not affiliated with or endorsed by miHoYo.
+            Genshin Card Generator is not affiliated with or endorsed by miHoYo. |
+            <router-link :to="`contact`"><a>Contact</a></router-link>
         </div>
     </div>
 </template>
@@ -58,6 +59,11 @@ button {
   border-radius: 4px;
   font-family: SuezOne-Regular; 
   align-items: center;
+}
+a {
+    text-decoration: none;
+    color: rgb(145, 136, 136);
+    cursor: pointer;
 }
 
 </style>

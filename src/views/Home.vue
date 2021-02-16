@@ -15,7 +15,8 @@
         <mobile-form/>
       </div>
       <div class= "footer">
-      Genshin Card Generator is not affiliated with or endorsed by miHoYo.
+      Genshin Card Generator is not affiliated with or endorsed by miHoYo. |    
+      <router-link :to="`contact`"><a>Contact</a></router-link>
     </div>
   </div>
 </template>
@@ -43,7 +44,7 @@ export default {
 }
 </script>
 
-<style>
+<style sa>
 .header {
   top: 0;
   padding: 0px;
@@ -64,5 +65,14 @@ export default {
   font-size: 15px;
   color: rgb(36, 34, 34);
   font-family: Arial, Helvetica, sans-serif;
+}
+.routerlink {
+  display: block;
+  color: rgb(240, 20, 20)
+}
+ a {
+    text-decoration: none;
+    color: rgb(145, 136, 136);
+    cursor: pointer;
 }
 </style>
