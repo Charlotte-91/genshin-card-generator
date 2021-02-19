@@ -73,7 +73,7 @@ body{
   font-size: 30px;
 }
 .top-gap {
-  height: 200px;
+  height: 10px;
 
 }
 .header {

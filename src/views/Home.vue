@@ -1,7 +1,6 @@
 <template>
   <div className="Home">
-      
-
+    
       <div v-if="!isMobile()">
         <header className="App-header">
         <img src="../assets/genshin-logo.png" height='260px'/>

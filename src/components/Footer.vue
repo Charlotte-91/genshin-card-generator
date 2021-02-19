@@ -12,6 +12,7 @@
           <br>
             Genshin Card Generator is not affiliated with or endorsed by miHoYo. |
             <router-link :to="`contact`"><a>Contact Us</a></router-link>
+        <br>
         </div>
     </div>
 </template>
@@ -39,6 +40,7 @@ export default {
  
 .footer {
   bottom: 0;
+  margin-bottom: 20px;
   height: 20px;
   font-size: 15px;
   color: rgb(36, 34, 34);

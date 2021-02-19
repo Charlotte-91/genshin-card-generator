@@ -1,32 +1,32 @@
 <template>
   <div className="App">
     <div v-bind:style="{ height: '90vh', width: '95vw' }" ref="container" >
-        <v-stage ref="stage" :config="stageSize">
+      <v-stage ref="stage" :config="stageSize">
         <v-layer v-if="this.$route.params.platform == undefined" ref="layer">
-            <v-image :config="{image: image}"/>
-            <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 25, x: 180, y: 115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-            <v-text :config="{text: `${this.$route.params.AR}`, fontSize: 25, x: 550, y:115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-            <v-text :config="{text: `genshin-impact-card-generator.herokuapp.com`, fontSize: 16, x: 38, y:655, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
-            <v-image :config="{image: team1, x: 170, y:200}"/>
-            <v-image :config="{image: team2, x: 170, y:390}"/>
-            <v-image :config="{image: team3, x: 400, y:390}"/>
-            <v-image :config="{image: team4, x: 400, y:200}"/>
+          <v-image :config="{image: image}"/>
+          <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 25, x: 180, y: 115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+          <v-text :config="{text: `${this.$route.params.AR}`, fontSize: 25, x: 550, y:115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+          <v-text :config="{text: `genshin-impact-card-generator.herokuapp.com`, fontSize: 16, x: 38, y:655, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
+          <v-image :config="{image: team1, x: 170, y:200}"/>
+          <v-image :config="{image: team2, x: 170, y:390}"/>
+          <v-image :config="{image: team3, x: 400, y:390}"/>
+          <v-image :config="{image: team4, x: 400, y:200}"/>
         </v-layer>
         <v-layer v-else>
-            <v-image :config="{image: image}"/>
-            <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 25, x: 180, y: 115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-            <v-text :config="{text: `${this.$route.params.UID}`, fontSize: 25, x: 180, y: 206, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-            <v-text :config="{text: `${this.$route.params.AR}`, fontSize: 25, x: 552, y:115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-            <v-text :config="{text: `${this.$route.params.platform}`, fontSize: 25, x: 552, y:206, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-            <v-text :config="{text: `${this.$route.params.server}`, fontSize: 25, x: 552, y:293, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-            <v-text :config="{text: `${this.$route.params.twitter}`, fontSize: 25, x: 180, y:293, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-            <v-text :config="{text: `genshin-impact-card-generator.herokuapp.com`, fontSize: 16, x: 38, y:655, fill:'black', opacity: 0.7, fontFamily:'SuezOne-Regular'}"></v-text>
-            <v-image :config="{image: team1, x: 90, y:390}"/>
-            <v-image :config="{image: team2, x: 240, y:390}"/>
-            <v-image :config="{image: team3, x: 390, y:390}"/>
-            <v-image :config="{image: team4, x: 540, y:390}"/>
+          <v-image :config="{image: image}"/>
+          <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 25, x: 180, y: 115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+          <v-text :config="{text: `${this.$route.params.UID}`, fontSize: 25, x: 180, y: 206, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+          <v-text :config="{text: `${this.$route.params.AR}`, fontSize: 25, x: 552, y:115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+          <v-text :config="{text: `${this.$route.params.platform}`, fontSize: 25, x: 552, y:206, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+          <v-text :config="{text: `${this.$route.params.server}`, fontSize: 25, x: 552, y:293, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+          <v-text :config="{text: `${this.$route.params.twitter}`, fontSize: 25, x: 180, y:293, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+          <v-text :config="{text: `genshin-impact-card-generator.herokuapp.com`, fontSize: 16, x: 38, y:655, fill:'black', opacity: 0.7, fontFamily:'SuezOne-Regular'}"></v-text>
+          <v-image :config="{image: team1, x: 90, y:390}"/>
+          <v-image :config="{image: team2, x: 240, y:390}"/>
+          <v-image :config="{image: team3, x: 390, y:390}"/>
+          <v-image :config="{image: team4, x: 540, y:390}"/>
         </v-layer>
-        </v-stage>
+      </v-stage>
     </div>
     <div class="save-button">
       <button class='mobile-button' v-on:click=save()>Save as image</button>
@@ -64,7 +64,7 @@ export default {
         console.log(this.$refs)
         var dataURL = (this.$refs.stage.getStage()).toDataURL({ pixelRatio: 3 });
         this.downloadURI(dataURL, 'stage.png');
-      }
+      },
     
   },
   created() {
