@@ -1,19 +1,24 @@
 <template>
-    <div class='mobile-footer'>
-        <div class= "social">
-            <button class="mobile-button" @click="$router.push({name: 'Home'})">Back</button>
-              <share-it 
-                :shareConfig="share" 
-                text="Check out Genshin Card Generator! #GenshinImpact #GenshinCard"
-                url="https://genshin-impact-card-generator.herokuapp.com/"
-              />
-          </div>
-        <div class= "footer">
-          <br>
-            Genshin Card Generator is not affiliated with or endorsed by miHoYo.  |
-            <router-link :to="`contact`"><a>Contact Us</a></router-link>
-        </div>
+  <div class='mobile-footer'>
+    <div class= "social">
+      <button class="mobile-button" @click="$router.push({name: 'Home'})">Back</button>
+      <twitter-button>
+        <ShareNetwork
+          network="twitter"
+          url="https://genshin-impact-card-generator.herokuapp.com/"
+          title="Check out Genshin Impact Card Generator!"
+          hashtags="GenshinImpact,GenshinCard"
+          >
+          Share on Twitter
+        </ShareNetwork>
+        </twitter-button>
     </div>
+      <div class= "footer">
+        <br>
+        Genshin Card Generator is not affiliated with or endorsed by miHoYo.  |
+        <router-link :to="`contact`"><a>Contact Us</a></router-link>
+      </div>
+  </div>
 </template>
 
 <script>
@@ -63,9 +68,25 @@ export default {
   font-size: 25px;
   border-radius: 4px;
   font-family: SuezOne-Regular; 
-  margin: 0px 10px;
+  margin: 0px 25px;
+}
+twitter-button {
+  background-color: #1da1f2;
+  color: #FFF;
+  padding: 17px 10px;
+  text-align: center;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: SuezOne-Regular; 
+  align-items: center;
 }
 a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+b {
     text-decoration: none;
     color: rgb(145, 136, 136);
     cursor: pointer;

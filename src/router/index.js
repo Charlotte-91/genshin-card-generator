@@ -3,11 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Vuelidate from "vuelidate";
 import VueKonva from 'vue-konva';
-import shareIt from 'vue-share-it';
 import VueSocialSharing from 'vue-social-sharing'
 
-
-Vue.use(shareIt);
 Vue.use(VueKonva);
 Vue.use(VueRouter);
 Vue.use(Vuelidate);

@@ -39,9 +39,7 @@ Genshin Impact Card Generator
 
 [Vue Konva](https://konvajs.org/docs/vue/index.html)
 
-[Node Canvas](https://github.com/Automattic/node-canvas)
-
-[Vue share it](https://github.com/thisDOTname/vue-share-it)
+[vue-social-sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
 
 ## Copyright
 

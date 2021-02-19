@@ -1,41 +1,31 @@
 <template>
-    <div class='buttons-and-footer'>
-        <div class= "social">
-            <button @click="$router.push({name: 'Home'})">Back</button>
+  <div class='buttons-and-footer'>
+    <div class= "social">
+      <button @click="$router.push({name: 'Home'})">Back</button>
               <!-- <share-it 
                 :shareConfig="share" 
                 text="Check out Genshin Card Generator!"
                 url="https://genshin-impact-card-generator.herokuapp.com/"
               /> -->
-              <share-it :shareConfig="share"  href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" 
-              data-text="Check out Genshin Impact card generator!" data-url="https://genshin-impact-card-generator.herokuapp.com/" 
-              data-hashtags="GenshinImpactCardGenerator" data-show-count="false">Tweet</share-it>
-          </div>
-        <div class= "footer">
-          <br>
-            Genshin Card Generator is not affiliated with or endorsed by miHoYo. |
-            <router-link :to="`contact`"><a>Contact Us</a></router-link>
-        <br>
-        </div>
+        <twitter-button>
+          <ShareNetwork
+            network="twitter"
+            url="https://genshin-impact-card-generator.herokuapp.com/"
+            title="Check out Genshin Impact Card Generator!"
+            hashtags="GenshinImpact,GenshinCard"
+            >
+            Share on Twitter
+          </ShareNetwork>
+        </twitter-button>
     </div>
+    <div class= "footer">
+      <br>
+      Genshin Card Generator is not affiliated with or endorsed by miHoYo. |
+      <router-link :to="`contact`"><b>Contact Us</b></router-link>
+    </div>
+  </div>
 </template>
 
-<script>
-export default {
-   data() {
-    return {
-      share: {
-        twitter: {
-          size: "2x",
-        },
-        // facebook: {
-        //   size: "2x"
-        // }
-      } 
-    }
-   }
-}
-</script>
 
 <style scoped>
 @font-face { font-family: roboto-regular; 
@@ -65,7 +55,24 @@ button {
   font-family: SuezOne-Regular; 
   align-items: center;
 }
+twitter-button {
+  background-color: #1da1f2;
+  color: #FFF;
+  padding: 11px 40px;
+  text-align: center;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: SuezOne-Regular; 
+  align-items: center;
+}
 a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+b {
     text-decoration: none;
     color: rgb(145, 136, 136);
     cursor: pointer;
