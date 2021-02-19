@@ -2,7 +2,10 @@
   <div className="App">
     <div v-bind:style="{ height: '90vh', width: '95vw' }" ref="container" >
       <v-stage ref="stage" :config="stageSize">
-        <v-layer v-if="this.$route.params.platform == undefined" ref="layer">
+        <v-layer v-if="this.$route.params.playerName == undefined" ref="layer">
+          <v-text :config="{text: `An Error occurred, please go back to the Home page`, fontSize: 15, x: 18, y:350, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
+        </v-layer>
+        <v-layer v-else-if="this.$route.params.platform == undefined" ref="layer">
           <v-image :config="{image: image}"/>
           <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 25, x: 180, y: 115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
           <v-text :config="{text: `${this.$route.params.AR}`, fontSize: 25, x: 550, y:115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
