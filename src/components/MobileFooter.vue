@@ -4,7 +4,7 @@
             <button class="mobile-button" @click="$router.push({name: 'Home'})">Back</button>
               <share-it 
                 :shareConfig="share" 
-                text="Checkout Genshin Card Generator!"
+                text="Check out Genshin Card Generator! #GenshinImpact #GenshinCard"
                 url="https://genshin-impact-card-generator.herokuapp.com/"
               />
           </div>

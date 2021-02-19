@@ -2,11 +2,14 @@
     <div class='buttons-and-footer'>
         <div class= "social">
             <button @click="$router.push({name: 'Home'})">Back</button>
-              <share-it 
+              <!-- <share-it 
                 :shareConfig="share" 
-                text="Checkout Genshin Card Generator!"
+                text="Check out Genshin Card Generator!"
                 url="https://genshin-impact-card-generator.herokuapp.com/"
-              />
+              /> -->
+              <share-it :shareConfig="share"  href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" 
+              data-text="Check out Genshin Impact card generator!" data-url="https://genshin-impact-card-generator.herokuapp.com/" 
+              data-hashtags="GenshinImpactCardGenerator" data-show-count="false">Tweet</share-it>
           </div>
         <div class= "footer">
           <br>
@@ -25,9 +28,9 @@ export default {
         twitter: {
           size: "2x",
         },
-        facebook: {
-          size: "2x"
-        }
+        // facebook: {
+        //   size: "2x"
+        // }
       } 
     }
    }
