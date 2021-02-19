@@ -66,7 +66,7 @@ export default {
         console.log('clidk')
         console.log(this.$refs)
         var dataURL = (this.$refs.stage.getStage()).toDataURL({ pixelRatio: 3 });
-        this.downloadURI(dataURL, 'stage.png');
+        this.downloadURI(dataURL, 'genshincard.png');
       },
     
   },

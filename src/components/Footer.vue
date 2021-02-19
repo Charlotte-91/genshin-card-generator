@@ -12,7 +12,7 @@
             network="twitter"
             url="https://genshin-impact-card-generator.herokuapp.com/"
             title="Check out Genshin Impact Card Generator!"
-            hashtags="GenshinImpact,GenshinCard"
+            hashtags="GenshinImpact,GenshinCard,原神"
             >
             Share on Twitter
           </ShareNetwork>
