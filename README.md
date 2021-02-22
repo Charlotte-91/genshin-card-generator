@@ -23,12 +23,34 @@ Genshin Impact Card Generator
 - A Twitter share button will be provided for instant shareability
 - An option for the User to not include personal/ multiplayer infomation
 
+## screenshots
+Home page
+
+![Home page](./readme-img/shot1.JPG)
+
+Home page with form expanded
+
+![Expanded Homepage](./readme-img/shot2.JPG)
+
+Contact Us page with google form
+
+![Contact us page](./readme-img/shot3.JPG)
+
+Card page with non-multiplayer card
+
+![Card page(non-mutiplayer card)](./readme-img/shot4.JPG)
+
+card page with mutiplayer card
+
+![Card Page (multiplayer card)](./readme-img/shot5.JPG)
+
+
 ## To do:
 
-- Add field validation on form for AR, UID
-- Max length for text fields 
-- Redirect to homepage when page is refreshed (for card page)
-- Add hashtags to Twitter share button
+- Attach image to twitter share button, so tweet draft includes image automatically
+- Make homepage more responsive
+- Check layout on other browers/devices and adjust accordingly
+
 
 ## Technologies
 [Node.js](https://nodejs.org/)
