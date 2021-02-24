@@ -5,7 +5,9 @@
         <div v-if="!isMobile()">
           <br>
           <div class='top-gap'/>
-          <CardGenerator/>
+            <div class ='card'>
+              <CardGenerator/>
+            </div>
           <div class = "savetext">
             Please right-click  on image and select "Save Image As" to save to your device
           </div>
@@ -96,17 +98,19 @@ body{
   font-family: SuezOne-Regular; 
 }
 .footer {
-  bottom: 0;
+
   height: 20px;
   font-size: 15px;
   color: rgb(36, 34, 34);
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  position: absolute;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   margin: -200px -5px;
 }
 .social {
-  position: bottom;
+  bottom: 0%;
   align-items: center;
   position: absolute;
 }
@@ -138,5 +142,11 @@ button {
 app {
   height:0%
 }
-
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
 </style>

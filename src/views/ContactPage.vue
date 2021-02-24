@@ -43,6 +43,7 @@ export default {
   text-align: center;
 }
 .body {
+  background-color:#464545;
   font-size: 25px;
   padding: 20px;
   font-family: SuezOne-Regular; 
@@ -55,5 +56,17 @@ export default {
   font-size: 15px;
   color: rgb(36, 34, 34);
   font-family: Arial, Helvetica, sans-serif;
+}
+button {
+  background-color: #464545;
+  color: white;
+  padding: 10px 120px;
+  text-align: center;
+  font-size: 25px;
+  margin: 30px 100px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: SuezOne-Regular; 
+
 }
 </style>

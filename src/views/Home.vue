@@ -43,7 +43,9 @@ export default {
 }
 </script>
 
-<style sa>
+<style scoped>
+
+* {background-color: #464545}
 .header {
   top: 0;
   padding: 0px;

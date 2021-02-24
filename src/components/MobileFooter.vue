@@ -2,6 +2,7 @@
   <div class='mobile-footer'>
     <div class= "social">
       <button class="mobile-button" @click="$router.push({name: 'Home'})">Back</button>
+      <br>
       <twitter-button>
         <ShareNetwork
           network="twitter"
@@ -52,12 +53,13 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   position: absolute;
-  margin: -200px -5px;
+  margin: -300px -5px;
 }
 .social {
   position: bottom;
   align-items: center;
   position: absolute;
+  margin: 10px
 }
 
 .mobile-button {
@@ -68,7 +70,6 @@ export default {
   font-size: 25px;
   border-radius: 4px;
   font-family: SuezOne-Regular; 
-  margin: 0px 25px;
 }
 twitter-button {
   background-color: #1da1f2;
@@ -80,6 +81,7 @@ twitter-button {
   border-radius: 4px;
   font-family: SuezOne-Regular; 
   align-items: center;
+  
 }
 a {
     text-decoration: none;

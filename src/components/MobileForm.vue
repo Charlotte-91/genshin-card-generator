@@ -1,5 +1,6 @@
 <template>
   <div class="body">
+    <div class="centered">
     <div class="summary-text-red" v-if="$v.form.$error">
         Form has errors
     </div>
@@ -250,6 +251,7 @@
                 </button>
         </form> 
 </div>
+</div>
 
 </template>
 
@@ -355,6 +357,97 @@ input {
 .hasError label {
   color: red;
 }
+@font-face { font-family: SuezOne-Regular; 
+  src: url('../assets/SuezOne-Regular.ttf'); } 
+  
+.header {
+  top: 0;
+  padding: 0px;
+
+  height: 280px;
+  text-align: center;
+}
+.body {
+
+  padding: 20px;
+  font-family: SuezOne-Regular; 
+  align-content: center;
+  
+}
+.footer {
+  position: bottom;
+  padding: 30px;
+  bottom: 0;
+  height: 20px;
+  font-size: 15px;
+  color: rgb(36, 34, 34);
+  font-family: Arial, Helvetica, sans-serif;
+}
+button {
+  background-color: #464545;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: SuezOne-Regular; 
+
+}
+
+app {
+  height:0%
+}
+* {
+  box-sizing: border-box;
+}
+input[type=text], select, textarea {
+  width: 85%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.centered {
+  position: relative;
+  top: 70%;
+  left: -6%;
+  transform: translate(-0%, 0%);
+  width: 95%;
+  background-color: #F9F6F2;
+  border: 36px solid orange;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 10px;
+  font-size: 20px;
+
+  border-image:
+      url("../assets/Form-bg.png")
+      70 / 50px    
+      round;    
+  @media screen and (min-width: 500px) {
+    position: relative;
+  top: 70%;
+  left: 52%;
+  transform: translate(-58%, 0%);
+  width: 80%;
+  
+  }              
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 2px;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
 .reveal-multiplayer {
   opacity: 0;
   max-height: 0;
@@ -370,33 +463,8 @@ input {
     transform: scale(1);
     width: 100%;
   }
-}
-.header {
-  top: 0;
-  padding: 0px;
-  font-size: 40px;
-  height: 280px;
-  text-align: center;
-  size: relative;
-}
-.body {
-    color: white;
-    position: center;
-    
-    
-}
-.mobile-button {
-  background-color: #464545;
-  color: white;
-  padding: 10px 50px;
-  text-align: center;
-  font-size: 25px;
-  border-radius: 4px;
-  font-family: SuezOne-Regular; 
-  margin: 10px 10px;
+}        
 
-
-}
 
 </style>
 

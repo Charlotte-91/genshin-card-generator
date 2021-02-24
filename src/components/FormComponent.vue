@@ -1,7 +1,7 @@
 <template>
   <div class="body">
     <div class ="container">
-      <img src="../assets/Form-bg.png" className="Form-bg" alt="Form background"/>
+      <!-- <img src="../assets/Form-bg.png" className="Form-bg" alt="Form background"/> -->
         <div class="centered">
           <div class="summary-text-red" v-if="$v.form.$error">
             Form has errors
@@ -389,7 +389,7 @@ validations: {
   }
 };
 </script>
-<style lang="scss" >
+<style lang="scss" scoped>
 input {
   background-color: #f7f7f7;
   border: 1px solid rgb(199, 199, 199);
@@ -404,7 +404,7 @@ input {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transform: scale(0.8);
+  transform: scale(1);
   transition: 0.5s;
   input[type="radio"]:checked ~ &,
   input[type="checkbox"]:checked ~ & {
@@ -434,6 +434,8 @@ body{
   font-size: 25px;
   padding: 20px;
   font-family: SuezOne-Regular; 
+  align-content: center;
+  
 }
 .footer {
   position: bottom;
@@ -456,6 +458,7 @@ button {
   font-family: SuezOne-Regular; 
 
 }
+
 app {
   height:0%
 }
@@ -469,18 +472,24 @@ input[type=text], select, textarea {
   border-radius: 4px;
   resize: vertical;
 }
-
-.container {
-  position: relative;
-  text-align: center;
-}
 .centered {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  
+  transform: translate(-53%, 0%);
+  width: 45%;
+  background-color: #F9F6F2;
+  border: 36px solid orange;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 10px;
+
+  border-image:
+      url("../assets/Form-bg.png")
+      70 / 50px    
+      round;                  
 }
+
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
@@ -511,6 +520,7 @@ label {
     margin-top: 0;
   }
 }
+
 </style>
 
            

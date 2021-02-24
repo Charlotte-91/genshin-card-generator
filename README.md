@@ -23,7 +23,7 @@ Genshin Impact Card Generator
 - A Twitter share button will be provided for instant shareability
 - An option for the User to not include personal/ multiplayer infomation
 
-## screenshots
+## Screenshots
 Home page
 
 ![Home page](./readme-img/shot1.JPG)
@@ -40,7 +40,7 @@ Card page with non-multiplayer card
 
 ![Card page(non-mutiplayer card)](./readme-img/shot4.JPG)
 
-card page with mutiplayer card
+Card page with mutiplayer card
 
 ![Card Page (multiplayer card)](./readme-img/shot5.JPG)
 

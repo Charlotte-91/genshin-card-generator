@@ -134,14 +134,14 @@ export default {
   color: white;
   padding: 10px 50px;
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   border-radius: 4px;
   font-family: SuezOne-Regular; 
 }
 .save-button {
   float: bottom;
   position: absolute;
-  margin: -40px -40px;
+  margin: 120px 60px;
   align-items: center;
 }
 </style>
