@@ -1,7 +1,7 @@
 <template>
   <div class="cardPage">
     <div class='body'>
-      <div class="centered">
+      <div class="center">
         <div v-if="!isMobile()">
           <br>
           <div class='top-gap'/>
@@ -136,7 +136,7 @@ button {
 app {
   height:0%
 }
-.centered {
+.center {
   position: absolute;
   top: 50%;
   left: 50%;
