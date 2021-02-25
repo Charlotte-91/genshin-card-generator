@@ -4,7 +4,9 @@
             <img src="../assets/genshin-logo.png" height='260px'/>
         </header>
         <body>
+          <div class='centered'>
             <ContactForm/>
+          </div>
         </body>
         <button @click="$router.push({name: 'Home'})">Back</button>
         <div class= "footer">
@@ -68,5 +70,22 @@ button {
   border-radius: 4px;
   font-family: SuezOne-Regular; 
 
+}
+.centered {
+  position: relative;
+  top: 70%;
+  left: 50%;
+  transform: translate(-53%, 0%);
+  width: 40%;
+  background-color: #F9F6F2;
+  border: 36px solid orange;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 10px;
+
+  border-image:
+      url("../assets/Form-bg.png")
+      70 / 50px    
+      round;                  
 }
 </style>

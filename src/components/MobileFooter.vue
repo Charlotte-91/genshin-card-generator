@@ -58,8 +58,9 @@ export default {
 .social {
   position: bottom;
   align-items: center;
-  position: absolute;
-  margin: 10px
+  position: absolute; 
+  width: 100%;
+  margin: 50px 0px;
 }
 
 .mobile-button {
@@ -70,6 +71,7 @@ export default {
   font-size: 25px;
   border-radius: 4px;
   font-family: SuezOne-Regular; 
+  margin: 20px;
 }
 twitter-button {
   background-color: #1da1f2;

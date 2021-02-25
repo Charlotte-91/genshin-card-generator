@@ -1,6 +1,6 @@
 <template>
   <div className="App">
-    <div v-bind:style="{ height: '90vh', width: '95vw' }" ref="container" >
+    <div v-bind:style="{ height: '80vh', width: '95vw' }" ref="container" class="container">
       <v-stage ref="stage" :config="stageSize">
         <v-layer v-if="this.$route.params.playerName == undefined" ref="layer">
           <v-text :config="{text: `An Error occurred, please go back to the Home page`, fontSize: 15, x: 18, y:350, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
@@ -31,13 +31,15 @@
         </v-layer>
       </v-stage>
     </div>
+    <br>
     <div class="save-button">
-      <button class='mobile-button' v-on:click=save()>Save as image</button>
+      <button class='mobile-button' v-on:click=save()>Save image</button>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -68,7 +70,6 @@ export default {
         var dataURL = (this.$refs.stage.getStage()).toDataURL({ pixelRatio: 3 });
         this.downloadURI(dataURL, 'genshincard.png');
       },
-    
   },
   created() {
     if (this.$route.params.UID == undefined) {
@@ -132,16 +133,37 @@ export default {
 .mobile-button {
   background-color: #464545;
   color: white;
-  padding: 10px 50px;
+  padding: 15px 80px;
   text-align: center;
   font-size: 20px;
+  font-family: SuezOne-Regular;
+  cursor: pointer;
   border-radius: 4px;
-  font-family: SuezOne-Regular; 
 }
 .save-button {
-  float: bottom;
-  position: absolute;
-  margin: 120px 60px;
-  align-items: center;
+    top: 100px;
+    bottom: 50px;
+    position: relative;
+}
+@media screen and (max-width: 399px) {
+  .save-button {
+    top: 200px;
+    bottom: 50px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 700px) {
+  .save-button {
+    top: -150px;
+    /* bottom: 50px; */
+    position: relative;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .save-button {
+    top: -350px;
+    /* bottom: 50px; */
+    position: relative;
+  }
 }
 </style>

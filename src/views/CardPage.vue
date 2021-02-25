@@ -15,10 +15,12 @@
         </div>
         <div v-else>
           <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-          <div class='cardLayout'>
-            <mobile-card/>
+          <mobile-card/>
+          <br>
+          <div class='social'>
+            
+            <MobileFooter/>
           </div>
-          <MobileFooter/>
         </div>
       </div>
     </div>
@@ -75,7 +77,7 @@ body{
   font-size: 30px;
 }
 .top-gap {
-  height: 10px;
+  height: 15px;
 
 }
 .header {
@@ -109,14 +111,6 @@ body{
   bottom: 0;
   margin: -200px -5px;
 }
-.social {
-  bottom: 0%;
-  align-items: center;
-  position: absolute;
-}
-.cardLayout {
-  margin: 90px 10px;
-}
 button {
   background-color: #464545;
   color: white;
@@ -148,5 +142,34 @@ app {
   left: 50%;
   transform: translate(-50%, -50%);
   
+}
+.social {
+  position: relative;
+  top: 10px;
+}
+
+@media screen and (max-width: 399px) {
+    .social {
+    position: relative;
+    top: 110px;
+  }
+}
+@media screen and (min-width: 399px) {
+    .social {
+    position: relative;
+    top: 20px;
+  }
+}
+@media screen and (min-width: 700px) {
+    .social {
+    position: relative;
+    top: -230px;
+  }
+}
+@media screen and (min-width: 1000px) {
+    .social {
+    position: relative;
+    top: -440px;
+  }
 }
 </style>
