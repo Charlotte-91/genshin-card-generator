@@ -76,8 +76,12 @@ body{
   font-family: SuezOne-Regular; 
   font-size: 30px;
 }
+.card {
+  padding-top: 50px;
+}
 .top-gap {
-  height: 15px;
+  height: 50px;
+  margin: 20px;
 
 }
 .header {
@@ -96,8 +100,9 @@ body{
 }
 .body {
   font-size: 25px;
-  padding: 20px;
+  padding: 40px;
   font-family: SuezOne-Regular; 
+
 }
 .footer {
 
