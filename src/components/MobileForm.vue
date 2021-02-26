@@ -392,7 +392,7 @@ button {
   cursor: pointer;
   border-radius: 4px;
   font-family: SuezOne-Regular; 
-
+  align-items: center;
 }
 
 app {
