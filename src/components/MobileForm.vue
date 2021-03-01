@@ -394,6 +394,7 @@ button {
   border-radius: 4px;
   font-family: SuezOne-Regular; 
   align-items: center;
+  margin: auto;
 }
 
 app {
