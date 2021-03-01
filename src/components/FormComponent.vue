@@ -2,7 +2,7 @@
   <div class="body">
     <div class ="container">
       <!-- <img src="../assets/Form-bg.png" className="Form-bg" alt="Form background"/> -->
-        <div class="centered">
+        <div class="form">
           <div class="summary-text-red" v-if="$v.form.$error">
             Form has errors
           </div>
@@ -423,6 +423,10 @@ body{
   font-family: SuezOne-Regular; 
   font-size: 25px;
 }
+.container {
+  max-width: 100%;
+  margin: 0px auto;
+}
 .header {
   top: 0;
   padding: 0px;
@@ -452,7 +456,7 @@ button {
   padding: 10px 120px;
   text-align: center;
   font-size: 25px;
-  margin: 30px 100px;
+  margin: auto;
   cursor: pointer;
   border-radius: 4px;
   font-family: SuezOne-Regular; 
@@ -472,7 +476,7 @@ input[type=text], select, textarea {
   border-radius: 4px;
   resize: vertical;
 }
-.centered {
+.form {
   position: relative;
   top: 70%;
   left: 50%;
