@@ -23,6 +23,7 @@
                     <option value="Diona-cd">Diona</option>
                     <option value="Fischl-cd">Fischl</option>
                     <option value="Ganyu-cd">Ganyu</option>
+                    <option value="Hutao-cd">Hu Tao</option>
                     <option value="Jean-cd">Jean</option>
                     <option value="Kaeya-cd">Kaeya</option>
                     <option value="Keqing-cd">Keqing</option>
@@ -76,6 +77,7 @@
                       <option value="Diona-small">Diona</option>
                       <option value="Fischl-small">Fischl</option>
                       <option value="Ganyu-small">Ganyu</option>
+                      <option value="Hutao-small">Hu Tao</option>
                       <option value="Jean-small">Jean</option>
                       <option value="Kaeya-small">Kaeya</option>
                       <option value="Keqing-small">Keqing</option>
@@ -112,6 +114,7 @@
                       <option value="Diona-small">Diona</option>
                       <option value="Fischl-small">Fischl</option>
                       <option value="Ganyu-small">Ganyu</option>
+                      <option value="Hutao-small">Hu Tao</option>
                       <option value="Jean-small">Jean</option>
                       <option value="Kaeya-small">Kaeya</option>
                       <option value="Keqing-small">Keqing</option>
@@ -148,6 +151,7 @@
                       <option value="Diona-small">Diona</option>
                       <option value="Fischl-small">Fischl</option>
                       <option value="Ganyu-small">Ganyu</option>
+                      <option value="Hutao-small">Hu Tao</option>
                       <option value="Jean-small">Jean</option>
                       <option value="Kaeya-small">Kaeya</option>
                       <option value="Keqing-small">Keqing</option>
@@ -184,6 +188,7 @@
                       <option value="Diona-small">Diona</option>
                       <option value="Fischl-small">Fischl</option>
                       <option value="Ganyu-small">Ganyu</option>
+                      <option value="Hutao-small">Hu Tao</option>
                       <option value="Jean-small">Jean</option>
                       <option value="Kaeya-small">Kaeya</option>
                       <option value="Keqing-small">Keqing</option>
