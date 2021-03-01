@@ -15,6 +15,7 @@
         </div>
         <div v-else>
           <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+          <div class='top-gap'/>
           <mobile-card/>
           <br>
           <div class='social'>
@@ -81,7 +82,7 @@ body{
 }
 .top-gap {
   height: 50px;
-  margin: 20px;
+
 
 }
 .header {

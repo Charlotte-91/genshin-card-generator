@@ -409,7 +409,7 @@ input {
   input[type="radio"]:checked ~ &,
   input[type="checkbox"]:checked ~ & {
     opacity: 1;
-    max-height: 100px;
+    max-height: 1000px;
     overflow: visible;
     padding: 10px 20px;
     transform: scale(1);
