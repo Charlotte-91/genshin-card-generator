@@ -1,6 +1,6 @@
 <template>
   <div className="App">
-    <div v-bind:style="{ height: '80vh', width: '95vw' }" ref="container" class="container">
+    <div v-bind:style="{ height: '50vh' }" ref="container" class="container">
       <v-stage ref="stage" :config="stageSize">
         <v-layer v-if="this.$route.params.playerName == undefined" ref="layer">
           <v-text :config="{text: `An Error occurred, please go back to the Home page`, fontSize: 15, x: 18, y:350, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
@@ -131,24 +131,24 @@ export default {
 <style scoped>
 
 .mobile-button {
-  background-color: #464545;
+  background-color: #3b3b3b;
   color: white;
-  padding: 15px 80px;
+  padding: 50px 280px;
   text-align: center;
-  font-size: 20px;
+  font-size: 60px;
   font-family: SuezOne-Regular;
   cursor: pointer;
   border-radius: 4px;
 }
 .save-button {
-    top: 100px;
-    bottom: 50px;
+    top: 0px;
+    bottom: 0px;
     position: relative;
 }
 @media screen and (max-width: 399px) {
   .save-button {
-    top: 200px;
-    bottom: 50px;
+    top: 0px;
+    bottom: 0px;
     position: relative;
   }
 }

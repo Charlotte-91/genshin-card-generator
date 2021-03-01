@@ -14,8 +14,8 @@
           <Footer/>
         </div>
         <div v-else>
-          <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-          <div class='top-gap'/>
+          <meta name="viewport" content="width=device-width,initial-scale=0.28,maximum-scale=2" />
+          <div class='mobile-top-gap'/>
           <mobile-card/>
           <br>
           <div class='social'>
@@ -80,10 +80,8 @@ body{
 .card {
   padding-top: 50px;
 }
-.top-gap {
-  height: 50px;
-
-
+.mobile-top-gap {
+  height: 100px;
 }
 .header {
   top: 0;
@@ -118,7 +116,7 @@ body{
   margin: -200px -5px;
 }
 button {
-  background-color: #464545;
+  background-color: #3b3b3b;
   color: white;
   padding: 10px 150px;
   text-align: center;
@@ -130,7 +128,7 @@ button {
   align-items: center;
 }
 .mobile-button {
-  background-color: #464545;
+  background-color: #3b3b3b;
   color: white;
   padding: 10px 50px;
   text-align: center;
@@ -157,7 +155,7 @@ app {
 @media screen and (max-width: 399px) {
     .social {
     position: relative;
-    top: 110px;
+    top: 0px;
   }
 }
 @media screen and (min-width: 399px) {

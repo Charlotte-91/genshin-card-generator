@@ -48,37 +48,37 @@ export default {
 .footer {
   bottom: 0;
   height: 20px;
-  font-size: 15px;
+  font-size: 45px;
   color: rgb(36, 34, 34);
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   position: absolute;
-  margin: -300px -5px;
+  margin: -620px -5px;
 }
 .social {
   position: bottom;
   align-items: center;
   position: absolute; 
   width: 100%;
-  margin: 50px 0px;
+  margin: 0px 0px;
 }
 
 .mobile-button {
-  background-color: #464545;
+  background-color: #3b3b3b;
   color: white;
-  padding: 10px 50px;
+  padding: 45px 370px;
   text-align: center;
-  font-size: 25px;
+  font-size: 60px;
   border-radius: 4px;
   font-family: SuezOne-Regular; 
-  margin: 20px;
+  margin: 100px;
 }
 twitter-button {
   background-color: #1da1f2;
   color: #FFF;
-  padding: 17px 10px;
+  padding: 40px 200px;
   text-align: center;
-  font-size: 17px;
+  font-size: 60px;
   cursor: pointer;
   border-radius: 4px;
   font-family: SuezOne-Regular; 

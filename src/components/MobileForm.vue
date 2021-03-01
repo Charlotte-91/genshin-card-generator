@@ -1,5 +1,6 @@
 <template>
   <div class="body">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <div class="centered">
     <div class="summary-text-red" v-if="$v.form.$error">
         Form has errors
