@@ -7,7 +7,7 @@
     </div>
         <form @submit.prevent="submit">
             <div class="px-4" :class="{ 'hasError': $v.form.cardChara.$error }">
-                <label for="card-design">Card design:</label>
+                <label for="card-design">Card design:<star>*</star></label>
                 <br>
                 <select v-model='form.cardChara'>
                     <option hidden disabled selected value> -- select an option -- </option>
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="px-4" :class="{ 'hasError': $v.form.playerName.$error }">
-                    <label for="player-name">Player name:</label>
+                    <label for="player-name">Player name:<star>*</star></label>
                     <br>
                     <input type="text" v-model="form.playerName"/>
                 </div>
@@ -56,13 +56,13 @@
 
 
                 <div class="px-4" :class="{ 'hasError': $v.form.AR.$error }">
-                    <label for="AR">Adventure Rank:</label>
+                    <label for="AR">Adventure Rank:<star>*</star></label>
                     <br>
                     <input type="text" v-model="form.AR"/>
                 </div>
           
 
-                <label for="team-1">Choose team:</label>
+                <label for="team-1">Choose team:<star>*</star></label>
                   <div class="px-4" :class="{ 'hasError': $v.form.team1.$error }">
                     <select v-model='form.team1'>
                       <option hidden disabled selected value> -- select an option -- </option>
@@ -223,7 +223,7 @@
                     </div>
 
                     <div class="px-4" :class="{ 'hasError': $v.form.platform.$error }">
-                        <label for="platform">Platform:</label>
+                        <label for="platform">Platform:<star>*</star></label>
                         <br>
                         <select v-model='form.platform'>
                         <option hidden disabled selected value> -- select an option -- </option>
@@ -235,7 +235,7 @@
                     </div>
 
                     <div class="px-4" :class="{ 'hasError': $v.form.server.$error }">
-                        <label for="server">Server:</label>
+                        <label for="server">Server:<star>*</star></label>
                         <br>
                         <select v-model='form.server'>
                         <option hidden disabled selected value> -- select an option -- </option>
@@ -379,6 +379,10 @@ input {
   font-family: SuezOne-Regular; 
   align-content: center;
   
+}
+star {
+  font-family: SuezOne-Regular; 
+  color: red;
 }
 .footer {
   position: bottom;

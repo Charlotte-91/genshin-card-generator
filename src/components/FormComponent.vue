@@ -10,7 +10,7 @@
             <div class ="row">
               <div class="px-4" :class="{ 'hasError': $v.form.cardChara.$error }">
                 <div class="col-25">
-                  <label for="card-design">Card design:</label>
+                  <label for="card-design">Card design:<star>*</star></label>
                 </div>
                 <div class="col-75">
                   <select v-model='form.cardChara'>
@@ -56,7 +56,7 @@
             <div class="px-4" :class="{ 'hasError': $v.form.playerName.$error }">
               <div class="row">
                 <div class="col-25">
-                  <label for="player-name">Player name:</label>
+                  <label for="player-name">Player name:<star>*</star></label>
                 </div>
                 <div class="col-75">
                   <input type="text" v-model="form.playerName"/>
@@ -68,7 +68,7 @@
             <div class="px-4" :class="{ 'hasError': $v.form.AR.$error }">
               <div class="row">
                 <div class="col-25">
-                  <label for="AR">Adventure Rank:</label>
+                  <label for="AR">Adventure Rank:<star>*</star></label>
                 </div>
                 <div class="col-75">
                   <input type="text" v-model="form.AR"/>
@@ -78,7 +78,7 @@
           
             <div class="row">
               <div class="col-25">
-                <label for="team-1">Choose team:</label>
+                <label for="team-1">Choose team:<star>*</star></label>
               </div>
                 <div class="col-75">
                   <div class="px-4" :class="{ 'hasError': $v.form.team1.$error }">
@@ -252,7 +252,7 @@
               <div class="px-4" :class="{ 'hasError': $v.form.platform.$error }">
                 <div class="row">
                   <div class="col-25">
-                    <label for="platform">Platform:</label>
+                    <label for="platform">Platform:<star>*</star></label>
                   </div>
                   <div class="col-75">
                     <select v-model='form.platform'>
@@ -269,7 +269,7 @@
               <div class="px-4" :class="{ 'hasError': $v.form.server.$error }">
                 <div class="row">
                   <div class="col-25">
-                    <label for="server">Server:</label>
+                    <label for="server">Server:<star>*</star></label>
                   </div>
                   <div class="col-75">
                     <select v-model='form.server'>
@@ -427,6 +427,10 @@ body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
   font-size: 25px;
+}
+star {
+  font-family: SuezOne-Regular; 
+  color: red;
 }
 .container {
   max-width: 100%;
