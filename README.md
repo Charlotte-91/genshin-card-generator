@@ -6,6 +6,9 @@ Genshin Impact Card Generator
 =====
 ### A small web app which allows people to create a 'card' which displays their stats for the game Genshin Impact. This card can then be downloaded as a .PNG or shared to twitter 
 
+## Website
+
+https://genshin-impact-card-generator.herokuapp.com/
 
 ## Key Features
 
@@ -45,12 +48,11 @@ Card page with mutiplayer card
 ![Card Page (multiplayer card)](./readme-img/shot5.JPG)
 
 
-## To do:
+## Future Improvements:
 
 - Attach image to twitter share button, so tweet draft includes image automatically
 - Make homepage more responsive
-- Check layout on other browers/devices and adjust accordingly
-
+- Add new characters when approproiate
 
 ## Technologies
 [Node.js](https://nodejs.org/)
@@ -63,7 +65,9 @@ Card page with mutiplayer card
 
 [vue-social-sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
 
-## Copyright
+[Heroku](https://www.heroku.com)
 
+## Copyright
+© All rights reserved by miHoYo. Other properties belong to their respective owners.
 Genshin Card Generator is not affiliated with or endorsed by miHoYo.
 Assets used are owned by [miHoYo](https://genshin.mihoyo.com/)

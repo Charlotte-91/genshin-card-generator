@@ -33,6 +33,15 @@ const routes = [
   // which is lazy-loaded when the route is visited.
   component: () => import(/* webpackChunkName: "CardDesign" */ '../views/ContactPage.vue'),
   props: true
+},
+{
+  path: '/FAQ',
+  name: 'FAQ',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/faqPage.vue'),
+  props: true
 }
 
 ]

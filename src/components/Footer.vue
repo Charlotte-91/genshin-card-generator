@@ -20,8 +20,10 @@
     </div>
     <div class= "footer">
       <br>
-      Genshin Card Generator is not affiliated with or endorsed by miHoYo. |
-      <router-link :to="`contact`"><b>Contact Us</b></router-link>
+      Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
+      <br>
+      © All rights Resevered by miHoYo. Other properies belong to their respective owners.|
+      <router-link :to="`contact`"><b>Contact Us</b></router-link> | <router-link :to="`FAQ`"><a>FAQ</a></router-link>
     </div>
   </div>
 </template>

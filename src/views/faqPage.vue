@@ -1,37 +1,36 @@
 <template>
   <div className="Contact">
-         <div v-if="!isMobile()">
+            <div v-if="!isMobile()">
                 <header className="App-header">
                     <img src="../assets/genshin-logo.png" height='260px'/>
                 </header>
-                <ContactForm/>
-                 <button @click="$router.push({name: 'Home'})">Back</button>
+                <FAQ/>
             </div>
             <div v-else>
                 <header className="App-header">
                     <img src="../assets/genshin-logo.png" width='80%'/>
                 </header>
-                <MobileContactForm/>
+                <MobileFAQ/>
             </div>
-        <div class= "footer">
-            Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
-      <br>
-          © All rights Resevered by miHoYo. Other properies belong to their respective owners.|
-          <router-link :to="`FAQ`"><a>FAQ</a></router-link>
-        </div>
+    <div class= "footer">
+        Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
+        <br>
+        © All rights Resevered by miHoYo. Other properies belong to their respective owners. |
+        <router-link :to="`contact`"><a>Contact Us</a></router-link> 
+    </div>
   </div>
 </template>
 
 <script>
 
-import ContactForm from "../components/ContactForm.vue";
-import MobileContactForm from "../components/MobileContactForm.vue";
+import MobileFAQ from "../components/MobileFAQ.vue";
+import FAQ from "../components/FAQ.vue"
 
 export default {
-  name: 'Contact',
+  name: 'Home',
   components: {
-    ContactForm,
-    MobileContactForm
+    MobileFAQ,
+    FAQ
   },
   methods: {
     isMobile() {
@@ -45,7 +44,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.app{
+    width: 100%
+}
 .header {
   top: 0;
   padding: 0px;
@@ -79,5 +81,10 @@ button {
   border-radius: 4px;
   font-family: SuezOne-Regular; 
 
+}
+ a {
+    text-decoration: none;
+    color: rgb(145, 136, 136);
+    cursor: pointer;
 }
 </style>
