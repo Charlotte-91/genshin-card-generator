@@ -17,7 +17,7 @@
             Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
       <br>
           © All rights Resevered by miHoYo. Other properies belong to their respective owners.|
-          <router-link :to="`FAQ`"><a>FAQ</a></router-link>
+          <router-link :to="`FAQ`"><b>FAQ</b></router-link>
         </div>
   </div>
 </template>
@@ -79,5 +79,10 @@ button {
   border-radius: 4px;
   font-family: SuezOne-Regular; 
 
+}
+b {
+    text-decoration: none;
+    color: rgb(145, 136, 136);
+    cursor: pointer;
 }
 </style>
