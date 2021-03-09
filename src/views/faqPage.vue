@@ -15,7 +15,7 @@
     <div class= "footer">
         Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
         <br>
-        © All rights Resevered by miHoYo. Other properies belong to their respective owners. |
+        © All rights Reserved by miHoYo. Other properies belong to their respective owners. |
         <router-link :to="`contact`"><a>Contact Us</a></router-link> 
     </div>
   </div>
