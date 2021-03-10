@@ -9,7 +9,9 @@
               <CardGenerator/>
             </div>
           <div class = "savetext">
-            Please right-click  on image and select "Save Image As" to save to your device
+            Please right-click  on image and select "Save Image As" to save to your device.
+            <br>
+            Please save the image and upload it to twitter manually. We have not yet implemented auto upload! Thank you!
           </div>
           <Footer/>
         </div>
@@ -19,7 +21,6 @@
           <mobile-card/>
           <br>
           <div class='social'>
-            
             <MobileFooter/>
           </div>
         </div>
@@ -97,6 +98,7 @@ body{
   color: grey;
   top: 20px;
 }
+
 .body {
   font-size: 25px;
   padding: 40px;

@@ -33,6 +33,9 @@
     </div>
     <br>
     <div class="save-button">
+      <div class = "mobilesavetext">
+            Please save the image and upload it to twitter manually. We have not yet implemented auto upload! Thank you!
+    </div>
       <button class='mobile-button' v-on:click=save()>Save image</button>
     </div>
   </div>
@@ -144,6 +147,13 @@ export default {
     top: 0px;
     bottom: 0px;
     position: relative;
+}
+.mobilesavetext {
+  font-size: 45px;
+  position: relative;
+  padding: 50px;
+  font-family: SuezOne-Regular; 
+  color: grey;
 }
 @media screen and (max-width: 399px) {
   .save-button {
