@@ -16,7 +16,7 @@
                     <option value="Amber-cd">Amber</option>
                     <option value="Barbara-cd">Barbara</option>
                     <option value="Beidou-cd">Beidou</option>
-                    <option value="Bennet-cd">Bennet</option>
+                    <option value="Bennet-cd">Bennett</option>
                     <option value="Chongyun-cd">Chongyun</option>
                     <option value="Dainsleif-cd">Dainsleif</option>
                     <option value="Diluc-cd">Diluc</option>
@@ -71,7 +71,7 @@
                       <option value="Amber-small">Amber</option>
                       <option value="Barbara-small">Barbara</option>
                       <option value="Beidou-small">Beidou</option>
-                      <option value="Bennet-small">Bennet</option>
+                      <option value="Bennet-small">Bennett</option>
                       <option value="Chongyun-small">Chongyun</option>
                       <option value="Diluc-small">Diluc</option>
                       <option value="Diona-small">Diona</option>
@@ -108,7 +108,7 @@
                       <option value="Amber-small">Amber</option>
                       <option value="Barbara-small">Barbara</option>
                       <option value="Beidou-small">Beidou</option>
-                      <option value="Bennet-small">Bennet</option>
+                      <option value="Bennet-small">Bennett</option>
                       <option value="Chongyun-small">Chongyun</option>
                       <option value="Diluc-small">Diluc</option>
                       <option value="Diona-small">Diona</option>
@@ -145,7 +145,7 @@
                       <option value="Amber-small">Amber</option>
                       <option value="Barbara-small">Barbara</option>
                       <option value="Beidou-small">Beidou</option>
-                      <option value="Bennet-small">Bennet</option>
+                      <option value="Bennet-small">Bennett</option>
                       <option value="Chongyun-small">Chongyun</option>
                       <option value="Diluc-small">Diluc</option>
                       <option value="Diona-small">Diona</option>
@@ -182,7 +182,7 @@
                       <option value="Amber-small">Amber</option>
                       <option value="Barbara-small">Barbara</option>
                       <option value="Beidou-small">Beidou</option>
-                      <option value="Bennet-small">Bennet</option>
+                      <option value="Bennet-small">Bennett</option>
                       <option value="Chongyun-small">Chongyun</option>
                       <option value="Diluc-small">Diluc</option>
                       <option value="Diona-small">Diona</option>
