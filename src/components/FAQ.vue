@@ -19,6 +19,14 @@
                 <h2>I have a suggestion or issue, can I contact the creator?</h2>
                 <p>Of course! Please fill out the form on our <router-link :to="`contact`"><a>contact page</a></router-link> </p>
             </div>
+            <div class='question-wrap'>
+                <h2>Can I see your Github?</h2>
+                <p>Sure! Here is a link to this project on my <a href="https://github.com/Charlotte-91/genshin-card-generator" >Github!</a></p> 
+            </div>
+            <div class='question-wrap'>
+                <h2>Are you currently in search of work?</h2>
+                <p>I am indeed! I'm looking for a Junior Software Engineer/Developer Role in the UK, please <router-link :to="`contact`"><a>contact me</a></router-link> if you think there is a role I would be suitable for.</p>
+            </div>
         </div>
     </body>
     <button @click="$router.push({name: 'Home'})">Back</button>
@@ -87,7 +95,7 @@ button {
     cursor: pointer;
 }
 .question-wrap {
-    padding: 20px;
+    padding: 15px;
 }
 
 </style>
