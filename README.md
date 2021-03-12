@@ -47,6 +47,9 @@ Card page with mutiplayer card
 
 ![Card Page (multiplayer card)](./readme-img/shot5.JPG)
 
+## Featured on: 
+
+[Realsport101](https://realsport101.com/genshin-impact/genshin-impact-card-generator-graphical-team-display/)
 
 ## Future Improvements:
 
