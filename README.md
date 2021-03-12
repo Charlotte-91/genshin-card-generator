@@ -26,6 +26,31 @@ https://genshin-impact-card-generator.herokuapp.com/
 - A Twitter share button will be provided for instant shareability
 - An option for the User to not include personal/ multiplayer infomation
 
+## Featured on: 
+
+[Realsport101](https://realsport101.com/genshin-impact/genshin-impact-card-generator-graphical-team-display/)
+
+## Future Improvements:
+
+- Attach image to twitter share button, so tweet draft includes image automatically
+- Make homepage more responsive
+- Add new characters when approproiate
+- Implement Session Storage so errors do not occur on refresh of the card page
+- Once a character is chosen, remove them on subsequent <select> tags to prevent duplicated characters
+
+## Technologies
+[Node.js](https://nodejs.org/)
+
+[Vue.js](https://vuejs.org/)
+
+[Vue Router](https://router.vuejs.org/)
+
+[Vue Konva](https://konvajs.org/docs/vue/index.html)
+
+[vue-social-sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
+
+[Heroku](https://www.heroku.com)
+
 ## Screenshots
 Home page
 
@@ -46,29 +71,6 @@ Card page with non-multiplayer card
 Card page with mutiplayer card
 
 ![Card Page (multiplayer card)](./readme-img/shot5.JPG)
-
-## Featured on: 
-
-[Realsport101](https://realsport101.com/genshin-impact/genshin-impact-card-generator-graphical-team-display/)
-
-## Future Improvements:
-
-- Attach image to twitter share button, so tweet draft includes image automatically
-- Make homepage more responsive
-- Add new characters when approproiate
-
-## Technologies
-[Node.js](https://nodejs.org/)
-
-[Vue.js](https://vuejs.org/)
-
-[Vue Router](https://router.vuejs.org/)
-
-[Vue Konva](https://konvajs.org/docs/vue/index.html)
-
-[vue-social-sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
-
-[Heroku](https://www.heroku.com)
 
 ## Copyright
 © All rights reserved by miHoYo. Other properties belong to their respective owners.
