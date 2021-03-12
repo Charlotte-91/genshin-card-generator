@@ -36,7 +36,8 @@ https://genshin-impact-card-generator.herokuapp.com/
 - Make homepage more responsive
 - Add new characters when approproiate
 - Implement Session Storage so errors do not occur on refresh of the card page
-- Once a character is chosen, remove them on subsequent <select> tags to prevent duplicated characters
+- Once a character is chosen, remove them on subsequent select tags to prevent duplicated characters
+
 
 ## Technologies
 [Node.js](https://nodejs.org/)
