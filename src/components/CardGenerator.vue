@@ -29,11 +29,14 @@
         <v-image :config="{image: team4, x: 540, y:390}"/>
       </v-layer>
     </v-stage>
+    <button class='mobile-button' v-on:click=tweetImage()>TWEET!</button>
   </div>
 </template>
 
 <script>
 export default {
+  
+
   data() {
     return {
       stageSize: {
@@ -47,7 +50,19 @@ export default {
       team4: null
     };
   },
-  
+  tweetImage() {
+    const Twit = require('twit');
+    const T = new Twit( config );
+    T.post( 'statuses/update'), { status: 'Checkout Genshin Impact Card Generator!!'}, function ( err ) {
+        if ( err ){
+          console.log( 'error:', err );
+        }
+        else{
+          console.log( 'tweeting...' );
+        }
+    }
+
+  },
   created() {
     if (this.$route.params.UID == undefined) {
       const image = new window.Image();

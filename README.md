@@ -26,11 +26,11 @@ https://genshin-impact-card-generator.herokuapp.com/
 - A Twitter share button will be provided for instant shareability
 - An option for the User to not include personal/ multiplayer infomation
 
-## Featured on: 
+## Featured on:
 
 [Realsport101](https://realsport101.com/genshin-impact/genshin-impact-card-generator-graphical-team-display/)
 
-## Future Improvements:
+## Future Improvements
 
 - Attach image to twitter share button, so tweet draft includes image automatically
 - Make homepage more responsive
