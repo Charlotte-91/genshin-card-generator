@@ -233,7 +233,24 @@
                 </div>
               </div>
             </div>
-            
+
+            <div class ="row">
+              <div class="px-4" :class="{ 'hasError': $v.form.pet.$error }">
+                <div class="col-25">
+                  <label for="pet">Pet:</label>
+                </div>
+                <div class="col-75">
+                  <select v-model='form.pet'>
+                    <option hidden disabled selected value> -- select an option -- </option>
+                    <option value="none">None</option>
+                    <option value="blue-seelie">Dayflower Seelie</option>
+                    <option value="yellow-seelie">Curcuma Seelie</option>
+                    <option value="pink-seelie">Rosé Seelie</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
             <input type="checkbox" name="mutliplayer" id="mutliplayer-choice">
             <label for="multiplayer-choice"> Multiplayer</label>
           
@@ -325,6 +342,7 @@ export default {
         team2: "",
         team3: "",
         team4: "",
+        pet: "",
         platform: "",
         server: "",
         twitter: ""
@@ -340,6 +358,7 @@ props: {
     team2: String,
     team3: String,
     team4: String,
+    pet: String,
     platform: String,
     server: String,
     twitter: String,
@@ -355,6 +374,7 @@ validations: {
         team2: { required },
         team3: { required },
         team4: { required },
+        pet: {},
         platform: { },
         server: { },
         twitter: {}
@@ -374,6 +394,7 @@ validations: {
           team2: this.form.team2,
           team3: this.form.team3,
           team4: this.form.team4,
+          pet: this.form.pet,
           }})
       else
       this.$router.push({name: 'CardPage', 
@@ -386,6 +407,7 @@ validations: {
           team2: this.form.team2,
           team3: this.form.team3,
           team4: this.form.team4,
+          pet: this.form.pet,
           platform: this.form.platform,
           server: this.form.server,
           twitter: this.form.twitter
