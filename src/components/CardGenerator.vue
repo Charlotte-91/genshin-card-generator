@@ -13,6 +13,7 @@
         <v-image :config="{image: team2, x: 170, y:390}"/>
         <v-image :config="{image: team3, x: 400, y:390}"/>
         <v-image :config="{image: team4, x: 400, y:200}"/>
+        <v-image :config="{image: pet, x: 660, y:50}"/>
       </v-layer>
       <v-layer v-else>
         <v-image :config="{image: image}"/>
@@ -27,6 +28,7 @@
         <v-image :config="{image: team2, x: 240, y:390}"/>
         <v-image :config="{image: team3, x: 390, y:390}"/>
         <v-image :config="{image: team4, x: 540, y:390}"/>
+        <v-image :config="{image: pet, x: 660, y:50}"/>
       </v-layer>
     </v-stage>
   </div>
@@ -44,7 +46,8 @@ export default {
       team1: null,
       team2: null,
       team3: null,
-      team4: null
+      team4: null,
+      pet: null
     };
   },
   
@@ -75,6 +78,11 @@ export default {
       team4.onload = () => {
         this.team4 = team4;
       };
+      const pet = new window.Image();
+      pet.src = require('../assets/pet/' + this.$route.params.pet + '.png');
+      pet.onload = () => {
+      this.pet = pet;
+      };
     }else{
       const image = new window.Image();
       image.src = require('../assets/card-bgs/' + this.$route.params.cardChara + '.png');
@@ -100,6 +108,11 @@ export default {
       team4.src = require('../assets/teams/' + this.$route.params.team4 + '.png');
       team4.onload = () => {
         this.team4 = team4;
+      };
+      const pet = new window.Image();
+      pet.src = require('../assets/pet/' + this.$route.params.pet + '.png');
+      pet.onload = () => {
+      this.pet = pet;
       };
     }
   }
