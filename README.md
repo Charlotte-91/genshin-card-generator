@@ -30,6 +30,11 @@ https://genshin-impact-card-generator.herokuapp.com/
 
 [Realsport101](https://realsport101.com/genshin-impact/genshin-impact-card-generator-graphical-team-display/)
 
+## Future Features: 
+
+- Add ability to choose and display in-game pet (done!)
+- Add Character load out option, to showcase weapons and artifacts on team memebers (in progress)
+
 ## Future Improvements:
 
 - Attach image to twitter share button, so tweet draft includes image automatically
