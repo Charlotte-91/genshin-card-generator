@@ -1,46 +1,56 @@
 <template>
     <body>
       <div class ="form">
-        <div class="col-25">
-          <label class="typo__label">Player Name:</label>
-        </div>
-        <div class="col-75">
-          <div class="multiselect">
-            <input class="multiselect__tags" type='input' v-model="playerName" min='0' max='60' /> 
+        <div class="row">
+          <div class="col-25">
+            <label class="typo__label">Player Name:</label>
+          </div>
+          <div class="col-75">
+            <div class="multiselect">
+              <input class="form-style"  type='input' v-model="playerName" min='0' max='60' /> 
+            </div>
           </div>
         </div>
 
-        <div class="col-25">
-          <label class="typo__label">UID:</label>
-        </div>
-        <div class="col-75">
-          <div class="multiselect">
-            <input class="multiselect__tags" type='input' v-model="UID" min='0' max='60' /> 
+        <div class="row">
+          <div class="col-25">
+            <label class="typo__label">AR:</label>
+          </div>
+          <div class="col-75">
+            <div class="multiselect">
+              <input class="form-style" type='number' v-model="AR" min='0' max='60' /> 
+            </div>
           </div>
         </div>
-        <div class="col-25">
-          <label class="typo__label">Spiral Abyss Progress:</label>
-        </div>
-        <div class="col-75">
-          <div class="multiselect">
-            <input class="multiselect__tags" type='input' v-model="SA" min='0' max='60' /> 
+        <div class="row">
+          <div class="col-25">
+            <label class="typo__label">Spiral Abyss Progress:</label>
+          </div>
+          <div class="col-75">
+            <div class="multiselect">
+              <input class="form-style" type='input' v-model="SA" min='0' max='60' /> 
+            </div>
           </div>
         </div>
 
-      <div class="col-25">
-        <label class="typo__label">Card Design:</label>
-      </div>
-      <div class="col-75">
-        <multiselect v-model="cardValue" :options="cardOptions" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>
+      <div class="row">
+        <div class="col-25">
+          <label class="typo__label">Card Design:</label>
+        </div>
+        <div class="col-75">
+          <multiselect v-model="cardValue" :options="cardOptions" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>
+        </div>
       </div>
 
-      <div class="col-25">
-        <label class="typo__label">Team: </label>
-      </div>
-      <div class="col-75">
-        <multiselect v-model="value" :options="options" :multiple="true" :max="4" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your team" label="name" track-by="name" :preselect-first="false">
-            <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">{{ values.length }} options selected</span></template>
-        </multiselect>
+      <div class="row">
+        <div class="col-25">
+          <label class="typo__label">Team: </label>
+        </div>
+        <div class="col-75">
+          <multiselect v-model="value" :options="options" :multiple="true" :max="4" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your team" label="name" track-by="name" :preselect-first="false">
+              <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">{{ values.length }} options selected</span></template>
+          </multiselect>
+        </div>
       </div>
       <button class='mobile-button' v-on:click=submit()>Submit</button>
     </div>
@@ -76,7 +86,7 @@ export default {
   props: {
     cardDesign: String,
     playerName: String,
-    UID: Number,
+    AR: Number,
     SA: Number,
     team1: String,
     team2: String,
@@ -90,11 +100,25 @@ export default {
         this.team3 = this.value[2].id
         this.team4 = this.value[3].id
         this.cardDesign = this.cardValue
-        console.log(this.UID)
-      }
+        console.log(this.AR)
+
+        // this.$v.form.$touch();
+        // if(this.$v.form.$error) return
+        this.$router.push({name: 'CardPage', 
+        params: {
+          cardDesign : this.cardDesign, 
+          playerName: this.playerName,
+          AR: this.AR,
+          SA: this.SR,
+          team1: this.team1,
+          team2: this.team2,
+          team3: this.team3,
+          team4: this.team4,
+        }
+      })
+    }
   }
 }
-
 
 </script> 
 
@@ -112,15 +136,21 @@ body{
 }
 .col-25 {
   float: left;
-  width: 40%;
+  width: 45%;
   text-align: right;
   font-family: SuezOne-Regular; 
-  margin-bottom: 2px;
+  margin-bottom: 15px;
 }
 .col-75 {
   float: right;
-  width: 60%;
-  margin-bottom: 2px;
+  width: 45%;
+  margin-bottom: 10px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 2px;
 }
 .form {
   position: relative;
@@ -140,6 +170,25 @@ body{
       round;                  
 }
 
+.form-style {
+  min-height: 40px;
+  display: block;
+  padding: 8px 8px 8px 8px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #E8E8E8;
+  background: #fff;
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #000;
+  line-height: 1;
+  margin-bottom: 5px;
+
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
 button {
   background-color: #464545;
   color: white;
@@ -280,7 +329,7 @@ fieldset[disabled] .multiselect {
 .multiselect__tags {
   min-height: 40px;
   display: block;
-  padding: 8px 40px 0 8px;
+  padding: 8px 50px 2px 8px;
   border-radius: 5px;
   border: 1px solid #E8E8E8;
   background: #fff;
