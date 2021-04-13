@@ -246,6 +246,7 @@
                     <option value="blue-seelie">Dayflower Seelie</option>
                     <option value="yellow-seelie">Curcuma Seelie</option>
                     <option value="pink-seelie">Rosé Seelie</option>
+                    <option value="endora">Endora</option>
                   </select>
                 </div>
               </div>
