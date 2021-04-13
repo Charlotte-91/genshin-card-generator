@@ -9,10 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change form to stop duplicate characters being chosen for team selection [ In Progress ]
 - Auto upload of card image to twitter 
 
-## [1.1.1] - 2021-04-13
+## [1.2.1] - 2021-04-13
 
 ### Added
 - Added the new pet Endora
+
+
+## [1.2.0] - 2021-04-06
+
+### Added
+- Added Rosaria to card designs and team selection
 
 
 ## [1.1.0] - 2021-03-26

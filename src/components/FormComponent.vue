@@ -40,6 +40,7 @@
                     <option value="Paimon-cd">Paimon</option>
                     <option value="Qiqi-cd">Qiqi</option>
                     <option value="Razor-cd">Razor</option>
+                    <option value="Rosaria-cd">Rosaria</option>
                     <option value="Sucrose-cd">Sucrose</option>
                     <option value="Tartaglia-cd">Tartaglia</option>
                     <option value="Venti-cd">Venti</option>
@@ -107,6 +108,7 @@
                       <option value="Noelle-small">Noelle</option>
                       <option value="Qiqi-small">Qiqi</option>
                       <option value="Razor-small">Razor</option>
+                      <option value="Rosaria-small">Rosaria</option>
                       <option value="Sucrose-small">Sucrose</option>
                       <option value="Tartaglia-small">Tartaglia</option>
                       <option value="Venti-small">Venti</option>
@@ -145,6 +147,7 @@
                       <option value="Noelle-small">Noelle</option>
                       <option value="Qiqi-small">Qiqi</option>
                       <option value="Razor-small">Razor</option>
+                      <option value="Rosaria-small">Rosaria</option>
                       <option value="Sucrose-small">Sucrose</option>
                       <option value="Tartaglia-small">Tartaglia</option>
                       <option value="Venti-small">Venti</option>
@@ -183,6 +186,7 @@
                       <option value="Noelle-small">Noelle</option>
                       <option value="Qiqi-small">Qiqi</option>
                       <option value="Razor-small">Razor</option>
+                      <option value="Rosaria-small">Rosaria</option>
                       <option value="Sucrose-small">Sucrose</option>
                       <option value="Tartaglia-small">Tartaglia</option>
                       <option value="Venti-small">Venti</option>
@@ -221,6 +225,7 @@
                       <option value="Noelle-small">Noelle</option>
                       <option value="Qiqi-small">Qiqi</option>
                       <option value="Razor-small">Razor</option>
+                      <option value="Rosaria-small">Rosaria</option>
                       <option value="Sucrose-small">Sucrose</option>
                       <option value="Tartaglia-small">Tartaglia</option>
                       <option value="Venti-small">Venti</option>
