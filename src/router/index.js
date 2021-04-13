@@ -51,6 +51,15 @@ const routes = [
   // which is lazy-loaded when the route is visited.
   component: () => import(/* webpackChunkName: "CardDesign" */ '../views/TeamFormPage.vue'),
   props: true
+},
+{
+  path: '/Team-card',
+  name: 'Team card',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/TeamCompCard.vue'),
+  props: true
 }
 
 ]

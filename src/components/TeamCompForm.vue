@@ -28,7 +28,7 @@
           </div>
           <div class="col-75">
             <div class="multiselect">
-              <input class="form-style" type='input' v-model="SA" min='0' max='60' /> 
+              <input class="form-style" type='number' v-model="SA" /> 
             </div>
           </div>
         </div>
@@ -48,8 +48,17 @@
         </div>
         <div class="col-75">
           <multiselect v-model="value" :options="options" :multiple="true" :max="4" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your team" label="name" track-by="name" :preselect-first="false">
-              <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">{{ values.length }} options selected</span></template>
+              <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">{{ values.length }} team members selected</span></template>
           </multiselect>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label class="typo__label">{{this.team1}}'s weapon: </label>
+        </div>
+        <div class="col-75">
+          <multiselect v-model="weapon_1" :options="weapons" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>
         </div>
       </div>
       <button class='mobile-button' v-on:click=submit()>Submit</button>
@@ -77,10 +86,12 @@ export default {
         { name: 'Amber', id: 'Amber-banner' },
         { name: 'Barbara', id: 'Barbara-banner' },
         { name: 'Beidou', id: 'Beidou-banner' },
-        { name: 'Bennet', id: 'Bennet-banner' }
+        { name: 'Bennet', id: 'Bennett-banner' }
       ],
       cardValue: '',
-      cardOptions: ['Start Menu', 'Mondstat', 'Liyre']
+      cardOptions: ['Start Menu', 'Mondstat', 'Liyue'],
+      weapon_1: '',
+      weapons: ['Start Menu', 'Mondstat', 'Liyue']
     }
   },
   props: {
@@ -100,16 +111,16 @@ export default {
         this.team3 = this.value[2].id
         this.team4 = this.value[3].id
         this.cardDesign = this.cardValue
-        console.log(this.AR)
+        console.log(this.SA)
 
         // this.$v.form.$touch();
         // if(this.$v.form.$error) return
-        this.$router.push({name: 'CardPage', 
+        this.$router.push({name: 'Team card', 
         params: {
           cardDesign : this.cardDesign, 
           playerName: this.playerName,
           AR: this.AR,
-          SA: this.SR,
+          SA: this.SA,
           team1: this.team1,
           team2: this.team2,
           team3: this.team3,
