@@ -5,7 +5,7 @@
 Genshin Impact Card Generator
 =====
 <p align="center">
-<img src="https://img.shields.io/badge/version-1.1.0-blue">
+<img src="https://img.shields.io/badge/version-1.1.1-blue">
 <br>
 <a href="https://github.com/Charlotte-91/genshin-card-generator/blob/main/CHANGELOG.md">View Changelog</a>
 </p>
