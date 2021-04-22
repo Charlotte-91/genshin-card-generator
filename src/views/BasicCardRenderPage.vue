@@ -1,12 +1,12 @@
 <template>
-  <div class="cardPage">
+  <div class="BasicCardRender">
     <div class='body'>
       <div class="center">
         <div v-if="!isMobile()">
           <br>
           <div class='top-gap'/>
             <div class ='card'>
-              <CardGenerator/>
+              <BasicRender/>
             </div>
           <div class = "savetext">
             Please right-click  on image and select "Save Image As" to save to your device.
@@ -18,7 +18,7 @@
         <div v-else>
           <meta name="viewport" content="width=device-width,initial-scale=0.28,maximum-scale=2" />
           <div class='mobile-top-gap'/>
-          <mobile-card/>
+          <MobileRender/>
           <br>
           <div class='social'>
             <MobileFooter/>
@@ -30,16 +30,16 @@
 </template>
 
 <script>
-import CardGenerator from '@/components/CardGenerator.vue'
-import MobileCard from '@/components/MobileCard.vue'
+import BasicRender from '@/components/BasicRender.vue'
+import MobileRender from '@/components/BasicRender-Mobile.vue'
 import Footer from '@/components/Footer.vue'
 import MobileFooter from '@/components/MobileFooter.vue'
 
 export default {
-  name: 'CardPage',
+  name: 'BasicCardRender',
   components: {
-    CardGenerator,
-    MobileCard,
+    BasicRender,
+    MobileRender,
     Footer,
     MobileFooter
   },

@@ -3,27 +3,19 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Vuelidate from "vuelidate";
 import VueKonva from 'vue-konva';
-import VueSocialSharing from 'vue-social-sharing'
+import VueFormulate from '@braid/vue-formulate'
+require('../styles/snow.css')
 
+Vue.use(VueFormulate)
 Vue.use(VueKonva);
 Vue.use(VueRouter);
 Vue.use(Vuelidate);
-Vue.use(VueSocialSharing);
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
-  },
-  {
-    path: '/card',
-    name: 'CardPage',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "CardDesign" */ '../views/CardPage.vue'),
-    props: true
   },
   {
   path: '/contact',
@@ -40,34 +32,52 @@ const routes = [
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
-  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/faqPage.vue'),
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/FaqPage.vue'),
   props: true
 },
 {
-  path: '/Team-Form',
-  name: 'Team Form',
+  path: '/Team-Comp-Form',
+  name: 'Team comp form',
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
-  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/TeamFormPage.vue'),
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/TeamCompFormPage.vue'),
   props: true
 },
 {
-  path: '/Team-card',
-  name: 'Team card',
+  path: '/Team-card-render',
+  name: 'TeamCardRender',
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
-  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/TeamCompCard.vue'),
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/TeamCompRender.vue'),
   props: true
 },
 {
-  path: '/splash-page',
-  name: 'Splash page',
+  path: '/basic-card-render',
+  name: 'BasicCardRender',
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
-  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/SplashPage.vue'),
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/BasicCardRenderPage.vue'),
+  props: true
+},
+{
+  path: '/basic-form',
+  name: 'Basic Form',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/BasicCardFormPage.vue'),
+  props: true
+},
+{
+  path: '/multiplayer-form',
+  name: 'Multiplayer Form',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/MultiplayerCardFormPage.vue'),
   props: true
 }
 

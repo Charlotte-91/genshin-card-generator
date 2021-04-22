@@ -325,7 +325,7 @@ import { required } from "vuelidate/lib/validators";
 
 
 export default {
-  name: "FormComponent",
+  name: "BasicForm",
   use: [
           'vue-style-loader',
           'css-loader',
@@ -385,7 +385,7 @@ validations: {
       this.$v.form.$touch();
       if(this.$v.form.$error) return
       if (this.form.platform == '')
-        this.$router.push({name: 'CardPage', 
+        this.$router.push({name: 'BasicCardRender', 
         params: {
           cardChara : this.form.cardChara, 
           playerName: this.form.playerName,
@@ -397,7 +397,7 @@ validations: {
           pet: this.form.pet,
           }})
       else
-      this.$router.push({name: 'CardPage', 
+      this.$router.push({name: 'BasicCardRender', 
         params: {
           cardChara : this.form.cardChara, 
           playerName: this.form.playerName,

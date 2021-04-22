@@ -6,7 +6,7 @@
           <br>
           <div class='top-gap'/>
             <div class ='card'>
-              <TeamCompCard/>
+              <TeamCompRender/>
             </div>
           <div class = "savetext">
             Please right-click  on image and select "Save Image As" to save to your device.
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import TeamCompCard from '@/components/TeamCompCard.vue'
+import TeamCompRender from '@/components/TeamCompRender.vue'
 import Footer from '@/components/Footer.vue'
 import MobileFooter from '@/components/MobileFooter.vue'
 
@@ -39,7 +39,7 @@ import MobileFooter from '@/components/MobileFooter.vue'
 export default {
   name: 'TeamCompPage',
   components: {
-    TeamCompCard,
+    TeamCompRender,
     Footer,
     MobileFooter
   },

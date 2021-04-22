@@ -2,7 +2,7 @@
   <div className="SplashSelection">
         <div class="row">
             <div class="column">
-                <router-link to="/">
+                <router-link to="/basic-form">
                     <div class="container">
                         <img src="../assets/SplashPage/Basic.png"/>
                         <div class="overlay">
@@ -10,17 +10,17 @@
                         </div>
                     </div>
                 </router-link>
-                <router-link to="/team-form">
+                <router-link to="">
                     <div class="container">
                         <img src="../assets/SplashPage/Characomp.png"/>
                         <div class="overlay">
-                            <div class="text">Character loadout card</div>
+                            <div class="text">Character Build card [Coming Soon]</div>
                         </div>
                     </div>
                 </router-link>
             </div>
             <div class="column">
-                <router-link to="/">
+                <router-link to="/multiplayer-form">
                     <div class="container">
                         <img src="../assets/SplashPage/Multiplayer.png"/>
                         <div class="overlay">
@@ -28,11 +28,11 @@
                         </div>
                     </div>
                 </router-link>
-                <router-link to="/team-form">
+                <router-link to="">
                     <div class="container">
                         <img src="../assets/SplashPage/Teamcomp.png"/>
                         <div class="overlay">
-                            <div class="text">Team Composition card</div>
+                            <div class="text">Team Composition card [Coming Soon]</div>
                         </div>
                     </div>
                 </router-link>
@@ -43,16 +43,21 @@
 
 
 <style scoped>
+
+@font-face { font-family: roboto-regular; 
+  src: url('../assets/SuezOne-Regular.ttf'); } 
+  
 .row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+  justify-content: center;
 }
 
 /* Create four equal columns that sits next to each other */
 .column {
-  flex: 25%;
-  max-width: 50%;
+  flex: 100%;
+  max-width: 30%;
   padding: 0 15px;
 }
 
@@ -82,11 +87,11 @@
   width: 100%;
 }
 
-/* .image {
+.image {
   display: block;
   width: 100%;
   height: auto;
-} */
+}
 
 .overlay {
   position: absolute;

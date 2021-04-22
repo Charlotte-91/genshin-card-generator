@@ -1,21 +1,21 @@
 <template>
-  <div className="SplashPage">
-    <div v-if="!isMobile()">
+  <div className="Multiplayer Form">
+    
+      <div v-if="!isMobile()">
         <header className="App-header">
-            <img src="../assets/genshin-logo.png" height='260px'/>
-        </header>
-        <div class="block">
-            <p>Please choose a card template</p>
-        </div>
-        <SplashSelection></SplashSelection>
-    </div>
-    <div v-else>
+        <img src="../assets/genshin-logo.png" height='260px'/>
+      </header>
+        <MultiplayerForm/>
+      </div>
+      <div v-else>
         <header className="App-header">
-            <img src="../assets/genshin-logo.png" width='80%'/>
-        </header>
-        <SplashSelection></SplashSelection>
-    </div>
-    <div class= "footer">
+        <img src="../assets/genshin-logo.png" width='80%'/>
+      </header>
+        
+        
+
+      </div>
+      <div class= "footer">
       Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
       <br>
       © All rights Reserved by miHoYo. Other properies belong to their respective owners. |    
@@ -25,12 +25,14 @@
 </template>
 
 <script>
-import SplashSelection from "../components/SplashSelection.vue";
+
+import MultiplayerForm from "../components/MultiplayerForm.vue";
+
 
 export default {
-  name: 'SplashPage',
+  name: 'Basic Card',
   components: {
-    SplashSelection
+    MultiplayerForm
   },
   methods: {
     isMobile() {
@@ -45,7 +47,6 @@ export default {
 </script>
 
 <style scoped>
-
 * {background-color: #464545}
 .header {
   top: 0;
@@ -77,12 +78,5 @@ export default {
     color: rgb(145, 136, 136);
     cursor: pointer;
 }
-.block {
-    margin: 25px;
 
-    color: white;
-    font-family: SuezOne-Regular; 
-    font-size: 30px;
-    position: relative
-}
 </style>
