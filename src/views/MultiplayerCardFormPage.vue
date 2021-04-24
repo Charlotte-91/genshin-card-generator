@@ -6,6 +6,7 @@
         <img src="../assets/genshin-logo.png" height='260px'/>
       </header>
         <MultiplayerForm/>
+        <button @click="$router.push({name: 'Home'})">Back</button>
       </div>
       <div v-else>
         <header className="App-header">

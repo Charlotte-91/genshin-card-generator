@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import Vuelidate from "vuelidate";
 import VueKonva from 'vue-konva';
 import VueFormulate from '@braid/vue-formulate'
-require('../styles/snow.css')
+require('../styles/form.css')
 
 Vue.use(VueFormulate)
 Vue.use(VueKonva);
@@ -46,16 +46,16 @@ const routes = [
 },
 {
   path: '/Team-card-render',
-  name: 'TeamCardRender',
+  name: 'Team Card Render',
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
-  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/TeamCompRender.vue'),
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/TeamCompRenderPage.vue'),
   props: true
 },
 {
   path: '/basic-card-render',
-  name: 'BasicCardRender',
+  name: 'Basic Card Render',
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
@@ -78,6 +78,15 @@ const routes = [
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
   component: () => import(/* webpackChunkName: "CardDesign" */ '../views/MultiplayerCardFormPage.vue'),
+  props: true
+},
+{
+  path: '/multiplayer-render',
+  name: 'Multiplayer Render page',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/MultiplayerCardRenderPage.vue'),
   props: true
 }
 
