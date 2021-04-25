@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change form to stop duplicate characters being chosen for team selection [ In Progress ]
 - Auto upload of card image to twitter 
 
+## [1.2.2] - 2021-04-25
+
+### Added
+- Added a custom domain name to the website
+- Added additional hosting time to heroku
+
+### Changed
+- Changed the url shown at the bottom of the card
+
+
 ## [1.2.1] - 2021-04-13
 
 ### Added
