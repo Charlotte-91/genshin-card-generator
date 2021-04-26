@@ -18,7 +18,7 @@
           <label class="typo__label">card Design:</label>
         </div>
         <div class="col-75">
-          <multiselect v-model="cardValue" :options="options" :multiple="true" :max="1" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design" label="name" track-by="name" :preselect-first="false">
+          <multiselect v-model="cardValue" :options="options" :multiple="true" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design" label="name" track-by="name" :preselect-first="false">
               <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">Card design selected</span></template>
           </multiselect>
         </div>
@@ -117,6 +117,7 @@
 
 <script>
 import Multiselect from 'vue-multiselect'
+// import { required, minLength, between, maxLength } from 'vuelidate/lib/validators'
 
 export default {
     components: {
@@ -157,6 +158,23 @@ export default {
     team3: String,
     team4: String,
   },
+  // validations: {
+  //   form: {
+  //       cardDesign: { required },
+  //       playerName: { required },
+  //       AR: { required, maxLength: maxLength(2), minLength: minLength(1)},
+  //       SA: {},
+  //       UID: { },
+  //       server: {required},
+  //       platform: {required},
+  //       twitter: {},
+  //       pet: {},
+  //       team1: { required },
+  //       team2: { required },
+  //       team3: { required },
+  //       team4: { required },
+  //   }
+  // },
   methods: {
       submit() {
         this.team1 = this.value[0].id
@@ -208,6 +226,9 @@ body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
   font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .col-25 {
   float: left;
@@ -221,6 +242,10 @@ body{
   width: 45%;
   margin-bottom: 10px;
 }
+.row{
+  align-items: center;
+  width: 80%
+}
 .row:after {
   content: "";
   display: table;
@@ -228,20 +253,21 @@ body{
   padding: 2px;
 }
 .form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   position: relative;
-  top: 70%;
-  left: 50%;
-  transform: translate(-53%, 0%);
-  width: 45%;
+  width: 40%;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
   margin: 30px;
   padding: 10px;
-
+  
   border-image:
       url("../assets/Form-bg.png")
       70 / 50px    
-      round;                  
+      round;   
+                
 }
 </style>

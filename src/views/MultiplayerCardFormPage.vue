@@ -12,9 +12,8 @@
         <header className="App-header">
         <img src="../assets/genshin-logo.png" width='80%'/>
       </header>
-        
-        
-
+        <MultiplayerFormMobile/>
+        <button @click="$router.push({name: 'Home'})">Back</button>
       </div>
       <div class= "footer">
       Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
@@ -28,12 +27,14 @@
 <script>
 
 import MultiplayerForm from "../components/MultiplayerForm.vue";
+import MultiplayerFormMobile from "../components/MultiplayerFormMobile.vue";
 
 
 export default {
   name: 'Basic Card',
   components: {
-    MultiplayerForm
+    MultiplayerForm,
+    MultiplayerFormMobile
   },
   methods: {
     isMobile() {

@@ -2,6 +2,7 @@
     <body>
       <div class ="form">
         <div class="row">
+          <div class="valid">{{ this.validation }}</div>
           <!-- <h3>Multiplayer card generator</h3> -->
           <div class="col-25">
             <label class="typo__label">Player Name:</label>
@@ -55,7 +56,7 @@
         </div>
       </div>
 
-      <button class='mobile-button' v-on:click=submit()>Submit</button>
+      <button class='mobile-button' v-on:click=validate()>Submit</button>
     </div>
   </body>
     
@@ -66,6 +67,7 @@
 
 <script>
 import Multiselect from 'vue-multiselect'
+// const { required, minLength, maxLength } = window.validators
 
 export default {
     components: {
@@ -96,7 +98,20 @@ export default {
     team2: String,
     team3: String,
     team4: String,
+    validation: String
   },
+  // validations: {
+  //   : {
+  //     cardDesign: { required },
+  //     playerName: { required },
+  //     AR: { required, min: minLength(1), max: maxLength(2)},
+  //     pet: {},
+  //     team1: { required },
+  //     team2: { required },
+  //     team3: { required },
+  //     team4: { required },
+  //   }
+  // },
   methods: {
       submit() {
         this.team1 = this.value[0].id
@@ -105,11 +120,11 @@ export default {
         this.team4 = this.value[3].id
         this.cardDesign = this.cardValue[0].id
         this.pet = this.PetValue
-        console.log(this.SA)
-        console.log(this.team1)
-        console.log(this.team2)
-        console.log(this.team3)
-        console.log(this.team4)
+        // console.log(this.SA)
+        // console.log(this.team1)
+        // console.log(this.team2)
+        // console.log(this.team3)
+        // console.log(this.team4)
         // this.$v.form.$touch();
         // if(this.$v.form.$error) return
         this.$router.push({name: 'Basic Card Render', 
@@ -124,6 +139,15 @@ export default {
           team4: this.team4,
         }
       })
+    },
+    validate() {
+        if (this.playerName == undefined || this.AR == undefined) {
+          this.validation = "Please fill out all fields"
+          console.log(this.validation)
+          console.log('Fields not filled')
+        } else {
+          this.submit()
+        }
     }
   }
 }
@@ -134,13 +158,16 @@ export default {
 
 
 
-<style>
+<style scoped>
 @font-face { font-family: SuezOne-Regular; 
   src: url('../assets/SuezOne-Regular.ttf'); } 
 body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
   font-size: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .col-25 {
   float: left;
@@ -154,6 +181,10 @@ body{
   width: 45%;
   margin-bottom: 10px;
 }
+.row{
+  align-items: center;
+  width: 80%
+}
 .row:after {
   content: "";
   display: table;
@@ -161,20 +192,26 @@ body{
   padding: 2px;
 }
 .form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   position: relative;
-  top: 70%;
-  left: 50%;
-  transform: translate(-53%, 0%);
-  width: 45%;
+  width: 40%;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
   margin: 30px;
   padding: 10px;
-
+  
   border-image:
       url("../assets/Form-bg.png")
       70 / 50px    
-      round;                  
+      round;   
+                
+}
+.valid {
+  font-size: 16px;
+  color: red;
+  margin-bottom: 15px;
 }
 </style>

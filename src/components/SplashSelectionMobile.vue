@@ -1,5 +1,6 @@
 <template>
   <div className="SplashSelection">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
         <div class="row">
             <div class="column">
                 <router-link to="/basic-form">
@@ -10,21 +11,21 @@
                         </div>
                     </div>
                 </router-link>
-                <router-link to="">
-                    <div class="container">
-                        <img src="../assets/SplashPage/Characomp.png"/>
-                        <div class="overlay">
-                            <div class="text">Character Build card [Coming Soon]</div>
-                        </div>
-                    </div>
-                </router-link>
-            </div>
-            <div class="column">
                 <router-link to="/multiplayer-form">
                     <div class="container">
                         <img src="../assets/SplashPage/Multiplayer.png"/>
                         <div class="overlay">
                             <div class="text">Multiplayer card</div>
+                        </div>
+                    </div>
+                </router-link>
+            </div>
+            <div class="column">
+                <router-link to="">
+                    <div class="container">
+                        <img src="../assets/SplashPage/Characomp.png"/>
+                        <div class="overlay">
+                            <div class="text">Character Build card [Coming Soon]</div>
                         </div>
                     </div>
                 </router-link>
@@ -59,6 +60,8 @@
   flex: 100%;
   max-width: 30%;
   padding: 0 15px;
+  flex: 100%;
+    max-width: 100%;
 }
 
 .column img {
@@ -66,22 +69,19 @@
   vertical-align: middle;
   width: 100%;
 }
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .column {
     flex: 50%;
     max-width: 50%;
   }
-}
+} */
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .column {
-    flex: 100%;
-    max-width: 100%;
+    
   }
-}
+} */
 .container {
   position: relative;
   width: 100%;
@@ -101,7 +101,7 @@
   right: 0;
   height: 100%;
   width: 100%;
-  opacity: 0;
+  opacity: 0.5;
   transition: .5s ease;
   background-color: #464545;
   font-family: roboto-regular; 
@@ -113,7 +113,7 @@
 
 .text {
   color: white;
-  font-size: 40px;
+  font-size: 25px;
   position: absolute;
   font-family: roboto-regular;
   top: 50%;

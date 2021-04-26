@@ -18,7 +18,7 @@
         <div v-else>
           <meta name="viewport" content="width=device-width,initial-scale=0.28,maximum-scale=2" />
           <div class='mobile-top-gap'/>
-          <mobile-card/>
+          <MultiplayerMobile/>
           <br>
           <div class='social'>
             <MobileFooter/>
@@ -31,6 +31,7 @@
 
 <script>
 import MultiplayerRender from '@/components/MultiplayerRender.vue'
+import MultiplayerMobile from '@/components/MultiplayerRenderMobile.vue'
 import Footer from '@/components/Footer.vue'
 import MobileFooter from '@/components/MobileFooter.vue'
 
@@ -40,6 +41,7 @@ export default {
   name: 'TeamCompPage',
   components: {
     MultiplayerRender,
+    MultiplayerMobile,
     Footer,
     MobileFooter
   },

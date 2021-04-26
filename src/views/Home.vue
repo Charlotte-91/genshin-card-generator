@@ -8,29 +8,37 @@
             <p>Please choose a card template</p>
         </div>
         <SplashSelection></SplashSelection>
+        <div class= "footer">
+          Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
+          <br>
+          © All rights Reserved by miHoYo. Other properies belong to their respective owners. |    
+          <router-link :to="`contact`"><a>Contact Us</a></router-link> | <router-link :to="`FAQ`"><a>FAQ</a></router-link>
+        </div>
     </div>
     <div v-else>
         <header className="App-header">
             <img src="../assets/genshin-logo.png" width='80%'/>
         </header>
-        <SplashSelection></SplashSelection>
-    </div>
-    <div class= "footer">
-      Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
-      <br>
-      © All rights Reserved by miHoYo. Other properies belong to their respective owners. |    
-      <router-link :to="`contact`"><a>Contact Us</a></router-link> | <router-link :to="`FAQ`"><a>FAQ</a></router-link>
+        <SplashSelectionMobile></SplashSelectionMobile>
+        <div class= "mobile-footer">
+          Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
+          <br>
+          © All rights Reserved by miHoYo. Other properies belong to their respective owners. |    
+          <router-link :to="`contact`"><a>Contact Us</a></router-link> | <router-link :to="`FAQ`"><a>FAQ</a></router-link>
+        </div>
     </div>
   </div>
 </template>
 
 <script>
 import SplashSelection from "../components/SplashSelection.vue";
+import SplashSelectionMobile from "../components/SplashSelectionMobile.vue";
 
 export default {
   name: 'Home',
   components: {
-    SplashSelection
+    SplashSelection,
+    SplashSelectionMobile
   },
   methods: {
     isMobile() {
@@ -59,14 +67,23 @@ export default {
 .body {
   font-size: 25px;
   padding: 20px;
-  font-family: SuezOne-Regular; 
+  font-family: roboto-regular;
+}
+.mobile-footer {
+  position: bottom;
+  padding: 30px;
+  bottom: 0;
+  height: 20px;
+  font-size: 16px;
+  color: rgb(36, 34, 34);
+  font-family: Arial, Helvetica, sans-serif;
 }
 .footer {
   position: bottom;
   padding: 30px;
   bottom: 0;
   height: 20px;
-  font-size: 15px;
+  font-size: 16px;
   color: rgb(36, 34, 34);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -83,7 +100,7 @@ export default {
     margin: 25px;
 
     color: white;
-    font-family: SuezOne-Regular; 
+    font-family: roboto-regular;
     font-size: 30px;
     position: relative
 }

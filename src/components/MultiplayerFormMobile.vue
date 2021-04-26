@@ -3,7 +3,6 @@
       <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
       <div class ="form">
         <div class="row">
-          <!-- <h3>Multiplayer card generator</h3> -->
           <div class="col-25">
             <label class="typo__label">Player Name:</label>
           </div>
@@ -16,7 +15,7 @@
 
         <div class="row">
         <div class="col-25">
-          <label class="typo__label">Card Design:</label>
+          <label class="typo__label">card Design:</label>
         </div>
         <div class="col-75">
           <multiselect v-model="cardValue" :options="options" :multiple="true" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design" label="name" track-by="name" :preselect-first="false">
@@ -35,6 +34,56 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="typo__label">Spiral Abyss Progress:</label>
+          </div>
+          <div class="col-75">
+            <div class="multiselect">
+              <input class="form-style" type='number' v-model="SA" /> 
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label class="typo__label">UID:</label>
+          </div>
+          <div class="col-75">
+            <div class="multiselect">
+              <input class="form-style" type='number' v-model="UID" /> 
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label class="typo__label">Twitter:</label>
+          </div>
+          <div class="col-75">
+            <div class="multiselect">
+              <input class="form-style" type='text' v-model="twitter" /> 
+            </div>
+          </div>
+        </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label class="typo__label">Platform:</label>
+        </div>
+        <div class="col-75">
+          <multiselect v-model="PlatformValue" :options="PlatformOptions" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label class="typo__label">Server:</label>
+        </div>
+        <div class="col-75">
+          <multiselect v-model="ServerValue" :options="ServerOptions" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>
+        </div>
+      </div>
 
       <div class="row">
         <div class="col-25">
@@ -55,6 +104,7 @@
           <multiselect v-model="PetValue" :options="PetOptions" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>
         </div>
       </div>
+
 
       <button class='mobile-button' v-on:click=submit()>Submit</button>
     </div>
@@ -85,13 +135,22 @@ export default {
       ],
       cardValue: [],
       PetValue: '',
-      PetOptions: ['Dayflower Seelie', 'Curcuma Seelie', 'Rose Seelie', 'Endora']
+      PetOptions: ['Dayflower Seelie', 'Curcuma Seelie', 'Rose Seelie', 'Endora'],
+      PlatformValue: '',
+      PlatformOptions: ['PC', 'PS4', 'Android', 'iOS'],
+      ServerValue: '',
+      ServerOptions: ['America', 'Asia', 'Europe', 'TW/HK/MO'],
     }
   },
   props: {
     cardDesign: String,
     playerName: String,
     AR: Number,
+    SA: Number,
+    UID: Number,
+    server: String,
+    twitter: String,
+    platform: String,
     pet: String,
     team1: String,
     team2: String,
@@ -105,6 +164,8 @@ export default {
         this.team3 = this.value[2].id
         this.team4 = this.value[3].id
         this.cardDesign = this.cardValue[0].id
+        this.platform = this.PlatformValue
+        this.server = this.ServerValue
         this.pet = this.PetValue
         console.log(this.SA)
         console.log(this.team1)
@@ -113,11 +174,16 @@ export default {
         console.log(this.team4)
         // this.$v.form.$touch();
         // if(this.$v.form.$error) return
-        this.$router.push({name: 'Basic Card Render', 
+        this.$router.push({name: 'Multiplayer Render page', 
         params: {
           cardChara : this.cardDesign, 
           playerName: this.playerName,
           AR: this.AR,
+          SA: this.SA,
+          UID: this.UID,
+          server: this.server,
+          twitter: this.twitter,
+          platform: this.platform,
           pet: this.pet,
           team1: this.team1,
           team2: this.team2,

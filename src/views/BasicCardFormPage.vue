@@ -12,7 +12,7 @@
         <header className="App-header">
         <img src="../assets/genshin-logo.png" width='80%'/>
       </header>
-        <MobileFormMobile/>
+        <BasicFormMobile/>
         <button @click="$router.push({name: 'Home'})">Back</button>
       </div>
       <div class= "footer">
@@ -27,13 +27,13 @@
 <script>
 
 import BasicForm from "../components/BasicForm.vue";
-import MobileFormMobile from "../components/BasicForm-Mobile.vue"
+import BasicFormMobile from "../components/BasicForm-Mobile.vue"
 
 export default {
   name: 'Basic Card',
   components: {
     BasicForm,
-    MobileFormMobile
+    BasicFormMobile
   },
   methods: {
     isMobile() {

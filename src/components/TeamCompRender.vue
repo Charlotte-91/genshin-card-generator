@@ -9,7 +9,7 @@
         <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 30, x: 200, y: 110, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `${this.$route.params.AR}`, fontSize: 30, x: 560, y:110, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `${this.$route.params.SA}`, fontSize: 30, x: 900, y:110, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `genshin-impact-card-generator.herokuapp.com`, fontSize: 16, x: 38, y:655, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `genshin-card-generator.com`, fontSize: 16, x: 38, y:655, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
         <v-image :config="{image: team1, x: 170, y:200}"/>
         <v-image :config="{image: team2, x: 450, y:200}"/>
         <v-image :config="{image: team3, x: 650, y:200}"/>
