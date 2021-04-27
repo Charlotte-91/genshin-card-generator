@@ -1,5 +1,5 @@
 <template>
-  <div class="cardPage">
+  <div class="Multiplayer Render page">
     <div class='body'>
       <div class="center">
         <div v-if="!isMobile()">
@@ -38,7 +38,7 @@ import MobileFooter from '@/components/MobileFooter.vue'
 
 
 export default {
-  name: 'TeamCompPage',
+  name: 'Multiplayer Render page',
   components: {
     MultiplayerRender,
     MultiplayerMobile,

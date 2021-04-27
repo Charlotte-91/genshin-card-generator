@@ -1,5 +1,5 @@
 <template>
-  <div className="Contact">
+  <div className="FaqPage">
             <div v-if="!isMobile()">
                 <header className="App-header">
                     <img src="../assets/genshin-logo.png" height='260px'/>
@@ -27,7 +27,7 @@ import MobileFAQ from "../components/MobileFAQ.vue";
 import FAQ from "../components/FAQ.vue"
 
 export default {
-  name: 'Home',
+  name: 'FaqPage',
   components: {
     MobileFAQ,
     FAQ
