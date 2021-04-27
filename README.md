@@ -4,6 +4,12 @@
 
 Genshin Impact Card Generator
 =====
+<p align="center">
+<img src="https://img.shields.io/badge/version-1.2.1-blue">
+<br>
+<a href="https://github.com/Charlotte-91/genshin-card-generator/blob/main/CHANGELOG.md">View Changelog</a>
+</p>
+
 ### A small web app which allows people to create a 'card' which displays their stats for the game Genshin Impact. This card can then be downloaded as a .PNG or shared to twitter 
 
 ## Website
@@ -29,6 +35,11 @@ https://genshin-impact-card-generator.herokuapp.com/
 ## Featured on: 
 
 [Realsport101](https://realsport101.com/genshin-impact/genshin-impact-card-generator-graphical-team-display/)
+
+## Future Features: 
+
+- Add ability to choose and display in-game pet (done!)
+- Add Character load out option, to showcase weapons and artifacts on team memebers (in progress)
 
 ## Future Improvements:
 
