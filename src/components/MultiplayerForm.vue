@@ -246,7 +246,6 @@ body{
   font-size: 25px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 .col-25 {
   float: left;
