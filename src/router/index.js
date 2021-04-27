@@ -3,10 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Vuelidate from "vuelidate";
 import VueKonva from 'vue-konva';
-import VueFormulate from '@braid/vue-formulate'
 require('../styles/form.css')
 
-Vue.use(VueFormulate)
 Vue.use(VueKonva);
 Vue.use(VueRouter);
 Vue.use(Vuelidate);
@@ -32,7 +30,7 @@ const routes = [
   // route level code-splitting
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
-  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/FaqPage.vue'),
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/FaqView.vue'),
   props: true
 },
 {
