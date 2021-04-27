@@ -1,5 +1,6 @@
 <template>
   <div className="SplashSelection">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
         <div class="row">
             <div class="column">
                 <router-link to="/basic-form">
@@ -57,7 +58,7 @@
 /* Create four equal columns that sits next to each other */
 .column {
   flex: 100%;
-  max-width: 30%;
+  max-width: 600px;
   padding: 0 15px;
 }
 
@@ -67,19 +68,15 @@
   width: 100%;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-}
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .column {
     flex: 100%;
     max-width: 100%;
+  }
+  .text {
+  font-size: 20px;
   }
 }
 .container {

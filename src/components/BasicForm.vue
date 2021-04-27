@@ -82,7 +82,34 @@ export default {
         { name: 'Amber', id: 'Amber' },
         { name: 'Barbara', id: 'Barbara' },
         { name: 'Beidou', id: 'Beidou' },
-        { name: 'Bennett', id: 'Bennett' }
+        { name: 'Bennett', id: 'Bennett' },
+        { name: 'Chongyun', id: 'Chongyun' },
+        { name: 'Diluc', id: 'Diluc' },
+        { name: 'Diona', id: 'Diona' },
+        { name: 'Fischl', id: 'Fischl' },
+        { name: 'Ganyu', id: 'Ganyu' },
+        { name: 'Hu tao', id: 'Hutao' },
+        { name: 'Jean', id: 'Jean' },
+        { name: 'Kaeya', id: 'Kaeya' },
+        { name: 'Keqing', id: 'Keqing' },
+        { name: 'Klee', id: 'Klee' },
+        { name: 'Lisa', id: 'Lisa' },
+        { name: 'Lumine', id: 'Lumine' },
+        { name: 'Mona', id: 'Mona' },
+        { name: 'Ningguang', id: 'Ningguang' },
+        { name: 'Noelle', id: 'Noelle' },
+        { name: 'Qiqi', id: 'Qiqi' },
+        { name: 'Razor', id: 'Razor' },
+        { name: 'Rosaria', id: 'Rosaria' },
+        { name: 'Sucrose', id: 'Sucrose' },
+        { name: 'Tartaglia', id: 'Tartaglia' },
+        { name: 'Venti', id: 'Venti' },
+        { name: 'Xiangling', id: 'Xiangling' },
+        { name: 'Xiao', id: 'Xiao' },
+        { name: 'Xingqiu', id: 'Xingqiu' },
+        { name: 'Xinyan', id: 'Xinyan' },
+        { name: 'Zhongli', id: 'Zhongli' },
+        
       ],
       cardValue: [],
       PetValue: '',
@@ -141,10 +168,14 @@ export default {
       })
     },
     validate() {
-        if (this.playerName == undefined || this.AR == undefined) {
-          this.validation = "Please fill out all fields"
-          console.log(this.validation)
-          console.log('Fields not filled')
+        var errors = []
+        if (this.playerName == undefined || this.playerName == '' || this.AR == undefined || this.AR == '' || this.value.length == 0 || this.cardValue.length == 0 ) {
+            if (this.playerName == undefined || this.playerName == '') {errors.push(' Player name ')}
+            if (this.AR == undefined || this.AR == '') {errors.push(' AR ')}
+            if (this.value.length == 0) {errors.push(' Team ')}
+            if (this.cardValue.length == 0) {errors.push(' Card design ')}
+            console.log(this.playerName)
+          this.validation = `Please fill out; ${errors} field(s)`
         } else {
           this.submit()
         }
@@ -196,7 +227,7 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  width: 40%;
+  width: 600px;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
@@ -208,6 +239,12 @@ body{
       70 / 50px    
       round;   
                 
+}
+
+@media screen and (max-width: 800px) {
+  .form {
+    width: 80%
+  }
 }
 .valid {
   font-size: 16px;

@@ -1,6 +1,6 @@
 <template>
   <div className="SplashSelection">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" /> -->
         <div class="row">
             <div class="column">
                 <router-link to="/basic-form">

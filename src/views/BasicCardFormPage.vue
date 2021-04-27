@@ -1,5 +1,5 @@
 <template>
-  <div className="Basic Card">
+  <div className="BasicCard">
     
       <div v-if="!isMobile()">
         <header className="App-header">
@@ -30,7 +30,7 @@ import BasicForm from "../components/BasicForm.vue";
 import BasicFormMobile from "../components/BasicForm-Mobile.vue"
 
 export default {
-  name: 'Basic Card',
+  name: 'BasicCard',
   components: {
     BasicForm,
     BasicFormMobile

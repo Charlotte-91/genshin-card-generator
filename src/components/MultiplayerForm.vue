@@ -2,7 +2,7 @@
     <body>
       <div class ="form">
         <div class="row">
-          <!-- <h3>Multiplayer card generator</h3> -->
+          <div class="valid">{{ this.validation }}</div>
           <div class="col-25">
             <label class="typo__label">Player Name:</label>
           </div>
@@ -15,7 +15,7 @@
 
         <div class="row">
         <div class="col-25">
-          <label class="typo__label">card Design:</label>
+          <label class="typo__label">Card Design:</label>
         </div>
         <div class="col-75">
           <multiselect v-model="cardValue" :options="options" :multiple="true" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design" label="name" track-by="name" :preselect-first="false">
@@ -106,7 +106,7 @@
       </div>
 
 
-      <button class='mobile-button' v-on:click=submit()>Submit</button>
+      <button class='mobile-button' v-on:click=validate()>Submit</button>
     </div>
   </body>
     
@@ -117,7 +117,6 @@
 
 <script>
 import Multiselect from 'vue-multiselect'
-// import { required, minLength, between, maxLength } from 'vuelidate/lib/validators'
 
 export default {
     components: {
@@ -132,7 +131,33 @@ export default {
         { name: 'Amber', id: 'Amber' },
         { name: 'Barbara', id: 'Barbara' },
         { name: 'Beidou', id: 'Beidou' },
-        { name: 'Bennett', id: 'Bennett' }
+        { name: 'Bennett', id: 'Bennett' },
+        { name: 'Chongyun', id: 'Chongyun' },
+        { name: 'Diluc', id: 'Diluc' },
+        { name: 'Diona', id: 'Diona' },
+        { name: 'Fischl', id: 'Fischl' },
+        { name: 'Ganyu', id: 'Ganyu' },
+        { name: 'Hu tao', id: 'Hutao' },
+        { name: 'Jean', id: 'Jean' },
+        { name: 'Kaeya', id: 'Kaeya' },
+        { name: 'Keqing', id: 'Keqing' },
+        { name: 'Klee', id: 'Klee' },
+        { name: 'Lisa', id: 'Lisa' },
+        { name: 'Lumine', id: 'Lumine' },
+        { name: 'Mona', id: 'Mona' },
+        { name: 'Ningguang', id: 'Ningguang' },
+        { name: 'Noelle', id: 'Noelle' },
+        { name: 'Qiqi', id: 'Qiqi' },
+        { name: 'Razor', id: 'Razor' },
+        { name: 'Rosaria', id: 'Rosaria' },
+        { name: 'Sucrose', id: 'Sucrose' },
+        { name: 'Tartaglia', id: 'Tartaglia' },
+        { name: 'Venti', id: 'Venti' },
+        { name: 'Xiangling', id: 'Xiangling' },
+        { name: 'Xiao', id: 'Xiao' },
+        { name: 'Xingqiu', id: 'Xingqiu' },
+        { name: 'Xinyan', id: 'Xinyan' },
+        { name: 'Zhongli', id: 'Zhongli' },
       ],
       cardValue: [],
       PetValue: '',
@@ -157,24 +182,8 @@ export default {
     team2: String,
     team3: String,
     team4: String,
+    validation: String
   },
-  // validations: {
-  //   form: {
-  //       cardDesign: { required },
-  //       playerName: { required },
-  //       AR: { required, maxLength: maxLength(2), minLength: minLength(1)},
-  //       SA: {},
-  //       UID: { },
-  //       server: {required},
-  //       platform: {required},
-  //       twitter: {},
-  //       pet: {},
-  //       team1: { required },
-  //       team2: { required },
-  //       team3: { required },
-  //       team4: { required },
-  //   }
-  // },
   methods: {
       submit() {
         this.team1 = this.value[0].id
@@ -185,13 +194,6 @@ export default {
         this.platform = this.PlatformValue
         this.server = this.ServerValue
         this.pet = this.PetValue
-        console.log(this.SA)
-        console.log(this.team1)
-        console.log(this.team2)
-        console.log(this.team3)
-        console.log(this.team4)
-        // this.$v.form.$touch();
-        // if(this.$v.form.$error) return
         this.$router.push({name: 'Multiplayer Render page', 
         params: {
           cardChara : this.cardDesign, 
@@ -209,6 +211,22 @@ export default {
           team4: this.team4,
         }
       })
+    },
+    validate() {
+        var errors = []
+        if (this.playerName == undefined || this.playerName == '' || this.AR == undefined || this.AR == '' || this.value.length == 0 || this.cardValue.length == 0 || this.SA == undefined || this.SA == '' || this.PlatformValue.length == 0 || this.ServerValue.length == 0) {
+            if (this.playerName == undefined || this.playerName == '') {errors.push(' Player name ')}
+            if (this.AR == undefined || this.AR == '') {errors.push(' AR ')}
+            if (this.SA == undefined || this.SA == '') {errors.push(' Spiral Abyss ')}
+            if (this.value.length == 0) {errors.push(' Team ')}
+            if (this.cardValue.length == 0) {errors.push(' Card design ')}
+            if (this.ServerValue.length == 0) {errors.push(' Server ')}
+            if (this.PlatformValue.length == 0) {errors.push(' Platform ')}
+            console.log(this.playerName)
+          this.validation = `Please fill out; ${errors} field(s)`
+        } else {
+          this.submit()
+        }
     }
   }
 }
@@ -219,7 +237,7 @@ export default {
 
 
 
-<style>
+<style scoped>
 @font-face { font-family: SuezOne-Regular; 
   src: url('../assets/SuezOne-Regular.ttf'); } 
 body{
@@ -257,7 +275,7 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  width: 40%;
+  width: 600px;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
@@ -269,5 +287,16 @@ body{
       70 / 50px    
       round;   
                 
+}
+
+@media screen and (max-width: 800px) {
+  .form {
+    width: 80%
+  }
+}
+.valid {
+  font-size: 16px;
+  color: red;
+  margin-bottom: 15px;
 }
 </style>

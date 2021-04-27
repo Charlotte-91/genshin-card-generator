@@ -3,6 +3,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
       <div class ="form">
         <div class="row">
+          <div class="valid">{{ this.validation }}</div>
           <!-- <h3>Multiplayer card generator</h3> -->
           <div class="col-25">
             <label class="typo__label">Player Name:</label>
@@ -56,7 +57,7 @@
         </div>
       </div>
 
-      <button class='mobile-button' v-on:click=submit()>Submit</button>
+      <button class='mobile-button' v-on:click=validate()>Submit</button>
     </div>
   </body>
     
@@ -81,7 +82,33 @@ export default {
         { name: 'Amber', id: 'Amber' },
         { name: 'Barbara', id: 'Barbara' },
         { name: 'Beidou', id: 'Beidou' },
-        { name: 'Bennett', id: 'Bennett' }
+        { name: 'Bennett', id: 'Bennett' },
+        { name: 'Chongyun', id: 'Chongyun' },
+        { name: 'Diluc', id: 'Diluc' },
+        { name: 'Diona', id: 'Diona' },
+        { name: 'Fischl', id: 'Fischl' },
+        { name: 'Ganyu', id: 'Ganyu' },
+        { name: 'Hu tao', id: 'Hutao' },
+        { name: 'Jean', id: 'Jean' },
+        { name: 'Kaeya', id: 'Kaeya' },
+        { name: 'Keqing', id: 'Keqing' },
+        { name: 'Klee', id: 'Klee' },
+        { name: 'Lisa', id: 'Lisa' },
+        { name: 'Lumine', id: 'Lumine' },
+        { name: 'Mona', id: 'Mona' },
+        { name: 'Ningguang', id: 'Ningguang' },
+        { name: 'Noelle', id: 'Noelle' },
+        { name: 'Qiqi', id: 'Qiqi' },
+        { name: 'Razor', id: 'Razor' },
+        { name: 'Rosaria', id: 'Rosaria' },
+        { name: 'Sucrose', id: 'Sucrose' },
+        { name: 'Tartaglia', id: 'Tartaglia' },
+        { name: 'Venti', id: 'Venti' },
+        { name: 'Xiangling', id: 'Xiangling' },
+        { name: 'Xiao', id: 'Xiao' },
+        { name: 'Xingqiu', id: 'Xingqiu' },
+        { name: 'Xinyan', id: 'Xinyan' },
+        { name: 'Zhongli', id: 'Zhongli' },
       ],
       cardValue: [],
       PetValue: '',
@@ -97,6 +124,7 @@ export default {
     team2: String,
     team3: String,
     team4: String,
+    validation: String
   },
   methods: {
       submit() {
@@ -125,6 +153,19 @@ export default {
           team4: this.team4,
         }
       })
+    },
+    validate() {
+        var errors = []
+        if (this.playerName == undefined || this.playerName == '' || this.AR == undefined || this.AR == '' || this.value.length == 0 || this.cardValue.length == 0 ) {
+            if (this.playerName == undefined || this.playerName == '') {errors.push(' player name ')}
+            if (this.AR == undefined || this.AR == '') {errors.push(' AR ')}
+            if (this.value.length == 0) {errors.push(' team ')}
+            if (this.cardValue.length == 0) {errors.push(' card design ')}
+            console.log(this.playerName)
+          this.validation = `Please fill out; ${errors} field(s)`
+        } else {
+          this.submit()
+        }
     }
   }
 }
@@ -141,7 +182,7 @@ export default {
 body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
-  font-size: 25px;
+  font-size: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -196,5 +237,10 @@ body{
     cursor: pointer;
     border-radius: 4px;
     font-family: SuezOne-Regular;
+}
+.valid {
+  font-size: 16px;
+  color: red;
+  margin-bottom: 15px;
 }
 </style>

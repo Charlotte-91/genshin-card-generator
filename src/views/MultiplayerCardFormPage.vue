@@ -1,6 +1,6 @@
 <template>
-  <div className="Multiplayer Form">
-    
+  <div className="MultiplayerForm">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
       <div v-if="!isMobile()">
         <header className="App-header">
         <img src="../assets/genshin-logo.png" height='260px'/>
@@ -31,7 +31,7 @@ import MultiplayerFormMobile from "../components/MultiplayerFormMobile.vue";
 
 
 export default {
-  name: 'Basic Card',
+  name: 'Multiplayer-form',
   components: {
     MultiplayerForm,
     MultiplayerFormMobile
