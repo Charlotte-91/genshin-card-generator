@@ -6,8 +6,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 - Character loadout card, allowing you to show which weapons and artifacts are equipped to each party member  [ In Progress ]
-- Change form to stop duplicate characters being chosen for team selection [ In Progress ]
 - Auto upload of card image to twitter 
+
+## [2.0.0] - 2021-04-27
+
+### Added
+- Added  a new splash page to the website
+- Added two new buttons on the splash page for future cards
+
+### Changed
+- Rebuilt the form for the basic card
+- Rebuilt the form for the multiplayer card
+- Fixed website responsiveness 
+- Changed form to stop duplicate characters being chosen for team selection
+
 
 ## [1.2.2] - 2021-04-25
 
