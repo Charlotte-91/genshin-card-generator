@@ -45,11 +45,14 @@
   height: 280px;
   text-align: center;
 }
-.body {
+body {
   background-color:#464545;
-  font-size: 25px;
   padding: 20px;
   font-family: SuezOne-Regular; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 .footer {
   position: bottom;
@@ -73,11 +76,11 @@ button {
 
 }
 .centered {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   position: relative;
-  top: 70%;
-  left: 50%;
-  transform: translate(-53%, 0%);
-  width: 40%;
+  width: 600px;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
@@ -97,5 +100,9 @@ button {
 .question-wrap {
     padding: 15px;
 }
-
+@media screen and (max-width: 800px) {
+  .centered{
+    width: 80%
+  }
+}
 </style>
