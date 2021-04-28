@@ -158,6 +158,7 @@ export default {
         { name: 'Xiao', id: 'Xiao' },
         { name: 'Xingqiu', id: 'Xingqiu' },
         { name: 'Xinyan', id: 'Xinyan' },
+        { name: 'Yanfei', id: 'Yanfei' },
         { name: 'Zhongli', id: 'Zhongli' },
       ],
       cardValue: [],
