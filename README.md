@@ -14,7 +14,7 @@ Genshin Impact Card Generator
 
 ## Website
 
-https://genshin-impact-card-generator.herokuapp.com/
+http://www.genshin-card-generator.com/
 
 ## Key Features
 
