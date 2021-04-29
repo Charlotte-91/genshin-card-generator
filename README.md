@@ -38,16 +38,13 @@ http://www.genshin-card-generator.com/
 
 ## Future Features: 
 
-- Add ability to choose and display in-game pet (done!)
 - Add Character load out option, to showcase weapons and artifacts on team memebers (in progress)
 
 ## Future Improvements:
 
 - Attach image to twitter share button, so tweet draft includes image automatically
-- Make homepage more responsive
 - Add new characters when approproiate
 - Implement Session Storage so errors do not occur on refresh of the card page
-- Once a character is chosen, remove them on subsequent select tags to prevent duplicated characters
 
 
 ## Technologies
