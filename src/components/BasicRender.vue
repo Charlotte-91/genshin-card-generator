@@ -1,5 +1,6 @@
 <template>
   <div className="App">
+    <div class="top-gap"/>
     <v-stage ref="stage" :config="stageSize">
       <v-layer v-if="this.$route.params.playerName == undefined" ref="layer">
           <v-text :config="{text: `An Error occurred, please go back to the Home page`, fontSize: 25, x: 300, y:350, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
@@ -16,6 +17,10 @@
         <v-image :config="{image: pet, x: 660, y:50}"/>
       </v-layer>
     </v-stage>
+    <br>
+    <div class="save-button">
+      <button class='mobile-button' v-on:click=save()>Save image</button>
+    </div>
   </div>
 </template>
 
@@ -35,7 +40,23 @@ export default {
       pet: null
     };
   },
-  
+  methods: {
+      downloadURI: function (uri, name) {
+        var link = document.createElement('a');
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        // delete link;
+      },
+      save: function () {
+        console.log('clidk')
+        console.log(this.$refs)
+        var dataURL = (this.$refs.stage.getStage()).toDataURL({ pixelRatio: 3 });
+        this.downloadURI(dataURL, 'genshincard.png');
+      },
+  },
   created() {
       const image = new window.Image();
       image.src = require('../assets/alt-card-bgs/' + this.$route.params.cardChara + '-cd.png');
@@ -70,3 +91,8 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.top-gap {
+  margin: 100px;
+}
+</style>
