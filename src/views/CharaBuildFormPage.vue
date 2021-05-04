@@ -5,7 +5,7 @@
         <header className="App-header">
         <img src="../assets/genshin-logo.png" height='260px'/>
       </header>
-        <team-comp-form/>
+        <CharaBuildForm/>
       </div>
       <div v-else>
         <header className="App-header">
@@ -24,12 +24,12 @@
 
 <script>
 
-import TeamCompForm from "../components/TeamCompForm.vue";
+import CharaBuildForm from "../components/CharaBuildForm.vue";
 
 export default {
-  name: 'Team Form Page',
+  name: 'Character Build form page',
   components: {
-    TeamCompForm
+    CharaBuildForm
   },
   methods: {
     isMobile() {
