@@ -33,7 +33,8 @@ export default {
   },
   methods: {
     isMobile() {
-      if(/Android|webOS|ipad|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|iOS/i.test(navigator.userAgent)) {
+      if(/Android|webOS|ipad|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|iOS/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0)) {
         return true
       } else {
         return false
