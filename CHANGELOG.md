@@ -8,10 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Character loadout card, allowing you to show which weapons and artifacts are equipped to each party member  [ In Progress ]
 - Auto upload of card image to twitter 
 
+## [2.2.0] - 2021-05-18
+
+### Added
+- Added Eula to card designs and team selection
+
+
 ## [2.1.2] - 2021-05-08
 
 ### Fixed
 - Fixed Spiral Abyss progress accidently appearing on the multiplayer form
+
 
 ## [2.1.1] - 2021-05-04
 
@@ -22,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.1.0] - 2021-04-27
 
 ### Added
-- Added  Yanfei to card designs and team selection
+- Added Yanfei to card designs and team selection
 
 
 ## [2.0.0] - 2021-04-27
