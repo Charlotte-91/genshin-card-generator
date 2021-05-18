@@ -19,7 +19,7 @@
           <label class="typo__label">Character:</label>
         </div>
         <div class="col-75">
-          <multiselect v-model="value" :options="options" :multiple="true" :max="1" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your Character" label="name" track-by="name" :preselect-first="false">
+          <multiselect v-model="value" :options="options" :multiple="true" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick your Character" label="name" track-by="name" :preselect-first="false">
               <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">{{ values.length }} character selected</span></template>
           </multiselect>
         </div>
@@ -41,20 +41,30 @@
           <label class="typo__label">Weapon:</label>
         </div>
         <div class="col-75">
+          <multiselect v-model="weaponChoice" :options="weapons" :multiple="true" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick your weapon" label="name" track-by="name" :preselect-first="false">
+              <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">Weapon selected</span></template>
+          </multiselect>
+        </div>
+      </div>
+        <!-- <div class="row">
+        <div class="col-25">
+          <label class="typo__label">Weapon:</label>
+        </div>
+        <div class="col-75"> -->
             <!-- <div>{{ value[0].name}}</div> -->
-            <div v-if="value[0].name == 'Diluc' ">
-                <multiselect v-model="charaWeapon" :options="claymore" :multiple="true" :max="1" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your weapon" label="name" track-by="name" :preselect-first="false">
+            <!-- <div v-if="value[0].name == 'Diluc' "> -->
+                <!-- <multiselect v-model="charaWeapon" :options="weapons" :multiple="true" :max="1" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your weapon" label="name" track-by="name" :preselect-first="false">
                     <template slot="selection" slot-scope="{ value, isOpen }"><span class="multiselect__single" v-if="value.length &amp;&amp; !isOpen">{{ value.length }} weapon selected</span></template>
-                </multiselect>
-            </div>
-          <div v-else-if="this.value == 'Zhongli'">
+                </multiselect> -->
+            <!-- </div>
+          <div v-else-if="this.value.name == 'Zhongli'">
               <multiselect v-model="charaWeapon" :options="polearm" :multiple="true" :max="1" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your weapon" label="name" track-by="name" :preselect-first="false">
                     <template slot="selection" slot-scope="{ value, isOpen }"><span class="multiselect__single" v-if="value.length &amp;&amp; !isOpen">{{ value.length }} weapon selected</span></template>
                 </multiselect>
-            </div>
+            </div> -->
 
-        </div>
-      </div>
+        <!-- </div>
+      </div> -->
 
       <button class='mobile-button' v-on:click=validate()>Submit</button>
     </div>
@@ -112,9 +122,10 @@ export default {
         { name: 'Zhongli', id: 'Zhongli' },
       ],
       charaWeapon: [],
-      claymore: ['hfhfhf', 'ghghfhhd'],
-      polearm: ['fjdnshf;ld', 'fsdlflsf'],
-      
+      weapons:[{ name: 'Claymore'},{ name: 'Polearm'}],
+      // claymore: ['hfhfhf', 'ghghfhhd'],
+      // polearm: ['fjdnshf;ld', 'fsdlflsf'],
+      weaponChoice: []
     }
   },
   props: {
@@ -124,11 +135,16 @@ export default {
     validation: String
   },
   methods: {
+      weaponChoose(){
+        console.log(this.value[0].name)
+          if (this.value[0].name == 'Diluc') {
+            this.weaponChoice == 'claymore'
+          }else if (this.value[0].name == 'Zhongli') {
+            this.weaponChoice == 'polearm'
+          }
+      },
       submit() {
-        this.team1 = this.value[0].id
-        this.team2 = this.value[1].id
-        this.team3 = this.value[2].id
-        this.team4 = this.value[3].id
+        this.character = this.value[0].id
         this.cardDesign = this.cardValue[0].id
         this.pet = this.PetValue
         // console.log(this.SA)
