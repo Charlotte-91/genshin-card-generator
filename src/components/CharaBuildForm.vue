@@ -1,16 +1,16 @@
 <template>
+   <FormulateForm
+    v-model='values'
+    :keep-model-data="true">
     <body>
+
       <div class ="form">
         <div class="row">
-          <div class="valid">{{ this.validation }}</div>
-          <!-- <h3>Multiplayer card generator</h3> -->
           <div class="col-25">
             <label class="typo__label">Player Name:</label>
           </div>
           <div class="col-75">
-            <div class="multiselect">
-              <input class="form-style"  type='input' v-model="playerName" min='0' max='60' /> 
-            </div>
+            <FormulateInput type="text" name="playerName"/>
           </div>
         </div>
 
@@ -19,121 +19,70 @@
           <label class="typo__label">Character:</label>
         </div>
         <div class="col-75">
-          <multiselect v-model="value" :options="options" :multiple="true" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick your Character" label="name" track-by="name" :preselect-first="false">
-              <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">{{ values.length }} character selected</span></template>
-          </multiselect>
+          <FormulateInput type="select" name='chara' :options="{ aether: 'Aether', albedo: 'Albedo', amber: 'Amber', barbara: 'Barbara', beidou: 'Beidou', bennett: 'Bennett', chongyun: 'Chongyun', diluc: 'Diluc', diona: 'Diona', eula: 'Eula', fishcl: 'Fischl', ganyu: 'Ganyu', hutao: 'Hu tao', jean: 'Jean', kaeya: 'Kaeya',
+          keqing: 'Keqing', klee: 'Klee', lisa: 'Lisa', lumine: 'Lumine', mona: 'Mona', ningguang: 'Ningguang', noelle: 'Noelle', qiqi: 'Qiqi', razor: 'Razor', rosaria: 'Rosaria', sucrose: 'Sucrose', tartaglia: 'Tartaglia', venti: 'Venti', xiangling: 'Xiangling', xiao: 'Xiao', xingqiu: 'Xingqiu', xinyan: 'Xinyan', yanfei: 'Yanfei', zhongli: 'Zhongli'}"/>
         </div>
       </div>
 
-        <div class="row">
-          <div class="col-25">
-            <label class="typo__label">Character level:</label>
-          </div>
-          <div class="col-75">
-            <div class="multiselect">
-              <input class="form-style" type='number' v-model="charaLvl" min='0' max='90' /> 
-            </div>
-          </div>
-        </div>
+        
 
         <div class="row">
         <div class="col-25">
           <label class="typo__label">Weapon:</label>
         </div>
         <div class="col-75">
-          <multiselect v-model="weaponChoice" :options="weapons" :multiple="true" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick your weapon" label="name" track-by="name" :preselect-first="false">
-              <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">Weapon selected</span></template>
-          </multiselect>
+          <FormulateInput v-if="values.chara =='beidou'|| values.chara =='chongyun'||values.chara == 'diluc' || values.chara =='eula'|| values.chara =='noelle'|| values.chara =='razor'|| values.chara =='xingyan'" key="claymore" name="claymore" type="select" :options="['Blackcliff Slasher', 'Bloodtainted Greatsword', 'Debate Club','Favonius Greatsword', 'Ferrous Shadow','Lithic Blade','Prototype Archaic', 'Quartz', 'Rainslasher','Royal Greatsword','Sacrificial Greatsword', 'Serpent Spine',
+           'Skyward Pride', 'Snow-Tombed Starsilver', 'Song of Broken Pines', 'The Bell', 'The Unforged', 'White Iron Greatsword', 'Whiteblind', 'Wolfs Gravestone']"/>
+          <FormulateInput v-if="values.chara =='aether' || values.chara =='albedo' || values.chara =='bennett'|| values.chara =='jean'|| values.chara =='kaeya'|| values.chara =='keqing'|| values.chara =='qiqi'|| values.chara =='xingqiu'" key="sword" name="sword" type="select" :options="['Aquila Favonia', 'Blackcliff Longsword', 'Cool Steel', 'Dark Iron Sword', 'Dull Blade', 'Favonius Sword', 'Festering Desire', 'Fillet Blade', 'Harbinger of Dawn', '	Iron Sting', 'Lions Roar', 'Primordial Jade Cutter', 'Prototype Rancour',
+           'Royal Longsword', 'Sacrificial Sword', 'Silver Sword', 'Skyrider Sword', 'Skyward Blade', 'Summit Shaper', 'Sword of Descension', 'The Alley Flash', 'The Black Sword', 'The Flute', 'Travelers Handy Sword']"/>
+          <FormulateInput v-if="values.chara =='hutao'|| values.chara =='rosaria'|| values.chara =='xiangling'|| values.chara =='xiao'|| values.chara =='zhongli'" key="polearm" name="polearm" type="select" :options="['Black Tassel', 'Blackcliff Pole', 'Crescent Pike', 'Deathmatch', 'Dragons Bane', 'Dragonspine Spear', 'Favonius Lance', '	Halberd', 'Iron Point', 'Lithic Spear', 'Primordial Jade Winged-Spear', 'Prototype Starglitter','Royal Spear','Skyward Spine',
+           'Staff of Homa', 'Vortex Vanquisher','White Tassel']"/>
+          <FormulateInput v-if="values.chara =='barbara'|| values.chara =='klee'|| values.chara =='lisa'|| values.chara =='mona'|| values.chara =='ningguang'|| values.chara =='sucrose'|| values.chara =='yanfei'" key="catalyst" name="catalyst" type="select" :options="['Amber Catalyst', 'Apprentices Notes',  'Blackcliff Agate', 'Emerald Orb', 'Favonius Codex', '	Frostbearer', 'Lost Prayer to the Sacred Winds', 'Magic Guide', 'Mappa Mare', 'Memory of Dust', 'Otherworldly Story',
+          'Prototype Amber', '	Royal Grimoire', 'Sacrificial Fragments', 'Skyward Atlas', 'Solar Pearl', 'The Widsith', 'Thrilling Tales of Dragon Slayers', 'Twin Nephrite', 'Wine and Song']"/>
+          <FormulateInput v-if="values.chara =='amber'|| values.chara =='diona'|| values.chara =='fischl'|| values.chara =='ganyu'|| values.chara =='tartaglia'|| values.chara =='venti'" key="bow" name="bow" type="select" :options="['Alley Hunter', 'Amos Bow', 'Blackcliff Warbow','Compound Bow', 'Ebony Bow', 'Elegy for the End', 'Favonius Warbow','Hunters Bow', 'Messenger', 'Prototype Crescent', 'Raven Bow', 'Recurve Bow', 'Royal Bow','Rust',
+            'Sacrificial Bow', 'Seasoned Hunters Bow', 'Skyward Harp', 'Slingshot', 'The Stringless', 'The Viridescent Hunt', 'Windblume Ode']"/>
         </div>
       </div>
-        <!-- <div class="row">
-        <div class="col-25">
-          <label class="typo__label">Weapon:</label>
-        </div>
-        <div class="col-75"> -->
-            <!-- <div>{{ value[0].name}}</div> -->
-            <!-- <div v-if="value[0].name == 'Diluc' "> -->
-                <!-- <multiselect v-model="charaWeapon" :options="weapons" :multiple="true" :max="1" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your weapon" label="name" track-by="name" :preselect-first="false">
-                    <template slot="selection" slot-scope="{ value, isOpen }"><span class="multiselect__single" v-if="value.length &amp;&amp; !isOpen">{{ value.length }} weapon selected</span></template>
-                </multiselect> -->
-            <!-- </div>
-          <div v-else-if="this.value.name == 'Zhongli'">
-              <multiselect v-model="charaWeapon" :options="polearm" :multiple="true" :max="1" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your weapon" label="name" track-by="name" :preselect-first="false">
-                    <template slot="selection" slot-scope="{ value, isOpen }"><span class="multiselect__single" v-if="value.length &amp;&amp; !isOpen">{{ value.length }} weapon selected</span></template>
-                </multiselect>
-            </div> -->
 
-        <!-- </div>
-      </div> -->
+      <div class="row">
+          <div class="col-25">
+            <label class="typo__label">Character level:</label>
+          </div>
+            <div class="col-75">
+              <FormulateInput
+               type='number' name="charaLvl" validation="required|number|between:0,60" /> 
+            </div>
+          </div>
+
 
       <button class='mobile-button' v-on:click=validate()>Submit</button>
     </div>
-  </body>
     
+  </body>
+   </FormulateForm> 
 
 </template>
 
 
 
 <script>
-import Multiselect from 'vue-multiselect'
-// const { required, minLength, maxLength } = window.validators
 
 export default {
-    components: {
-    Multiselect
-  },
+
   data () {
     return {
-      value: [],
-      options: [
-        { name: 'Aether', id: 'Aether' },
-        { name: 'Albedo', id: 'Albedo' },
-        { name: 'Amber', id: 'Amber' },
-        { name: 'Barbara', id: 'Barbara' },
-        { name: 'Beidou', id: 'Beidou' },
-        { name: 'Bennett', id: 'Bennett' },
-        { name: 'Chongyun', id: 'Chongyun' },
-        { name: 'Diluc', id: 'Diluc' },
-        { name: 'Diona', id: 'Diona' },
-        { name: 'Fischl', id: 'Fischl' },
-        { name: 'Ganyu', id: 'Ganyu' },
-        { name: 'Hu tao', id: 'Hutao' },
-        { name: 'Jean', id: 'Jean' },
-        { name: 'Kaeya', id: 'Kaeya' },
-        { name: 'Keqing', id: 'Keqing' },
-        { name: 'Klee', id: 'Klee' },
-        { name: 'Lisa', id: 'Lisa' },
-        { name: 'Lumine', id: 'Lumine' },
-        { name: 'Mona', id: 'Mona' },
-        { name: 'Ningguang', id: 'Ningguang' },
-        { name: 'Noelle', id: 'Noelle' },
-        { name: 'Qiqi', id: 'Qiqi' },
-        { name: 'Razor', id: 'Razor' },
-        { name: 'Rosaria', id: 'Rosaria' },
-        { name: 'Sucrose', id: 'Sucrose' },
-        { name: 'Tartaglia', id: 'Tartaglia' },
-        { name: 'Venti', id: 'Venti' },
-        { name: 'Xiangling', id: 'Xiangling' },
-        { name: 'Xiao', id: 'Xiao' },
-        { name: 'Xingqiu', id: 'Xingqiu' },
-        { name: 'Xinyan', id: 'Xinyan' },
-        { name: 'Yanfei', id: 'Yanfei' },
-        { name: 'Zhongli', id: 'Zhongli' },
-      ],
-      charaWeapon: [],
-      weapons:[{ name: 'Claymore'},{ name: 'Polearm'}],
-      // claymore: ['hfhfhf', 'ghghfhhd'],
-      // polearm: ['fjdnshf;ld', 'fsdlflsf'],
-      weaponChoice: []
+      values: {
+
+      }
+
     }
   },
-  props: {
-    playerName: String,
-    character: String,
-    charaLvl: Number,
-    validation: String
-  },
+  // props: {
+  //   playerName: String,
+  //   chara: String,
+  //   charaLvl: Number,
+  //   weapon: String
+  // },
   methods: {
       weaponChoose(){
         console.log(this.value[0].name)

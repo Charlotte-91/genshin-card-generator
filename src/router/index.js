@@ -2,10 +2,13 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import VueKonva from 'vue-konva';
+import VueFormulate from '@braid/vue-formulate'
 require('../styles/form.css')
+
 
 Vue.use(VueKonva);
 Vue.use(VueRouter);
+Vue.use(VueFormulate);
 
 const routes = [
   {
