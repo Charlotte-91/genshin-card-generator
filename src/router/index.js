@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import VueKonva from 'vue-konva';
 import VueFormulate from '@braid/vue-formulate'
 require('../styles/form.css')
+require('../styles/snow.css')
 
 
 Vue.use(VueKonva);

@@ -24,12 +24,21 @@
         </div>
       </div>
 
-        
+        <div class="row">
+          <div class="col-25">
+            <label class="typo__label">Character level:</label>
+          </div>
+            <div class="col-75">
+              <FormulateInput
+               type='number' name="level" validation="required|number|between:0,61" /> 
+            </div>
+          </div>
 
         <div class="row">
         <div class="col-25">
           <label class="typo__label">Weapon:</label>
         </div>
+        <!-- To be refactored -->
         <div class="col-75">
           <FormulateInput v-if="values.chara =='beidou'|| values.chara =='chongyun'||values.chara == 'diluc' || values.chara =='eula'|| values.chara =='noelle'|| values.chara =='razor'|| values.chara =='xingyan'" key="claymore" name="claymore" type="select" :options="['Blackcliff Slasher', 'Bloodtainted Greatsword', 'Debate Club','Favonius Greatsword', 'Ferrous Shadow','Lithic Blade','Prototype Archaic', 'Quartz', 'Rainslasher','Royal Greatsword','Sacrificial Greatsword', 'Serpent Spine',
            'Skyward Pride', 'Snow-Tombed Starsilver', 'Song of Broken Pines', 'The Bell', 'The Unforged', 'White Iron Greatsword', 'Whiteblind', 'Wolfs Gravestone']"/>
@@ -43,16 +52,86 @@
             'Sacrificial Bow', 'Seasoned Hunters Bow', 'Skyward Harp', 'Slingshot', 'The Stringless', 'The Viridescent Hunt', 'Windblume Ode']"/>
         </div>
       </div>
+      <div class="row">
+          <div class="col-25">
+            <label class="typo__label">Artifacts</label>
+          </div>
+      </div>
 
       <div class="row">
           <div class="col-25">
-            <label class="typo__label">Character level:</label>
+            <label class="typo__label">Flower of Life:</label>
           </div>
             <div class="col-75">
-              <FormulateInput
-               type='number' name="charaLvl" validation="required|number|between:0,60" /> 
+              <FormulateInput type="select" name='flower' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+              'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
             </div>
           </div>
+
+      <div class="row">
+          <div class="col-25">
+            <label class="typo__label">Main stat:</label>
+          </div>
+            <div class="col-90">
+              <FormulateInput
+               type='number' name="flower-main" validation="number" /> 
+            </div>
+            <div class="col-85">
+              ATK%
+            </div>
+          </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label class="typo__label">Sub stats:</label>
+          </div>
+            <div class="col-90">
+              <FormulateInput
+               type='number' name="flower-1" validation="number" /> 
+            </div>
+            <div class="col-85">
+              <FormulateInput
+               type='select' name="flower-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-25">
+          </div>
+            <div class="col-90">
+              <FormulateInput
+               type='number' name="flower-3" validation="number" /> 
+            </div>
+            <div class="col-85">
+              <FormulateInput
+               type='select' name="flower-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+            </div>
+          </div>
+           <div class="row">
+          <div class="col-25">
+          </div>
+            <div class="col-90">
+              <FormulateInput
+               type='number' name="flower-4" validation="number" /> 
+            </div>
+            <div class="col-85">
+              <FormulateInput
+               type='select' name="flower-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+            </div>
+          </div>
+           <div class="row">
+          <div class="col-25">
+          </div>
+            <div class="col-90">
+              <FormulateInput
+               type='number' name="flower-4" validation="number" /> 
+            </div>
+            <div class="col-85">
+              <FormulateInput
+               type='select' name="flower-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+            </div>
+          </div>
+
+            
 
 
       <button class='mobile-button' v-on:click=validate()>Submit</button>
@@ -84,14 +163,6 @@ export default {
   //   weapon: String
   // },
   methods: {
-      weaponChoose(){
-        console.log(this.value[0].name)
-          if (this.value[0].name == 'Diluc') {
-            this.weaponChoice == 'claymore'
-          }else if (this.value[0].name == 'Zhongli') {
-            this.weaponChoice == 'polearm'
-          }
-      },
       submit() {
         this.character = this.value[0].id
         this.cardDesign = this.cardValue[0].id
@@ -158,6 +229,16 @@ body{
 .col-75 {
   float: right;
   width: 45%;
+  margin-bottom: 10px;
+}
+.col-85 {
+  float: right;
+  width: 30%;
+  margin-bottom: 10px;
+}
+.col-90 {
+  float: right;
+  width: 20%;
   margin-bottom: 10px;
 }
 .row{
