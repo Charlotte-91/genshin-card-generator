@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import VueKonva from 'vue-konva';
 import VueFormulate from '@braid/vue-formulate'
+import VueSimpleAccordion from 'vue-simple-accordion';
+import 'vue-simple-accordion/dist/vue-simple-accordion.css';
 require('../styles/form.css')
 require('../styles/snow.css')
 
@@ -10,6 +12,7 @@ require('../styles/snow.css')
 Vue.use(VueKonva);
 Vue.use(VueRouter);
 Vue.use(VueFormulate);
+Vue.use(VueSimpleAccordion);
 
 const routes = [
   {
@@ -96,6 +99,15 @@ const routes = [
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
   component: () => import(/* webpackChunkName: "CardDesign" */ '../views/CharaBuildFormPage.vue'),
+  props: true
+},
+{
+  path: '/character-render',
+  name: 'Chara Build Render Page',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/CharaBuildRenderPage.vue'),
   props: true
 }
 

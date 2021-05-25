@@ -52,89 +52,405 @@
             'Sacrificial Bow', 'Seasoned Hunters Bow', 'Skyward Harp', 'Slingshot', 'The Stringless', 'The Viridescent Hunt', 'Windblume Ode']"/>
         </div>
       </div>
-      <div class="row">
+      <h3> Artifacts</h3>
+      <!-- <div class="row">
           <div class="col-25">
             <label class="typo__label">Artifacts</label>
           </div>
-      </div>
+      </div> -->
+          <!-- Artifacts -->
+            <vsa-list>
+              <!-- Flower Artifacts -->
+              <vsa-item>
+                <vsa-heading>Flower of Life</vsa-heading>
+                  <vsa-content>
+                    <div class="row">
+                        <div class="col-25">
+                          <label class="typo__label">Set:</label>
+                        </div>
+                          <div class="col-75">
+                            <FormulateInput type="select" name='flower' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
+                          </div>
+                        </div>
+                          <div class="row">
+                              <div class="col-25">
+                                <label class="typo__label">Main stat:</label>
+                              </div>
+                                <div class="col-90">
+                                  <FormulateInput
+                                  type='number' name="flower-main" validation="number" /> 
+                                </div>
+                                <div class="col-85">
+                                  HP
+                                </div>
+                              </div>
 
-      <div class="row">
-          <div class="col-25">
-            <label class="typo__label">Flower of Life:</label>
-          </div>
-            <div class="col-75">
-              <FormulateInput type="select" name='flower' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
-              'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
-            </div>
-          </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label class="typo__label">Sub stats:</label>
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="flower-1" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="flower-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="flower-2" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="flower-2-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput 
+                              type='number' name="flower-3" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="flower-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="flower-4" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="flower-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                  </vsa-content>
+              </vsa-item>
+              <!-- Feather Artifact -->
+              <vsa-item>
+                <vsa-heading>Plume of Death</vsa-heading>
+                  <vsa-content>
+                    <div class="row">
+                        <div class="col-25">
+                          <label class="typo__label">Set:</label>
+                        </div>
+                          <div class="col-75">
+                            <FormulateInput type="select" name='feather' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
+                          </div>
+                        </div>
+                          <div class="row">
+                              <div class="col-25">
+                                <label class="typo__label">Main stat:</label>
+                              </div>
+                                <div class="col-90">
+                                  <FormulateInput
+                                  type='number' name="feather-main" validation="number" /> 
+                                </div>
+                                <div class="col-85">
+                                  ATK
+                                </div>
+                              </div>
 
-      <div class="row">
-          <div class="col-25">
-            <label class="typo__label">Main stat:</label>
-          </div>
-            <div class="col-90">
-              <FormulateInput
-               type='number' name="flower-main" validation="number" /> 
-            </div>
-            <div class="col-85">
-              ATK%
-            </div>
-          </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label class="typo__label">Sub stats:</label>
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="feather-1" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="feather-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="feather-2" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="feather-2-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput 
+                              type='number' name="feather-3" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="feather-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="feather-4" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="feather-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                  </vsa-content>
+              </vsa-item>
+              <!-- Sands Artifact -->
+              <vsa-item>
+                <vsa-heading>Sands of Eon</vsa-heading>
+                  <vsa-content>
+                    <div class="row">
+                        <div class="col-25">
+                          <label class="typo__label">Set:</label>
+                        </div>
+                          <div class="col-75">
+                            <FormulateInput type="select" name='sands' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
+                          </div>
+                        </div>
+                          <div class="row">
+                              <div class="col-25">
+                                <label class="typo__label">Main stat:</label>
+                              </div>
+                                <div class="col-90">
+                                  <FormulateInput
+                                  type='number' name="sands-main" validation="number" /> 
+                                </div>
+                                <div class="col-85">
+                                  <FormulateInput
+                                    type='select' name="sands-main-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %']" /> 
+                                </div>
+                              </div>
 
-        <div class="row">
-          <div class="col-25">
-            <label class="typo__label">Sub stats:</label>
-          </div>
-            <div class="col-90">
-              <FormulateInput
-               type='number' name="flower-1" validation="number" /> 
-            </div>
-            <div class="col-85">
-              <FormulateInput
-               type='select' name="flower-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-            </div>
-          </div>
-          <div class="row">
-          <div class="col-25">
-          </div>
-            <div class="col-90">
-              <FormulateInput
-               type='number' name="flower-3" validation="number" /> 
-            </div>
-            <div class="col-85">
-              <FormulateInput
-               type='select' name="flower-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-            </div>
-          </div>
-           <div class="row">
-          <div class="col-25">
-          </div>
-            <div class="col-90">
-              <FormulateInput
-               type='number' name="flower-4" validation="number" /> 
-            </div>
-            <div class="col-85">
-              <FormulateInput
-               type='select' name="flower-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-            </div>
-          </div>
-           <div class="row">
-          <div class="col-25">
-          </div>
-            <div class="col-90">
-              <FormulateInput
-               type='number' name="flower-4" validation="number" /> 
-            </div>
-            <div class="col-85">
-              <FormulateInput
-               type='select' name="flower-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-            </div>
-          </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label class="typo__label">Sub stats:</label>
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="sands-1" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="sands-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="sands-2" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="sands-2-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput 
+                              type='number' name="sands-3" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="sands-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="sands-4" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="sands-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                  </vsa-content>
+              </vsa-item>
+              <!-- Goblet Artifact -->
+              <vsa-item>
+                <vsa-heading>Sands of Eon</vsa-heading>
+                  <vsa-content>
+                    <div class="row">
+                        <div class="col-25">
+                          <label class="typo__label">Set:</label>
+                        </div>
+                          <div class="col-75">
+                            <FormulateInput type="select" name='goblet' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
+                          </div>
+                        </div>
+                          <div class="row">
+                              <div class="col-25">
+                                <label class="typo__label">Main stat:</label>
+                              </div>
+                                <div class="col-90">
+                                  <FormulateInput
+                                  type='number' name="goblet-main" validation="number" /> 
+                                </div>
+                                <div class="col-85">
+                                  <FormulateInput
+                                    type='select' name="goblet-main-type" :options="['', 'HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %', 'Pyro DMG%','Hydro DMG%', 'Cryo DMG%', 'Electro DMG%', 'Geo DMG%','Anemo DMG%','Physical DMG %']" /> 
+                                </div>
+                              </div>
 
-            
+                        <div class="row">
+                          <div class="col-25">
+                            <label class="typo__label">Sub stats:</label>
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="goblet-1" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="goblet-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="goblet-2" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="goblet-2-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput 
+                              type='number' name="goblet-3" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="goblet-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="goblet-4" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="goblet-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                  </vsa-content>
+              </vsa-item>
+              <!-- Circlet Artifact -->
+              <vsa-item>
+                <vsa-heading>Circlet of Logos</vsa-heading>
+                  <vsa-content>
+                    <div class="row">
+                        <div class="col-25">
+                          <label class="typo__label">Set:</label>
+                        </div>
+                          <div class="col-75">
+                            <FormulateInput type="select" name='circlet' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
+                          </div>
+                        </div>
+                          <div class="row">
+                              <div class="col-25">
+                                <label class="typo__label">Main stat:</label>
+                              </div>
+                                <div class="col-90">
+                                  <FormulateInput
+                                  type='number' name="circlet-main" validation="number" /> 
+                                </div>
+                                <div class="col-85">
+                                  <FormulateInput
+                                    type='select' name="circlet-main-type" :options="['','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %', 'CRIT Rate %', 'CRIT DMG %', 'Healing%']" /> 
+                                </div>
+                              </div>
 
-
-      <button class='mobile-button' v-on:click=validate()>Submit</button>
+                        <div class="row">
+                          <div class="col-25">
+                            <label class="typo__label">Sub stats:</label>
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="circlet-1" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="circlet-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="circlet-2" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="circlet-2-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput 
+                              type='number' name="circlet-3" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="circlet-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                          <div class="row">
+                          <div class="col-25">
+                          </div>
+                            <div class="col-90">
+                              <FormulateInput
+                              type='number' name="circlet-4" validation="number" /> 
+                            </div>
+                            <div class="col-85">
+                              <FormulateInput
+                              type='select' name="flower-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                            </div>
+                          </div>
+                  </vsa-content>
+              </vsa-item>
+            </vsa-list>
+              
+      <button class='mobile-button' v-on:click=submit()>Submit</button>
     </div>
     
   </body>
@@ -156,50 +472,13 @@ export default {
 
     }
   },
-  // props: {
-  //   playerName: String,
-  //   chara: String,
-  //   charaLvl: Number,
-  //   weapon: String
-  // },
   methods: {
       submit() {
-        this.character = this.value[0].id
-        this.cardDesign = this.cardValue[0].id
-        this.pet = this.PetValue
-        // console.log(this.SA)
-        // console.log(this.team1)
-        // console.log(this.team2)
-        // console.log(this.team3)
-        // console.log(this.team4)
-        // this.$v.form.$touch();
-        // if(this.$v.form.$error) return
-        this.$router.push({name: 'Basic Card Render', 
-        params: {
-          cardChara : this.cardDesign, 
-          playerName: this.playerName,
-          AR: this.AR,
-          pet: this.pet,
-          team1: this.team1,
-          team2: this.team2,
-          team3: this.team3,
-          team4: this.team4,
-        }
+        this.$router.push({name: 'Chara Build Render Page', 
+        params: this.values
       })
     },
-    validate() {
-        var errors = []
-        if (this.playerName == undefined || this.playerName == '' || this.AR == undefined || this.AR == '' || this.value.length == 0 || this.cardValue.length == 0 ) {
-            if (this.playerName == undefined || this.playerName == '') {errors.push(' Player name ')}
-            if (this.AR == undefined || this.AR == '') {errors.push(' AR ')}
-            if (this.value.length == 0) {errors.push(' Team ')}
-            if (this.cardValue.length == 0) {errors.push(' Card design ')}
-            console.log(this.playerName)
-          this.validation = `Please fill out; ${errors} field(s)`
-        } else {
-          this.submit()
-        }
-    }
+
   }
 }
 
@@ -219,6 +498,7 @@ body{
   display: flex;
   flex-wrap: wrap;
 }
+
 .col-25 {
   float: left;
   width: 45%;
@@ -279,5 +559,21 @@ body{
   font-size: 16px;
   color: red;
   margin-bottom: 15px;
+}
+.vsa-item__trigger:focus, .vsa-item__trigger:hover{
+  color:black
+}
+.vsa-list{
+--vsa-max-width: 720px;
+--vsa-min-width: 300px;
+--vsa-text-color: #464545;
+--vsa-highlight-color: #DBCBBD;
+--vsa-bg-color:#F9F6F2;
+--vsa-border-color: #F9F6F2;
+--vsa-border-width: 1px;
+--vsa-border-style: solid;
+--vsa-heading-padding: 1rem 1rem;
+--vsa-content-padding: 1rem 1rem;
+--vsa-default-icon-size: 1;
 }
 </style>
