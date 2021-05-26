@@ -6,17 +6,18 @@
       </v-layer>
       <v-layer>
         <v-image :config="{image: image}"/>
-        <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 25, x: 180, y: 115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.flower-1}`, fontSize: 25, x: 552, y:115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.platform}`, fontSize: 25, x: 552, y:210, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.server}`, fontSize: 25, x: 552, y:293, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.twitter}`, fontSize: 25, x: 180, y:293, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 30, x: 180, y: 95, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.level}`, fontSize: 30, x: 300, y:155, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `HP - ${this.$route.params.flowermain} `, fontSize: 25, x: 540, y:128, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.flower1type} - ${this.$route.params.flower1}`, fontSize: 20, x: 540, y:155, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+
         <v-text :config="{text: `genshin-card-generator.com`, fontSize: 16, x: 38, y:655, fill:'black', opacity: 0.7, fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-image :config="{image: team1, x: 90, y:390}"/>
-        <v-image :config="{image: team2, x: 240, y:390}"/>
-        <v-image :config="{image: team3, x: 390, y:390}"/>
-        <v-image :config="{image: team4, x: 540, y:390}"/>
-        <v-image :config="{image: pet, x: 660, y:50}"/>
+        <v-image :config="{image: weapon, x: 90, y:390}"/>
+        <v-image :config="{image: flower, x: 440, y:110}"/>
+        <v-image :config="{image: feather, x: 440, y:200}"/>
+        <v-image :config="{image: sands, x: 440, y:290}"/>
+        <v-image :config="{image: goblet, x: 440, y:390}"/>
+        <v-image :config="{image: circlet, x: 440, y:490}"/>
       </v-layer>
     </v-stage>
   </div>
@@ -31,44 +32,50 @@ export default {
         height: 674
       },
       image: null,
-      team1: null,
-      team2: null,
-      team3: null,
-      team4: null,
-      pet: null
+      flower: null,
+      feather: null,
+      sands: null,
+      goblet: null,
+      circlet: null,
+      weapon: null
     };
   },
   
   created() {
       const image = new window.Image();
-      image.src = require('../assets/card-bgs/' + this.$route.params.cardChara + '-cd.png');
+      image.src = require('../assets/chara-build/' + this.$route.params.chara + '.png');
       image.onload = () => {
         this.image = image;
         };
-      const team1 = new window.Image();
-      team1.src = require('../assets/teams/' + this.$route.params.team1 + '-small.png');
-      team1.onload = () => {
-        this.team1 = team1;
+      const flower = new window.Image();
+      flower.src = require('../assets/Artifacts/Flower/' + (this.$route.params.flower).split(" ").join("") + '.png');
+      flower.onload = () => {
+        this.flower = flower;
       };
-      const team2 = new window.Image();
-      team2.src = require('../assets/teams/' + this.$route.params.team2 + '-small.png');
-      team2.onload = () => {
-        this.team2 = team2;
+      const feather = new window.Image();
+      feather.src = require('../assets/Artifacts/Feather/' + (this.$route.params.feather).split(" ").join("") + '.png');
+      feather.onload = () => {
+        this.feather = feather;
       };
-      const team3 = new window.Image();
-      team3.src = require('../assets/teams/' + this.$route.params.team3 + '-small.png');
-      team3.onload = () => {
-        this.team3 = team3;
+      const sands = new window.Image();
+      sands.src = require('../assets/Artifacts/Sands/' + (this.$route.params.sands).split(" ").join("") + '.png');
+     sands.onload = () => {
+        this.sands = sands;
       };
-      const team4 = new window.Image();
-      team4.src = require('../assets/teams/' + this.$route.params.team4 + '-small.png');
-      team4.onload = () => {
-        this.team4 = team4;
+      const goblet = new window.Image();
+      goblet.src = require('../assets/Artifacts/Goblet/' + (this.$route.params.goblet).split(" ").join("") + '.png');
+      goblet.onload = () => {
+        this.goblet = goblet;
       };
-      const pet = new window.Image();
-      pet.src = require('../assets/pet/' + this.$route.params.pet + '.png');
-      pet.onload = () => {
-      this.pet = pet;
+      const circlet = new window.Image();
+      circlet.src = require('../assets/Artifacts/Circlet/' + (this.$route.params.circlet).split(" ").join("") + '.png');
+      circlet.onload = () => {
+      this.circlet = circlet;
+      };
+      const weapon = new window.Image();
+      weapon.src = require('../assets/Weapons/' + (this.$route.params.weapon).split(" ").join("") + '.png');
+      weapon.onload = () => {
+      this.weapon = weapon;
       };
     }
   }

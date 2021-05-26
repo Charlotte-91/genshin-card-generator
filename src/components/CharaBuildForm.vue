@@ -40,24 +40,19 @@
         </div>
         <!-- To be refactored -->
         <div class="col-75">
-          <FormulateInput v-if="values.chara =='beidou'|| values.chara =='chongyun'||values.chara == 'diluc' || values.chara =='eula'|| values.chara =='noelle'|| values.chara =='razor'|| values.chara =='xingyan'" key="claymore" name="claymore" type="select" :options="['Blackcliff Slasher', 'Bloodtainted Greatsword', 'Debate Club','Favonius Greatsword', 'Ferrous Shadow','Lithic Blade','Prototype Archaic', 'Quartz', 'Rainslasher','Royal Greatsword','Sacrificial Greatsword', 'Serpent Spine',
+          <FormulateInput v-if="values.chara =='beidou'|| values.chara =='chongyun'||values.chara == 'diluc' || values.chara =='eula'|| values.chara =='noelle'|| values.chara =='razor'|| values.chara =='xingyan'" key="claymore" name="weapon" type="select" :options="['Blackcliff Slasher', 'Bloodtainted Greatsword', 'Debate Club','Favonius Greatsword', 'Ferrous Shadow','Lithic Blade','Prototype Archaic', 'Quartz', 'Rainslasher','Royal Greatsword','Sacrificial Greatsword', 'Serpent Spine',
            'Skyward Pride', 'Snow-Tombed Starsilver', 'Song of Broken Pines', 'The Bell', 'The Unforged', 'White Iron Greatsword', 'Whiteblind', 'Wolfs Gravestone']"/>
-          <FormulateInput v-if="values.chara =='aether' || values.chara =='albedo' || values.chara =='bennett'|| values.chara =='jean'|| values.chara =='kaeya'|| values.chara =='keqing'|| values.chara =='qiqi'|| values.chara =='xingqiu'" key="sword" name="sword" type="select" :options="['Aquila Favonia', 'Blackcliff Longsword', 'Cool Steel', 'Dark Iron Sword', 'Dull Blade', 'Favonius Sword', 'Festering Desire', 'Fillet Blade', 'Harbinger of Dawn', '	Iron Sting', 'Lions Roar', 'Primordial Jade Cutter', 'Prototype Rancour',
+          <FormulateInput v-if="values.chara =='aether' || values.chara =='albedo' || values.chara =='bennett'|| values.chara =='jean'|| values.chara =='kaeya'|| values.chara =='keqing'|| values.chara =='qiqi'|| values.chara =='xingqiu'" key="sword" name="weapon" type="select" :options="['Aquila Favonia', 'Blackcliff Longsword', 'Cool Steel', 'Dark Iron Sword', 'Dull Blade', 'Favonius Sword', 'Festering Desire', 'Fillet Blade', 'Harbinger of Dawn', '	Iron Sting', 'Lions Roar', 'Primordial Jade Cutter', 'Prototype Rancour',
            'Royal Longsword', 'Sacrificial Sword', 'Silver Sword', 'Skyrider Sword', 'Skyward Blade', 'Summit Shaper', 'Sword of Descension', 'The Alley Flash', 'The Black Sword', 'The Flute', 'Travelers Handy Sword']"/>
-          <FormulateInput v-if="values.chara =='hutao'|| values.chara =='rosaria'|| values.chara =='xiangling'|| values.chara =='xiao'|| values.chara =='zhongli'" key="polearm" name="polearm" type="select" :options="['Black Tassel', 'Blackcliff Pole', 'Crescent Pike', 'Deathmatch', 'Dragons Bane', 'Dragonspine Spear', 'Favonius Lance', '	Halberd', 'Iron Point', 'Lithic Spear', 'Primordial Jade Winged-Spear', 'Prototype Starglitter','Royal Spear','Skyward Spine',
+          <FormulateInput v-if="values.chara =='hutao'|| values.chara =='rosaria'|| values.chara =='xiangling'|| values.chara =='xiao'|| values.chara =='zhongli'" key="polearm" name="weapon" type="select" :options="['Black Tassel', 'Blackcliff Pole', 'Crescent Pike', 'Deathmatch', 'Dragons Bane', 'Dragonspine Spear', 'Favonius Lance', '	Halberd', 'Iron Point', 'Lithic Spear', 'Primordial Jade Winged-Spear', 'Prototype Starglitter','Royal Spear','Skyward Spine',
            'Staff of Homa', 'Vortex Vanquisher','White Tassel']"/>
-          <FormulateInput v-if="values.chara =='barbara'|| values.chara =='klee'|| values.chara =='lisa'|| values.chara =='mona'|| values.chara =='ningguang'|| values.chara =='sucrose'|| values.chara =='yanfei'" key="catalyst" name="catalyst" type="select" :options="['Amber Catalyst', 'Apprentices Notes',  'Blackcliff Agate', 'Emerald Orb', 'Favonius Codex', '	Frostbearer', 'Lost Prayer to the Sacred Winds', 'Magic Guide', 'Mappa Mare', 'Memory of Dust', 'Otherworldly Story',
+          <FormulateInput v-if="values.chara =='barbara'|| values.chara =='klee'|| values.chara =='lisa'|| values.chara =='mona'|| values.chara =='ningguang'|| values.chara =='sucrose'|| values.chara =='yanfei'" key="catalyst" name="weapon" type="select" :options="['Amber Catalyst', 'Apprentices Notes',  'Blackcliff Agate', 'Emerald Orb', 'Favonius Codex', '	Frostbearer', 'Lost Prayer to the Sacred Winds', 'Magic Guide', 'Mappa Mare', 'Memory of Dust', 'Otherworldly Story',
           'Prototype Amber', '	Royal Grimoire', 'Sacrificial Fragments', 'Skyward Atlas', 'Solar Pearl', 'The Widsith', 'Thrilling Tales of Dragon Slayers', 'Twin Nephrite', 'Wine and Song']"/>
-          <FormulateInput v-if="values.chara =='amber'|| values.chara =='diona'|| values.chara =='fischl'|| values.chara =='ganyu'|| values.chara =='tartaglia'|| values.chara =='venti'" key="bow" name="bow" type="select" :options="['Alley Hunter', 'Amos Bow', 'Blackcliff Warbow','Compound Bow', 'Ebony Bow', 'Elegy for the End', 'Favonius Warbow','Hunters Bow', 'Messenger', 'Prototype Crescent', 'Raven Bow', 'Recurve Bow', 'Royal Bow','Rust',
+          <FormulateInput v-if="values.chara =='amber'|| values.chara =='diona'|| values.chara =='fischl'|| values.chara =='ganyu'|| values.chara =='tartaglia'|| values.chara =='venti'" key="bow" name="weapon" type="select" :options="['Alley Hunter', 'Amos Bow', 'Blackcliff Warbow','Compound Bow', 'Ebony Bow', 'Elegy for the End', 'Favonius Warbow','Hunters Bow', 'Messenger', 'Prototype Crescent', 'Raven Bow', 'Recurve Bow', 'Royal Bow','Rust',
             'Sacrificial Bow', 'Seasoned Hunters Bow', 'Skyward Harp', 'Slingshot', 'The Stringless', 'The Viridescent Hunt', 'Windblume Ode']"/>
         </div>
       </div>
       <h3> Artifacts</h3>
-      <!-- <div class="row">
-          <div class="col-25">
-            <label class="typo__label">Artifacts</label>
-          </div>
-      </div> -->
           <!-- Artifacts -->
             <vsa-list>
               <!-- Flower Artifacts -->
@@ -69,7 +64,7 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='flower' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            <FormulateInput type="select" name='flower' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
                             'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
                           </div>
                         </div>
@@ -79,7 +74,7 @@
                               </div>
                                 <div class="col-90">
                                   <FormulateInput
-                                  type='number' name="flower-main" validation="number" /> 
+                                  type='number' name="flowermain" validation="number" /> 
                                 </div>
                                 <div class="col-85">
                                   HP
@@ -92,11 +87,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="flower-1" validation="number" /> 
+                              type='number' name="flower1" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="flower-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="flower1type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -104,11 +99,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="flower-2" validation="number" /> 
+                              type='number' name="flower2" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="flower-2-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="flower2type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -116,11 +111,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput 
-                              type='number' name="flower-3" validation="number" /> 
+                              type='number' name="flower3" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="flower-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="flower3type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -128,11 +123,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="flower-4" validation="number" /> 
+                              type='number' name="flower4" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="flower-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="flower4type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                   </vsa-content>
@@ -146,7 +141,7 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='feather' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            <FormulateInput type="select" name='feather' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
                             'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
                           </div>
                         </div>
@@ -156,7 +151,7 @@
                               </div>
                                 <div class="col-90">
                                   <FormulateInput
-                                  type='number' name="feather-main" validation="number" /> 
+                                  type='number' name="feathermain" validation="number" /> 
                                 </div>
                                 <div class="col-85">
                                   ATK
@@ -169,11 +164,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="feather-1" validation="number" /> 
+                              type='number' name="feather1" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="feather-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="feather1type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -181,11 +176,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="feather-2" validation="number" /> 
+                              type='number' name="feather2" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="feather-2-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="feather2type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -193,11 +188,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput 
-                              type='number' name="feather-3" validation="number" /> 
+                              type='number' name="feather3" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="feather-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="feather3type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -205,11 +200,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="feather-4" validation="number" /> 
+                              type='number' name="feather4" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="feather-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="feather4type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                   </vsa-content>
@@ -223,7 +218,7 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='sands' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            <FormulateInput type="select" name='sands' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
                             'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
                           </div>
                         </div>
@@ -233,11 +228,11 @@
                               </div>
                                 <div class="col-90">
                                   <FormulateInput
-                                  type='number' name="sands-main" validation="number" /> 
+                                  type='number' name="sandsmain" validation="number" /> 
                                 </div>
                                 <div class="col-85">
                                   <FormulateInput
-                                    type='select' name="sands-main-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %']" /> 
+                                    type='select' name="sandsmaintype" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %']" /> 
                                 </div>
                               </div>
 
@@ -247,11 +242,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="sands-1" validation="number" /> 
+                              type='number' name="sands1" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="sands-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="sands1type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -259,11 +254,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="sands-2" validation="number" /> 
+                              type='number' name="sands2" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="sands-2-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="sands2type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -271,11 +266,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput 
-                              type='number' name="sands-3" validation="number" /> 
+                              type='number' name="sands3" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="sands-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="sands3type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -283,11 +278,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="sands-4" validation="number" /> 
+                              type='number' name="sands4" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="sands-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="sands4type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                   </vsa-content>
@@ -301,7 +296,7 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='goblet' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            <FormulateInput type="select" name='goblet' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
                             'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
                           </div>
                         </div>
@@ -311,11 +306,11 @@
                               </div>
                                 <div class="col-90">
                                   <FormulateInput
-                                  type='number' name="goblet-main" validation="number" /> 
+                                  type='number' name="gobletmain" validation="number" /> 
                                 </div>
                                 <div class="col-85">
                                   <FormulateInput
-                                    type='select' name="goblet-main-type" :options="['', 'HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %', 'Pyro DMG%','Hydro DMG%', 'Cryo DMG%', 'Electro DMG%', 'Geo DMG%','Anemo DMG%','Physical DMG %']" /> 
+                                    type='select' name="gobletmaintype" :options="['', 'HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %', 'Pyro DMG%','Hydro DMG%', 'Cryo DMG%', 'Electro DMG%', 'Geo DMG%','Anemo DMG%','Physical DMG %']" /> 
                                 </div>
                               </div>
 
@@ -325,11 +320,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="goblet-1" validation="number" /> 
+                              type='number' name="goblet1" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="goblet-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="goblet1type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -337,11 +332,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="goblet-2" validation="number" /> 
+                              type='number' name="goblet2" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="goblet-2-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="goblet2type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -349,11 +344,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput 
-                              type='number' name="goblet-3" validation="number" /> 
+                              type='number' name="goblet3" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="goblet-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="goblet3type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -361,11 +356,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="goblet-4" validation="number" /> 
+                              type='number' name="goblet4" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="goblet-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="goblet4type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                   </vsa-content>
@@ -379,7 +374,7 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='circlet' :options="['Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            <FormulateInput type="select" name='circlet' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
                             'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
                           </div>
                         </div>
@@ -389,11 +384,11 @@
                               </div>
                                 <div class="col-90">
                                   <FormulateInput
-                                  type='number' name="circlet-main" validation="number" /> 
+                                  type='number' name="circletmain" validation="number" /> 
                                 </div>
                                 <div class="col-85">
                                   <FormulateInput
-                                    type='select' name="circlet-main-type" :options="['','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %', 'CRIT Rate %', 'CRIT DMG %', 'Healing%']" /> 
+                                    type='select' name="circlet-maintype" :options="['','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %', 'CRIT Rate %', 'CRIT DMG %', 'Healing%']" /> 
                                 </div>
                               </div>
 
@@ -403,11 +398,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="circlet-1" validation="number" /> 
+                              type='number' name="circlet1" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="circlet-1-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="circlet1type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -415,11 +410,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="circlet-2" validation="number" /> 
+                              type='number' name="circlet2" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="circlet-2-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="circlet2type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -427,11 +422,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput 
-                              type='number' name="circlet-3" validation="number" /> 
+                              type='number' name="circlet3" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="circlet-3-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="circlet3type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                           <div class="row">
@@ -439,11 +434,11 @@
                           </div>
                             <div class="col-90">
                               <FormulateInput
-                              type='number' name="circlet-4" validation="number" /> 
+                              type='number' name="circlet4" validation="number" /> 
                             </div>
                             <div class="col-85">
                               <FormulateInput
-                              type='select' name="flower-4-type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
+                              type='select' name="flower4type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
                             </div>
                           </div>
                   </vsa-content>
@@ -458,30 +453,23 @@
 
 </template>
 
-
-
 <script>
-
 export default {
-
   data () {
     return {
       values: {
-
       }
-
     }
   },
   methods: {
       submit() {
+        console.log(this.values)
         this.$router.push({name: 'Chara Build Render Page', 
         params: this.values
       })
     },
-
   }
 }
-
 </script> 
 
 
