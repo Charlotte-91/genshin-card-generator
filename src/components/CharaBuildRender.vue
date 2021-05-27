@@ -8,16 +8,48 @@
         <v-image :config="{image: image}"/>
         <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 30, x: 180, y: 95, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `${this.$route.params.level}`, fontSize: 30, x: 300, y:155, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `HP - ${this.$route.params.flowermain} `, fontSize: 25, x: 540, y:128, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.flower1type} - ${this.$route.params.flower1}`, fontSize: 20, x: 540, y:155, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `HP - ${this.$route.params.flowermain} `, fontSize: 16, x: 530, y:130, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.flower1type} - ${this.$route.params.flower1}`, fontSize: 12, x: 530, y:150, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.flower2type} - ${this.$route.params.flower2}`, fontSize: 12, x: 530, y:165, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.flower3type} - ${this.$route.params.flower3}`, fontSize: 12, x: 530, y:180, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.flower4type} - ${this.$route.params.flower4}`, fontSize: 12, x: 530, y:195, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+
+        <v-text :config="{text: `ATK - ${this.$route.params.feathermain} `, fontSize: 16, x: 530, y:215, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.feather1type} - ${this.$route.params.feather1}`, fontSize: 12, x: 530, y:235, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.feather2type} - ${this.$route.params.feather2}`, fontSize: 12, x: 530, y:250, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.feather3type} - ${this.$route.params.feather3}`, fontSize: 12, x: 530, y:265, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.feather4type} - ${this.$route.params.feather4}`, fontSize: 12, x: 530, y:280, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+
+        <v-text :config="{text: `${this.$route.params.sandsmaintype} - ${this.$route.params.sandsmain} `, fontSize: 16, x: 530, y:305, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.sands1type} - ${this.$route.params.sands1}`, fontSize: 12, x: 530, y:325, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.sands2type} - ${this.$route.params.sands2}`, fontSize: 12, x: 530, y:340, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.sands3type} - ${this.$route.params.sands3}`, fontSize: 12, x: 530, y:355, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.sands4type} - ${this.$route.params.sands4}`, fontSize: 12, x: 530, y:370, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        
+        <v-text :config="{text: `${this.$route.params.gobletmaintype} - ${this.$route.params.gobletmain} `, fontSize: 16, x: 530, y:395, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.goblet1type} - ${this.$route.params.goblet1}`, fontSize: 12, x: 530, y:420, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.goblet2type} - ${this.$route.params.goblet2}`, fontSize: 12, x: 530, y:435, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.goblet3type} - ${this.$route.params.goblet3}`, fontSize: 12, x: 530, y:450, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.goblet4type} - ${this.$route.params.goblet4}`, fontSize: 12, x: 530, y:465, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+
+        <v-text :config="{text: `${this.$route.params.circletmaintype} - ${this.$route.params.circletmain} `, fontSize: 16, x: 530, y:495, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.circlet1type} - ${this.$route.params.circlet1}`, fontSize: 12, x: 530, y:515, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.circlet2type} - ${this.$route.params.circlet2}`, fontSize: 12, x: 530, y:530, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.circlet3type} - ${this.$route.params.circlet3}`, fontSize: 12, x: 530, y:545, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.circlet4type} - ${this.$route.params.circlet4}`, fontSize: 12, x: 530, y:560, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
 
         <v-text :config="{text: `genshin-card-generator.com`, fontSize: 16, x: 38, y:655, fill:'black', opacity: 0.7, fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-image :config="{image: weapon, x: 90, y:390}"/>
-        <v-image :config="{image: flower, x: 440, y:110}"/>
-        <v-image :config="{image: feather, x: 440, y:200}"/>
-        <v-image :config="{image: sands, x: 440, y:290}"/>
-        <v-image :config="{image: goblet, x: 440, y:390}"/>
-        <v-image :config="{image: circlet, x: 440, y:490}"/>
+        <v-image :config="{image: weapon, x: 90, y:150}"/>
+        <v-image :config="{image: flower, x: 445, y:125}"/>
+        <v-image :config="{image: feather, x: 445, y:215}"/>
+        <v-image :config="{image: sands, x: 445, y:305}"/>
+        <v-image :config="{image: goblet, x: 445, y:400}"/>
+        <v-image :config="{image: circlet, x: 445, y:495}"/>
+
+        <v-image :config="{image: constellation, x: 280, y:260}"/>
+        <v-image :config="{image: normal, x: 100, y:440}"/>
+        <v-image :config="{image: skill, x: 200, y:440}"/>
+        <v-image :config="{image: burst, x: 300, y:440}"/>
       </v-layer>
     </v-stage>
   </div>
@@ -37,7 +69,11 @@ export default {
       sands: null,
       goblet: null,
       circlet: null,
-      weapon: null
+      weapon: null,
+      constellation: null, 
+      normal: null,
+      skill: null,
+      burst: null
     };
   },
   
@@ -76,6 +112,26 @@ export default {
       weapon.src = require('../assets/Weapons/' + (this.$route.params.weapon).split(" ").join("") + '.png');
       weapon.onload = () => {
       this.weapon = weapon;
+      };
+      const constellation = new window.Image();
+      constellation.src = require('../assets/skills/' + this.$route.params.chara + '/'+ this.$route.params.constellation + '.png');
+      constellation.onload = () => {
+      this.constellation = constellation;
+        };
+      const normal = new window.Image();
+      normal.src = require('../assets/skills/' + this.$route.params.chara + '/normal.png');
+      normal.onload = () => {
+      this.normal = normal;
+      };
+      const skill = new window.Image();
+      skill.src = require('../assets/skills/' + this.$route.params.chara + '/skill.png');
+      skill.onload = () => {
+      this.skill = skill;
+      };
+      const burst = new window.Image();
+      burst.src = require('../assets/skills/' + this.$route.params.chara + '/burst.png');
+      burst.onload = () => {
+      this.burst = burst;
       };
     }
   }
