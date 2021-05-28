@@ -96,7 +96,6 @@
           
       </vsa-list>
       <h3> Artifacts</h3>
-          <!-- Artifacts -->
             <vsa-list>
               <!-- Flower Artifacts -->
               <vsa-item>
