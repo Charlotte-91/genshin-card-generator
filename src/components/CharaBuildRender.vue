@@ -39,19 +39,28 @@
         <v-text :config="{text: `${this.$route.params.circlet4type} - ${this.$route.params.circlet4}`, fontSize: 12, x: 530, y:560, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
 
         <v-text :config="{text: `genshin-card-generator.com`, fontSize: 16, x: 38, y:655, fill:'black', opacity: 0.7, fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-image :config="{image: weapon, x: 90, y:150}"/>
+        <v-image :config="{image: weapon, x: 100, y:260}"/>
         <v-image :config="{image: flower, x: 445, y:125}"/>
         <v-image :config="{image: feather, x: 445, y:215}"/>
         <v-image :config="{image: sands, x: 445, y:305}"/>
         <v-image :config="{image: goblet, x: 445, y:400}"/>
         <v-image :config="{image: circlet, x: 445, y:495}"/>
 
-        <v-image :config="{image: constellation, x: 280, y:260}"/>
-        <v-image :config="{image: normal, x: 100, y:440}"/>
-        <v-image :config="{image: skill, x: 200, y:440}"/>
-        <v-image :config="{image: burst, x: 300, y:440}"/>
+        <v-image :config="{image: constellation, x: 290, y:265}"/>
+        <v-image :config="{image: normal, x: 95, y:445}"/>
+        <v-image :config="{image: skill, x: 210, y:445}"/>
+        <v-image :config="{image: burst, x: 325, y:445}"/>
+
+        <v-text :config="{text: `${this.$route.params.constellation} `, fontSize: 16, x: 330, y:380, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `Level ${this.$route.params.normal} `, fontSize: 16, x: 120, y:555, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `Level ${this.$route.params.skill} `, fontSize: 16, x: 235, y:555, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `Level ${this.$route.params.burst} `, fontSize: 16, x: 350, y:555, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
     </v-stage>
+    <br>
+    <div class="save-button">
+      <button class='mobile-button' v-on:click=save()>Save image</button>
+    </div>
   </div>
 </template>
 
@@ -76,7 +85,23 @@ export default {
       burst: null
     };
   },
-  
+   methods: {
+      downloadURI: function (uri, name) {
+        var link = document.createElement('a');
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        // delete link;
+      },
+      save: function () {
+        console.log('clidk')
+        console.log(this.$refs)
+        var dataURL = (this.$refs.stage.getStage()).toDataURL({ pixelRatio: 3 });
+        this.downloadURI(dataURL, 'genshincard.png');
+      },
+  },
   created() {
       const image = new window.Image();
       image.src = require('../assets/chara-build/' + this.$route.params.chara + '.png');

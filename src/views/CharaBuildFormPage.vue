@@ -11,7 +11,7 @@
         <header className="App-header">
         <img src="../assets/genshin-logo.png" width='80%'/>
       </header>
-        
+        <CharaBuildFormMobile/>
       </div>
       <div class= "footer">
       Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
@@ -25,11 +25,13 @@
 <script>
 
 import CharaBuildForm from "../components/CharaBuildForm.vue";
+import CharaBuildFormMobile from "../components/CharaBuildFormMobile.vue";
 
 export default {
   name: 'Character Build form page',
   components: {
-    CharaBuildForm
+    CharaBuildForm,
+    CharaBuildFormMobile
   },
   methods: {
     isMobile() {

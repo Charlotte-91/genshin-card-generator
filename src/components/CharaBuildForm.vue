@@ -6,6 +6,7 @@
 
       <div class ="form">
         <div class="row">
+        <div class="valid">{{ this.validation }}</div>
           <div class="col-25">
             <label class="typo__label">Player Name:</label>
           </div>
@@ -19,8 +20,8 @@
           <label class="typo__label">Character:</label>
         </div>
         <div class="col-75">
-          <FormulateInput type="select" name='chara' :options="{ AetherAmeno: 'Aether (Ameno)', AetherGeo: 'Aether (Geo)', albedo: 'Albedo', amber: 'Amber', barbara: 'Barbara', beidou: 'Beidou', bennett: 'Bennett', chongyun: 'Chongyun', diluc: 'Diluc', diona: 'Diona', eula: 'Eula', fishcl: 'Fischl', ganyu: 'Ganyu', hutao: 'Hu tao', jean: 'Jean', kaeya: 'Kaeya',
-          keqing: 'Keqing', klee: 'Klee', lisa: 'Lisa',LumineAmeno: 'Lumine (Ameno)', LumineGeo: 'Lumine (Geo)', mona: 'Mona', ningguang: 'Ningguang', noelle: 'Noelle', qiqi: 'Qiqi', razor: 'Razor', rosaria: 'Rosaria', sucrose: 'Sucrose', tartaglia: 'Tartaglia', venti: 'Venti', xiangling: 'Xiangling', xiao: 'Xiao', xingqiu: 'Xingqiu', xinyan: 'Xinyan', yanfei: 'Yanfei', zhongli: 'Zhongli'}"/>
+          <FormulateInput type="select" name='chara' :options="{ aetherAmeno: 'Aether (Ameno)', aetherGeo: 'Aether (Geo)', albedo: 'Albedo', amber: 'Amber', barbara: 'Barbara', beidou: 'Beidou', bennett: 'Bennett', chongyun: 'Chongyun', diluc: 'Diluc', diona: 'Diona', eula: 'Eula', fishcl: 'Fischl', ganyu: 'Ganyu', hutao: 'Hu tao', jean: 'Jean', kaeya: 'Kaeya',
+          keqing: 'Keqing', klee: 'Klee', lisa: 'Lisa',lumineAmeno: 'Lumine (Ameno)', lumineGeo: 'Lumine (Geo)', mona: 'Mona', ningguang: 'Ningguang', noelle: 'Noelle', qiqi: 'Qiqi', razor: 'Razor', rosaria: 'Rosaria', sucrose: 'Sucrose', tartaglia: 'Tartaglia', venti: 'Venti', xiangling: 'Xiangling', xiao: 'Xiao', xingqiu: 'Xingqiu', xinyan: 'Xinyan', yanfei: 'Yanfei', zhongli: 'Zhongli'}"/>
         </div>
       </div>
 
@@ -44,7 +45,7 @@
         <div class="col-75">
           <FormulateInput v-if="values.chara =='beidou'|| values.chara =='chongyun'||values.chara == 'diluc' || values.chara =='eula'|| values.chara =='noelle'|| values.chara =='razor'|| values.chara =='xingyan'" key="claymore" name="weapon" type="select" :options="['Blackcliff Slasher', 'Bloodtainted Greatsword', 'Debate Club','Favonius Greatsword', 'Ferrous Shadow','Lithic Blade','Prototype Archaic', 'Quartz', 'Rainslasher','Royal Greatsword','Sacrificial Greatsword', 'Serpent Spine',
            'Skyward Pride', 'Snow-Tombed Starsilver', 'Song of Broken Pines', 'The Bell', 'The Unforged', 'White Iron Greatsword', 'Whiteblind', 'Wolfs Gravestone']"/>
-          <FormulateInput v-if="values.chara =='travellerAmeno' || values.chara =='travellerGeo' || values.chara =='albedo' || values.chara =='bennett'|| values.chara =='jean'|| values.chara =='kaeya'|| values.chara =='keqing'|| values.chara =='qiqi'|| values.chara =='xingqiu'" key="sword" name="weapon" type="select" :options="['Aquila Favonia', 'Blackcliff Longsword', 'Cool Steel', 'Dark Iron Sword', 'Dull Blade', 'Favonius Sword', 'Festering Desire', 'Fillet Blade', 'Harbinger of Dawn', '	Iron Sting', 'Lions Roar', 'Primordial Jade Cutter', 'Prototype Rancour',
+          <FormulateInput v-if="values.chara =='lumineAmeno' || values.chara =='lumineGeo' || values.chara =='aetherAmeno' || values.chara =='aetherGeo' || values.chara =='albedo' || values.chara =='bennett'|| values.chara =='jean'|| values.chara =='kaeya'|| values.chara =='keqing'|| values.chara =='qiqi'|| values.chara =='xingqiu'" key="sword" name="weapon" type="select" :options="['Aquila Favonia', 'Blackcliff Longsword', 'Cool Steel', 'Dark Iron Sword', 'Dull Blade', 'Favonius Sword', 'Festering Desire', 'Fillet Blade', 'Harbinger of Dawn', '	Iron Sting', 'Lions Roar', 'Primordial Jade Cutter', 'Prototype Rancour',
            'Royal Longsword', 'Sacrificial Sword', 'Silver Sword', 'Skyrider Sword', 'Skyward Blade', 'Summit Shaper', 'Sword of Descension', 'The Alley Flash', 'The Black Sword', 'The Flute', 'Travelers Handy Sword']"/>
           <FormulateInput v-if="values.chara =='hutao'|| values.chara =='rosaria'|| values.chara =='xiangling'|| values.chara =='xiao'|| values.chara =='zhongli'" key="polearm" name="weapon" type="select" :options="['Black Tassel', 'Blackcliff Pole', 'Crescent Pike', 'Deathmatch', 'Dragons Bane', 'Dragonspine Spear', 'Favonius Lance', '	Halberd', 'Iron Point', 'Lithic Spear', 'Primordial Jade Winged-Spear', 'Prototype Starglitter','Royal Spear','Skyward Spine',
            'Staff of Homa', 'Vortex Vanquisher','White Tassel']"/>
@@ -487,7 +488,7 @@
               </vsa-item>
             </vsa-list>
               
-      <button class='mobile-button' v-on:click=submit()>Submit</button>
+      <button class='mobile-button' v-on:click=validate()>Submit</button>
     </div>
     
   </body>
@@ -503,6 +504,9 @@ export default {
       }
     }
   },
+  props: {
+    validation: String
+  },
   methods: {
       submit() {
         console.log(this.values)
@@ -510,6 +514,13 @@ export default {
         params: this.values
       })
     },
+    validate() {
+      for(const key in this.values) { if ((this.values[key] == '' || undefined) == true) { 
+        return this.validation = 'Please fill out ALL field(s)'
+        }
+      }
+      this.submit()
+    }
   }
 }
 </script> 
