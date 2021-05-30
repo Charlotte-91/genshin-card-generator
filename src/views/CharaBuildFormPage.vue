@@ -6,12 +6,14 @@
         <img src="../assets/genshin-logo.png" height='260px'/>
       </header>
         <CharaBuildForm/>
+        <button @click="$router.push({name: 'Home'})">Back</button>
       </div>
       <div v-else>
         <header className="App-header">
         <img src="../assets/genshin-logo.png" width='80%'/>
       </header>
         <CharaBuildFormMobile/>
+        <button @click="$router.push({name: 'Home'})">Back</button>
       </div>
       <div class= "footer">
       Genshin Card Generator is not affiliated with or endorsed by miHoYo. 

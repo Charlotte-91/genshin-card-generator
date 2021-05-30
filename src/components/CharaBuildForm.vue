@@ -510,19 +510,34 @@ export default {
   methods: {
       submit() {
         console.log(this.values)
-        this.$router.push({name: 'Chara Build Render Page', 
+        this.$router.push({name: 'CharaBuildRender', 
         params: this.values
       })
     },
-    validate() {
-      for(const key in this.values) { if ((this.values[key] == '' || undefined) == true) { 
-        return this.validation = 'Please fill out ALL field(s)'
+      validate() {
+        for(const key in this.values) { 
+          if ((this.values[key] == '' || undefined) == true) { 
+            return this.validation = 'Please fill out ALL field(s)'
         }
       }
-      this.submit()
     }
   }
 }
+//       Object.entries(this.values).forEach(([key, value]) => {
+//         if (((key == 'flower4type' || 'feather4type' || 'sands4type' || 'goblet4type' || 'circlet4type') == true) && ((value == '' || undefined) == true)) {
+//           value = ''
+//           console.log('test')
+//           console.log(key)
+//           console.log(value)
+//         } else if (value == '' || undefined) {
+//           console.log('here')
+//           this.validation = 'Please fill out ALL field(s)'
+//           break
+//        }
+//     })
+//     this.submit()
+//    }
+// }  
 </script> 
 
 
