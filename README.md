@@ -5,7 +5,7 @@
 Genshin Impact Card Generator
 =====
 <p align="center">
-<img src="https://img.shields.io/badge/version-1.2.1-blue">
+<img src="https://img.shields.io/badge/version-2.2.0-blue">
 <br>
 <a href="https://github.com/Charlotte-91/genshin-card-generator/blob/main/CHANGELOG.md">View Changelog</a>
 </p>
@@ -14,7 +14,7 @@ Genshin Impact Card Generator
 
 ## Website
 
-https://genshin-impact-card-generator.herokuapp.com/
+http://www.genshin-card-generator.com/
 
 ## Key Features
 
@@ -38,16 +38,13 @@ https://genshin-impact-card-generator.herokuapp.com/
 
 ## Future Features: 
 
-- Add ability to choose and display in-game pet (done!)
 - Add Character load out option, to showcase weapons and artifacts on team memebers (in progress)
 
 ## Future Improvements:
 
 - Attach image to twitter share button, so tweet draft includes image automatically
-- Make homepage more responsive
 - Add new characters when approproiate
 - Implement Session Storage so errors do not occur on refresh of the card page
-- Once a character is chosen, remove them on subsequent select tags to prevent duplicated characters
 
 
 ## Technologies
@@ -59,7 +56,7 @@ https://genshin-impact-card-generator.herokuapp.com/
 
 [Vue Konva](https://konvajs.org/docs/vue/index.html)
 
-[vue-social-sharing](https://github.com/nicolasbeauvais/vue-social-sharing)
+[vue-Multiselect](https://vue-multiselect.js.org/)
 
 [Heroku](https://www.heroku.com)
 

@@ -21,6 +21,9 @@
         <header className="App-header">
             <img src="../assets/genshin-logo.png" width='80%'/>
         </header>
+        <div class="block-mobile">
+            <p>Please choose a card template</p>
+        </div>
         <SplashSelectionMobile></SplashSelectionMobile>
         <div class= "mobile-footer">
           Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
@@ -100,10 +103,16 @@ export default {
 }
 .block {
     margin: 25px;
-
     color: white;
     font-family: roboto-regular;
     font-size: 30px;
+    position: relative
+}
+.block-mobile {
+    margin: 25px;
+    color: white;
+    font-family: roboto-regular;
+    font-size: 20px;
     position: relative
 }
 </style>

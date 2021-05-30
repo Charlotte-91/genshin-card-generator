@@ -86,6 +86,7 @@ export default {
         { name: 'Chongyun', id: 'Chongyun' },
         { name: 'Diluc', id: 'Diluc' },
         { name: 'Diona', id: 'Diona' },
+        { name: 'Eula', id: 'Eula' },
         { name: 'Fischl', id: 'Fischl' },
         { name: 'Ganyu', id: 'Ganyu' },
         { name: 'Hu tao', id: 'Hutao' },

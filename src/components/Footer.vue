@@ -2,11 +2,6 @@
   <div class='buttons-and-footer'>
     <div class= "social">
       <button @click="$router.push({name: 'Home'})">Back</button>
-              <!-- <share-it 
-                :shareConfig="share" 
-                text="Check out Genshin Card Generator!"
-                url="https://genshin-impact-card-generator.herokuapp.com/"
-              /> -->
         <twitter-button>
           <ShareNetwork
             network="twitter"

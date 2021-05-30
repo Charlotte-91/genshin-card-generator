@@ -35,16 +35,16 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-25">
             <label class="typo__label">Spiral Abyss Progress:</label>
           </div>
           <div class="col-75">
             <div class="multiselect">
-              <input class="form-style" type='number' v-model="SA" /> 
+              <input class="form-style" type='text' v-model="SA" /> 
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="row">
           <div class="col-25">
@@ -136,6 +136,7 @@ export default {
         { name: 'Chongyun', id: 'Chongyun' },
         { name: 'Diluc', id: 'Diluc' },
         { name: 'Diona', id: 'Diona' },
+        { name: 'Eula', id: 'Eula' },
         { name: 'Fischl', id: 'Fischl' },
         { name: 'Ganyu', id: 'Ganyu' },
         { name: 'Hu tao', id: 'Hutao' },
@@ -174,7 +175,7 @@ export default {
     cardDesign: String,
     playerName: String,
     AR: Number,
-    SA: Number,
+    // SA: String,
     UID: Number,
     server: String,
     twitter: String,
@@ -202,7 +203,7 @@ export default {
           cardChara : this.cardDesign, 
           playerName: this.playerName,
           AR: this.AR,
-          SA: this.SA,
+          // SA: this.SA,
           UID: this.UID,
           server: this.server,
           twitter: this.twitter,
@@ -217,10 +218,10 @@ export default {
     },
     validate() {
         var errors = []
-        if (this.playerName == undefined || this.playerName == '' || this.AR == undefined || this.AR == '' || this.value.length == 0 || this.cardValue.length == 0 || this.SA == undefined || this.SA == '' || this.PlatformValue.length == 0 || this.ServerValue.length == 0) {
+        if (this.playerName == undefined || this.playerName == '' || this.AR == undefined || this.AR == '' || this.value.length == 0 || this.cardValue.length == 0 || this.PlatformValue.length == 0 || this.ServerValue.length == 0) {
             if (this.playerName == undefined || this.playerName == '') {errors.push(' Player name ')}
             if (this.AR == undefined || this.AR == '') {errors.push(' AR ')}
-            if (this.SA == undefined || this.SA == '') {errors.push(' Spiral Abyss ')}
+            // if (this.SA == undefined || this.SA == '') {errors.push(' Spiral Abyss ')}
             if (this.value.length == 0) {errors.push(' Team ')}
             if (this.cardValue.length == 0) {errors.push(' Card design ')}
             if (this.ServerValue.length == 0) {errors.push(' Server ')}
