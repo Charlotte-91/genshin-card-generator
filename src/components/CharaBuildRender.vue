@@ -1,5 +1,6 @@
 <template>
   <div className="App">
+    <div class="top-gap"/>
     <v-stage ref="stage" :config="stageSize">
       <v-layer v-if="this.$route.params.playerName == undefined" ref="layer">
           <v-text :config="{text: `An Error occurred, please go back to the Home page`, fontSize: 25, x: 300, y:350, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
@@ -161,3 +162,9 @@ export default {
     }
   }
 </script>
+
+<style lang="scss" scoped>
+.top-gap {
+  margin: 100px;
+}
+</style>
