@@ -515,11 +515,11 @@ export default {
       })
     },
       validate() {
-        for(const key in this.values) { 
-          if ((this.values[key] == '' || undefined) == true) { 
-            return this.validation = 'Please fill out ALL field(s)'
+      for(const key in this.values) { if ((this.values[key] == '' || undefined) == true) { 
+        return this.validation = 'Please fill out ALL field(s)'
         }
       }
+      this.submit()
     }
   }
 }
