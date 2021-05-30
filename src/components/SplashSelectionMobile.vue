@@ -21,11 +21,11 @@
                 </router-link>
             </div>
             <div class="column">
-                <router-link to="">
+                <router-link to="character-build-form">
                     <div class="container">
                         <img src="../assets/SplashPage/Characomp.png"/>
                         <div class="overlay">
-                            <div class="text">Character Build card [Coming Soon]</div>
+                            <div class="text">Character Build card</div>
                         </div>
                     </div>
                 </router-link>

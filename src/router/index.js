@@ -1,13 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Vuelidate from "vuelidate";
 import VueKonva from 'vue-konva';
+import VueFormulate from '@braid/vue-formulate'
+import VueSimpleAccordion from 'vue-simple-accordion';
+import 'vue-simple-accordion/dist/vue-simple-accordion.css';
 require('../styles/form.css')
+require('../styles/snow.css')
+
 
 Vue.use(VueKonva);
 Vue.use(VueRouter);
-Vue.use(Vuelidate);
+Vue.use(VueFormulate);
+Vue.use(VueSimpleAccordion);
 
 const routes = [
   {
@@ -86,8 +91,25 @@ const routes = [
   // which is lazy-loaded when the route is visited.
   component: () => import(/* webpackChunkName: "CardDesign" */ '../views/MultiplayerCardRenderPage.vue'),
   props: true
+},
+{
+  path: '/character-build-form',
+  name: 'Character Build form',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/CharaBuildFormPage.vue'),
+  props: true
+},
+{
+  path: '/character-render',
+  name: 'CharaBuildRender',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/CharaBuildRender.vue'),
+  props: true
 }
-
 ]
 
 const router = new VueRouter({

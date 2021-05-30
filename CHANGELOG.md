@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Character loadout card, allowing you to show which weapons and artifacts are equipped to each party member  [ In Progress ]
 - Auto upload of card image to twitter 
 
+
+## [3.0.0] - 2021-05-30
+
+### Added 
+- Added Character Build card feature
+
+
 ## [2.2.0] - 2021-05-18
 
 ### Added
@@ -24,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fixed a bug where the mobile version was not triggering on newer iOS devices
+
 
 
 ## [2.1.0] - 2021-04-27
