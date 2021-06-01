@@ -5,7 +5,9 @@
         <header className="App-header">
         <img src="../assets/genshin-logo.png" height='260px'/>
       </header>
+      <body>
         <MultiplayerForm/>
+      </body>
         <button @click="$router.push({name: 'Home'})">Back</button>
       </div>
       <div v-else>
@@ -57,7 +59,8 @@ export default {
   height: 280px;
   text-align: center;
 }
-.body {
+body {
+  justify-content: center;
   font-size: 25px;
   padding: 20px;
   font-family: SuezOne-Regular; 

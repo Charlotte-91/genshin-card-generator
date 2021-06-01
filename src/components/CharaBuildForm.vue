@@ -551,8 +551,6 @@ body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
   font-size: 25px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .col-25 {
@@ -588,16 +586,13 @@ body{
   padding: 2px;
 }
 .form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
   width: 600px;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
-  margin: 30px;
-  padding: 10px;
+  /* margin: 30px;
+  padding: 10px; */
+  align-content: center;
   
   border-image:
       url("../assets/Form-bg.png")

@@ -5,7 +5,9 @@
         <header className="App-header">
         <img src="../assets/genshin-logo.png" height='260px'/>
       </header>
+      <body>
         <CharaBuildForm/>
+      </body>
         <button @click="$router.push({name: 'Home'})">Back</button>
       </div>
       <div v-else>
@@ -57,10 +59,8 @@ export default {
   height: 280px;
   text-align: center;
 }
-.body {
-  font-size: 25px;
-  padding: 20px;
-  font-family: SuezOne-Regular; 
+body {
+    justify-content: center;
 }
 .footer {
   position: bottom;
