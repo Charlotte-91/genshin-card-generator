@@ -5,7 +5,7 @@
 Genshin Impact Card Generator
 =====
 <p align="center">
-<img src="https://img.shields.io/badge/version-2.2.0-blue">
+<img src="https://img.shields.io/badge/version-3.0.1-blue">
 <br>
 <a href="https://github.com/Charlotte-91/genshin-card-generator/blob/main/CHANGELOG.md">View Changelog</a>
 </p>
@@ -38,7 +38,8 @@ http://www.genshin-card-generator.com/
 
 ## Future Features: 
 
-- Add Character load out option, to showcase weapons and artifacts on team memebers (in progress)
+- Team composition card
+- Additional background designs
 
 ## Future Improvements:
 
@@ -65,25 +66,19 @@ http://www.genshin-card-generator.com/
 [Heroku](https://www.heroku.com)
 
 ## Screenshots
-Home page
+![Home page](./readme-img/img-1.JPG)
 
-![Home page](./readme-img/shot1.JPG)
+![Basic card form](./readme-img/img-2.JPG)
 
-Home page with form expanded
+![Basic card render](./readme-img/img-3.JPG)
 
-![Expanded Homepage](./readme-img/shot2.JPG)
+![Mulitplayer card form](./readme-img/img-4.JPG)
 
-Contact Us page with google form
+![Mulitplayer card render](./readme-img/img-5.JPG)
 
-![Contact us page](./readme-img/shot3.JPG)
+![Character build card form](./readme-img/img-6.JPG)
 
-Card page with non-multiplayer card
-
-![Card page(non-mutiplayer card)](./readme-img/shot4.JPG)
-
-Card page with mutiplayer card
-
-![Card Page (multiplayer card)](./readme-img/shot5.JPG)
+![Character build card render](./readme-img/img-7.JPG)
 
 ## Copyright
 © All rights reserved by miHoYo. Other properties belong to their respective owners.
