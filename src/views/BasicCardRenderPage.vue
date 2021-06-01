@@ -81,6 +81,9 @@ body{
 .card {
   padding-top: 50px;
 }
+.top-gap {
+  margin: 200px;
+}
 .mobile-top-gap {
   height: 100px;
 }

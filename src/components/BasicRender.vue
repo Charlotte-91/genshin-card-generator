@@ -93,6 +93,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .top-gap {
-  margin: 100px;
+  margin: 200px;
 }
 </style>

@@ -5,6 +5,7 @@
         <header className="App-header">
         <img src="../assets/genshin-logo.png" height='260px'/>
       </header>
+        <div class='top-gap'/>
         <BasicForm/>
         <button @click="$router.push({name: 'Home'})">Back</button>
       </div>
@@ -56,6 +57,9 @@ export default {
   font-size: 40px;
   height: 280px;
   text-align: center;
+}
+.top-gap {
+  margin: 200px;
 }
 .body {
   font-size: 25px;
