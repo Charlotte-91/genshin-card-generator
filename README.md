@@ -58,6 +58,10 @@ http://www.genshin-card-generator.com/
 
 [vue-Multiselect](https://vue-multiselect.js.org/)
 
+[Vue Formulate](https://vueformulate.com/)
+
+[Vue Simple Accordion](https://github.com/tkhquang/vue-simple-accordion)
+
 [Heroku](https://www.heroku.com)
 
 ## Screenshots

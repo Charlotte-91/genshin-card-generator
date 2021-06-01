@@ -137,7 +137,7 @@ export default {
 
 
 
-<style>
+<style scoped>
 @font-face { font-family: SuezOne-Regular; 
   src: url('../assets/SuezOne-Regular.ttf'); } 
 body{

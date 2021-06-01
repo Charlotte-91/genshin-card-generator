@@ -298,7 +298,7 @@ body{
     padding: 10px 80px;
     text-align: center;
     font-size: 25px;
-    margin: auto;
+    /* margin: auto; */
     cursor: pointer;
     border-radius: 4px;
     font-family: SuezOne-Regular;
