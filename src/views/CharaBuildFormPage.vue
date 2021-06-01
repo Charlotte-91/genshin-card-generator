@@ -1,13 +1,13 @@
 <template>
-  <div className="Home">
+  <div className="CharaBuildFormPage">
     
       <div v-if="!isMobile()">
         <header className="App-header">
         <img src="../assets/genshin-logo.png" height='260px'/>
       </header>
-      <body>
+      <div class="container">
         <CharaBuildForm/>
-      </body>
+      </div>
         <button @click="$router.push({name: 'Home'})">Back</button>
       </div>
       <div v-else>
@@ -59,8 +59,9 @@ export default {
   height: 280px;
   text-align: center;
 }
-body {
-    justify-content: center;
+.container {
+  max-width: 690px;
+  margin: auto;
 }
 .footer {
   position: bottom;

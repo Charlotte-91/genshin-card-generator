@@ -551,6 +551,7 @@ body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
   font-size: 25px;
+  align-self: center;
 }
 
 .col-25 {
@@ -590,10 +591,6 @@ body{
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
-  /* margin: 30px;
-  padding: 10px; */
-  align-content: center;
-  
   border-image:
       url("../assets/Form-bg.png")
       70 / 50px    
