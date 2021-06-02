@@ -103,76 +103,50 @@
                 <vsa-heading>Flower of Life</vsa-heading>
                   <vsa-content>
                     <div class="row">
-                        <div class="col-25">
-                          <label class="typo__label">Set:</label>
-                        </div>
-                          <div class="col-75">
-                            <FormulateInput type="select" name='flower' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
-                            'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
-                          </div>
-                        </div>
-                          <div class="row">
-                              <div class="col-25">
-                                <label class="typo__label">Main stat:</label>
-                              </div>
-                                <div class="col-90">
-                                  <FormulateInput
-                                  type='number' name="flowermain" validation="number" /> 
-                                </div>
-                                <div class="col-85">
-                                  HP
-                                </div>
-                              </div>
+                      <div class="col-25">
+                        <label class="typo__label">Set:</label>
+                      </div>
+                      <div class="col-75">
+                        <FormulateInput type="select" name='flower' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                          'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
+                      </div>
+                    </div>
 
-                        <div class="row">
-                          <div class="col-25">
-                            <label class="typo__label">Sub stats:</label>
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="flower1" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="flower1type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="flower2" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="flower2type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput 
-                              type='number' name="flower3" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="flower3type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="flower4" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="flower4type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
+                    <div class="row">
+                      <div class="col-25">
+                        <label class="typo__label">Main stat:</label>
+                      </div>
+                      <div class="col-90">
+                        <FormulateInput
+                          type='number' name="flowermain" validation="number" /> 
+                      </div>
+                      <div class="col-85">
+                        HP
+                      </div>
+                    </div>
+
+                    <FormulateInput
+                      type="group"
+                      name="flowersubstats"
+                      :repeatable="true"
+                      label="Sub Stats"
+                      add-label="+ Add Sub Stat"
+                      validation="min:2, max:4, required"
+                    >
+                      <div class="substat">
+                        <FormulateInput
+                          type="select"
+                          name="flowertype"
+                          validation="required"
+                          :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
+                        />
+                        <FormulateInput
+                          type="number"
+                          name="flowerstat"
+                          validation="required|number"
+                        />
+                      </div>
+                    </FormulateInput>
                   </vsa-content>
               </vsa-item>
               <!-- Feather Artifact -->
@@ -200,56 +174,29 @@
                                   ATK
                                 </div>
                               </div>
-
-                        <div class="row">
-                          <div class="col-25">
-                            <label class="typo__label">Sub stats:</label>
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="feather1" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="feather1type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="feather2" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="feather2type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput 
-                              type='number' name="feather3" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="feather3type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="feather4" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="feather4type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
+                        
+                        <FormulateInput
+                      type="group"
+                      name="feathersubstats"
+                      :repeatable="true"
+                      label="Sub Stats"
+                      add-label="+ Add Sub Stat"
+                      validation="min:2, max:4, required"
+                    >
+                      <div class="substat">
+                        <FormulateInput
+                          type="select"
+                          name="feathertype"
+                          validation="required"
+                          :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
+                        />
+                        <FormulateInput
+                          type="number"
+                          name="featherstat"
+                          validation="required|number"
+                        />
+                      </div>
+                    </FormulateInput>
                   </vsa-content>
               </vsa-item>
               <!-- Sands Artifact -->
@@ -279,60 +226,33 @@
                                 </div>
                               </div>
 
-                        <div class="row">
-                          <div class="col-25">
-                            <label class="typo__label">Sub stats:</label>
-                          </div>
-                            <div class="col-90">
                               <FormulateInput
-                              type='number' name="sands1" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="sands1type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="sands2" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="sands2type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput 
-                              type='number' name="sands3" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="sands3type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="sands4" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="sands4type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
+                                type="group"
+                                name="sandssubstats"
+                                :repeatable="true"
+                                label="Sub Stats"
+                                add-label="+ Add Sub Stat"
+                                validation="min:2, max:4, required"
+                              >
+                                <div class="substat">
+                                  <FormulateInput
+                                    type="select"
+                                    name="sandstype"
+                                    validation="required"
+                                    :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
+                                  />
+                                  <FormulateInput
+                                    type="number"
+                                    name="sandsstat"
+                                    validation="required|number"
+                                  />
+                                </div>
+                              </FormulateInput>
                   </vsa-content>
               </vsa-item>
               <!-- Goblet Artifact -->
               <vsa-item>
-                <vsa-heading>Sands of Eon</vsa-heading>
+                <vsa-heading>Goblet of Eonothem</vsa-heading>
                   <vsa-content>
                     <div class="row">
                         <div class="col-25">
@@ -357,55 +277,28 @@
                                 </div>
                               </div>
 
-                        <div class="row">
-                          <div class="col-25">
-                            <label class="typo__label">Sub stats:</label>
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="goblet1" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="goblet1type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="goblet2" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="goblet2type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput 
-                              type='number' name="goblet3" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="goblet3type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="goblet4" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="goblet4type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
+                            <FormulateInput
+                                type="group"
+                                name="gobletsubstats"
+                                :repeatable="true"
+                                label="Sub Stats"
+                                add-label="+ Add Sub Stat"
+                                validation="min:2, max:4, required"
+                              >
+                                <div class="substat">
+                                  <FormulateInput
+                                    type="select"
+                                    name="goblettype"
+                                    validation="required"
+                                    :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
+                                  />
+                                  <FormulateInput
+                                    type="number"
+                                    name="gobletstat"
+                                    validation="required|number"
+                                  />
+                                </div>
+                              </FormulateInput>
                   </vsa-content>
               </vsa-item>
               <!-- Circlet Artifact -->
@@ -435,55 +328,27 @@
                                 </div>
                               </div>
 
-                        <div class="row">
-                          <div class="col-25">
-                            <label class="typo__label">Sub stats:</label>
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="circlet1" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="circlet1type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="circlet2" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="circlet2type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput 
-                              type='number' name="circlet3" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="circlet3type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
-                          <div class="row">
-                          <div class="col-25">
-                          </div>
-                            <div class="col-90">
-                              <FormulateInput
-                              type='number' name="circlet4" validation="number" /> 
-                            </div>
-                            <div class="col-85">
-                              <FormulateInput
-                              type='select' name="circlet4type" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']" /> 
-                            </div>
-                          </div>
+                                  <FormulateInput
+                                      type="group"
+                                      name="circletsubstats"
+                                      :repeatable="true"
+                                      label="Sub Stats"
+                                      add-label="+ Add Sub Stat"
+                                      validation="min:2, max:4, required">
+                                      <div class="substat">
+                                        <FormulateInput
+                                          type="select"
+                                          name="circlettype"
+                                          validation="required"
+                                          :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
+                                        />
+                                        <FormulateInput
+                                          type="number"
+                                          name="circletstat"
+                                          validation="required|number"
+                                        />
+                                      </div>
+                                    </FormulateInput>
                   </vsa-content>
               </vsa-item>
             </vsa-list>
@@ -568,7 +433,7 @@ body{
 }
 .col-85 {
   float: right;
-  width: 30%;
+  width: 25%;
   margin-bottom: 10px;
 }
 .col-90 {
@@ -623,5 +488,33 @@ body{
 --vsa-heading-padding: 1rem 1rem;
 --vsa-content-padding: 1rem 1rem;
 --vsa-default-icon-size: 1;
+}
+@media (min-width: 650px) {
+  .substat {
+    display: flex;
+    font-family: SuezOne-Regular; 
+  }
+}
+
+@media (min-width: 720px) {
+  .substat {
+    display: block;
+    font-family: SuezOne-Regular; 
+
+  }
+}
+
+@media (min-width: 850px) {
+  .substat {
+    display: flex;
+    font-family: SuezOne-Regular; 
+  }
+  .substat .formulate-input {
+    margin-right: 1.5em;
+  }
+}
+.substat .formulate-input {
+  margin-right: 2em;
+  margin-bottom: 0;
 }
 </style>
