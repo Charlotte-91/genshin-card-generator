@@ -332,7 +332,7 @@
               </vsa-item>
               <!-- Goblet Artifact -->
               <vsa-item>
-                <vsa-heading>Sands of Eon</vsa-heading>
+                <vsa-heading>Goblet of Eonothem</vsa-heading>
                   <vsa-content>
                     <div class="row">
                         <div class="col-25">
