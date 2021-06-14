@@ -31,7 +31,7 @@
           </div>
             <div class="col-75">
               <FormulateInput
-               type='number' name="level" validation="required|number|between:0,61" /> 
+               type='number' name="level" validation="required|number|between:0,91" /> 
             </div>
           </div>
 
