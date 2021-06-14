@@ -31,7 +31,7 @@
           </div>
             <div class="col-75">
               <FormulateInput
-               type='number' name="level" validation="required|number|between:0,61" /> 
+               type='number' name="level" validation="required|number|between:0,91,value"/> 
             </div>
           </div>
 
@@ -73,7 +73,7 @@
                   <label class="typo__label">Normal Attack:</label>
                 </div>
                 <div class="col-75">
-                  <FormulateInput type='number' name="normal" validation="required|number|between:0,16" />
+                  <FormulateInput type='number' name="normal" validation="required|number|between:0,16,value" />
                 </div>
               </div>
               <div class="row">
@@ -81,7 +81,7 @@
                   <label class="typo__label">Elemental Skill :</label>
                 </div>
                 <div class="col-75">
-                  <FormulateInput type='number' name="skill" validation="required|number|between:0,16" />
+                  <FormulateInput type='number' name="skill" validation="required|number|between:0,16,value" />
                 </div>
               </div>
               <div class="row">
@@ -89,7 +89,7 @@
                   <label class="typo__label">Elemental Burst:</label>
                 </div>
                 <div class="col-75">
-                  <FormulateInput type='number' name="burst" validation="required|number|between:0,16" />
+                  <FormulateInput type='number' name="burst" validation="required|number|between:0,16,value" />
                 </div>
               </div>
             </vsa-content>
@@ -132,18 +132,21 @@
                       label="Sub Stats"
                       add-label="+ Add Sub Stat"
                       validation="min:2, max:4, required"
+                      validation-name="sub stats"
                     >
                       <div class="substat">
                         <FormulateInput
                           type="select"
                           name="flowertype"
                           validation="required"
+                          validation-name="Sub stat type required"
                           :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
                         />
                         <FormulateInput
                           type="number"
                           name="flowerstat"
                           validation="required|number"
+                          validation-name="Sub stat value required"
                         />
                       </div>
                     </FormulateInput>
@@ -182,18 +185,21 @@
                       label="Sub Stats"
                       add-label="+ Add Sub Stat"
                       validation="min:2, max:4, required"
+                      validation-name="sub stats"
                     >
                       <div class="substat">
                         <FormulateInput
                           type="select"
                           name="feathertype"
                           validation="required"
+                          validation-name="Sub stat type required"
                           :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
                         />
                         <FormulateInput
                           type="number"
                           name="featherstat"
                           validation="required|number"
+                          validation-name="Sub stat value required"
                         />
                       </div>
                     </FormulateInput>
@@ -233,18 +239,21 @@
                                 label="Sub Stats"
                                 add-label="+ Add Sub Stat"
                                 validation="min:2, max:4, required"
+                                validation-name="sub stats"
                               >
                                 <div class="substat">
                                   <FormulateInput
                                     type="select"
                                     name="sandstype"
                                     validation="required"
+                                    validation-name="Sub stat type required"
                                     :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
                                   />
                                   <FormulateInput
                                     type="number"
                                     name="sandsstat"
                                     validation="required|number"
+                                    validation-name="Sub stat value required"
                                   />
                                 </div>
                               </FormulateInput>
@@ -284,18 +293,21 @@
                                 label="Sub Stats"
                                 add-label="+ Add Sub Stat"
                                 validation="min:2, max:4, required"
+                                validation-name="sub stats"
                               >
                                 <div class="substat">
                                   <FormulateInput
                                     type="select"
                                     name="goblettype"
                                     validation="required"
+                                    validation-name="Sub stat type required"
                                     :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
                                   />
                                   <FormulateInput
                                     type="number"
                                     name="gobletstat"
                                     validation="required|number"
+                                    validation-name="Sub stat value required"
                                   />
                                 </div>
                               </FormulateInput>
@@ -334,18 +346,21 @@
                                       :repeatable="true"
                                       label="Sub Stats"
                                       add-label="+ Add Sub Stat"
+                                      validation-name="sub stats"
                                       validation="min:2, max:4, required">
                                       <div class="substat">
                                         <FormulateInput
                                           type="select"
                                           name="circlettype"
                                           validation="required"
+                                          validation-name="Sub stat type required"
                                           :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
                                         />
                                         <FormulateInput
                                           type="number"
                                           name="circletstat"
                                           validation="required|number"
+                                          validation-name="Sub stat value required"
                                         />
                                       </div>
                                     </FormulateInput>
