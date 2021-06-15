@@ -11,7 +11,7 @@
             <label class="typo__label">Player Name:</label>
           </div>
           <div class="col-75">
-            <FormulateInput type="text" name="playerName"/>
+            <FormulateInput type="text" name="playerName"  validation="required" validation-name="Player name"/>
           </div>
         </div>
 
