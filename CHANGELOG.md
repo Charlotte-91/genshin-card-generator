@@ -51,7 +51,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed a bug where the mobile version was not triggering on newer iOS devices
 
 
-
 ## [2.1.0] - 2021-04-27
 
 ### Added
