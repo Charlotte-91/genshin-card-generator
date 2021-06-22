@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Additional background choices for each card
 - Auto upload of card image to twitter 
 
+
 ## [3.1.0] - 2021-06-15
 
 ### Changed
@@ -19,6 +20,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added 
 - Added missing validation from player name field
+
+
+## [3.0.2] - 2021-06-09
+
+### Added
+
+- Added missing 'Noblesse Oblige' set from Character build card
 
 
 ## [3.0.1] - 2021-06-01

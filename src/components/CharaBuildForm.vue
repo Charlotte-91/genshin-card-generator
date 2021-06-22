@@ -106,12 +106,13 @@
                 <vsa-heading>Flower of Life</vsa-heading>
                   <vsa-content>
                     <div class="row">
+
                       <div class="col-25">
                         <label class="typo__label">Set:</label>
                       </div>
                       <div class="col-75">
-                        <FormulateInput type="select" name='flower' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
-                          'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
+                       <FormulateInput type="select" name='flower' :options="['','Adventurer','Archaic Petra', 'Berserker', 'Blizzard Strayer','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale', 'Heart of Depth', 'Instructor', 'Lavawalker', 'Lucky Dog',
+                            'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
                       </div>
                     </div>
 
@@ -164,8 +165,8 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='feather' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
-                            'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
+                            <FormulateInput type="select" name='feather' :options="['','Adventurer','Archaic Petra', 'Berserker', 'Blizzard Strayer','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale', 'Heart of Depth', 'Instructor', 'Lavawalker', 'Lucky Dog',
+                            'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
                           </div>
                         </div>
                           <div class="row">
@@ -217,8 +218,8 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='sands' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
-                            'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
+                            <FormulateInput type="select" name='sands' :options="['','Adventurer','Archaic Petra', 'Berserker', 'Blizzard Strayer','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale', 'Heart of Depth', 'Instructor', 'Lavawalker', 'Lucky Dog',
+                            'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
                           </div>
                         </div>
                           <div class="row">
@@ -271,8 +272,10 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='goblet' validation="required" :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
-                            'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
+
+                            <FormulateInput type="select" name='goblet' :options="['','Adventurer','Archaic Petra', 'Berserker', 'Blizzard Strayer','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale', 'Heart of Depth', 'Instructor', 'Lavawalker', 'Lucky Dog',
+                            'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
+
                           </div>
                         </div>
                           <div class="row">
@@ -325,8 +328,8 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='circlet' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
-                            'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
+                            <FormulateInput type="select" name='circlet' :options="['','Adventurer','Archaic Petra', 'Berserker', 'Blizzard Strayer','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale', 'Heart of Depth', 'Instructor', 'Lavawalker', 'Lucky Dog',
+                            'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
                           </div>
                         </div>
                           <div class="row">
