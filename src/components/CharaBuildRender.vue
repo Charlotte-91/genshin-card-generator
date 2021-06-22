@@ -11,12 +11,12 @@
         <v-text :config="{text: `${this.$route.params.level}`, fontSize: 30, x: 300, y:155, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `HP - ${this.$route.params.flowermain} `, fontSize: 16, x: 530, y:130, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `${this.$route.params.flowersubstats[0].flowertype} - ${this.$route.params.flowersubstats[0].flowerstat}`, fontSize: 12, x: 530, y:150, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+      </v-layer>  
+      <v-layer v-if="this.$route.params.flowersubstats[1] != undefined" ref = 'layer'>
         <v-text :config="{text: `${this.$route.params.flowersubstats[1].flowertype} - ${this.$route.params.flowersubstats[1].flowerstat}`, fontSize: 12, x: 530, y:165, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>  
-
       <v-layer v-if="this.$route.params.flowersubstats[2] != undefined" ref = 'layer'>
         <v-text :config="{text: `${this.$route.params.flowersubstats[2].flowertype} - ${this.$route.params.flowersubstats[2].flowerstat}`, fontSize: 12, x: 530, y:180, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.flowersubstats[3].flowertype} - ${this.$route.params.flowersubstats[3].flowerstat}`, fontSize: 12, x: 530, y:195, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
       <v-layer v-if="this.$route.params.flowersubstats[3] != undefined" ref = 'layer'>
         <v-text :config="{text: `${this.$route.params.flowersubstats[3].flowertype} - ${this.$route.params.flowersubstats[3].flowerstat}`, fontSize: 12, x: 530, y:195, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
@@ -25,11 +25,12 @@
       <v-layer>
         <v-text :config="{text: `ATK - ${this.$route.params.feathermain} `, fontSize: 16, x: 530, y:215, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `${this.$route.params.feathersubstats[0].feathertype} - ${this.$route.params.feathersubstats[0].featherstat}`, fontSize: 12, x: 530, y:235, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+      </v-layer>  
+      <v-layer v-if="this.$route.params.feathersubstats[1] != undefined" ref = 'layer'>  
         <v-text :config="{text: `${this.$route.params.feathersubstats[1].feathertype} - ${this.$route.params.feathersubstats[1].featherstat}`, fontSize: 12, x: 530, y:250, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
       <v-layer v-if="this.$route.params.feathersubstats[2] != undefined" ref = 'layer'>
         <v-text :config="{text: `${this.$route.params.feathersubstats[2].feathertype} - ${this.$route.params.feathersubstats[2].featherstat}`, fontSize: 12, x: 530, y:265, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.feathersubstats[3].feathertype} - ${this.$route.params.feathersubstats[3].featherstat}`, fontSize: 12, x: 530, y:280, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
       <v-layer v-if="this.$route.params.feathersubstats[3] != undefined" ref = 'layer'>
         <v-text :config="{text: `${this.$route.params.feathersubstats[3].feathertype} - ${this.$route.params.feathersubstats[3].featherstat}`, fontSize: 12, x: 530, y:280, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
@@ -38,12 +39,12 @@
       <v-layer>
         <v-text :config="{text: `${this.$route.params.sandsmaintype} - ${this.$route.params.sandsmain} `, fontSize: 16, x: 530, y:305, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `${this.$route.params.sandssubstats[0].sandstype} - ${this.$route.params.sandssubstats[0].sandsstat}`, fontSize: 12, x: 530, y:325, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+      </v-layer>  
+      <v-layer v-if="this.$route.params.sandssubstats[1] != undefined" ref = 'layer'>  
         <v-text :config="{text: `${this.$route.params.sandssubstats[1].sandstype} - ${this.$route.params.sandssubstats[1].sandsstat}`, fontSize: 12, x: 530, y:340, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
       <v-layer v-if="this.$route.params.sandssubstats[2] != undefined" ref = 'layer'>  
-        <v-text :config="{text: `${this.$route.params.sandssubstats[2].sandstype} - ${this.$route.params.sandssubstats[2].sandsstat}`, fontSize: 12, x: 530, y:355, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.sandssubstats[3].sandstype} - ${this.$route.params.sandssubstats[3].sandsstat}`, fontSize: 12, x: 530, y:370, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
-      </v-layer>
+        <v-text :config="{text: `${this.$route.params.sandssubstats[2].sandstype} - ${this.$route.params.sandssubstats[2].sandsstat}`, fontSize: 12, x: 530, y:355, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>      </v-layer>
       <v-layer v-if="this.$route.params.sandssubstats[3] != undefined" ref = 'layer'>  
         <v-text :config="{text: `${this.$route.params.sandssubstats[3].sandstype} - ${this.$route.params.sandssubstats[3].sandsstat}`, fontSize: 12, x: 530, y:370, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
@@ -52,11 +53,12 @@
       <v-layer>
         <v-text :config="{text: `${this.$route.params.gobletmaintype} - ${this.$route.params.gobletmain} `, fontSize: 16, x: 530, y:395, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `${this.$route.params.gobletsubstats[0].goblettype} - ${this.$route.params.gobletsubstats[0].gobletstat}`, fontSize: 12, x: 530, y:420, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+      </v-layer>  
+      <v-layer v-if="this.$route.params.gobletsubstats[1] != undefined" ref = 'layer'>    
         <v-text :config="{text: `${this.$route.params.gobletsubstats[1].goblettype} - ${this.$route.params.gobletsubstats[1].gobletstat}`, fontSize: 12, x: 530, y:435, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
       <v-layer v-if="this.$route.params.gobletsubstats[2] != undefined" ref = 'layer'> 
         <v-text :config="{text: `${this.$route.params.gobletsubstats[2].goblettype} - ${this.$route.params.gobletsubstats[2].gobletstat}`, fontSize: 12, x: 530, y:450, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.gobletsubstats[3].goblettype} - ${this.$route.params.gobletsubstats[3].gobletstat}`, fontSize: 12, x: 530, y:465, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
       <v-layer v-if="this.$route.params.gobletsubstats[3] != undefined" ref = 'layer'> 
         <v-text :config="{text: `${this.$route.params.gobletsubstats[3].goblettype} - ${this.$route.params.gobletsubstats[3].gobletstat}`, fontSize: 12, x: 530, y:465, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
@@ -65,11 +67,12 @@
       <v-layer>
         <v-text :config="{text: `${this.$route.params.circletmaintype} - ${this.$route.params.circletmain} `, fontSize: 16, x: 530, y:495, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `${this.$route.params.circletsubstats[0].circlettype} - ${this.$route.params.circletsubstats[0].circletstat}`, fontSize: 12, x: 530, y:515, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
+      </v-layer>  
+      <v-layer v-if="this.$route.params.circletsubstats[1] != undefined" ref = 'layer'>    
         <v-text :config="{text: `${this.$route.params.circletsubstats[1].circlettype} - ${this.$route.params.circletsubstats[1].circletstat}`, fontSize: 12, x: 530, y:530, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
       <v-layer v-if="this.$route.params.circletsubstats[2] != undefined" ref = 'layer'> 
         <v-text :config="{text: `${this.$route.params.circletsubstats[2].circlettype} - ${this.$route.params.circletsubstats[2].circletstat}`, fontSize: 12, x: 530, y:545, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.circletsubstats[3].circlettype} - ${this.$route.params.circletsubstats[3].circletstat}`, fontSize: 12, x: 530, y:560, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
       <v-layer v-if="this.$route.params.circletsubstats[3] != undefined" ref = 'layer'> 
         <v-text :config="{text: `${this.$route.params.circletsubstats[3].circlettype} - ${this.$route.params.circletsubstats[3].circletstat}`, fontSize: 12, x: 530, y:560, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
@@ -135,8 +138,6 @@ export default {
         // delete link;
       },
       save: function () {
-        console.log('clidk')
-        console.log(this.$refs)
         var dataURL = (this.$refs.stage.getStage()).toDataURL({ pixelRatio: 3 });
         this.downloadURI(dataURL, 'genshincard.png');
       },

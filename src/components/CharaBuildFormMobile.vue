@@ -1,12 +1,15 @@
 <template>
-<FormulateForm
+
+   <FormulateForm
     v-model='values'
-    :keep-model-data="true">
+    :keep-model-data="true"
+    @submit="submit">
     <body>
 
       <div class ="form">
         <div class="row">
         <div class="valid">{{ this.validation }}</div>
+        
           <div class="col-25">
             <label class="typo__label">Player Name:</label>
           </div>
@@ -268,7 +271,7 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='goblet' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            <FormulateInput type="select" name='goblet' validation="required" :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
                             'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
                           </div>
                         </div>
@@ -367,14 +370,17 @@
                   </vsa-content>
               </vsa-item>
             </vsa-list>
-              
-      <button class='mobile-button' v-on:click=validate()>Submit</button>
+  <FormulateInput
+      type="submit"
+      label="Submit"
+    />
     </div>
     
   </body>
    </FormulateForm> 
 
 </template>
+
 
 <script>
 export default {
@@ -394,13 +400,6 @@ export default {
         params: this.values
       })
     },
-    validate() {
-      for(const key in this.values) { if ((this.values[key] == '' || undefined) == true) { 
-        return this.validation = 'Please fill out ALL field(s)'
-        }
-      }
-      this.submit()
-    }
   }
 }
 </script> 
@@ -420,6 +419,9 @@ body{
   flex-wrap: wrap;
   justify-content: center;
 }
+.button{
+  margin: 10px 120px;
+  }
 .col-25 {
   float: left;
   width: 35%;

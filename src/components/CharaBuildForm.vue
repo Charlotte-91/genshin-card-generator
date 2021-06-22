@@ -1,12 +1,15 @@
 <template>
+
    <FormulateForm
     v-model='values'
-    :keep-model-data="true">
+    :keep-model-data="true"
+    @submit="submit">
     <body>
 
       <div class ="form">
         <div class="row">
         <div class="valid">{{ this.validation }}</div>
+        
           <div class="col-25">
             <label class="typo__label">Player Name:</label>
           </div>
@@ -268,7 +271,7 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='goblet' :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
+                            <FormulateInput type="select" name='goblet' validation="required" :options="['','Adventurer','Archaic Petra','Berserker','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Gambler','Gladiators Finale','Instructor', 'Lavawalker', 'Lucky Dog',
                             'Maiden Beloved', 'Martial Artist', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe', 'Blizzard Strayer', 'Heart of Depth']"/>
                           </div>
                         </div>
@@ -367,8 +370,11 @@
                   </vsa-content>
               </vsa-item>
             </vsa-list>
-              
-      <button class='mobile-button' v-on:click=validate()>Submit</button>
+  <FormulateInput
+      class="button"
+      type="submit"
+      label="Submit"
+    />
     </div>
     
   </body>
@@ -389,35 +395,14 @@ export default {
   },
   methods: {
       submit() {
-        console.log(this.values)
+        console.log('validation')
+        console.log(this.validation)
         this.$router.push({name: 'CharaBuildRender', 
         params: this.values
       })
     },
-      validate() {
-      for(const key in this.values) { if ((this.values[key] == '' || undefined) == true) { 
-        return this.validation = 'Please fill out ALL field(s)'
-        }
-      }
-      this.submit()
-    }
   }
 }
-//       Object.entries(this.values).forEach(([key, value]) => {
-//         if (((key == 'flower4type' || 'feather4type' || 'sands4type' || 'goblet4type' || 'circlet4type') == true) && ((value == '' || undefined) == true)) {
-//           value = ''
-//           console.log('test')
-//           console.log(key)
-//           console.log(value)
-//         } else if (value == '' || undefined) {
-//           console.log('here')
-//           this.validation = 'Please fill out ALL field(s)'
-//           break
-//        }
-//     })
-//     this.submit()
-//    }
-// }  
 </script> 
 
 
@@ -433,7 +418,9 @@ body{
   font-size: 25px;
   align-self: center;
 }
-
+.button{
+  margin: 10px 120px;
+  }
 .col-25 {
   float: left;
   width: 45%;
