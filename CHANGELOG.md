@@ -5,8 +5,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-- Character loadout card, allowing you to show which weapons and artifacts are equipped to each party member  [ In Progress ]
+- Team composition card   [ In Progress ]
+- Async storage for params 
+- Additional background choices for each card
 - Auto upload of card image to twitter 
+
+
+## [3.1.0] - 2021-06-15
+
+### Changed
+- Rebuilt the form element on the Character Build page to be more intuitive
+- Changed the validation to allow for 2 - 4 artifacts sub stats rather than only 4
+- Changed incorrect maximum character level
+
+### Added 
+- Added missing validation from player name field
+
 
 ## [3.0.2] - 2021-06-09
 
@@ -19,6 +33,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Added spacing to the top of each page to prevent the image appearing off page
+
 
 ## [3.0.0] - 2021-05-30
 
@@ -42,7 +57,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fixed a bug where the mobile version was not triggering on newer iOS devices
-
 
 
 ## [2.1.0] - 2021-04-27

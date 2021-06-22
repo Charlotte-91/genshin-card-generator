@@ -84,7 +84,7 @@ body{
   padding-top: 50px;
 }
 .top-gap {
-  margin: 200px;
+  margin: 150px;
 }
 .mobile-top-gap {
   height: 100px;
