@@ -5,7 +5,7 @@
         <header className="App-header">
         <img src="../assets/genshin-logo.png" height='260px'/>
       </header>
-        <team-comp-form/>
+        <TeamCompForm/>
       </div>
       <div v-else>
         <header className="App-header">
@@ -53,10 +53,9 @@ export default {
   height: 280px;
   text-align: center;
 }
-.body {
-  font-size: 25px;
-  padding: 20px;
-  font-family: SuezOne-Regular; 
+.container {
+  max-width: 690px;
+  margin: auto;
 }
 .footer {
   position: bottom;
