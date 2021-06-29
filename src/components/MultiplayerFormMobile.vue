@@ -142,6 +142,7 @@ export default {
         { name: 'Hu tao', id: 'Hutao' },
         { name: 'Jean', id: 'Jean' },
         { name: 'Kaeya', id: 'Kaeya' },
+        { name: 'Kazuha', id: 'Kazuha' },
         { name: 'Keqing', id: 'Keqing' },
         { name: 'Klee', id: 'Klee' },
         { name: 'Lisa', id: 'Lisa' },

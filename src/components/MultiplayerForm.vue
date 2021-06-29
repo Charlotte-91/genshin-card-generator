@@ -34,16 +34,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="row">
-          <div class="col-25">
-            <label class="typo__label">Spiral Abyss Progress:</label>
-          </div>
-          <div class="col-75">
-            <div class="multiselect">
-              <input class="form-style" type='text' v-model="SA" /> 
-            </div>
-          </div>
-        </div> -->
 
         <div class="row">
           <div class="col-25">
@@ -141,6 +131,7 @@ export default {
         { name: 'Hu tao', id: 'Hutao' },
         { name: 'Jean', id: 'Jean' },
         { name: 'Kaeya', id: 'Kaeya' },
+        { name: 'Kazuha', id: 'Kazuha' },
         { name: 'Keqing', id: 'Keqing' },
         { name: 'Klee', id: 'Klee' },
         { name: 'Lisa', id: 'Lisa' },

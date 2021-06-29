@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Additional background choices for each card
 - Auto upload of card image to twitter 
 
+## [3.2.0] - 2021-06-29
+
+### Added 
+- Added Kazuha to each card design and team selection
+
 
 ## [3.1.0] - 2021-06-15
 
