@@ -10,6 +10,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Additional background choices for each card
 - Auto upload of card image to twitter 
 
+## [3.2.2] - 2021-07-13
+
+### Fixed
+- Fixed validation issue where user could not enter a decimal in the sub stat value field
+- Fixed validation issue where set selection was not validated upon form submit
+
+
 ## [3.2.1] - 2021-07-08
 
 ### Fixed
