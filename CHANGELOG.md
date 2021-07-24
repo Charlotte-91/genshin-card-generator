@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Additional background choices for each card
 - Auto upload of card image to twitter 
 
+## [3.3.0] - 2021-07-24
+
+### Added
+- Added Ayaka character cards, skills and constellations
+- Added new weapons from Genshin 1.6 and 2.0 updates
+- Added new Artifacts from Genshin 2.0 update
+
+
 ## [3.2.2] - 2021-07-13
 
 ### Fixed

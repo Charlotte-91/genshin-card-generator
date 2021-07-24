@@ -80,6 +80,7 @@ export default {
         { name: 'Aether', id: 'Aether' },
         { name: 'Albedo', id: 'Albedo' },
         { name: 'Amber', id: 'Amber' },
+        { name: 'Ayaka', id: 'Ayaka' },
         { name: 'Barbara', id: 'Barbara' },
         { name: 'Beidou', id: 'Beidou' },
         { name: 'Bennett', id: 'Bennett' },
