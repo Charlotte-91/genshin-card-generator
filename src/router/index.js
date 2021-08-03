@@ -5,6 +5,7 @@ import VueKonva from 'vue-konva';
 import VueFormulate from '@braid/vue-formulate'
 import VueSimpleAccordion from 'vue-simple-accordion';
 import 'vue-simple-accordion/dist/vue-simple-accordion.css';
+import { BadgerAccordion, BadgerAccordionItem } from 'vue-badger-accordion'
 require('../styles/form.css')
 require('../styles/snow.css')
 
@@ -13,6 +14,8 @@ Vue.use(VueKonva);
 Vue.use(VueRouter);
 Vue.use(VueFormulate);
 Vue.use(VueSimpleAccordion);
+Vue.component('BadgerAccordion', BadgerAccordion)
+Vue.component('BadgerAccordionItem', BadgerAccordionItem)
 
 const routes = [
   {

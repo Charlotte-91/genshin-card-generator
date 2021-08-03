@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "@braid/vue-formulate": "^2.5.2",
+    "@dafcoe/vue-collapsible-panel": "^0.2.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@ztrehagem/vue-accordion": "^0.3.0",
+    "badger-accordion": "^1.2.4",
     "canvas": "2.6.1",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
@@ -25,6 +28,8 @@
     "serve-static": "^1.14.1",
     "vue": "^2.6.11",
     "vue-badger-accordion": "^2.0.2",
+    "vue-bulma-accordion": "^0.5.2",
+    "vue-faq-accordion": "^1.6.2",
     "vue-konva": "^2.1.6",
     "vue-multiselect": "^2.1.6",
     "vue-router": "^3.2.0",
@@ -45,7 +50,8 @@
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vue2-collapse": "^1.0.15"
   },
   "eslintConfig": {
     "root": true,
