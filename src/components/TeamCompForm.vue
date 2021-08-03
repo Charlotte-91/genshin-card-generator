@@ -34,11 +34,15 @@
               type="select" name='SA' :options="['1-1','1-2','1-3', '2-1', '2-2', '2-3', '3-1', '3-2', '3-3','4-1','4-2','4-3','5-1','5-2','5-3','6-1','6-2','6-3','7-1','7-2','7-3','8-1','8-2','8-3','9-1','9-2','9-3','10-1','10-2','10-3','11-1','11-2','11-3','12-1','12-2','12-3']"/> 
             </div>
           </div>
-        
-        <badger-accordion>
-              <badger-accordion-item>
-                <template id="header" slot="header">Character 1</template>
-                  <template slot="content">
+
+
+      <div class="x-badger-accordion js-badger-accordion">
+      <div>
+        <div class="badger-accordion__header js-badger-accordion-header">Character 1</div>
+        </div>
+          <div class="badger-accordion__panel js-badger-accordion-panel">
+              <div class="badger-accordion__panel--inner js-badger-accordion-panel-inner">
+          <ul>
                   <div class="row">
                     <div class="col-25">
                       <label class="typo__label">Character:</label>
@@ -113,11 +117,16 @@
                           'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
                       </div>
                     </div>
-                  </template>
-              </badger-accordion-item>
-              <badger-accordion-item>
-                <template type="button" slot="header">Character 2</template>
-                  <template slot="content">
+          </ul>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div>
+        <div class="badger-accordion__header js-badger-accordion-header">Character 2</div>
+      </div>
+      <div class="badger-accordion__panel js-badger-accordion-panel">
+        <div class="badger-accordion__panel--inner js-badger-accordion-panel-inner">
+          <ul>
                   <div class="row">
                     <div class="col-25">
                       <label class="typo__label">Character:</label>
@@ -192,11 +201,16 @@
                           'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
                       </div>
                     </div>
-                  </template>
-              </badger-accordion-item>
-              <badger-accordion-item>
-                <template slot="header">Character 3</template>
-                  <template slot="content">
+          </ul>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div>
+        <div class="badger-accordion__header js-badger-accordion-header">Character 3</div>
+      </div>
+      <div class="badger-accordion__panel js-badger-accordion-panel">
+        <div class="badger-accordion__panel--inner js-badger-accordion-panel-inner">
+          <ul>
                   <div class="row">
                     <div class="col-25">
                       <label class="typo__label">Character:</label>
@@ -271,11 +285,15 @@
                           'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
                       </div>
                     </div>
-                  </template>
-              </badger-accordion-item>
-              <badger-accordion-item>
-                <template slot="header">Character 4</template>
-                  <template slot="content">
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="badger-accordion__header js-badger-accordion-header">Character 4</div>
+      </div>
+      <div class="badger-accordion__panel js-badger-accordion-panel">
+        <div class="badger-accordion__panel--inner js-badger-accordion-panel-inner">
+          <ul>
                   <div class="row">
                     <div class="col-25">
                       <label class="typo__label">Character:</label>
@@ -350,9 +368,13 @@
                           'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar', 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
                       </div>
                     </div>
-                  </template>
-                </badger-accordion-item>
-        </badger-accordion>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+
+
               
           <FormulateInput
                 id="submitB"
@@ -366,6 +388,7 @@
 </template>
 
 <script>
+import BadgerAccordion from "badger-accordion";
 export default {
   data () {
     
@@ -386,9 +409,20 @@ export default {
         params: this.values
         })
       },
+      onOpenItem() {
+        // Item opened
+      },
+      onCloseItem() {
+        // Item closed
+    }
   },
   components: {
   
+  },
+  mounted() {
+    new BadgerAccordion(".js-badger-accordion", {
+      openMultiplePanels: true
+    });
   }
 }
 
@@ -513,4 +547,38 @@ body{
 }
 
 
+
+.badger-accordion__header {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.5em;
+  transition: all ease-in-out 0.3s;
+}
+
+.badger-accordion__header:hover {
+  background-color: #444;
+  color: #eee;
+}
+
+.badger-accordion__panel {
+  max-height: 75vh;
+  overflow: hidden;
+}
+
+.badger-accordion__panel.-ba-is-hidden {
+  max-height: 0 !important;
+  visibility: hidden;
+}
+
+.badger-accordion__panel--inner {
+  padding: 0.5em 2em;
+}
+
+.badger-accordion--initialized .badger-accordion__panel {
+  transition: all ease-in-out 0.3s;
+}
+
+li {
+  margin-bottom: 1em;
+}
 </style>
