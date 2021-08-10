@@ -105,6 +105,7 @@ export default {
         { name: 'Razor', id: 'Razor' },
         { name: 'Rosaria', id: 'Rosaria' },
         { name: 'Sucrose', id: 'Sucrose' },
+        { name: 'Sayu', id: 'Sayu' },
         { name: 'Tartaglia', id: 'Tartaglia' },
         { name: 'Venti', id: 'Venti' },
         { name: 'Xiangling', id: 'Xiangling' },
@@ -112,12 +113,13 @@ export default {
         { name: 'Xingqiu', id: 'Xingqiu' },
         { name: 'Xinyan', id: 'Xinyan' },
         { name: 'Yanfei', id: 'Yanfei' },
+        { name: 'Yoimiya', id: 'Yoimiya' },
         { name: 'Zhongli', id: 'Zhongli' },
         
       ],
       cardValue: [],
       PetValue: '',
-      PetOptions: ['Dayflower Seelie', 'Curcuma Seelie', 'Rose Seelie', 'Endora']
+      PetOptions: ['Dayflower Seelie', 'Curcuma Seelie', 'Rose Seelie', 'Viola Seelie', 'Endora']
     }
   },
   props: {
