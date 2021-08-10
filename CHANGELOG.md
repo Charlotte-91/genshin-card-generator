@@ -10,6 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Additional background choices for each card
 - Auto upload of card image to twitter 
 
+## [3.4.0] - 2021-08-10
+
+### Added
+- Added Sayu character cards, skills and constellations
+- Added Yoimiya character cards, skills and constellations
+- Added Electro Lumine/Aether character cards, skills and constellations
+- Added Viola Seelie pet
+
+
 ## [3.3.0] - 2021-07-24
 
 ### Added
