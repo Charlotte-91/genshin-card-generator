@@ -10,6 +10,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Additional background choices for each card
 - Auto upload of card image to twitter 
 
+## [3.5.0] - 2021-09-01
+
+### Added
+- Added Kujou Sara character cards, skills and constellations
+- Added Raiden Shogun character cards, skills and constellations
+- Added Aloy character cards
+- Added 2.1 weapons
+
+### Fixed
+- Bug where the main artifact stat could not be a decimal 
+
+
 ## [3.4.1] - 2021-08-11
 
 ### Fixed
@@ -28,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [3.3.0] - 2021-07-24
 
 ### Added
-- Added Ayaka character cards, skills and constellations
+- Added Kamisato Ayaka character cards, skills and constellations
 - Added new weapons from Genshin 1.6 and 2.0 updates
 - Added new Artifacts from Genshin 2.0 update
 
@@ -49,7 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [3.2.0] - 2021-06-29
 
 ### Added 
-- Added Kazuha to each card design and team selection
+- Added Kaedehara Kazuha to each card design and team selection
 
 
 ## [3.1.0] - 2021-06-15

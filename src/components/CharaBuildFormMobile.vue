@@ -23,8 +23,8 @@
           <label class="typo__label">Character:</label>
         </div>
         <div class="col-75">
-          <FormulateInput type="select" name='chara' :options="{ aetherAmeno: 'Aether (Ameno)', aetherElectro: 'Aether (Electro)',  aetherGeo: 'Aether (Geo)', albedo: 'Albedo', amber: 'Amber', ayaka: 'Ayaka', barbara: 'Barbara', beidou: 'Beidou', bennett: 'Bennett', chongyun: 'Chongyun', diluc: 'Diluc', diona: 'Diona', eula: 'Eula', fishcl: 'Fischl', ganyu: 'Ganyu', hutao: 'Hu tao', jean: 'Jean', kaeya: 'Kaeya', kazuha:'Kazuha',
-          keqing: 'Keqing', klee: 'Klee', lisa: 'Lisa',lumineAmeno: 'Lumine (Ameno)',lumineElectro: 'Lumine (Electro)', lumineGeo: 'Lumine (Geo)', mona: 'Mona', ningguang: 'Ningguang', noelle: 'Noelle', qiqi: 'Qiqi', razor: 'Razor', rosaria: 'Rosaria', sayu: 'Sayu', sucrose: 'Sucrose', tartaglia: 'Tartaglia', venti: 'Venti', xiangling: 'Xiangling', xiao: 'Xiao', xingqiu: 'Xingqiu', xinyan: 'Xinyan', yanfei: 'Yanfei', yoimiya: 'Yoimiya', zhongli: 'Zhongli'}"/>
+          <FormulateInput type="select" name='chara' :options="{ aetherAmeno: 'Aether (Ameno)', aetherElectro: 'Aether (Electro)',  aetherGeo: 'Aether (Geo)', albedo: 'Albedo', amber: 'Amber', barbara: 'Barbara', beidou: 'Beidou', bennett: 'Bennett', chongyun: 'Chongyun', diluc: 'Diluc', diona: 'Diona', eula: 'Eula', fishcl: 'Fischl', ganyu: 'Ganyu', hutao: 'Hu tao', jean: 'Jean', kaeya: 'Kaeya', kaedeharaKazuha:'kaedehara Kazuha',
+          kamisatoAyaka: 'Kamisato Ayaka', keqing: 'Keqing', klee: 'Klee', kujouSara : 'Kujou Sara', lisa: 'Lisa',lumineAmeno: 'Lumine (Ameno)',lumineElectro: 'Lumine (Electro)', lumineGeo: 'Lumine (Geo)', mona: 'Mona', ningguang: 'Ningguang', noelle: 'Noelle', qiqi: 'Qiqi', raidenShogun: 'Raiden Shogun', razor: 'Razor', rosaria: 'Rosaria', sayu: 'Sayu', sucrose: 'Sucrose', tartaglia: 'Tartaglia', venti: 'Venti', xiangling: 'Xiangling', xiao: 'Xiao', xingqiu: 'Xingqiu', xinyan: 'Xinyan', yanfei: 'Yanfei', yoimiya: 'Yoimiya', zhongli: 'Zhongli'}"/>
         </div>
       </div>
 
@@ -46,15 +46,15 @@
         </div>
         <!-- To be refactored -->
         <div class="col-75">
-          <FormulateInput v-if="values.chara =='beidou'|| values.chara =='chongyun'||values.chara == 'diluc' || values.chara =='eula'|| values.chara =='noelle'|| values.chara =='razor'|| values.chara =='xinyan' || values.chara == 'sayu' " key="claymore" name="weapon" type="select" :options="['Blackcliff Slasher', 'Bloodtainted Greatsword', 'Debate Club','Favonius Greatsword', 'Ferrous Shadow','Lithic Blade','Prototype Archaic', 'Quartz', 'Rainslasher','Royal Greatsword','Sacrificial Greatsword', 'Serpent Spine',
-           'Skyward Pride', 'Snow-Tombed Starsilver', 'Song of Broken Pines', 'The Bell', 'The Unforged', 'White Iron Greatsword', 'Whiteblind', 'Wolfs Gravestone']"/>
-          <FormulateInput v-if="values.chara =='lumineAmeno' || values.chara =='lumineElectro' || values.chara =='lumineGeo' || values.chara =='aetherAmeno' || values.chara =='aetherElectro' || values.chara =='aetherGeo' || values.chara =='albedo' || values.chara =='bennett'|| values.chara =='jean'|| values.chara =='kaeya'|| values.chara =='keqing'|| values.chara =='qiqi'|| values.chara =='xingqiu' || values.chara =='kazuha' || values.chara =='ayaka'" key="sword" name="weapon" type="select" :options="['Aquila Favonia', 'Blackcliff Longsword', 'Cool Steel', 'Dark Iron Sword', 'Dull Blade', 'Favonius Sword', 'Festering Desire', 'Fillet Blade','Freedom-Sworn', 'Harbinger of Dawn', '	Iron Sting', 'Lions Roar', 'Mistsplitter Reforged', 'Primordial Jade Cutter', 'Prototype Rancour',
+          <FormulateInput v-if="values.chara =='beidou'|| values.chara =='chongyun'||values.chara == 'diluc' || values.chara =='eula'|| values.chara =='noelle'|| values.chara =='razor'|| values.chara =='xinyan' || values.chara == 'sayu' " key="claymore" name="weapon" type="select" :options="['Blackcliff Slasher', 'Bloodtainted Greatsword', 'Debate Club','Favonius Greatsword', 'Ferrous Shadow', 'Lithic Blade', 'Luxurious Sea-Lord','Prototype Archaic', 'Quartz', 'Rainslasher','Royal Greatsword','Sacrificial Greatsword', 'Serpent Spine',
+           'Skyward Pride', 'Snow-Tombed Starsilver', 'Song of Broken Pines', 'The Catch', 'The Bell', 'The Unforged', 'White Iron Greatsword', 'Whiteblind', 'Wolfs Gravestone']"/>
+          <FormulateInput v-if="values.chara =='lumineAmeno' || values.chara =='lumineElectro' || values.chara =='lumineGeo' || values.chara =='aetherAmeno' || values.chara =='aetherElectro' || values.chara =='aetherGeo' || values.chara =='albedo' || values.chara =='bennett'|| values.chara =='jean'|| values.chara =='kaeya'|| values.chara =='keqing'|| values.chara =='qiqi'|| values.chara =='xingqiu' || values.chara =='kaedeharaKazuha' || values.chara =='kamisatoAyaka'" key="sword" name="weapon" type="select" :options="['Aquila Favonia', 'Blackcliff Longsword', 'Cool Steel', 'Dark Iron Sword', 'Dull Blade', 'Favonius Sword', 'Festering Desire', 'Fillet Blade','Freedom-Sworn', 'Harbinger of Dawn', '	Iron Sting', 'Lions Roar', 'Mistsplitter Reforged', 'Primordial Jade Cutter', 'Prototype Rancour',
            'Royal Longsword', 'Sacrificial Sword', 'Silver Sword', 'Skyrider Sword', 'Skyward Blade', 'Summit Shaper', 'Sword of Descension', 'The Alley Flash', 'The Black Sword', 'The Flute', 'Travelers Handy Sword']"/>
-          <FormulateInput v-if="values.chara =='hutao'|| values.chara =='rosaria'|| values.chara =='xiangling'|| values.chara =='xiao'|| values.chara =='zhongli'" key="polearm" name="weapon" type="select" :options="['Black Tassel', 'Blackcliff Pole', 'Crescent Pike', 'Deathmatch', 'Dragons Bane', 'Dragonspine Spear', 'Favonius Lance', '	Halberd', 'Iron Point', 'Lithic Spear', 'Primordial Jade Winged-Spear', 'Prototype Starglitter','Royal Spear','Skyward Spine',
+          <FormulateInput v-if="values.chara =='hutao'|| values.chara =='rosaria'|| values.chara =='xiangling'|| values.chara =='xiao'|| values.chara =='zhongli' || values.chara == 'raidenShogun'" key="polearm" name="weapon" type="select" :options="['Black Tassel', 'Blackcliff Pole', 'Crescent Pike', 'Deathmatch', 'Dragons Bane', 'Dragonspine Spear', 'Engulfing Lightning', 'Favonius Lance', 'Halberd', 'Iron Point', 'Lithic Spear', 'Primordial Jade Winged-Spear', 'Prototype Starglitter','Royal Spear','Skyward Spine',
            'Staff of Homa', 'Vortex Vanquisher','White Tassel']"/>
           <FormulateInput v-if="values.chara =='barbara'|| values.chara =='klee'|| values.chara =='lisa'|| values.chara =='mona'|| values.chara =='ningguang'|| values.chara =='sucrose'|| values.chara =='yanfei'" key="catalyst" name="weapon" type="select" :options="['Amber Catalyst', 'Apprentices Notes',  'Blackcliff Agate', 'Dodoco Tales', 'Emerald Orb', 'Favonius Codex', '	Frostbearer', 'Lost Prayer to the Sacred Winds', 'Magic Guide', 'Mappa Mare', 'Memory of Dust', 'Otherworldly Story',
           'Prototype Amber', '	Royal Grimoire', 'Sacrificial Fragments', 'Skyward Atlas', 'Solar Pearl', 'The Widsith', 'Thrilling Tales of Dragon Slayers', 'Twin Nephrite', 'Wine and Song']"/>
-          <FormulateInput v-if="values.chara =='amber'|| values.chara =='diona'|| values.chara =='fischl'|| values.chara =='ganyu'|| values.chara =='tartaglia'|| values.chara =='venti' || values.chara =='yoimiya'" key="bow" name="weapon" type="select" :options="['Alley Hunter', 'Amos Bow', 'Blackcliff Warbow','Compound Bow', 'Ebony Bow', 'Elegy for the End', 'Favonius Warbow','Hunters Bow', 'Messenger', 'Mitternachts Waltz', 'Prototype Crescent', 'Raven Bow', 'Recurve Bow', 'Royal Bow','Rust',
+          <FormulateInput v-if="values.chara =='amber'|| values.chara =='diona'|| values.chara =='fischl'|| values.chara =='ganyu'|| values.chara =='tartaglia'|| values.chara =='venti' || values.chara =='yoimiya' || values.chara == 'kujouSara' || values.chara == 'aloy'" key="bow" name="weapon" type="select" :options="['Alley Hunter', 'Amos Bow', 'Blackcliff Warbow','Compound Bow', 'Ebony Bow', 'Elegy for the End','Everlasting Moonglow', 'Favonius Warbow','Hunters Bow', 'Messenger', 'Mitternachts Waltz', 'Predator', 'Prototype Crescent', 'Raven Bow', 'Recurve Bow', 'Royal Bow','Rust',
             'Sacrificial Bow', 'Seasoned Hunters Bow', 'Skyward Harp', 'Slingshot', 'The Stringless', 'The Viridescent Hunt', 'Thundering Pulse', 'Windblume Ode']"/>
         </div>
       </div>
@@ -121,7 +121,7 @@
                       </div>
                       <div class="col-90">
                         <FormulateInput
-                          type='number' name="flowermain" validation="number" /> 
+                          type='text' name="flowermain" validation="required|number" /> 
                       </div>
                       <div class="col-85">
                         HP
@@ -174,7 +174,7 @@
                               </div>
                                 <div class="col-90">
                                   <FormulateInput
-                                  type='number' name="feathermain" validation="number" /> 
+                                  type='text' name="feathermain" validation="required|number" /> 
                                 </div>
                                 <div class="col-85">
                                   ATK
@@ -227,7 +227,7 @@
                               </div>
                                 <div class="col-90">
                                   <FormulateInput
-                                  type='number' name="sandsmain" validation="number" /> 
+                                  type='text' name="sandsmain" validation="required|number" /> 
                                 </div>
                                 <div class="col-85">
                                   <FormulateInput
@@ -281,7 +281,7 @@
                               </div>
                                 <div class="col-90">
                                   <FormulateInput
-                                  type='number' name="gobletmain" validation="number" /> 
+                                  type='text' name="gobletmain" validation="required|number" /> 
                                 </div>
                                 <div class="col-85">
                                   <FormulateInput
@@ -335,7 +335,7 @@
                               </div>
                                 <div class="col-90">
                                   <FormulateInput
-                                  type='number' name="circletmain" validation="number" /> 
+                                  type='text' name="circletmain" validation="required|number" /> 
                                 </div>
                                 <div class="col-85">
                                   <FormulateInput
