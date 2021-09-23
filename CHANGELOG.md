@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Additional background choices for each card
 - Auto upload of card image to twitter 
 
+## [3.6.0] - 2021-09-23
+
+### Added 
+- Added Sangonomiya Kokomi character cards, skills and constellations
+
+
 ## [3.5.0] - 2021-09-01
 
 ### Added

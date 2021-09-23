@@ -157,6 +157,7 @@ export default {
         { name: 'Raiden Shogun', id: 'Raiden Shogun'},
         { name: 'Razor', id: 'Razor' },
         { name: 'Rosaria', id: 'Rosaria' },
+        { name: 'Sangonomiya Kokomi', id: 'Sangonomiya Kokomi' },
         { name: 'Sayu', id: 'Sayu' },
         { name: 'Sucrose', id: 'Sucrose' },
         { name: 'Tartaglia', id: 'Tartaglia' },
