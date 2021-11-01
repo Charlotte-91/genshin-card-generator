@@ -1,0 +1,201 @@
+{
+    "Swords" : 
+    {
+        "Characters" :
+            [
+                "Albedo",
+                "Bennett",
+                "Jean",
+                "Kaedehara Kazuha",
+                "Kaeya",
+                "Kamisato Ayaka",
+                "Keqing",
+                "Qiqi",
+                "Xingqui"
+            ],
+        "Weapons" : 
+            [
+            "Amenoma Kageuchi", 
+            "Aquila Favonia",
+            "Blackcliff Longsword",
+            "Cool Steel",
+            "Dark Iron Sword",
+            "Dull Blade",
+            "Favonius Sword",
+            "Festering Desire",
+            "Fillet Blade",
+            "Freedom-Sworn",
+            "Harbinger of Dawn",
+            "Iron Sting",
+            "Lion's Roar",
+            "Mistsplitter Reforged",
+            "Primordial Jade Cutter",
+            "Prototype Rancour",
+            "Royal Longsword",
+            "Sacrificial Sword",
+            "Silver Sword",
+            "Skyrider Sword",
+            "Skyward Blade",
+            "Summit Shaper",
+            "Sword of Descension",
+            "The Alley Flash",
+            "The Black Sword",
+            "The Flute",
+            "Traveler's Handy Sword"
+            ]
+    },
+
+    "Claymore" : 
+    {
+        "Characters" :
+            [
+                "Beidou",
+                "Chongyun",
+                "Diluc",
+                "Eula",
+                "Noelle",
+                "Razor",
+                "Sayu",
+                "Xinyan"
+            ],
+        "Weapons:" : 
+        [
+            "Blackcliff Slasher",
+            "Bloodtainted Greatsword",
+            "Debate Club","Favonius Greatsword",
+            "Ferrous Shadow","Lithic Blade",
+            "Luxurious Sea-Lord","Prototype Archaic",
+            "Quartz", "Rainslasher",
+            "Royal Greatsword",
+            "Sacrificial Greatsword",
+            "Serpent Spine",
+            "Skyward Pride",
+            "Snow-Tombed Starsilver",
+            "Song of Broken Pines",
+            "The Bell",
+            "The Unforged",
+            "White Iron Greatsword",
+            "Whiteblind",
+            "Wolfs Gravestone"
+        ]
+
+    },
+
+    "Polearms": 
+    {
+        "Characters" :
+            [
+                "Hu Tao",
+                "Raiden Shougun",
+                "Rosaria",
+                "Thoma",
+                "Xiangling",
+                "Xiao",
+                "Zhongli"
+            ],
+        "Weapons":
+            [
+                "Black Tassel",
+                "Blackcliff Pole",
+                "Crescent Pike",
+                "Deathmatch",
+                "Dragons Bane",
+                "Dragonspine Spear",
+                "Engulfing Lightning",
+                "Favonius Lance",
+                "Halberd",
+                "Iron Point",
+                "Lithic Spear",
+                "Primordial Jade Winged-Spear",
+                "Prototype Starglitter",
+                "Royal Spear",
+                "Skyward Spine",
+                "Staff of Homa",
+                "The Catch",
+                "Vortex Vanquisher",
+                "White Tassel"
+            ]
+    },
+
+    "Catalysts": 
+    {
+        "Characters" :
+            [
+                "Barbara",
+                "Klee",
+                "Lisa",
+                "Mona",
+                "Ningguang",
+                "Sangonomiya Kokomi",
+                "Sucrose",
+                "Yanfei"
+            ],
+        "Weapons":
+            [
+                "Apprentices Notes",
+                "Blackcliff Agate",
+                "Dodoco Tales",
+                "Emerald Orb",
+                "Favonius Codex",
+                "Frostbearer",
+                "Lost Prayer to the Sacred Winds",
+                "Magic Guide",
+                "Mappa Mare",
+                "Memory of Dust",
+                "Otherworldly Story",
+                "Prototype Amber",
+                "Royal Grimoire",
+                "Sacrificial Fragments",
+                "Skyward Atlas",
+                "Solar Pearl",
+                "The Widsith",
+                "Thrilling Tales of Dragon Slayers",
+                "Twin Nephrite",
+                "Wine and Song"
+            ]
+    },
+
+    "Bows": 
+    {
+        "Characters" :
+            [
+                "Aloy",
+                "Amber",
+                "Diona",
+                "Fischl",
+                "Ganyu",
+                "Kujou Sara",
+                "Tartaglia",
+                "Venti",
+                "Yoimiya"
+            ],
+        "Weapons":
+            [
+                "Alley Hunter",
+                "Amos Bow",
+                "Blackcliff Warbow",
+                "Compound Bow",
+                "Ebony Bow",
+                "Elegy for the End",
+                "Everlasting Moonglow",
+                "Favonius Warbow",
+                "Hunters Bow",
+                "Messenger",
+                "Mitternachts Waltz",
+                "Predator",
+                "Prototype Crescent",
+                "Raven Bow",
+                "Recurve Bow",
+                "Royal Bow",
+                "Rust",
+                "Sacrificial Bow",
+                "Seasoned Hunters Bow",
+                "Skyward Harp",
+                "Slingshot",
+                "The Stringless",
+                "The Viridescent Hunt",
+                "Thundering Pulse",
+                "Windblume Ode"
+            ]
+    }
+}
