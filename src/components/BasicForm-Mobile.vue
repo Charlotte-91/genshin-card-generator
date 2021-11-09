@@ -20,7 +20,7 @@
           <label class="typo__label">Card Design:</label>
         </div>
         <div class="col-75">
-          <multiselect v-model="cardValue" :options="options" :multiple="true" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design" label="name" track-by="name" :preselect-first="false">
+          <multiselect v-model="cardValue" :options="options" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design"  :preselect-first="false">
               <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">Card design selected</span></template>
           </multiselect>
         </div>
@@ -68,6 +68,7 @@
 
 <script>
 import Multiselect from 'vue-multiselect'
+import Characters from 'C:/Users/charl/Documents/Software-Development/genshin-card-generator/src/components/JSON/characters.JSON'
 
 export default {
     components: {
@@ -76,50 +77,7 @@ export default {
   data () {
     return {
       value: [],
-      options: [
-        { name: 'Aether', id: 'Aether' },
-        { name: 'Albedo', id: 'Albedo' },
-        { name: 'Aloy', id:'Aloy'},
-        { name: 'Amber', id: 'Amber' },
-        { name: 'Kamisato Ayaka', id: 'Kamisato Ayaka' },
-        { name: 'Barbara', id: 'Barbara' },
-        { name: 'Beidou', id: 'Beidou' },
-        { name: 'Bennett', id: 'Bennett' },
-        { name: 'Chongyun', id: 'Chongyun' },
-        { name: 'Diluc', id: 'Diluc' },
-        { name: 'Diona', id: 'Diona' },
-        { name: 'Eula', id: 'Eula' },
-        { name: 'Fischl', id: 'Fischl' },
-        { name: 'Ganyu', id: 'Ganyu' },
-        { name: 'Hu tao', id: 'Hutao' },
-        { name: 'Jean', id: 'Jean' },
-        { name: 'Kaeya', id: 'Kaeya' },
-        { name: 'Kaedehara Kazuha', id: 'Kaedehara Kazuha' },
-        { name: 'Keqing', id: 'Keqing' },
-        { name: 'Klee', id: 'Klee' },
-        { name: 'Kujou Sara', id: 'Kujou Sara'},
-        { name: 'Lisa', id: 'Lisa' },
-        { name: 'Lumine', id: 'Lumine' },
-        { name: 'Mona', id: 'Mona' },
-        { name: 'Ningguang', id: 'Ningguang' },
-        { name: 'Noelle', id: 'Noelle' },
-        { name: 'Qiqi', id: 'Qiqi' },
-        { name: 'Raiden Shogun', id: 'Raiden Shogun'},
-        { name: 'Razor', id: 'Razor' },
-        { name: 'Rosaria', id: 'Rosaria' },
-        { name: 'Sangonomiya Kokomi', id: 'Sangonomiya Kokomi' },
-        { name: 'Sayu', id: 'Sayu' },
-        { name: 'Sucrose', id: 'Sucrose' },
-        { name: 'Tartaglia', id: 'Tartaglia' },
-        { name: 'Venti', id: 'Venti' },
-        { name: 'Xiangling', id: 'Xiangling' },
-        { name: 'Xiao', id: 'Xiao' },
-        { name: 'Xingqiu', id: 'Xingqiu' },
-        { name: 'Xinyan', id: 'Xinyan' },
-        { name: 'Yanfei', id: 'Yanfei' },
-        { name: 'Yoimiya', id: 'Yoimiya' },
-        { name: 'Zhongli', id: 'Zhongli' },
-      ],
+      options: Characters,
       cardValue: [],
       PetValue: '',
       PetOptions: ['Dayflower Seelie', 'Curcuma Seelie', 'Rose Seelie', 'Viola Seelie', 'Endora']
