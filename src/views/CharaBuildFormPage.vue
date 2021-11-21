@@ -28,8 +28,8 @@
 
 <script>
 
-import CharaBuildForm from "../components/CharaBuildForm.vue";
-import CharaBuildFormMobile from "../components/CharaBuildFormMobile.vue";
+import CharaBuildForm from "../components/CharacterBuildForm/CharaBuildForm.vue";
+import CharaBuildFormMobile from "../components/CharacterBuildForm/CharaBuildFormMobile.vue";
 
 export default {
   name: 'Character Build form page',

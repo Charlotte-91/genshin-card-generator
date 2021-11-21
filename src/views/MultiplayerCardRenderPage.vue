@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import MultiplayerRender from '@/components/MultiplayerRender.vue'
-import MultiplayerMobile from '@/components/MultiplayerRenderMobile.vue'
+import MultiplayerRender from '../components/multiplayerForm/MultiplayerRender.vue'
+import MultiplayerMobile from '../components/multiplayerForm/MultiplayerRenderMobile.vue'
 import Footer from '@/components/Footer.vue'
 import MobileFooter from '@/components/MobileFooter.vue'
 

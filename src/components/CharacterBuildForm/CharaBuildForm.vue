@@ -5,11 +5,10 @@
     :keep-model-data="true"
     @submit="submit">
     <body>
-
+      
       <div class ="form">
         <div class="row">
         <div class="valid">{{ this.validation }}</div>
-        
           <div class="col-25">
             <label class="typo__label">Player Name:</label>
           </div>
@@ -23,8 +22,7 @@
           <label class="typo__label">Character:</label>
         </div>
         <div class="col-75">
-          <FormulateInput type="select" name='chara' :options="{ aetherAmeno: 'Aether (Ameno)', aetherElectro: 'Aether (Electro)',  aetherGeo: 'Aether (Geo)', albedo: 'Albedo', amber: 'Amber', barbara: 'Barbara', beidou: 'Beidou', bennett: 'Bennett', chongyun: 'Chongyun', diluc: 'Diluc', diona: 'Diona', eula: 'Eula', fishcl: 'Fischl', ganyu: 'Ganyu', hutao: 'Hu tao', jean: 'Jean', kaeya: 'Kaeya', kaedeharaKazuha:'kaedehara Kazuha',
-          kamisatoAyaka: 'Kamisato Ayaka', keqing: 'Keqing', klee: 'Klee' , kujouSara : 'Kujou Sara', lisa: 'Lisa',lumineAmeno: 'Lumine (Ameno)',lumineElectro: 'Lumine (Electro)', lumineGeo: 'Lumine (Geo)', mona: 'Mona', ningguang: 'Ningguang', noelle: 'Noelle', qiqi: 'Qiqi', raidenShogun: 'Raiden Shogun', razor: 'Razor', rosaria: 'Rosaria', sangonomiyaKokomi: 'Sangonomiya Kokomi', sayu: 'Sayu', sucrose: 'Sucrose', tartaglia: 'Tartaglia', venti: 'Venti', xiangling: 'Xiangling', xiao: 'Xiao', xingqiu: 'Xingqiu', xinyan: 'Xinyan', yanfei: 'Yanfei', yoimiya: 'Yoimiya', zhongli: 'Zhongli'}"/>
+          <FormulateInput type="select" name='chara' :options="characters.Characters"/>
         </div>
       </div>
 
@@ -43,19 +41,16 @@
         <div class="row">
         <div class="col-25">
           <label class="typo__label">Weapon:</label>
+           
         </div>
         <!-- To be refactored -->
         <div class="col-75">
-          <FormulateInput v-if="values.chara =='beidou'|| values.chara =='chongyun'||values.chara == 'diluc' || values.chara =='eula'|| values.chara =='noelle'|| values.chara =='razor'|| values.chara =='xinyan' || values.chara == 'sayu' " key="claymore" name="weapon" type="select" :options="['Blackcliff Slasher', 'Bloodtainted Greatsword', 'Debate Club','Favonius Greatsword', 'Ferrous Shadow', 'Lithic Blade', 'Luxurious Sea-Lord','Prototype Archaic', 'Quartz', 'Rainslasher','Royal Greatsword','Sacrificial Greatsword', 'Serpent Spine',
-           'Skyward Pride', 'Snow-Tombed Starsilver', 'Song of Broken Pines', 'The Catch', 'The Bell', 'The Unforged', 'White Iron Greatsword', 'Whiteblind', 'Wolfs Gravestone']"/>
-          <FormulateInput v-if="values.chara =='lumineAmeno' || values.chara =='lumineElectro' || values.chara =='lumineGeo' || values.chara =='aetherAmeno' || values.chara =='aetherElectro' || values.chara =='aetherGeo' || values.chara =='albedo' || values.chara =='bennett'|| values.chara =='jean'|| values.chara =='kaeya'|| values.chara =='keqing'|| values.chara =='qiqi'|| values.chara =='xingqiu' || values.chara =='kaedeharaKazuha' || values.chara =='kamisatoAyaka'" key="sword" name="weapon" type="select" :options="['Aquila Favonia', 'Blackcliff Longsword', 'Cool Steel', 'Dark Iron Sword', 'Dull Blade', 'Favonius Sword', 'Festering Desire', 'Fillet Blade','Freedom-Sworn', 'Harbinger of Dawn', '	Iron Sting', 'Lions Roar', 'Mistsplitter Reforged', 'Primordial Jade Cutter', 'Prototype Rancour',
-           'Royal Longsword', 'Sacrificial Sword', 'Silver Sword', 'Skyrider Sword', 'Skyward Blade', 'Summit Shaper', 'Sword of Descension', 'The Alley Flash', 'The Black Sword', 'The Flute', 'Travelers Handy Sword']"/>
-          <FormulateInput v-if="values.chara =='hutao'|| values.chara =='rosaria'|| values.chara =='xiangling'|| values.chara =='xiao'|| values.chara =='zhongli' || values.chara == 'raidenShogun'" key="polearm" name="weapon" type="select" :options="['Black Tassel', 'Blackcliff Pole', 'Crescent Pike', 'Deathmatch', 'Dragons Bane', 'Dragonspine Spear', 'Engulfing Lightning', 'Favonius Lance', 'Halberd', 'Iron Point', 'Lithic Spear', 'Primordial Jade Winged-Spear', 'Prototype Starglitter','Royal Spear','Skyward Spine',
-           'Staff of Homa', 'Vortex Vanquisher','White Tassel']"/>
-          <FormulateInput v-if="values.chara =='barbara'|| values.chara =='klee'|| values.chara == 'sangonomiyaKokomi' || values.chara =='lisa'|| values.chara =='mona'|| values.chara =='ningguang'|| values.chara =='sucrose'|| values.chara =='yanfei'" key="catalyst" name="weapon" type="select" :options="['Apprentices Notes',  'Blackcliff Agate', 'Dodoco Tales', 'Emerald Orb', 'Favonius Codex', '	Frostbearer', 'Lost Prayer to the Sacred Winds', 'Magic Guide', 'Mappa Mare', 'Memory of Dust', 'Otherworldly Story',
-          'Prototype Amber', '	Royal Grimoire', 'Sacrificial Fragments', 'Skyward Atlas', 'Solar Pearl', 'The Widsith', 'Thrilling Tales of Dragon Slayers', 'Twin Nephrite', 'Wine and Song']"/>
-          <FormulateInput v-if="values.chara =='amber'|| values.chara =='diona'|| values.chara =='fischl'|| values.chara =='ganyu'|| values.chara =='tartaglia'|| values.chara =='venti' || values.chara =='yoimiya' || values.chara == 'kujouSara' || values.chara == 'aloy'" key="bow" name="weapon" type="select" :options="['Alley Hunter', 'Amos Bow', 'Blackcliff Warbow','Compound Bow', 'Ebony Bow', 'Elegy for the End','Everlasting Moonglow', 'Favonius Warbow','Hunters Bow', 'Messenger', 'Mitternachts Waltz', 'Predator', 'Prototype Crescent', 'Raven Bow', 'Recurve Bow', 'Royal Bow','Rust',
-            'Sacrificial Bow', 'Seasoned Hunters Bow', 'Skyward Harp', 'Slingshot', 'The Stringless', 'The Viridescent Hunt', 'Thundering Pulse', 'Windblume Ode']"/>
+          <FormulateInput v-if="(weapons.Claymore.Characters).includes(values.chara)" key="Claymore" name="weapon" type="select" :options="weapons.Claymore.Weapons"/>
+          <FormulateInput v-if="(weapons.Swords.Characters).includes(values.chara)" key="Swords" name="weapon" type="select" :options="weapons.Swords.Weapons"/>
+          <FormulateInput v-if="(weapons.Polearms.Characters).includes(values.chara)" key="Polearms" name="weapon" type="select" :options="weapons.Polearms.Weapons"/>
+          <FormulateInput v-if="(weapons.Catalysts.Characters).includes(values.chara)" key="Catalysts" name="weapon" type="select" :options="weapons.Catalysts.Weapons"/>
+          <FormulateInput v-if="(weapons.Bows.Characters).includes(values.chara)" key="Bows" name="weapon" type="select" :options="weapons.Bows.Weapons"/>
+
         </div>
       </div>
       <vsa-list>
@@ -106,12 +101,12 @@
                 <vsa-heading>Flower of Life</vsa-heading>
                   <vsa-content>
                     <div class="row">
+
                       <div class="col-25">
                         <label class="typo__label">Set:</label>
                       </div>
                       <div class="col-75">
-                        <FormulateInput type="select" name='flower' validation="required" validation-name="set" :options="['','Adventurer','Archaic Petra', 'Berserker', 'Blizzard Strayer','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will','Emblem of Severed Fate', 'Gambler','Gladiators Finale', 'Heart of Depth', 'Instructor', 'Lavawalker', 'Lucky Dog',
-                            'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar',`Shimenawa's Reminiscence`, 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
+                       <FormulateInput type="select" name='flower' validation="required" validation-name="set" :options="artifacts.set"/>
                       </div>
                     </div>
 
@@ -143,7 +138,7 @@
                           name="flowertype"
                           validation="required"
                           validation-name="Sub stat type required"
-                          :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
+                          :options="artifacts.substat"
                         />
                         <FormulateInput
                           type="text"
@@ -164,8 +159,7 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                           <FormulateInput type="select" name='flower' validation="required" validation-name="set" :options="['','Adventurer','Archaic Petra', 'Berserker', 'Blizzard Strayer','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Emblem of Severed Fate', 'Gambler','Gladiators Finale', 'Heart of Depth', 'Instructor', 'Lavawalker', 'Lucky Dog',
-                            'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar',`Shimenawa's Reminiscence`, 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
+                            <FormulateInput type="select" name='feather' validation="required" validation-name="set" :options="artifacts.set"/>
                           </div>
                         </div>
                           <div class="row">
@@ -196,7 +190,7 @@
                           name="feathertype"
                           validation="required"
                           validation-name="Sub stat type required"
-                          :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
+                          :options="artifacts.substat"
                         />
                         <FormulateInput
                           type="text"
@@ -217,8 +211,7 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='flower' validation="required" validation-name="set" :options="['','Adventurer','Archaic Petra', 'Berserker', 'Blizzard Strayer','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Emblem of Severed Fate', 'Gambler','Gladiators Finale', 'Heart of Depth', 'Instructor', 'Lavawalker', 'Lucky Dog',
-                            'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar',`Shimenawa's Reminiscence`, 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
+                            <FormulateInput type="select" name='sands' validation="required" validation-name="set" :options="artifacts.set"/>
                           </div>
                         </div>
                           <div class="row">
@@ -231,7 +224,7 @@
                                 </div>
                                 <div class="col-85">
                                   <FormulateInput
-                                    type='select' name="sandsmaintype" :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %']" /> 
+                                    type='select' name="sandsmaintype" :options="artifacts.sands" /> 
                                 </div>
                               </div>
 
@@ -250,7 +243,7 @@
                                     name="sandstype"
                                     validation="required"
                                     validation-name="Sub stat type required"
-                                    :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
+                                    :options="artifacts.substat"
                                   />
                                   <FormulateInput
                                     type="text"
@@ -271,8 +264,9 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='flower' validation="required" validation-name="set" :options="['','Adventurer','Archaic Petra', 'Berserker', 'Blizzard Strayer','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Emblem of Severed Fate', 'Gambler','Gladiators Finale', 'Heart of Depth', 'Instructor', 'Lavawalker', 'Lucky Dog',
-                            'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar',`Shimenawa's Reminiscence`, 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
+
+                            <FormulateInput type="select" name='goblet' validation="required" validation-name="set" :options="artifacts.set"/>
+
                           </div>
                         </div>
                           <div class="row">
@@ -285,7 +279,7 @@
                                 </div>
                                 <div class="col-85">
                                   <FormulateInput
-                                    type='select' name="gobletmaintype" :options="['', 'HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %', 'Pyro DMG%','Hydro DMG%', 'Cryo DMG%', 'Electro DMG%', 'Geo DMG%','Anemo DMG%','Physical DMG %']" /> 
+                                    type='select' name="gobletmaintype" :options="artifacts.goblet" /> 
                                 </div>
                               </div>
 
@@ -304,7 +298,7 @@
                                     name="goblettype"
                                     validation="required"
                                     validation-name="Sub stat type required"
-                                    :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
+                                    :options="artifacts.substat"
                                   />
                                   <FormulateInput
                                     type="text"
@@ -325,8 +319,7 @@
                           <label class="typo__label">Set:</label>
                         </div>
                           <div class="col-75">
-                            <FormulateInput type="select" name='flower' validation="required" validation-name="set" :options="['','Adventurer','Archaic Petra', 'Berserker', 'Blizzard Strayer','Bloodstained Chivalry','Brave Heart','Crimson Witch of Flames', 'Defenders Will', 'Emblem of Severed Fate', 'Gambler','Gladiators Finale', 'Heart of Depth', 'Instructor', 'Lavawalker', 'Lucky Dog',
-                            'Maiden Beloved', 'Martial Artist', 'Noblesse Oblige', 'Pale Flame', 'Resolution of Sojourner', 'Retracing Bolide', 'Scholar',`Shimenawa's Reminiscence`, 'Tenacity of the Millelith', 'The Exile', 'Thundering Fury', 'Thundersoother', 'Tiny Miracle', 'Traveling Doctor', 'Viridescent Venerer', 'Wanderers Troupe']"/>
+                            <FormulateInput type="select" name='circlet' validation="required" validation-name="set" :options="artifacts.set"/>
                           </div>
                         </div>
                           <div class="row">
@@ -339,7 +332,7 @@
                                 </div>
                                 <div class="col-85">
                                   <FormulateInput
-                                    type='select' name="circletmaintype" :options="['','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %', 'CRIT Rate %', 'CRIT DMG %', 'Healing%']" /> 
+                                    type='select' name="circletmaintype" :options="artifacts.circlet" /> 
                                 </div>
                               </div>
 
@@ -357,7 +350,7 @@
                                           name="circlettype"
                                           validation="required"
                                           validation-name="Sub stat type required"
-                                          :options="['', 'HP', 'ATK', 'DEF','HP %', 'ATK %', 'DEF %', 'Elemental Mastery', 'Energy Recharge %','CRIT Rate %', 'CRIT DMG %']"
+                                          :options="artifacts.substat"
                                         />
                                         <FormulateInput
                                           type="text"
@@ -371,6 +364,7 @@
               </vsa-item>
             </vsa-list>
   <FormulateInput
+      class="button"
       type="submit"
       label="Submit"
     />
@@ -381,11 +375,17 @@
 
 </template>
 
-
 <script>
+import characters from '../JSON/characters.JSON'
+import artifacts from '../JSON/artifacts.JSON'
+import weapons from '../JSON/weapons.JSON'
+
 export default {
   data () {
     return {
+      artifacts,
+      characters,
+      weapons,
       values: {
       }
     }
@@ -395,44 +395,34 @@ export default {
   },
   methods: {
       submit() {
-        console.log(this.values)
+        console.log('validation')
+        console.log(this.validation)
         this.$router.push({name: 'CharaBuildRender', 
         params: this.values
       })
     },
-  }
+  },
 }
 </script> 
 
-
-
-
-
 <style scoped>
 @font-face { font-family: SuezOne-Regular; 
-  src: url('../assets/SuezOne-Regular.ttf'); } 
+  src: url('../../assets/SuezOne-Regular.ttf'); } 
 body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
-  font-size: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  font-size: 25px;
+  align-self: center;
 }
 .button{
   margin: 10px 120px;
   }
 .col-25 {
   float: left;
-  width: 35%;
+  width: 45%;
   text-align: right;
   font-family: SuezOne-Regular; 
   margin-bottom: 15px;
-}
-.col-75 {
-  float: right;
-  width: 55%;
-  margin-bottom: 10px;
 }
 .col-75 {
   float: right;
@@ -441,7 +431,7 @@ body{
 }
 .col-85 {
   float: right;
-  width: 30%;
+  width: 25%;
   margin-bottom: 10px;
 }
 .col-90 {
@@ -451,7 +441,7 @@ body{
 }
 .row{
   align-items: center;
-  width: 100%
+  width: 80%
 }
 .row:after {
   content: "";
@@ -460,19 +450,12 @@ body{
   padding: 2px;
 }
 .form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
-  width: 75%;
+  width: 600px;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
-  margin: 30px;
-  padding: 10px;
-  
   border-image:
-      url("../assets/Form-bg.png")
+      url("../../assets/Form-bg.png")
       70 / 50px    
       round;   
                 
@@ -503,5 +486,33 @@ body{
 --vsa-heading-padding: 1rem 1rem;
 --vsa-content-padding: 1rem 1rem;
 --vsa-default-icon-size: 1;
+}
+@media (min-width: 650px) {
+  .substat {
+    display: flex;
+    font-family: SuezOne-Regular; 
+  }
+}
+
+@media (min-width: 720px) {
+  .substat {
+    display: block;
+    font-family: SuezOne-Regular; 
+
+  }
+}
+
+@media (min-width: 850px) {
+  .substat {
+    display: flex;
+    font-family: SuezOne-Regular; 
+  }
+  .substat .formulate-input {
+    margin-right: 1.5em;
+  }
+}
+.substat .formulate-input {
+  margin-right: 2em;
+  margin-bottom: 0;
 }
 </style>

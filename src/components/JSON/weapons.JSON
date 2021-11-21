@@ -3,6 +3,9 @@
     {
         "Characters" :
             [
+                "Aether - Ameno",
+                "Aether - Electo",
+                "Aether - Geo",
                 "Albedo",
                 "Bennett",
                 "Jean",
@@ -10,6 +13,9 @@
                 "Kaeya",
                 "Kamisato Ayaka",
                 "Keqing",
+                "Lumine - Ameno",
+                "Lumine - Electo",
+                "Lumine - Geo",
                 "Qiqi",
                 "Xingqui"
             ],
@@ -58,32 +64,32 @@
                 "Sayu",
                 "Xinyan"
             ],
-        "Weapons:" : 
-        [
-            "Blackcliff Slasher",
-            "Bloodtainted Greatsword",
-            "Debate Club","Favonius Greatsword",
-            "Ferrous Shadow","Lithic Blade",
-            "Luxurious Sea-Lord","Prototype Archaic",
-            "Quartz", "Rainslasher",
-            "Royal Greatsword",
-            "Sacrificial Greatsword",
-            "Serpent Spine",
-            "Skyward Pride",
-            "Snow-Tombed Starsilver",
-            "Song of Broken Pines",
-            "The Bell",
-            "The Unforged",
-            "White Iron Greatsword",
-            "Whiteblind",
-            "Wolfs Gravestone"
-        ]
+        "Weapons" : 
+            [
+                "Blackcliff Slasher",
+                "Bloodtainted Greatsword",
+                "Debate Club","Favonius Greatsword",
+                "Ferrous Shadow","Lithic Blade",
+                "Luxurious Sea-Lord","Prototype Archaic",
+                "Quartz", "Rainslasher",
+                "Royal Greatsword",
+                "Sacrificial Greatsword",
+                "Serpent Spine",
+                "Skyward Pride",
+                "Snow-Tombed Starsilver",
+                "Song of Broken Pines",
+                "The Bell",
+                "The Unforged",
+                "White Iron Greatsword",
+                "Whiteblind",
+                "Wolfs Gravestone"
+            ]
 
     },
 
     "Polearms": 
     {
-        "Characters" :
+        "Characters":
             [
                 "Hu Tao",
                 "Raiden Shougun",
@@ -119,7 +125,7 @@
 
     "Catalysts": 
     {
-        "Characters" :
+        "Characters":
             [
                 "Barbara",
                 "Klee",

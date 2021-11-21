@@ -1,5 +1,6 @@
 <template>
     <body>
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
       <div class ="form">
         <div class="row">
           <div class="valid">{{ this.validation }}</div>
@@ -15,7 +16,7 @@
 
         <div class="row">
         <div class="col-25">
-          <label class="typo__label">Card Design:</label>
+          <label class="typo__label">card Design:</label>
         </div>
         <div class="col-75">
           <multiselect v-model="cardValue" :options="options" :multiple="true" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design" label="name" track-by="name" :preselect-first="false">
@@ -34,6 +35,16 @@
             </div>
           </div>
         </div>
+        <!-- <div class="row">
+          <div class="col-25">
+            <label class="typo__label">Spiral Abyss Progress:</label>
+          </div>
+          <div class="col-75">
+            <div class="multiselect">
+              <input class="form-style" type='text' v-model="SA" /> 
+            </div>
+          </div>
+        </div> -->
 
         <div class="row">
           <div class="col-25">
@@ -107,6 +118,8 @@
 
 <script>
 import Multiselect from 'vue-multiselect'
+import Characters from '../JSON/characters.JSON'
+import Pets from '../JSON/pets.JSON'
 
 export default {
     components: {
@@ -115,53 +128,10 @@ export default {
   data () {
     return {
       value: [],
-      options: [
-        { name: 'Aether', id: 'Aether' },
-        { name: 'Albedo', id: 'Albedo' },
-        { name: 'Aloy', id:'Aloy'},
-        { name: 'Amber', id: 'Amber' },
-        { name: 'Barbara', id: 'Barbara' },
-        { name: 'Beidou', id: 'Beidou' },
-        { name: 'Bennett', id: 'Bennett' },
-        { name: 'Chongyun', id: 'Chongyun' },
-        { name: 'Diluc', id: 'Diluc' },
-        { name: 'Diona', id: 'Diona' },
-        { name: 'Eula', id: 'Eula' },
-        { name: 'Fischl', id: 'Fischl' },
-        { name: 'Ganyu', id: 'Ganyu' },
-        { name: 'Hu tao', id: 'Hutao' },
-        { name: 'Jean', id: 'Jean' },
-        { name: 'Kaeya', id: 'Kaeya' },
-        { name: 'Kaedehara Kazuha', id: 'Kaedehara Kazuha' },
-        { name: 'Kamisato Ayaka', id: 'Kamisato Ayaka' },
-        { name: 'Keqing', id: 'Keqing' },
-        { name: 'Klee', id: 'Klee' },
-        { name: 'Kujou Sara', id: 'Kujou Sara'},
-        { name: 'Lisa', id: 'Lisa' },
-        { name: 'Lumine', id: 'Lumine' },
-        { name: 'Mona', id: 'Mona' },
-        { name: 'Ningguang', id: 'Ningguang' },
-        { name: 'Noelle', id: 'Noelle' },
-        { name: 'Qiqi', id: 'Qiqi' },
-        { name: 'Raiden Shogun', id: 'Raiden Shogun'},
-        { name: 'Razor', id: 'Razor' },
-        { name: 'Rosaria', id: 'Rosaria' },
-        { name: 'Sangonomiya Kokomi', id: 'Sangonomiya Kokomi' },
-        { name: 'Sayu', id: 'Sayu' },
-        { name: 'Sucrose', id: 'Sucrose' },
-        { name: 'Tartaglia', id: 'Tartaglia' },
-        { name: 'Venti', id: 'Venti' },
-        { name: 'Xiangling', id: 'Xiangling' },
-        { name: 'Xiao', id: 'Xiao' },
-        { name: 'Xingqiu', id: 'Xingqiu' },
-        { name: 'Xinyan', id: 'Xinyan' },
-        { name: 'Yanfei', id: 'Yanfei' },
-        { name: 'Yoimiya', id: 'Yoimiya' },
-        { name: 'Zhongli', id: 'Zhongli' },
-      ],
+      options: Characters.Characters,
       cardValue: [],
       PetValue: '',
-      PetOptions: ['Dayflower Seelie', 'Curcuma Seelie', 'Rose Seelie', 'Viola Seelie', 'Endora'],
+      PetOptions: Pets.Pets,
       PlatformValue: '',
       PlatformOptions: ['PC', 'PS4', 'Android', 'iOS'],
       ServerValue: '',
@@ -172,7 +142,6 @@ export default {
     cardDesign: String,
     playerName: String,
     AR: Number,
-    // SA: String,
     UID: Number,
     server: String,
     twitter: String,
@@ -194,6 +163,7 @@ export default {
         this.platform = this.PlatformValue
         this.server = this.ServerValue
         this.pet = this.PetValue
+
         this.$router.push({name: 'Multiplayer Render page', 
         params: {
           cardChara : this.cardDesign, 
@@ -239,29 +209,30 @@ export default {
 
 <style scoped>
 @font-face { font-family: SuezOne-Regular; 
-  src: url('../assets/SuezOne-Regular.ttf'); } 
+  src: url('../../assets/SuezOne-Regular.ttf'); } 
 body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
-  font-size: 25px;
+  font-size: 20px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .col-25 {
   float: left;
-  width: 45%;
+  width: 35%;
   text-align: right;
   font-family: SuezOne-Regular; 
   margin-bottom: 15px;
 }
 .col-75 {
   float: right;
-  width: 45%;
+  width: 55%;
   margin-bottom: 10px;
 }
 .row{
   align-items: center;
-  width: 80%
+  width: 100%
 }
 .row:after {
   content: "";
@@ -274,7 +245,7 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  width: 600px;
+  width: 75%;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
@@ -282,16 +253,21 @@ body{
   padding: 10px;
   
   border-image:
-      url("../assets/Form-bg.png")
+      url("../../assets/Form-bg.png")
       70 / 50px    
       round;   
                 
 }
-
-@media screen and (max-width: 800px) {
-  .form {
-    width: 80%
-  }
+.mobile-button {
+    background-color: #464545;
+    color: white;
+    padding: 10px 80px;
+    text-align: center;
+    font-size: 25px;
+    /* margin: auto; */
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: SuezOne-Regular;
 }
 .valid {
   font-size: 16px;

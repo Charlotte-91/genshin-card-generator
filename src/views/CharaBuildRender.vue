@@ -31,8 +31,8 @@
 </template>
 
 <script>
-import CharaBuildRender from "../components/CharaBuildRender.vue";
-import CharaBuildRenderMobile from "../components/CharaBuildRenderMobile.vue";
+import CharaBuildRender from "../components/CharacterBuildForm/CharaBuildRender.vue";
+import CharaBuildRenderMobile from "../components/CharacterBuildForm/CharaBuildRenderMobile.vue";
 import Footer from '@/components/Footer.vue';
 import MobileFooter from '@/components/MobileFooter.vue';
 

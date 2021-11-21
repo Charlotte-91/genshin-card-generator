@@ -150,57 +150,57 @@ export default {
   },
   created() {
       const image = new window.Image();
-      image.src = require('../assets/chara-build/' + this.$route.params.chara + '.png');
+      image.src = require('@/assets/chara-build/' + this.$route.params.chara + '.png');
       image.onload = () => {
         this.image = image;
         };
       const flower = new window.Image();
-      flower.src = require('../assets/Artifacts/Flower/' + (this.$route.params.flower).split(" ").join("") + '.png');
+      flower.src = require('@/assets/Artifacts/Flower/' + (this.$route.params.flower).split(" ").join("") + '.png');
       flower.onload = () => {
         this.flower = flower;
       };
       const feather = new window.Image();
-      feather.src = require('../assets/Artifacts/Feather/' + (this.$route.params.feather).split(" ").join("") + '.png');
+      feather.src = require('@/assets/Artifacts/Feather/' + (this.$route.params.feather).split(" ").join("") + '.png');
       feather.onload = () => {
         this.feather = feather;
       };
       const sands = new window.Image();
-      sands.src = require('../assets/Artifacts/Sands/' + (this.$route.params.sands).split(" ").join("") + '.png');
+      sands.src = require('@/assets/Artifacts/Sands/' + (this.$route.params.sands).split(" ").join("") + '.png');
      sands.onload = () => {
         this.sands = sands;
       };
       const goblet = new window.Image();
-      goblet.src = require('../assets/Artifacts/Goblet/' + (this.$route.params.goblet).split(" ").join("") + '.png');
+      goblet.src = require('@/assets/Artifacts/Goblet/' + (this.$route.params.goblet).split(" ").join("") + '.png');
       goblet.onload = () => {
         this.goblet = goblet;
       };
       const circlet = new window.Image();
-      circlet.src = require('../assets/Artifacts/Circlet/' + (this.$route.params.circlet).split(" ").join("") + '.png');
+      circlet.src = require('@/assets/Artifacts/Circlet/' + (this.$route.params.circlet).split(" ").join("") + '.png');
       circlet.onload = () => {
       this.circlet = circlet;
       };
       const weapon = new window.Image();
-      weapon.src = require('../assets/Weapons/' + (this.$route.params.weapon).split(" ").join("") + '.png');
+      weapon.src = require('@/assets/Weapons/' + (this.$route.params.weapon).split(" ").join("") + '.png');
       weapon.onload = () => {
       this.weapon = weapon;
       };
       const constellation = new window.Image();
-      constellation.src = require('../assets/skills/' + this.$route.params.chara + '/'+ this.$route.params.constellation + '.png');
+      constellation.src = require('@/assets/skills/' + this.$route.params.chara + '/'+ this.$route.params.constellation + '.png');
       constellation.onload = () => {
       this.constellation = constellation;
         };
       const normal = new window.Image();
-      normal.src = require('../assets/skills/' + this.$route.params.chara + '/normal.png');
+      normal.src = require('@/assets/skills/' + this.$route.params.chara + '/normal.png');
       normal.onload = () => {
       this.normal = normal;
       };
       const skill = new window.Image();
-      skill.src = require('../assets/skills/' + this.$route.params.chara + '/skill.png');
+      skill.src = require('@/assets/skills/' + this.$route.params.chara + '/skill.png');
       skill.onload = () => {
       this.skill = skill;
       };
       const burst = new window.Image();
-      burst.src = require('../assets/skills/' + this.$route.params.chara + '/burst.png');
+      burst.src = require('@/assets/skills/' + this.$route.params.chara + '/burst.png');
       burst.onload = () => {
       this.burst = burst;
       };

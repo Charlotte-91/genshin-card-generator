@@ -139,7 +139,7 @@ export default {
 
 <style scoped>
 @font-face { font-family: SuezOne-Regular; 
-  src: url('../assets/SuezOne-Regular.ttf'); } 
+  src: url('../../assets/SuezOne-Regular.ttf'); } 
 body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
@@ -176,7 +176,7 @@ body{
   padding: 10px;
 
   border-image:
-      url("../assets/Form-bg.png")
+      url("../../assets/Form-bg.png")
       70 / 50px    
       round;                  
 }

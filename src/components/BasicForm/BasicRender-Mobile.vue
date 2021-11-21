@@ -63,32 +63,32 @@ export default {
   },
   created() {
       const image = new window.Image();
-      image.src = require('../assets/alt-card-bgs/' + (this.$route.params.cardChara).split(" ").join("") + '-cd.png');
+      image.src = require('../../assets/alt-card-bgs/' + (this.$route.params.cardChara).split(" ").join("") + '-cd.png');
       image.onload = () => {
       this.image = image;
       };
       const team1 = new window.Image();
-      team1.src = require('../assets/alt-teams/' + (this.$route.params.team1).split(" ").join("") + '-small.png');
+      team1.src = require('../../assets/alt-teams/' + (this.$route.params.team1).split(" ").join("") + '-small.png');
       team1.onload = () => {
         this.team1 = team1;
       };
       const team2 = new window.Image();
-      team2.src = require('../assets/alt-teams/' + (this.$route.params.team2).split(" ").join("") + '-small.png');
+      team2.src = require('../../assets/alt-teams/' + (this.$route.params.team2).split(" ").join("") + '-small.png');
       team2.onload = () => {
         this.team2 = team2;
       };
       const team3 = new window.Image();
-      team3.src = require('../assets/alt-teams/' + (this.$route.params.team3).split(" ").join("") + '-small.png');
+      team3.src = require('../../assets/alt-teams/' + (this.$route.params.team3).split(" ").join("") + '-small.png');
       team3.onload = () => {
         this.team3 = team3;
       };
       const team4 = new window.Image();
-      team4.src = require('../assets/alt-teams/' + (this.$route.params.team4).split(" ").join("") + '-small.png');
+      team4.src = require('../../assets/alt-teams/' + (this.$route.params.team4).split(" ").join("") + '-small.png');
       team4.onload = () => {
         this.team4 = team4;
       };
       const pet = new window.Image();
-      pet.src = require('../assets/pet/' + this.$route.params.pet + '.png');
+      pet.src = require('../../assets/pet/' + this.$route.params.pet + '.png');
       pet.onload = () => {
       this.pet = pet;
       };

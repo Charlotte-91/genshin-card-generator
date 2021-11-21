@@ -3,7 +3,6 @@
       <div class ="form">
         <div class="row">
           <div class="valid">{{ this.validation }}</div>
-          <!-- <h3>Multiplayer card generator</h3> -->
           <div class="col-25">
             <label class="typo__label">Player Name:</label>
           </div>
@@ -19,7 +18,7 @@
           <label class="typo__label">Card Design:</label>
         </div>
         <div class="col-75">
-          <multiselect v-model="cardValue" :options="options" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design" :show-labels="false" :preselect-first="false">
+          <multiselect v-model="cardValue" :options="options" :multiple="true" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design" label="name" track-by="name" :preselect-first="false">
               <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">Card design selected</span></template>
           </multiselect>
         </div>
@@ -35,6 +34,46 @@
             </div>
           </div>
         </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label class="typo__label">UID:</label>
+          </div>
+          <div class="col-75">
+            <div class="multiselect">
+              <input class="form-style" type='number' v-model="UID" /> 
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-25">
+            <label class="typo__label">Twitter:</label>
+          </div>
+          <div class="col-75">
+            <div class="multiselect">
+              <input class="form-style" type='text' v-model="twitter" /> 
+            </div>
+          </div>
+        </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label class="typo__label">Platform:</label>
+        </div>
+        <div class="col-75">
+          <multiselect v-model="PlatformValue" :options="PlatformOptions" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label class="typo__label">Server:</label>
+        </div>
+        <div class="col-75">
+          <multiselect v-model="ServerValue" :options="ServerOptions" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>
+        </div>
+      </div>
 
       <div class="row">
         <div class="col-25">
@@ -56,6 +95,7 @@
         </div>
       </div>
 
+
       <button class='mobile-button' v-on:click=validate()>Submit</button>
     </div>
   </body>
@@ -68,6 +108,7 @@
 <script>
 import Multiselect from 'vue-multiselect'
 import Characters from 'C:/Users/charl/Documents/Software-Development/genshin-card-generator/src/components/JSON/characters.JSON'
+import Pets from 'C:/Users/charl/Documents/Software-Development/genshin-card-generator/src/components/JSON/pets.JSON'
 
 export default {
     components: {
@@ -75,17 +116,26 @@ export default {
   },
   data () {
     return {
-      value: '',
+      value: [],
       options: Characters.Characters,
       cardValue: [],
       PetValue: '',
-      PetOptions: ['Dayflower Seelie', 'Curcuma Seelie', 'Rose Seelie', 'Viola Seelie', 'Endora']
+      PetOptions: Pets.Pets,
+      PlatformValue: '',
+      PlatformOptions: ['PC', 'PS4', 'Android', 'iOS'],
+      ServerValue: '',
+      ServerOptions: ['America', 'Asia', 'Europe', 'TW/HK/MO'],
     }
   },
   props: {
     cardDesign: String,
     playerName: String,
     AR: Number,
+    // SA: String,
+    UID: Number,
+    server: String,
+    twitter: String,
+    platform: String,
     pet: String,
     team1: String,
     team2: String,
@@ -93,18 +143,6 @@ export default {
     team4: String,
     validation: String
   },
-  // validations: {
-  //   : {
-  //     cardDesign: { required },
-  //     playerName: { required },
-  //     AR: { required, min: minLength(1), max: maxLength(2)},
-  //     pet: {},
-  //     team1: { required },
-  //     team2: { required },
-  //     team3: { required },
-  //     team4: { required },
-  //   }
-  // },
   methods: {
       submit() {
         this.team1 = this.value[0].id
@@ -112,19 +150,19 @@ export default {
         this.team3 = this.value[2].id
         this.team4 = this.value[3].id
         this.cardDesign = this.cardValue[0].id
+        this.platform = this.PlatformValue
+        this.server = this.ServerValue
         this.pet = this.PetValue
-        // console.log(this.SA)
-        // console.log(this.team1)
-        // console.log(this.team2)
-        // console.log(this.team3)
-        // console.log(this.team4)
-        // this.$v.form.$touch();
-        // if(this.$v.form.$error) return
-        this.$router.push({name: 'Basic Card Render', 
+        this.$router.push({name: 'Multiplayer Render page', 
         params: {
           cardChara : this.cardDesign, 
           playerName: this.playerName,
           AR: this.AR,
+          // SA: this.SA,
+          UID: this.UID,
+          server: this.server,
+          twitter: this.twitter,
+          platform: this.platform,
           pet: this.pet,
           team1: this.team1,
           team2: this.team2,
@@ -135,11 +173,14 @@ export default {
     },
     validate() {
         var errors = []
-        if (this.playerName == undefined || this.playerName == '' || this.AR == undefined || this.AR == '' || this.value.length == 0 || this.cardValue.length == 0 ) {
+        if (this.playerName == undefined || this.playerName == '' || this.AR == undefined || this.AR == '' || this.value.length == 0 || this.cardValue.length == 0 || this.PlatformValue.length == 0 || this.ServerValue.length == 0) {
             if (this.playerName == undefined || this.playerName == '') {errors.push(' Player name ')}
             if (this.AR == undefined || this.AR == '') {errors.push(' AR ')}
+            // if (this.SA == undefined || this.SA == '') {errors.push(' Spiral Abyss ')}
             if (this.value.length == 0) {errors.push(' Team ')}
             if (this.cardValue.length == 0) {errors.push(' Card design ')}
+            if (this.ServerValue.length == 0) {errors.push(' Server ')}
+            if (this.PlatformValue.length == 0) {errors.push(' Platform ')}
             console.log(this.playerName)
           this.validation = `Please fill out; ${errors} field(s)`
         } else {
@@ -157,7 +198,7 @@ export default {
 
 <style scoped>
 @font-face { font-family: SuezOne-Regular; 
-  src: url('../assets/SuezOne-Regular.ttf'); } 
+  src: url('../../assets/SuezOne-Regular.ttf'); } 
 body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
@@ -200,7 +241,7 @@ body{
   padding: 10px;
   
   border-image:
-      url("../assets/Form-bg.png")
+      url("../../assets/Form-bg.png")
       70 / 50px    
       round;   
                 

@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import BasicRender from '@/components/BasicRender.vue'
-import MobileRender from '@/components/BasicRender-Mobile.vue'
+import BasicRender from '@/components/BasicForm/BasicRender.vue'
+import MobileRender from '@/components/BasicForm/BasicRender-Mobile.vue'
 import Footer from '@/components/Footer.vue'
 import MobileFooter from '@/components/MobileFooter.vue'
 

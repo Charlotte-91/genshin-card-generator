@@ -1,5 +1,5 @@
 { 
-    "Artifacts" : 
+    "set" : 
     [
         "Adventurer",
         "Archaic Petra",
@@ -31,5 +31,17 @@
         "Traveling Doctor",
         "Viridescent Venerer",
         "Wanderers Troupe"
-    ]
+    ],
+
+    "flower" :  ["HP"],
+
+    "feather" : ["ATK"],
+    
+    "sands" : ["HP", "ATK", "DEF","HP %", "ATK %", "DEF %", "Elemental Mastery", "Energy Recharge %"],
+
+    "goblet" : ["HP %", "ATK %", "DEF %", "Elemental Mastery", "Energy Recharge %", "Pyro DMG%","Hydro DMG%", "Cryo DMG%", "Electro DMG%", "Geo DMG%","Anemo DMG%","Physical DMG %"],
+
+    "circlet" : ["HP %", "ATK %", "DEF %", "Elemental Mastery", "Energy Recharge %", "CRIT Rate %", "CRIT DMG %", "Healing%"],
+    
+    "subStat" : ["HP", "ATK", "DEF","HP %", "ATK %", "DEF %", "Elemental Mastery", "Energy Recharge %","CRIT Rate %", "CRIT DMG %"]
 }

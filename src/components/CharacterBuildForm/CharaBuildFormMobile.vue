@@ -1,10 +1,8 @@
 <template>
     <body>
-      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
       <div class ="form">
         <div class="row">
           <div class="valid">{{ this.validation }}</div>
-          <!-- <h3>Multiplayer card generator</h3> -->
           <div class="col-25">
             <label class="typo__label">Player Name:</label>
           </div>
@@ -20,7 +18,7 @@
           <label class="typo__label">Card Design:</label>
         </div>
         <div class="col-75">
-          <multiselect v-model="cardValue" :options="options" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design"  :preselect-first="false">
+          <multiselect v-model="cardValue" :options="options" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design" :show-labels="false" :preselect-first="false">
               <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">Card design selected</span></template>
           </multiselect>
         </div>
@@ -42,7 +40,7 @@
           <label class="typo__label">Team:</label>
         </div>
         <div class="col-75">
-          <multiselect v-model="value" :options="options" :multiple="true" :max="4" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your team" label="name" track-by="name" :preselect-first="false">
+          <multiselect v-model="value" :options="options" :multiple="true" :max="4" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your team" :show-labels="false" :preselect-first="false">
               <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">{{ values.length }} team members selected</span></template>
           </multiselect>
         </div>
@@ -60,15 +58,12 @@
       <button class='mobile-button' v-on:click=validate()>Submit</button>
     </div>
   </body>
-    
-
 </template>
-
-
 
 <script>
 import Multiselect from 'vue-multiselect'
 import Characters from 'C:/Users/charl/Documents/Software-Development/genshin-card-generator/src/components/JSON/characters.JSON'
+import Pets from 'C:/Users/charl/Documents/Software-Development/genshin-card-generator/src/components/JSON/pets.JSON'
 
 export default {
     components: {
@@ -76,11 +71,11 @@ export default {
   },
   data () {
     return {
-      value: [],
-      options: Characters,
+      value: '',
+      options: Characters.Characters,
       cardValue: [],
       PetValue: '',
-      PetOptions: ['Dayflower Seelie', 'Curcuma Seelie', 'Rose Seelie', 'Viola Seelie', 'Endora']
+      PetOptions: Pets.Pets
     }
   },
   props: {
@@ -107,8 +102,6 @@ export default {
         console.log(this.team2)
         console.log(this.team3)
         console.log(this.team4)
-        // this.$v.form.$touch();
-        // if(this.$v.form.$error) return
         this.$router.push({name: 'Basic Card Render', 
         params: {
           cardChara : this.cardDesign, 
@@ -137,16 +130,11 @@ export default {
     }
   }
 }
-
 </script> 
-
-
-
-
 
 <style scoped>
 @font-face { font-family: SuezOne-Regular; 
-  src: url('../assets/SuezOne-Regular.ttf'); } 
+  src: url('../../assets/SuezOne-Regular.ttf'); } 
 body{
   background-color:#464545;
   font-family: SuezOne-Regular; 
@@ -155,6 +143,9 @@ body{
   flex-wrap: wrap;
   justify-content: center;
 }
+.button{
+  margin: 10px 120px;
+  }
 .col-25 {
   float: left;
   width: 35%;
@@ -165,6 +156,21 @@ body{
 .col-75 {
   float: right;
   width: 55%;
+  margin-bottom: 10px;
+}
+.col-75 {
+  float: right;
+  width: 45%;
+  margin-bottom: 10px;
+}
+.col-85 {
+  float: right;
+  width: 30%;
+  margin-bottom: 10px;
+}
+.col-90 {
+  float: right;
+  width: 20%;
   margin-bottom: 10px;
 }
 .row{
@@ -190,25 +196,36 @@ body{
   padding: 10px;
   
   border-image:
-      url("../assets/Form-bg.png")
+      url("../../assets/Form-bg.png")
       70 / 50px    
       round;   
                 
 }
-.mobile-button {
-    background-color: #464545;
-    color: white;
-    padding: 10px 80px;
-    text-align: center;
-    font-size: 25px;
-    margin: auto;
-    cursor: pointer;
-    border-radius: 4px;
-    font-family: SuezOne-Regular;
+
+@media screen and (max-width: 800px) {
+  .form {
+    width: 80%
+  }
 }
 .valid {
   font-size: 16px;
   color: red;
   margin-bottom: 15px;
+}
+.vsa-item__trigger:focus, .vsa-item__trigger:hover{
+  color:black
+}
+.vsa-list{
+--vsa-max-width: 720px;
+--vsa-min-width: 300px;
+--vsa-text-color: #464545;
+--vsa-highlight-color: #DBCBBD;
+--vsa-bg-color:#F9F6F2;
+--vsa-border-color: #F9F6F2;
+--vsa-border-width: 1px;
+--vsa-border-style: solid;
+--vsa-heading-padding: 1rem 1rem;
+--vsa-content-padding: 1rem 1rem;
+--vsa-default-icon-size: 1;
 }
 </style>

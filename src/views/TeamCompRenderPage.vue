@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import TeamCompRender from '@/components/TeamCompRender.vue'
+import TeamCompRender from '@/components/TeamComp/TeamCompRender.vue'
 import Footer from '@/components/Footer.vue'
 import MobileFooter from '@/components/MobileFooter.vue'
 

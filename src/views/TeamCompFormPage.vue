@@ -24,7 +24,7 @@
 
 <script>
 
-import TeamCompForm from "../components/TeamCompForm.vue";
+import TeamCompForm from "../components/TeamComp/TeamCompForm.vue";
 
 export default {
   name: 'Team Form Page',
