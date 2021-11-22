@@ -1,12 +1,14 @@
 <template>
   <div className="App">
-    <div v-bind:style="{ height: '50vh' }" ref="container" class="container">
+    <div class="top-gap"/>
     <v-stage ref="stage" :config="stageSize">
       <v-layer v-if="this.$route.params.playerName == undefined" ref="layer">
           <v-text :config="{text: `An Error occurred, please go back to the Home page`, fontSize: 25, x: 300, y:350, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
       <v-layer>
-        <v-image :config="{image: image}"/>
+        <v-image :config="{image: cardBg}"/>
+        <v-image :config="{image: chara}"/>
+        <v-image :config="{image: card}"/>
         <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 30, x: 180, y: 95, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `${this.$route.params.level}`, fontSize: 30, x: 300, y:155, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `HP - ${this.$route.params.flowermain} `, fontSize: 16, x: 530, y:130, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
@@ -100,11 +102,7 @@
       </v-layer>
     </v-stage>
     <br>
-    </div>
     <div class="save-button">
-      <div class = "mobilesavetext">
-            Please save the image and upload it to twitter manually. We have not yet implemented auto upload! Thank you!
-      </div>
       <button class='mobile-button' v-on:click=save()>Save image</button>
     </div>
   </div>
@@ -118,7 +116,9 @@ export default {
         width: 1200,
         height: 674
       },
-      image: null,
+      cardBg: null,
+      chara: null,
+      card: null,
       flower: null,
       feather: null,
       sands: null,
@@ -142,18 +142,26 @@ export default {
         // delete link;
       },
       save: function () {
-        console.log('clidk')
-        console.log(this.$refs)
         var dataURL = (this.$refs.stage.getStage()).toDataURL({ pixelRatio: 3 });
         this.downloadURI(dataURL, 'genshincard.png');
       },
   },
   created() {
-      const image = new window.Image();
-      image.src = require('@/assets/chara-build/' + this.$route.params.chara + '.png');
-      image.onload = () => {
-        this.image = image;
-        };
+      const cardBg = new window.Image();
+      cardBg.src = require('../../assets/bgs/' + (this.$route.params.cardBg).split(" ").join("") + '.png');
+      cardBg.onload = () => {
+      this.cardBg = cardBg;
+      };
+      const chara = new window.Image();
+      chara.src = require('../../assets/Characters/' + (this.$route.params.cardChara).split(" ").join("") + '.png');
+      chara.onload = () => {
+      this.chara = chara;
+      };
+      const card = new window.Image();
+      card.src = require('../../assets/Cards/MultiplayerCard.png');
+      card.onload = () => {
+      this.card = card;
+      };
       const flower = new window.Image();
       flower.src = require('@/assets/Artifacts/Flower/' + (this.$route.params.flower).split(" ").join("") + '.png');
       flower.onload = () => {

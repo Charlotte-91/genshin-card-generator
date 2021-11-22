@@ -27,7 +27,7 @@ export default {
         width: 1200,
         height: 674
       },
-      image: null,
+      cardBg: null,
       team1: null,
       team2: null,
       team3: null,
@@ -37,54 +37,54 @@ export default {
   
   created() {
     if (this.$route.params.UID == undefined) {
-      const image = new window.Image();
-      image.src = require('@/assets/team-loadout/card/' + this.$route.params.cardDesign + '.png');
-      image.onload = () => {
-      this.image = image;
+      const cardBg = new window.Image();
+      cardBg.src = require('@/assets/Cards/TeamLoadoutCard.png');
+      cardBg.onload = () => {
+      this.cardBg = cardBg;
       };
       const team1 = new window.Image();
-      team1.src = require('@/assets/team-loadout/portraits/' + this.$route.params.team1 + '.png');
+      team1.src = require('@/assets/SquarePortraits' + this.$route.params.team1 + '.png');
       team1.onload = () => {
         this.team1 = team1;
       };
       const team2 = new window.Image();
-      team2.src = require('@/assets/team-loadout/portraits/' + this.$route.params.team2 + '.png');
+      team2.src = require('@/assets/SquarePortraits/' + this.$route.params.team2 + '.png');
       team2.onload = () => {
         this.team2 = team2;
       };
       const team3 = new window.Image();
-      team3.src = require('@/assets/team-loadout/portraits/' + this.$route.params.team3 + '.png');
+      team3.src = require('@/assets/SquarePortraits' + this.$route.params.team3 + '.png');
       team3.onload = () => {
         this.team3 = team3;
       };
       const team4 = new window.Image();
-      team4.src = require('@/assets/team-loadout/portraits/' + this.$route.params.team4 + '.png');
+      team4.src = require('@/assets/SquarePortraits' + this.$route.params.team4 + '.png');
       team4.onload = () => {
         this.team4 = team4;
       };
     }else{
-      const image = new window.Image();
-      image.src = require('@/assets//team-loadout/card/' + this.$route.params.cardDesign + '.png');
-      image.onload = () => {
-        this.image = image;
-        };
+      const cardBg = new window.Image();
+      cardBg.src = require('@/assets/Cards/TeamLoadoutCard.png');
+      cardBg.onload = () => {
+        this.cardBg = cardBg;
+      };
       const team1 = new window.Image();
-      team1.src = require('@/assets/team-loadout/portraits/' + this.$route.params.team1 + '.png');
+      team1.src = require('@/assets/SquarePortraits' + this.$route.params.team1 + '.png');
       team1.onload = () => {
         this.team1 = team1;
       };
       const team2 = new window.Image();
-      team2.src = require('@/assets//team-loadout/portraits/' + this.$route.params.team2 + '.png');
+      team2.src = require('@/assets/SquarePortraits' + this.$route.params.team2 + '.png');
       team2.onload = () => {
         this.team2 = team2;
       };
       const team3 = new window.Image();
-      team3.src = require('@/assets/team-loadout/portraits/' + this.$route.params.team3 + '.png');
+      team3.src = require('@/assets/SquarePortraits' + this.$route.params.team3 + '.png');
       team3.onload = () => {
         this.team3 = team3;
       };
       const team4 = new window.Image();
-      team4.src = require('@/assets/team-loadout/portraits/' + this.$route.params.team4 + '.png');
+      team4.src = require('@/assets/SquarePortraits' + this.$route.params.team4 + '.png');
       team4.onload = () => {
         this.team4 = team4;
       };

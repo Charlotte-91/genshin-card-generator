@@ -103,8 +103,6 @@
 
 </template>
 
-
-
 <script>
 import Multiselect from 'vue-multiselect'
 import Characters from 'C:/Users/charl/Documents/Software-Development/genshin-card-generator/src/components/JSON/characters.JSON'

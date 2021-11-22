@@ -6,7 +6,9 @@
           <v-text :config="{text: `An Error occurred, please go back to the Home page`, fontSize: 25, x: 300, y:350, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
       <v-layer>
-        <v-image :config="{image: image}"/>
+        <v-image :config="{image: cardBg}"/>
+        <v-image :config="{image: chara}"/>
+        <v-image :config="{image: card}"/>
         <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 25, x: 180, y: 115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `${this.$route.params.UID}`, fontSize: 25, x: 180, y: 206, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
         <v-text :config="{text: `${this.$route.params.AR}`, fontSize: 25, x: 552, y:115, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
@@ -36,7 +38,9 @@ export default {
         width: 1200,
         height: 674
       },
-      image: null,
+      cardBg: null,
+      chara: null,
+      card: null,
       team1: null,
       team2: null,
       team3: null,
@@ -62,11 +66,21 @@ export default {
       },
   },
   created() {
-      const image = new window.Image();
-      image.src = require('@/assets/card-bgs/' + (this.$route.params.cardChara).split(" ").join("")  + '-cd.png');
-      image.onload = () => {
-        this.image = image;
-        };
+      const cardBg = new window.Image();
+      cardBg.src = require('../../assets/bgs/' + (this.$route.params.cardBg).split(" ").join("") + '.png');
+      cardBg.onload = () => {
+      this.cardBg = cardBg;
+      };
+      const chara = new window.Image();
+      chara.src = require('../../assets/Characters/' + (this.$route.params.cardChara).split(" ").join("") + '.png');
+      chara.onload = () => {
+      this.chara = chara;
+      };
+      const card = new window.Image();
+      card.src = require('../../assets/Cards/MultiplayerCard.png');
+      card.onload = () => {
+      this.card = card;
+      };
       const team1 = new window.Image();
       team1.src = require('@/assets/teams/' + (this.$route.params.team1).split(" ").join("")  + '-small.png');
       team1.onload = () => {
