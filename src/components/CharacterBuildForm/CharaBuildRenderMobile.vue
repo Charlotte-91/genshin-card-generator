@@ -147,18 +147,18 @@ export default {
       },
   },
   created() {
-      const cardBg = new window.Image();
+       const cardBg = new window.Image();
       cardBg.src = require('../../assets/bgs/' + (this.$route.params.cardBg).split(" ").join("") + '.png');
       cardBg.onload = () => {
       this.cardBg = cardBg;
       };
       const chara = new window.Image();
-      chara.src = require('../../assets/Characters/' + (this.$route.params.cardChara).split(" ").join("") + '.png');
+      chara.src = require('../../assets/Characters/' + (this.$route.params.chara).split(" ").join("") + '.png');
       chara.onload = () => {
       this.chara = chara;
       };
       const card = new window.Image();
-      card.src = require('../../assets/Cards/MultiplayerCard.png');
+      card.src = require('../../assets/Cards/CharaBuildCard.png');
       card.onload = () => {
       this.card = card;
       };

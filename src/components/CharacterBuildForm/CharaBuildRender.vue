@@ -153,12 +153,12 @@ export default {
       this.cardBg = cardBg;
       };
       const chara = new window.Image();
-      chara.src = require('../../assets/Characters/' + (this.$route.params.cardChara).split(" ").join("") + '.png');
+      chara.src = require('../../assets/Characters/' + (this.$route.params.chara).split(" ").join("") + '.png');
       chara.onload = () => {
       this.chara = chara;
       };
       const card = new window.Image();
-      card.src = require('../../assets/Cards/MultiplayerCard.png');
+      card.src = require('../../assets/Cards/CharaBuildCard.png');
       card.onload = () => {
       this.card = card;
       };

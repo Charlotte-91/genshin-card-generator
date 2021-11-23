@@ -22,7 +22,16 @@
           <label class="typo__label">Character:</label>
         </div>
         <div class="col-75">
-          <FormulateInput type="select" name='chara' :options="characters.Characters"/>
+              <FormulateInput type="select" name='chara' validation="required" :options="characters.Characters"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label class="typo__label">Background Design:</label>
+        </div>
+        <div class="col-75">
+          <FormulateInput type="select" name='cardBg' validation="required" :options="Bg.Backgrounds"/>
         </div>
       </div>
 
@@ -138,7 +147,7 @@
                           name="flowertype"
                           validation="required"
                           validation-name="Sub stat type required"
-                          :options="artifacts.substat"
+                          :options="artifacts.subStat"
                         />
                         <FormulateInput
                           type="text"
@@ -190,7 +199,7 @@
                           name="feathertype"
                           validation="required"
                           validation-name="Sub stat type required"
-                          :options="artifacts.substat"
+                          :options="artifacts.subStat"
                         />
                         <FormulateInput
                           type="text"
@@ -243,7 +252,7 @@
                                     name="sandstype"
                                     validation="required"
                                     validation-name="Sub stat type required"
-                                    :options="artifacts.substat"
+                                    :options="artifacts.subStat"
                                   />
                                   <FormulateInput
                                     type="text"
@@ -298,7 +307,7 @@
                                     name="goblettype"
                                     validation="required"
                                     validation-name="Sub stat type required"
-                                    :options="artifacts.substat"
+                                    :options="artifacts.subStat"
                                   />
                                   <FormulateInput
                                     type="text"
@@ -350,7 +359,7 @@
                                           name="circlettype"
                                           validation="required"
                                           validation-name="Sub stat type required"
-                                          :options="artifacts.substat"
+                                          :options="artifacts.subStat"
                                         />
                                         <FormulateInput
                                           type="text"
@@ -379,6 +388,7 @@
 import characters from '../JSON/characters.JSON'
 import artifacts from '../JSON/artifacts.JSON'
 import weapons from '../JSON/weapons.JSON'
+import Bg from '../JSON/backgrounds.JSON'
 
 export default {
   data () {
@@ -386,6 +396,7 @@ export default {
       artifacts,
       characters,
       weapons,
+      Bg,
       values: {
       }
     }

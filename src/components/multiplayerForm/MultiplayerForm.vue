@@ -13,18 +13,25 @@
           </div>
         </div>
 
-        <div class="row">
+       <div class="row">
         <div class="col-25">
           <label class="typo__label">Card Design:</label>
         </div>
         <div class="col-75">
-          <multiselect v-model="cardValue" :options="options" :multiple="true" :max="1" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick card Design" label="name" track-by="name" :preselect-first="false">
-              <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">Card design selected</span></template>
-          </multiselect>
+              <multiselect v-model="cardValue" :options="options" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>
         </div>
       </div>
 
-        <div class="row">
+       <div class="row">
+        <div class="col-25">
+          <label class="typo__label">Card Background:</label>
+        </div>
+        <div class="col-75">
+          <multiselect v-model="cardBgValue" :options="CardBackground" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>
+        </div>
+      </div>
+
+      <div class="row">
           <div class="col-25">
             <label class="typo__label">AR:</label>
           </div>
@@ -80,7 +87,7 @@
           <label class="typo__label">Team:</label>
         </div>
         <div class="col-75">
-          <multiselect v-model="value" :options="options" :multiple="true" :max="4" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your team" label="name" track-by="name" :preselect-first="false">
+           <multiselect v-model="team" :options="options" :multiple="true" :max="4" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick your team" :show-labels="false" :preselect-first="false">
               <template slot="selection" slot-scope="{ values, isOpen }"><span class="multiselect__single" v-if="values.length &amp;&amp; !isOpen">{{ values.length }} team members selected</span></template>
           </multiselect>
         </div>
@@ -105,8 +112,9 @@
 
 <script>
 import Multiselect from 'vue-multiselect'
-import Characters from 'C:/Users/charl/Documents/Software-Development/genshin-card-generator/src/components/JSON/characters.JSON'
-import Pets from 'C:/Users/charl/Documents/Software-Development/genshin-card-generator/src/components/JSON/pets.JSON'
+import Characters from '../JSON/characters.JSON'
+import Pets from '../JSON/pets.JSON'
+import Bg from '../JSON/backgrounds.JSON'
 
 export default {
     components: {
@@ -114,11 +122,13 @@ export default {
   },
   data () {
     return {
-      value: [],
+      team: [],
       options: Characters.Characters,
-      cardValue: [],
+      cardBgValue: '',
+      cardValue: '',
       PetValue: '',
       PetOptions: Pets.Pets,
+      CardBackground: Bg.Backgrounds,
       PlatformValue: '',
       PlatformOptions: ['PC', 'PS4', 'Android', 'iOS'],
       ServerValue: '',
@@ -127,9 +137,9 @@ export default {
   },
   props: {
     cardDesign: String,
+    cardBg: String,
     playerName: String,
     AR: Number,
-    // SA: String,
     UID: Number,
     server: String,
     twitter: String,
@@ -143,20 +153,21 @@ export default {
   },
   methods: {
       submit() {
-        this.team1 = this.value[0].id
-        this.team2 = this.value[1].id
-        this.team3 = this.value[2].id
-        this.team4 = this.value[3].id
-        this.cardDesign = this.cardValue[0].id
+        this.team1 = this.team[0]
+        this.team2 = this.team[1]
+        this.team3 = this.team[2]
+        this.team4 = this.team[3]
+        this.cardDesign = this.cardValue
         this.platform = this.PlatformValue
         this.server = this.ServerValue
         this.pet = this.PetValue
+        this.cardBg = this.cardBgValue
         this.$router.push({name: 'Multiplayer Render page', 
         params: {
           cardChara : this.cardDesign, 
+          cardBg: this.cardBg,
           playerName: this.playerName,
           AR: this.AR,
-          // SA: this.SA,
           UID: this.UID,
           server: this.server,
           twitter: this.twitter,
@@ -171,11 +182,10 @@ export default {
     },
     validate() {
         var errors = []
-        if (this.playerName == undefined || this.playerName == '' || this.AR == undefined || this.AR == '' || this.value.length == 0 || this.cardValue.length == 0 || this.PlatformValue.length == 0 || this.ServerValue.length == 0) {
+        if (this.playerName == undefined || this.playerName == '' || this.AR == undefined || this.AR == '' || this.team.length == 0 || this.cardValue.length == 0 || this.PlatformValue.length == 0 || this.ServerValue.length == 0) {
             if (this.playerName == undefined || this.playerName == '') {errors.push(' Player name ')}
             if (this.AR == undefined || this.AR == '') {errors.push(' AR ')}
-            // if (this.SA == undefined || this.SA == '') {errors.push(' Spiral Abyss ')}
-            if (this.value.length == 0) {errors.push(' Team ')}
+            if (this.team.length == 0) {errors.push(' Team ')}
             if (this.cardValue.length == 0) {errors.push(' Card design ')}
             if (this.ServerValue.length == 0) {errors.push(' Server ')}
             if (this.PlatformValue.length == 0) {errors.push(' Platform ')}
@@ -189,10 +199,6 @@ export default {
 }
 
 </script> 
-
-
-
-
 
 <style scoped>
 @font-face { font-family: SuezOne-Regular; 
