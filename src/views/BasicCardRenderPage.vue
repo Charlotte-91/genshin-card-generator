@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import BasicRender from '@/components/BasicRender.vue'
-import MobileRender from '@/components/BasicRender-Mobile.vue'
+import BasicRender from '@/components/BasicForm/BasicRender.vue'
+import MobileRender from '@/components/BasicForm/BasicRender-Mobile.vue'
 import Footer from '@/components/Footer.vue'
 import MobileFooter from '@/components/MobileFooter.vue'
 
@@ -157,28 +157,4 @@ app {
   top: 10px;
 }
 
-@media screen and (max-width: 399px) {
-    .social {
-    position: relative;
-    top: 0px;
-  }
-}
-@media screen and (min-width: 399px) {
-    .social {
-    position: relative;
-    top: 20px;
-  }
-}
-@media screen and (min-width: 700px) {
-    .social {
-    position: relative;
-    top: -230px;
-  }
-}
-@media screen and (min-width: 1000px) {
-    .social {
-    position: relative;
-    top: -440px;
-  }
-}
 </style>

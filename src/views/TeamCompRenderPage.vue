@@ -6,7 +6,7 @@
           <br>
           <div class='top-gap'/>
             <div class ='card'>
-              <TeamCompRender/>
+              <team-comp-render/>
             </div>
           <div class = "savetext">
             Please right-click  on image and select "Save Image As" to save to your device.
@@ -18,7 +18,7 @@
         <div v-else>
           <meta name="viewport" content="width=device-width,initial-scale=0.28,maximum-scale=2" />
           <div class='mobile-top-gap'/>
-          <mobile-card/>
+          <team-comp-render-mobile/>
           <br>
           <div class='social'>
             <MobileFooter/>
@@ -30,9 +30,10 @@
 </template>
 
 <script>
-import TeamCompRender from '@/components/TeamCompRender.vue'
+import TeamCompRender from '@/components/TeamComp/TeamCompRender.vue'
 import Footer from '@/components/Footer.vue'
 import MobileFooter from '@/components/MobileFooter.vue'
+import TeamCompRenderMobile from '../components/TeamComp/TeamCompRenderMobile.vue'
 
 
 
@@ -41,7 +42,8 @@ export default {
   components: {
     TeamCompRender,
     Footer,
-    MobileFooter
+    MobileFooter,
+    TeamCompRenderMobile,
   },
   methods: {
     isMobile() {
@@ -151,31 +153,8 @@ app {
 }
 .social {
   position: relative;
-  top: 10px;
+  top: 0px;
 }
 
-@media screen and (max-width: 399px) {
-    .social {
-    position: relative;
-    top: 0px;
-  }
-}
-@media screen and (min-width: 399px) {
-    .social {
-    position: relative;
-    top: 20px;
-  }
-}
-@media screen and (min-width: 700px) {
-    .social {
-    position: relative;
-    top: -230px;
-  }
-}
-@media screen and (min-width: 1000px) {
-    .social {
-    position: relative;
-    top: -440px;
-  }
-}
+
 </style>

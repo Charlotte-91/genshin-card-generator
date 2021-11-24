@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import MultiplayerRender from '@/components/MultiplayerRender.vue'
-import MultiplayerMobile from '@/components/MultiplayerRenderMobile.vue'
+import MultiplayerRender from '../components/multiplayerForm/MultiplayerRender.vue'
+import MultiplayerMobile from '../components/multiplayerForm/MultiplayerRenderMobile.vue'
 import Footer from '@/components/Footer.vue'
 import MobileFooter from '@/components/MobileFooter.vue'
 
@@ -159,28 +159,4 @@ app {
   top: 10px;
 }
 
-@media screen and (max-width: 399px) {
-    .social {
-    position: relative;
-    top: 0px;
-  }
-}
-@media screen and (min-width: 399px) {
-    .social {
-    position: relative;
-    top: 20px;
-  }
-}
-@media screen and (min-width: 700px) {
-    .social {
-    position: relative;
-    top: -230px;
-  }
-}
-@media screen and (min-width: 1000px) {
-    .social {
-    position: relative;
-    top: -440px;
-  }
-}
 </style>

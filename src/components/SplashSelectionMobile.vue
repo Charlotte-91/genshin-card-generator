@@ -21,7 +21,7 @@
                 </router-link>
             </div>
             <div class="column">
-                <router-link to="character-build-form">
+                <router-link to="/character-build-form">
                     <div class="container">
                         <img src="../assets/SplashPage/Characomp.png"/>
                         <div class="overlay">
@@ -29,11 +29,11 @@
                         </div>
                     </div>
                 </router-link>
-                <router-link to="">
+                <router-link to="/team-comp-form">
                     <div class="container">
                         <img src="../assets/SplashPage/Teamcomp.png"/>
                         <div class="overlay">
-                            <div class="text">Team Composition card [Coming Soon]</div>
+                            <div class="text">Team Composition card</div>
                         </div>
                     </div>
                 </router-link>

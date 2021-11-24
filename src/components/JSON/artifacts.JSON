@@ -1,0 +1,49 @@
+{ 
+    "set" : 
+    [
+        "Adventurer",
+        "Archaic Petra",
+        "Berserker",
+        "Blizzard Strayer",
+        "Bloodstained Chivalry",
+        "Brave Heart",
+        "Crimson Witch of Flames",
+        "Defenders Will",
+        "Emblem of Severed Fate",
+        "Gambler",
+        "Gladiators Finale",
+        "Heart of Depth",
+        "Husk of Opulent Dreams",
+        "Instructor",
+        "Lavawalker",
+        "Lucky Dog",
+        "Maiden Beloved",
+        "Martial Artist",
+        "Noblesse Oblige",
+        "Ocean-Hued Clam",
+        "Pale Flame",
+        "Resolution of Sojourner",
+        "Retracing Bolide",
+        "Scholar", "Shimenawa's Reminiscence",
+        "Tenacity of the Millelith",
+        "The Exile",
+        "Thundering Fury",
+        "Thundersoother",
+        "Tiny Miracle",
+        "Traveling Doctor",
+        "Viridescent Venerer",
+        "Wanderers Troupe"
+    ],
+
+    "flower" :  ["HP"],
+
+    "feather" : ["ATK"],
+    
+    "sands" : ["HP", "ATK", "DEF","HP %", "ATK %", "DEF %", "Elemental Mastery", "Energy Recharge %"],
+
+    "goblet" : ["HP %", "ATK %", "DEF %", "Elemental Mastery", "Energy Recharge %", "Pyro DMG%","Hydro DMG%", "Cryo DMG%", "Electro DMG%", "Geo DMG%","Anemo DMG%","Physical DMG %"],
+
+    "circlet" : ["HP %", "ATK %", "DEF %", "Elemental Mastery", "Energy Recharge %", "CRIT Rate %", "CRIT DMG %", "Healing%"],
+    
+    "subStat" : ["HP", "ATK", "DEF","HP %", "ATK %", "DEF %", "Elemental Mastery", "Energy Recharge %","CRIT Rate %", "CRIT DMG %"]
+}

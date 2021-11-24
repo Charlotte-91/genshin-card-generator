@@ -5,10 +5,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-- Team composition card   [ In Progress ]
 - Async storage for params 
-- Additional background choices for each card
 - Auto upload of card image to twitter 
+
+
+## [4.0.0] - 2021-11-24
+
+### Added 
+- Added Team composition card
+- Added the ability to pick from a range of backgrounds for each card
+- Added Thoma character cards, skills and constellations
+- Added Shiki Koshou pet
+- Added weapons and artifacts from update 2.2 & 2.3
+
+### Changed
+- Updated logo to add the 'Unofficial' tag
+- Removed Job plee from FAQs
+
+### Fixed
+- Refactored website backend, making adding new characters, items, pets, backgrounds etc easier
+- Fixed missing Keqing assets
+- Buttons overlapping the card image on mobile view
+
 
 ## [3.6.0] - 2021-09-23
 

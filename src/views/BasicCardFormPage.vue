@@ -28,8 +28,8 @@
 
 <script>
 
-import BasicForm from "../components/BasicForm.vue";
-import BasicFormMobile from "../components/BasicForm-Mobile.vue"
+import BasicForm from "../components/BasicForm/BasicForm.vue";
+import BasicFormMobile from "../components/BasicForm/BasicForm-Mobile.vue"
 
 export default {
   name: 'BasicCard',

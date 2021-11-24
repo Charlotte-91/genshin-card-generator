@@ -28,8 +28,8 @@
 
 <script>
 
-import MultiplayerForm from "../components/MultiplayerForm.vue";
-import MultiplayerFormMobile from "../components/MultiplayerFormMobile.vue";
+import MultiplayerForm from "../components/multiplayerForm/MultiplayerForm.vue";
+import MultiplayerFormMobile from "../components/multiplayerForm/MultiplayerFormMobile.vue";
 
 
 export default {
