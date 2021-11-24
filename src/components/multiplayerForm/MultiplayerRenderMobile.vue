@@ -102,7 +102,7 @@ export default {
         this.team4 = team4;
       };
       const pet = new window.Image();
-      pet.src = require('@/assets/pet/' + (this.$route.params.pet).split(" ").join("")  + '.png');
+      pet.src = require('../../assets/pet/' + this.$route.params.pet + '.png');
       pet.onload = () => {
       this.pet = pet;
       };
@@ -133,25 +133,5 @@ export default {
   font-family: SuezOne-Regular; 
   color: grey;
 }
-@media screen and (max-width: 399px) {
-  .save-button {
-    top: 0px;
-    bottom: 0px;
-    position: relative;
-  }
-}
-@media screen and (min-width: 700px) {
-  .save-button {
-    top: -150px;
-    /* bottom: 50px; */
-    position: relative;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .save-button {
-    top: -350px;
-    /* bottom: 50px; */
-    position: relative;
-  }
-}
+
 </style>

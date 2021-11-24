@@ -73,7 +73,7 @@ export default {
       this.chara = chara;
       };
       const card = new window.Image();
-      card.src = require('../../assets/Cards/MultiplayerCard.png');
+      card.src = require('../../assets/Cards/BasicCard.png');
       card.onload = () => {
       this.card = card;
       };
@@ -129,25 +129,5 @@ export default {
   font-family: SuezOne-Regular; 
   color: grey;
 }
-@media screen and (max-width: 399px) {
-  .save-button {
-    top: 0px;
-    bottom: 0px;
-    position: relative;
-  }
-}
-@media screen and (min-width: 700px) {
-  .save-button {
-    top: -150px;
-    /* bottom: 50px; */
-    position: relative;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .save-button {
-    top: -350px;
-    /* bottom: 50px; */
-    position: relative;
-  }
-}
+
 </style>

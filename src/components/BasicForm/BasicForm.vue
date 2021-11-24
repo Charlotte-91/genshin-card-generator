@@ -15,7 +15,7 @@
 
       <div class="row">
         <div class="col-25">
-          <label class="typo__label">Card Design:</label>
+          <label class="typo__label">Card Character:</label>
         </div>
         <div class="col-75">
               <multiselect v-model="cardValue" :options="options" :searchable="false" :close-on-select="true" :show-labels="false" placeholder="Pick a value"></multiselect>

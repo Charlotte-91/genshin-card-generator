@@ -216,7 +216,6 @@ export default {
   }
 </script>
 <style scoped>
-
 .mobile-button {
   background-color: #3b3b3b;
   color: white;
@@ -228,9 +227,9 @@ export default {
   border-radius: 4px;
 }
 .save-button {
-    top: 0px;
+    top: 20px;
     bottom: 0px;
-    position: relative;
+    position: inherit;
 }
 .mobilesavetext {
   font-size: 45px;
@@ -238,26 +237,5 @@ export default {
   padding: 50px;
   font-family: SuezOne-Regular; 
   color: grey;
-}
-@media screen and (max-width: 399px) {
-  .save-button {
-    top: 0px;
-    bottom: 0px;
-    position: relative;
-  }
-}
-@media screen and (min-width: 700px) {
-  .save-button {
-    top: -150px;
-    /* bottom: 50px; */
-    position: relative;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .save-button {
-    top: -350px;
-    /* bottom: 50px; */
-    position: relative;
-  }
 }
 </style>

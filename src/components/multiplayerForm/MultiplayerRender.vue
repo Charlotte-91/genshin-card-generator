@@ -102,7 +102,7 @@ export default {
         this.team4 = team4;
       };
       const pet = new window.Image();
-      pet.src = require('@/assets/pet/' + (this.$route.params.pet).split(" ").join("")  + '.png');
+      pet.src = require('../../assets/pet/' + this.$route.params.pet + '.png');
       pet.onload = () => {
       this.pet = pet;
       };

@@ -6,12 +6,15 @@
         <img src="../assets/genshin-logo.png" height='260px'/>
       </header>
         <team-comp-form/>
+        <button @click="$router.push({name: 'Home'})">Back</button>
       </div>
+      
       <div v-else>
         <header className="App-header">
         <img src="../assets/genshin-logo.png" width='80%'/>
       </header>
-        
+        <team-comp-form-mobile/>
+        <button @click="$router.push({name: 'Home'})">Back</button>
       </div>
       <div class= "footer">
       Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
@@ -25,11 +28,13 @@
 <script>
 
 import TeamCompForm from "../components/TeamComp/TeamCompForm.vue";
+import TeamCompFormMobile from '../components/TeamComp/TeamCompFormMobile.vue';
 
 export default {
   name: 'Team Form Page',
   components: {
-    TeamCompForm
+    TeamCompForm,
+    TeamCompFormMobile,
   },
   methods: {
     isMobile() {
@@ -44,7 +49,6 @@ export default {
 </script>
 
 <style scoped>
-
 * {background-color: #464545}
 .header {
   top: 0;
@@ -53,7 +57,8 @@ export default {
   height: 280px;
   text-align: center;
 }
-.body {
+body {
+  justify-content: center;
   font-size: 25px;
   padding: 20px;
   font-family: SuezOne-Regular; 
@@ -76,4 +81,5 @@ export default {
     color: rgb(145, 136, 136);
     cursor: pointer;
 }
+
 </style>
