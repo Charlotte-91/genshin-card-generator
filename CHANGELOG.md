@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Async storage for params 
 - Auto upload of card image to twitter 
 
+## [4.0.1] - 2021-12-13
+
+### Fixed
+
+- Fixed a bug where some characters could not have weapons selected for them
+
 
 ## [4.0.0] - 2021-11-24
 
