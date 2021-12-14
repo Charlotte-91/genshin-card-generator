@@ -8,6 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Async storage for params 
 - Auto upload of card image to twitter 
 
+## [4.1.0] - 2021-12-13
+
+## Added
+
+- Added Arataki Itto character cards, skills and constellations
+- Added Gorou character cards, skills and constellations
+
+### Fixed
+
+- Fixed a bug where the character build card did not work correctly for characters with 2 names
+- Fixed missing Qingce Village background
+
+
 ## [4.0.1] - 2021-12-13
 
 ### Fixed

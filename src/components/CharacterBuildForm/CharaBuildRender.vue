@@ -193,22 +193,22 @@ export default {
       this.weapon = weapon;
       };
       const constellation = new window.Image();
-      constellation.src = require('@/assets/skills/' + this.$route.params.chara + '/'+ this.$route.params.constellation + '.png');
+      constellation.src = require('@/assets/skills/' + this.$route.params.chara.split(" ").join("") + '/'+ this.$route.params.constellation + '.png');
       constellation.onload = () => {
       this.constellation = constellation;
         };
       const normal = new window.Image();
-      normal.src = require('@/assets/skills/' + this.$route.params.chara + '/normal.png');
+      normal.src = require('@/assets/skills/' + this.$route.params.chara.split(" ").join("") + '/normal.png');
       normal.onload = () => {
       this.normal = normal;
       };
       const skill = new window.Image();
-      skill.src = require('@/assets/skills/' + this.$route.params.chara + '/skill.png');
+      skill.src = require('@/assets/skills/' + this.$route.params.chara.split(" ").join("") + '/skill.png');
       skill.onload = () => {
       this.skill = skill;
       };
       const burst = new window.Image();
-      burst.src = require('@/assets/skills/' + this.$route.params.chara + '/burst.png');
+      burst.src = require('@/assets/skills/' + this.$route.params.chara.split(" ").join("") + '/burst.png');
       burst.onload = () => {
       this.burst = burst;
       };
