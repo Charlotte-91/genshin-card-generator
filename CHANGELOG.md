@@ -8,7 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Async storage for params 
 - Auto upload of card image to twitter 
 
-## [4.1.0] - 2021-12-13
+## [4.1.1] - 2021-12-20
+
+### Fixed
+
+- Misspelling of Anemo
+
+
+## [4.1.0] - 2021-12-14
 
 ## Added
 
@@ -26,7 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fixed a bug where some characters could not have weapons selected for them
-
 
 ## [4.0.0] - 2021-11-24
 

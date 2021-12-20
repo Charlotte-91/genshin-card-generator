@@ -3,7 +3,7 @@
     {
         "Characters" :
             [
-                "Aether - Ameno",
+                "Aether - anemo",
                 "Aether - Electro",
                 "Aether - Geo",
                 "Albedo",
@@ -13,7 +13,7 @@
                 "Kaeya",
                 "Kamisato Ayaka",
                 "Keqing",
-                "Lumine - Ameno",
+                "Lumine - anemo",
                 "Lumine - Electro",
                 "Lumine - Geo",
                 "Qiqi",
@@ -21,7 +21,7 @@
             ],
         "Weapons" : 
             [
-            "Amenoma Kageuchi", 
+            "anemoma Kageuchi", 
             "Aquila Favonia",
             "Blackcliff Longsword",
             "Cinnabar Spindle",
