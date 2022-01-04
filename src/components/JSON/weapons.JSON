@@ -3,7 +3,7 @@
     {
         "Characters" :
             [
-                "Aether - anemo",
+                "Aether - Anemo",
                 "Aether - Electro",
                 "Aether - Geo",
                 "Albedo",
@@ -103,15 +103,18 @@
                 "Hu Tao",
                 "Raiden Shogun",
                 "Rosaria",
+                "Shenhe",
                 "Thoma",
                 "Xiangling",
                 "Xiao",
+                "Yun Jin",
                 "Zhongli"
             ],
         "Weapons":
             [
                 "Black Tassel",
                 "Blackcliff Pole",
+                "Calamity Queller",
                 "Crescent Pike",
                 "Deathmatch",
                 "Dragons Bane",

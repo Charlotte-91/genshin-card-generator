@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Async storage for params 
 - Auto upload of card image to twitter 
 
+## [4.2.0] - 2021-01-05
+
+### Added
+- Added Shenhe character cards, skills and constellations
+- Added Yun Jin Shogun character cards, skills and constellations
+- Added Calamity Queller weapon
+
+
 ## [4.1.1] - 2021-12-20
 
 ### Fixed

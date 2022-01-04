@@ -1,7 +1,7 @@
 { 
     "Characters" : 
     [
-        "Aether - anemo",
+        "Aether - Anemo",
         "Aether - Electro",
         "Aether - Geo",
         "Albedo",
@@ -39,6 +39,7 @@
         "Rosaria",
         "Sangonomiya Kokomi",
         "Sayu",
+        "Shenhe",
         "Sucrose",
         "Tartaglia",
         "Thoma",
@@ -49,6 +50,7 @@
         "Xinyan",
         "Yanfei",
         "Yoimiya",
+        "Yun Jin",
         "Zhongli"
     ]
 }
