@@ -109,6 +109,15 @@ const routes = [
   // which is lazy-loaded when the route is visited.
   component: () => import(/* webpackChunkName: "CardDesign" */ '../views/CharaBuildRender.vue'),
   props: true
+},
+{
+  path: '/test',
+  name: 'CharacterBuildBox',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/test.vue'),
+  props: true
 }
 ]
 
