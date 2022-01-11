@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Async storage for params 
 - Auto upload of card image to twitter 
 
+## [4.2.1] - 2021-01-11
+
+### Fixed
+- Fixed bug where Aether and Lumine cards would sometimes not render constallations correctly
+- Fixed incorrectly named Thundering Fury artifact
+- Fixed other minor bugs
+
+
 ## [4.2.0] - 2021-01-05
 
 ### Added
