@@ -1,0 +1,81 @@
+<template>
+        <div class="footer">
+            <div class="row">
+                <div class="column">
+                    <p>Genshin Card Generator is not affiliated with or endorsed by miHoYo.</p>
+                    <p>© All rights Reserved by miHoYo. Other properies belong to their respective owners.</p>
+                </div>
+                <div class="column2">
+                    <p><router-link to="/contact">Contact</router-link></p>
+                    <p><router-link to="/faq">FAQ</router-link></p>
+                </div>
+            </div>
+        </div>
+</template>
+<script>
+
+</script>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.footer {
+    display: table;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(28, 34, 58);
+    filter: drop-shadow(0px 2px 5px #000000);
+    color: white;
+    font-family: Montserrat, sans-serif; 
+    text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    align-self: center;
+    background: transparent;
+    color: white;
+    font-family: Montserrat, sans-serif; 
+    font-size: 12px;
+}
+.column2 {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    align-self: left;
+    background: transparent;
+    color: white;
+    font-family: Montserrat, sans-serif; 
+    font-size: 12px;
+}
+
+.row {
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a {
+    display: center;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+    text-decoration: none;
+}
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 20px #38a6c2; 
+}
+</style>

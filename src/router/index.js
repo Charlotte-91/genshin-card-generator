@@ -5,6 +5,8 @@ import VueKonva from 'vue-konva';
 import VueFormulate from '@braid/vue-formulate'
 import VueSimpleAccordion from 'vue-simple-accordion';
 import 'vue-simple-accordion/dist/vue-simple-accordion.css';
+import VueNavigationBar from "vue-navigation-bar";
+
 require('../styles/form.css')
 require('../styles/snow.css')
 
@@ -13,6 +15,7 @@ Vue.use(VueKonva);
 Vue.use(VueRouter);
 Vue.use(VueFormulate);
 Vue.use(VueSimpleAccordion);
+Vue.component("vue-navigation-bar", VueNavigationBar);
 
 const routes = [
   {
@@ -117,6 +120,15 @@ const routes = [
   // this generates a separate chunk (about.[hash].js) for this route
   // which is lazy-loaded when the route is visited.
   component: () => import(/* webpackChunkName: "CardDesign" */ '../views/test.vue'),
+  props: true
+},
+{
+  path: '/navbar',
+  name: 'Navbar test',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  component: () => import(/* webpackChunkName: "CardDesign" */ '../views/test navbar.vue'),
   props: true
 }
 ]

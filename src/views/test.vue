@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style scoped>
-* {background-color: #464545}
+* {background-image: "@/assets/bgs/StartScreen.png";}
 .header {
   top: 0;
   padding: 0px;
