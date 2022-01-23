@@ -27,7 +27,7 @@
 
 <script>
 
-import CharacterBuildBox from "../components/test/CharacterBuildBox.vue";
+import CharacterBuildBox from "../components/CommonPageComponents/CharacterBuildBox.vue";
 
 export default {
   name: 'CharacterBuildBox Page',

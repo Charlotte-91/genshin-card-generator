@@ -142,21 +142,17 @@ export default {
 </script> 
 
 <style scoped>
-@font-face { font-family: SuezOne-Regular; 
-  src: url('../../assets/SuezOne-Regular.ttf'); } 
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 body{
-  background-color:#464545;
-  font-family: SuezOne-Regular; 
-  font-size: 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  min-height: 400px;
+  margin-bottom: 100px;
 }
 .col-25 {
   float: left;
   width: 35%;
   text-align: right;
-  font-family: SuezOne-Regular; 
+  font-family: Montserrat, sans-serif; 
   margin-bottom: 15px;
 }
 .col-75 {
@@ -175,11 +171,14 @@ body{
   padding: 2px;
 }
 .form {
+  
+  font-family: Montserrat, sans-serif; 
+  font-size: 60%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  width: 75%;
+  max-width: 80%;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
@@ -193,15 +192,15 @@ body{
                 
 }
 .mobile-button {
-    background-color: #464545;
+    background-color: rgb(28, 34, 58);
     color: white;
     padding: 10px 80px;
     text-align: center;
     font-size: 25px;
     margin: auto;
     cursor: pointer;
-    border-radius: 4px;
-    font-family: SuezOne-Regular;
+
+    font-family: Montserrat, sans-serif; 
 }
 .valid {
   font-size: 16px;

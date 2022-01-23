@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import Navbartest from '../components/test/Navbar test.vue';
-import FootTest from '../components/test/FootTest.vue';
+import Navbartest from '../components/CommonPageComponents/Navbar.vue';
+import FootTest from '../components/CommonPageComponents/Footer.vue';
 export default {
   name: 'Navbar test',
   components: {

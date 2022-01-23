@@ -1,28 +1,16 @@
 <template>
-  <div className="MultiplayerForm">
+  <div>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
       <div v-if="!isMobile()">
-        <header className="App-header">
-        <img src="../assets/genshin-logo.png" height='260px'/>
-      </header>
-      <body>
+        <Navbar/>
         <MultiplayerForm/>
-      </body>
-        <button @click="$router.push({name: 'Home'})">Back</button>
+        <Footer/>
       </div>
       <div v-else>
-        <header className="App-header">
-        <img src="../assets/genshin-logo.png" width='80%'/>
-      </header>
+        <Navbar/>
         <MultiplayerFormMobile/>
-        <button @click="$router.push({name: 'Home'})">Back</button>
+        <Footer/>
       </div>
-      <div class= "footer">
-      Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
-      <br>
-      © All rights Reserved by miHoYo. Other properies belong to their respective owners. |    
-      <router-link :to="`contact`"><a>Contact Us</a></router-link> | <router-link :to="`FAQ`"><a>FAQ</a></router-link>
-    </div>
   </div>
 </template>
 
@@ -30,13 +18,17 @@
 
 import MultiplayerForm from "../components/multiplayerForm/MultiplayerForm.vue";
 import MultiplayerFormMobile from "../components/multiplayerForm/MultiplayerFormMobile.vue";
+import Navbar from '../components/CommonPageComponents/Navbar.vue';
+import Footer from '../components/CommonPageComponents/Footer.vue';
 
 
 export default {
   name: 'Multiplayer-form',
   components: {
     MultiplayerForm,
-    MultiplayerFormMobile
+    MultiplayerFormMobile,
+    Navbar,
+    Footer
   },
   methods: {
     isMobile() {
@@ -51,37 +43,9 @@ export default {
 </script>
 
 <style scoped>
-* {background-color: #464545}
-.header {
-  top: 0;
-  padding: 0px;
-  font-size: 40px;
-  height: 280px;
-  text-align: center;
-}
 body {
   justify-content: center;
   font-size: 25px;
   padding: 20px;
-  font-family: SuezOne-Regular; 
 }
-.footer {
-  position: bottom;
-  padding: 30px;
-  bottom: 0;
-  height: 20px;
-  font-size: 15px;
-  color: rgb(36, 34, 34);
-  font-family: Arial, Helvetica, sans-serif;
-}
-.routerlink {
-  display: block;
-  color: rgb(240, 20, 20)
-}
- a {
-    text-decoration: none;
-    color: rgb(145, 136, 136);
-    cursor: pointer;
-}
-
 </style>

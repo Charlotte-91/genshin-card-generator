@@ -1,11 +1,9 @@
 <template>
-
+ <body>
    <FormulateForm
     v-model='values'
     :keep-model-data="true"
     @submit="submit">
-    <body>
-      
       <div class ="form">
         <div class="row">
         <div class="valid">{{ this.validation }}</div>
@@ -379,9 +377,9 @@
     />
     </div>
     
-  </body>
-   </FormulateForm> 
 
+</FormulateForm> 
+  </body>
 </template>
 
 <script>
@@ -417,44 +415,22 @@ export default {
 </script> 
 
 <style scoped>
-@font-face { font-family: SuezOne-Regular; 
-  src: url('../../assets/SuezOne-Regular.ttf'); } 
+
 body{
-  background-color:#464545;
-  font-family: SuezOne-Regular; 
-  font-size: 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  min-height: 400px;
+  margin-bottom: 100px;
 }
-.button{
-  margin: 10px 120px;
-  }
 .col-25 {
   float: left;
   width: 35%;
   text-align: right;
-  font-family: SuezOne-Regular; 
+  font-family: Montserrat, sans-serif; 
   margin-bottom: 15px;
 }
 .col-75 {
   float: right;
   width: 55%;
-  margin-bottom: 10px;
-}
-.col-75 {
-  float: right;
-  width: 45%;
-  margin-bottom: 10px;
-}
-.col-85 {
-  float: right;
-  width: 30%;
-  margin-bottom: 10px;
-}
-.col-90 {
-  float: right;
-  width: 20%;
   margin-bottom: 10px;
 }
 .row{
@@ -468,11 +444,13 @@ body{
   padding: 2px;
 }
 .form {
+  font-family: Montserrat, sans-serif; 
+  font-size: 60%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  width: 75%;
+  max-width: 60%;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
@@ -485,11 +463,16 @@ body{
       round;   
                 
 }
+.mobile-button {
+    background-color: rgb(28, 34, 58);
+    color: white;
+    padding: 10px 80px;
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+    cursor: pointer;
 
-@media screen and (max-width: 800px) {
-  .form {
-    width: 80%
-  }
+    font-family: Montserrat, sans-serif; 
 }
 .valid {
   font-size: 16px;

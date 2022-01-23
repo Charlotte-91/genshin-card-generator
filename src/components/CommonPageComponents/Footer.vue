@@ -78,4 +78,25 @@ a:hover {
     color: #fff;
     text-shadow: 0 0 20px #38a6c2; 
 }
+
+@media screen and (max-width: 1000px) {
+    .column {
+        width: 55%;
+        font-size: 70%;
+    }
+    .column2 {
+        width: 15%;
+        font-size: 70%;
+    }
+}
+    @media screen and (max-width: 500px) {
+    .column {
+       width: 100%;
+        font-size: 60%;
+    }
+    .column2 {
+        width: 30%;
+        font-size: 70%;
+    }
+}
 </style>
