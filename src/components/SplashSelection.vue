@@ -1,5 +1,5 @@
 <template>
-  <div className="SplashSelection">
+  <div class="SplashSelection">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
         <div class="row">
             <div class="column">
@@ -45,9 +45,8 @@
 
 <style scoped>
 
-@font-face { font-family: roboto-regular; 
-  src: url('../assets/SuezOne-Regular.ttf'); } 
-  
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +75,7 @@
     max-width: 100%;
   }
   .text {
-  font-size: 20px;
+  font-size: px;
   }
 }
 .container {
@@ -92,16 +91,17 @@
 
 .overlay {
   position: absolute;
-  top: 0;
+  top: 15px;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: 96%;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #464545;
-  font-family: roboto-regular; 
+  background-color: rgb(28, 34, 58);
+  font-family: Montserrat, sans-serif; 
+  border-radius: 10px;
 }
 
 .container:hover .overlay {
@@ -112,7 +112,7 @@
   color: white;
   font-size: 40px;
   position: absolute;
-  font-family: roboto-regular;
+  font-family: Montserrat, sans-serif; 
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -123,5 +123,9 @@
 title {
     margin: 25px;
     height: 1000px;
+}
+
+.SplashSelection {
+  height: 25%;
 }
 </style>

@@ -101,7 +101,7 @@
         <v-text :config="{text: `Level ${this.$route.params.burst} `, fontSize: 16, x: 350, y:555, fill:'#93887B', fontFamily:'SuezOne-Regular'}"></v-text>
       </v-layer>
     </v-stage>
-    <br>
+    <div class="space"/>
     <div class="save-button">
       <button class='mobile-button' v-on:click=save()>Save image</button>
     </div>
@@ -216,15 +216,17 @@ export default {
   }
 </script>
 <style scoped>
+@font-face { font-family: roboto-regular; 
+  src: url('../../assets/SuezOne-Regular.ttf'); } 
 .mobile-button {
-  background-color: #3b3b3b;
+   background-color: rgb(28, 34, 58);
   color: white;
   padding: 50px 280px;
   text-align: center;
   font-size: 60px;
-  font-family: SuezOne-Regular;
+  font-family: Montserrat, sans-serif; 
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 15px;
 }
 .save-button {
     top: 20px;
@@ -235,7 +237,10 @@ export default {
   font-size: 45px;
   position: relative;
   padding: 50px;
-  font-family: SuezOne-Regular; 
+  font-family: Montserrat, sans-serif; 
   color: grey;
+}
+.space {
+  height: 100px;
 }
 </style>

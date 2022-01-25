@@ -45,9 +45,8 @@
 
 <style scoped>
 
-@font-face { font-family: roboto-regular; 
-  src: url('../assets/SuezOne-Regular.ttf'); } 
-  
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -69,19 +68,7 @@
   vertical-align: middle;
   width: 100%;
 }
-/* @media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-} */
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-/* @media screen and (max-width: 800px) {
-  .column {
-    
-  }
-} */
 .container {
   position: relative;
   width: 100%;
@@ -95,27 +82,24 @@
 
 .overlay {
   position: absolute;
-  top: 0;
+  top: 15px;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: 96%;
   width: 100%;
   opacity: 0.5;
   transition: .5s ease;
-  background-color: #464545;
-  font-family: roboto-regular; 
-}
-
-.container:hover .overlay {
-  opacity: 0.8;
+  background-color: rgb(28, 34, 58);
+  font-family: Montserrat, sans-serif; 
+  border-radius: 10px;
 }
 
 .text {
   color: white;
   font-size: 25px;
   position: absolute;
-  font-family: roboto-regular;
+  font-family: Montserrat, sans-serif; 
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);

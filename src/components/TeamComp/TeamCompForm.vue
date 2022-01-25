@@ -404,11 +404,9 @@ export default {
 
 <style scoped>
 
-@font-face { font-family: SuezOne-Regular; 
-  src: url('../../assets/SuezOne-Regular.ttf'); } 
+
 body{
-  background-color:#464545;
-  font-family: SuezOne-Regular; 
+  font-family: Montserrat, sans-serif;
   font-size: 25px;
   display: flex;
   flex-wrap: wrap;
@@ -418,7 +416,7 @@ body{
   float: left;
   width: 45%;
   text-align: right;
-  font-family: SuezOne-Regular; 
+  font-family: Montserrat, sans-serif;
   margin-bottom: 15px;
 }
 .col-75 {
@@ -484,19 +482,19 @@ body{
 @media (min-width: 650px) {
   .substat {
     display: flex;
-    font-family: SuezOne-Regular; 
+    font-family: Montserrat, sans-serif;
   }
 }
 @media (min-width: 720px) {
   .substat {
     display: block;
-    font-family: SuezOne-Regular; 
+    font-family: Montserrat, sans-serif;
   }
 }
 @media (min-width: 850px) {
   .substat {
     display: flex;
-    font-family: SuezOne-Regular; 
+    font-family: Montserrat, sans-serif;
   }
   .substat .formulate-input {
     margin-right: 1.5em;

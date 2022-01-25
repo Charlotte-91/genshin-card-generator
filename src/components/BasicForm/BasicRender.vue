@@ -18,10 +18,6 @@
         <v-image :config="{image: pet, x: 660, y:50}"/>
       </v-layer>
     </v-stage>
-    <br>
-    <div class="save-button">
-      <button class='mobile-button' v-on:click=save()>Save image</button>
-    </div>
   </div>
 </template>
 
@@ -104,4 +100,7 @@ export default {
   }
 };
 </script>
-
+<style scoped>
+@font-face { font-family: roboto-regular; 
+  src: url('../../assets/SuezOne-Regular.ttf'); } 
+</style>

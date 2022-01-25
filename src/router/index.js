@@ -17,6 +17,7 @@ Vue.use(VueFormulate);
 Vue.use(VueSimpleAccordion);
 Vue.component("vue-navigation-bar", VueNavigationBar);
 
+
 const routes = [
   {
     path: '/',

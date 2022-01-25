@@ -47,6 +47,7 @@ body {
   justify-content: center;
   font-size: 25px;
   padding: 20px;
+  font-family: Montserrat, sans-serif;
 }
 
 </style>

@@ -433,6 +433,18 @@ body{
   width: 55%;
   margin-bottom: 10px;
 }
+
+.col-85 {
+  float: right;
+  width: 25%;
+  font-family: Montserrat, sans-serif; 
+  margin-bottom: 15px;
+}
+.col-90 {
+  float: right;
+  width: 30%;
+  margin-bottom: 10px;
+}
 .row{
   align-items: center;
   width: 100%
@@ -450,29 +462,16 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  max-width: 60%;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
   margin: 30px;
-  padding: 10px;
   
   border-image:
       url("../../assets/Form-bg.png")
       70 / 50px    
       round;   
                 
-}
-.mobile-button {
-    background-color: rgb(28, 34, 58);
-    color: white;
-    padding: 10px 80px;
-    text-align: center;
-    font-size: 25px;
-    margin: auto;
-    cursor: pointer;
-
-    font-family: Montserrat, sans-serif; 
 }
 .valid {
   font-size: 16px;
@@ -495,4 +494,5 @@ body{
 --vsa-content-padding: 1rem 1rem;
 --vsa-default-icon-size: 1;
 }
+
 </style>

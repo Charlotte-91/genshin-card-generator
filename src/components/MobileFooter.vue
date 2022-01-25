@@ -66,14 +66,14 @@ export default {
 }
 
 .mobile-button {
-  background-color: #3b3b3b;
+   background-color: rgb(28, 34, 58);
   color: white;
-  padding: 45px 370px;
+  padding: 50px 280px;
   text-align: center;
   font-size: 60px;
-  border-radius: 4px;
-  font-family: SuezOne-Regular; 
-  margin: 100px;
+  font-family: Montserrat, sans-serif; 
+  cursor: pointer;
+  border-radius: 15px;
 }
 twitter-button {
   background-color: #1da1f2;

@@ -1,39 +1,17 @@
 <template>
-        <!-- <div class="topnav" id="myTopnav">
-            <div class="row">
-                <div class="column">
-                    <router-link to="/"><img src="../../../src/assets/genshin-logo-small.png"></router-link>
-                </div>
-                <div class="column">
-                    <router-link to="/basic-form">Basic Card</router-link>
-                </div>
-                <div class="column">
-                    <router-link to="/character-build-form">Multiplayer Card</router-link>
-                </div>
-                <div class="column">
-                    <router-link to="/multiplayer-form">Character Build Card</router-link>
-                </div>
-                <div class="column"> 
-                    <router-link to="/team-comp-form">Team Composition Card</router-link>
-                </div>
-                <a href="javascript:void(0);" class="icon" v-on:click=myFunction()>
-                    <i class="fa fa-bars"></i>
-                 </a>
-            </div>
-        </div> -->
-        <div class="topnav" id="myTopnav">
-          <div class="container">
-  <a href="#home" class="active"><router-link to="/"><img src="../../../src/assets/genshin-logo-small.png"></router-link></a>
-  <router-link to="/basic-form">Basic Card</router-link>
-  <router-link to="/character-build-form">Multiplayer Card</router-link>
-  <router-link to="/multiplayer-form">Character Build Card</router-link>
-  <router-link to="/team-comp-form">Team Composition Card</router-link>
-  </div>
-  <a href="javascript:void(0);" class="icon" v-on:click=myFunction()>
-  <img src="../../../src/assets/burger.png">
-  </a>
+  <div class="topnav" id="myTopnav">
+    <div class="container">
+      <a href="#home" class="active"><router-link to="/"><img src="../../../src/assets/genshin-logo-small.png"></router-link></a>
+      <router-link to="/basic-form">Basic Card</router-link>
+      <router-link to="/multiplayer-form">Multiplayer Card</router-link>
+      <router-link to="/character-build-form">Character Build Card</router-link>
+      <router-link to="/team-comp-form">Team Composition Card</router-link>
+      
+    </div>
+    <a href="javascript:void(0);" class="icon" v-on:click=myFunction()>
+      <img src="../../../src/assets/burger.png">
+    </a>
 </div>
-
 </template>
 
 <script>

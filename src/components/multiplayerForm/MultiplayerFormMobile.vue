@@ -201,12 +201,9 @@ export default {
 </script> 
 
 <style scoped>
-@font-face { font-family: SuezOne-Regular; 
-  src: url('../../assets/SuezOne-Regular.ttf'); } 
 body{
-  background-color:#464545;
-  font-family: SuezOne-Regular; 
-  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -215,7 +212,7 @@ body{
   float: left;
   width: 35%;
   text-align: right;
-  font-family: SuezOne-Regular; 
+  font-family: Montserrat, sans-serif;
   margin-bottom: 15px;
 }
 .col-75 {
@@ -252,15 +249,14 @@ body{
                 
 }
 .mobile-button {
-    background-color: #464545;
+    background-color: rgb(28, 34, 58);
     color: white;
     padding: 10px 80px;
     text-align: center;
     font-size: 25px;
-    /* margin: auto; */
+    margin: auto;
     cursor: pointer;
-    border-radius: 4px;
-    font-family: SuezOne-Regular;
+    font-family: Montserrat, sans-serif; 
 }
 .valid {
   font-size: 16px;

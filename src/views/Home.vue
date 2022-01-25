@@ -3,34 +3,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
     <div v-if="!isMobile()">
       <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
-        <header className="App-header">
-            <img src="../assets/genshin-logo.png" height='260px'/>
-        </header>
+        <Navbar/>
+        <body>
         <div class="block">
-            <p>Please choose a card template</p>
+          <p>Please choose a card template</p>
         </div>
-        <SplashSelection></SplashSelection>
-        <div class= "footer">
-          Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
-          <br>
-          © All rights Reserved by miHoYo. Other properies belong to their respective owners. |    
-          <router-link :to="`contact`"><a>Contact Us</a></router-link> | <router-link :to="`FAQ`"><a>FAQ</a></router-link>
-        </div>
+        <SplashSelection/>
+        </body>
+        <Footer/>
     </div>
     <div v-else>
-        <header className="App-header">
-            <img src="../assets/genshin-logo.png" width='80%'/>
-        </header>
+        <Navbar/>
+        <body>
         <div class="block-mobile">
             <p>Please choose a card template</p>
         </div>
-        <SplashSelectionMobile></SplashSelectionMobile>
-        <div class= "mobile-footer">
-          Genshin Card Generator is not affiliated with or endorsed by miHoYo. 
-          <br>
-          © All rights Reserved by miHoYo. Other properies belong to their respective owners. |    
-          <router-link :to="`contact`"><a>Contact Us</a></router-link> | <router-link :to="`FAQ`"><a>FAQ</a></router-link>
-        </div>
+        <SplashSelectionMobile/>
+        </body>
+        <Footer/>
     </div>
   </div>
 </template>
@@ -38,12 +28,16 @@
 <script>
 import SplashSelection from "../components/SplashSelection.vue";
 import SplashSelectionMobile from "../components/SplashSelectionMobile.vue";
+import Navbar from '../components/CommonPageComponents/Navbar.vue';
+import Footer from '../components/CommonPageComponents/Footer.vue';
 
 export default {
   name: 'Home',
   components: {
     SplashSelection,
-    SplashSelectionMobile
+    SplashSelectionMobile,
+    Navbar,
+    Footer
   },
   methods: {
     isMobile() {
@@ -58,60 +52,26 @@ export default {
 </script>
 
 <style scoped>
-@font-face { font-family: roboto-regular; 
-  src: url('../assets/SuezOne-Regular.ttf'); } 
-  
-* {background-color: #464545}
-.header {
-  top: 0;
-  padding: 0px;
-  font-size: 40px;
-  height: 280px;
-  text-align: center;
-}
-.body {
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body {
+  justify-content: center;
   font-size: 25px;
   padding: 20px;
-  font-family: roboto-regular;
-}
-.mobile-footer {
-  position: bottom;
-  padding: 30px;
-  bottom: 0;
-  height: 20px;
-  font-size: 16px;
-  color: rgb(36, 34, 34);
-  font-family: Arial, Helvetica, sans-serif;
-}
-.footer {
-  position: bottom;
-  padding: 30px;
-  bottom: 0;
-  height: 20px;
-  font-size: 16px;
-  color: rgb(36, 34, 34);
-  font-family: Arial, Helvetica, sans-serif;
-}
-.routerlink {
-  display: block;
-  color: rgb(240, 20, 20)
-}
- a {
-    text-decoration: none;
-    color: rgb(145, 136, 136);
-    cursor: pointer;
+  font-family: Montserrat, sans-serif; 
+  height: auto;
 }
 .block {
     margin: 25px;
-    color: white;
-    font-family: roboto-regular;
-    font-size: 30px;
+    color: rgb(36, 34, 34);
+    font-family: Montserrat, sans-serif; 
+    font-size: 90%;
     position: relative
 }
 .block-mobile {
-    margin: 25px;
-    color: white;
-    font-family: roboto-regular;
+    margin: 15px;
+    color: rgb(36, 34, 34);
+    font-family: Montserrat, sans-serif; 
     font-size: 20px;
     position: relative
 }

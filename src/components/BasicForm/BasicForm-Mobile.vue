@@ -199,7 +199,6 @@ body{
     font-size: 25px;
     margin: auto;
     cursor: pointer;
-
     font-family: Montserrat, sans-serif; 
 }
 .valid {

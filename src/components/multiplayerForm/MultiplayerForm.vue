@@ -199,14 +199,12 @@ export default {
 </script> 
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 body{
   font-family: Montserrat, sans-serif;  
   font-size: 25px;
   display: flex;
   flex-wrap: wrap;
   min-height: 400px;
-  margin-bottom: 100px;
 }
 .col-25 {
   float: left;

@@ -45,7 +45,6 @@ export default {
 <style scoped>
 body {
   justify-content: center;
-  font-size: 25px;
   padding: 20px;
 }
 </style>

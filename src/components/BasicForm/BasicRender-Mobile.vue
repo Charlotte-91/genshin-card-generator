@@ -1,6 +1,5 @@
 <template>
   <div className="App">
-    <div class="top-gap"/>
     <v-stage ref="stage" :config="stageSize">
       <v-layer v-if="this.$route.params.playerName == undefined" ref="layer">
           <v-text :config="{text: `An Error occurred, please go back to the Home page`, fontSize: 25, x: 300, y:350, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
@@ -19,7 +18,7 @@
         <v-image :config="{image: pet, x: 660, y:50}"/>
       </v-layer>
     </v-stage>
-    <br>
+    <div class="space"/>
     <div class="save-button">
       <button class='mobile-button' v-on:click=save()>Save image</button>
     </div>
@@ -28,6 +27,7 @@
 
 <script>
 export default {
+  
   data() {
     return {
       stageSize: {
@@ -106,28 +106,33 @@ export default {
 };
 </script>
 <style scoped>
+@font-face { font-family: roboto-regular; 
+  src: url('../../assets/SuezOne-Regular.ttf'); } 
 
 .mobile-button {
-  background-color: #3b3b3b;
+  background-color: rgb(28, 34, 58);
   color: white;
   padding: 50px 280px;
   text-align: center;
   font-size: 60px;
-  font-family: SuezOne-Regular;
+  font-family: Montserrat, sans-serif; 
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 15px;
 }
 .save-button {
-    top: 0px;
+    top: 20px;
     bottom: 0px;
-    position: relative;
+    position: inherit;
+    height: 30px;
 }
 .mobilesavetext {
   font-size: 45px;
   position: relative;
   padding: 50px;
-  font-family: SuezOne-Regular; 
+  font-family: Montserrat, sans-serif; 
   color: grey;
 }
-
+.space {
+  height: 100px;
+}
 </style>

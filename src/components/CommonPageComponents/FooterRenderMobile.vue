@@ -27,6 +27,7 @@
     color: white;
     font-family: Montserrat, sans-serif; 
     text-align: center;
+    height: 300px;
 }
 * {
   box-sizing: border-box;
@@ -34,23 +35,23 @@
 
 .column {
     float: left;
-    width: 25%;
+    width: 50%;
     padding: 10px;
     align-self: center;
     background: transparent;
     color: white;
     font-family: Montserrat, sans-serif; 
-    font-size: 12px;
+    font-size: 30px;
 }
 .column2 {
     float: left;
-    width: 15%;
+    width: 30%;
     padding: 10px;
     align-self: left;
     background: transparent;
     color: white;
     font-family: Montserrat, sans-serif; 
-    font-size: 12px;
+    font-size: 30px;
 }
 
 .row {
@@ -97,5 +98,4 @@ a:hover {
         font-size: 70%;
     }
 }
-
 </style>

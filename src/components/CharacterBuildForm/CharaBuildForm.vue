@@ -372,7 +372,7 @@
               </vsa-item>
             </vsa-list>
   <FormulateInput
-      class="button"
+      class="submit-button"
       type="submit"
       label="Submit"
     />
@@ -424,7 +424,6 @@ body{
   flex-wrap: wrap;
   height: auto;
   min-height: 400px;
-  margin-bottom: 100px;
 }
 .col-25 {
   float: left;

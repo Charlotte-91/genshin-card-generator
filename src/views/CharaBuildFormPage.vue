@@ -6,6 +6,7 @@
       <Footer/>
     </div>
     <div v-else>
+      <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
       <Navbar/>
       <CharaBuildFormMobile/>
       <Footer/>
@@ -46,7 +47,7 @@ body {
   justify-content: center;
   font-size: 25px;
   padding: 20px;
-  font-family: SuezOne-Regular; 
+  font-family: Montserrat, sans-serif;
 }
 
 </style>

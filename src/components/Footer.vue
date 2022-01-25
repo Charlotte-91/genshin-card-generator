@@ -41,7 +41,7 @@
   align-items: center;
 }
 button {
-  background-color: #464545;
+  background-color: rgb(28, 34, 58);
   color: white;
   padding: 10px 150px;
   text-align: center;
