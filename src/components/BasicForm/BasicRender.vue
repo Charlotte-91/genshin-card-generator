@@ -1,6 +1,5 @@
 <template>
   <div className="App">
-    <div class="top-gap"/>
     <v-stage ref="stage" :config="stageSize">
       <v-layer v-if="this.$route.params.playerName == undefined" ref="layer">
           <v-text :config="{text: `An Error occurred, please go back to the Home page`, fontSize: 25, x: 300, y:350, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
@@ -19,10 +18,6 @@
         <v-image :config="{image: pet, x: 660, y:50}"/>
       </v-layer>
     </v-stage>
-    <br>
-    <div class="save-button">
-      <button class='mobile-button' v-on:click=save()>Save image</button>
-    </div>
   </div>
 </template>
 
@@ -105,8 +100,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-.top-gap {
-  margin: 200px;
-}
+<style scoped>
+@font-face { font-family: roboto-regular; 
+  src: url('../../assets/SuezOne-Regular.ttf'); } 
 </style>

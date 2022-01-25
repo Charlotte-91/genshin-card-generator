@@ -18,15 +18,15 @@
     text-overflow: ellipsis;
   }
   button {
-    background-color: #464545;
+    background-color: rgb(28, 34, 58);
     color: white;
-    padding: 10px 120px;
+    padding: 60px 250px;
     text-align: center;
-    font-size: 25px;
+    font-size: 60px;
     margin: auto;
     cursor: pointer;
-    border-radius: 4px;
-    font-family: SuezOne-Regular; 
+    border-radius: 15px;
+    font-family: Montserrat, sans-serif; 
   
   }
   

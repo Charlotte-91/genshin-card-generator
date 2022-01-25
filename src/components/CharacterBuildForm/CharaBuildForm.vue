@@ -1,10 +1,9 @@
 <template>
-
+  <body>
    <FormulateForm
     v-model='values'
     :keep-model-data="true"
     @submit="submit">
-    <body>
       
       <div class ="form">
         <div class="row">
@@ -373,15 +372,15 @@
               </vsa-item>
             </vsa-list>
   <FormulateInput
-      class="button"
+      class="submit-button"
       type="submit"
       label="Submit"
     />
     </div>
     
-  </body>
+  
    </FormulateForm> 
-
+</body>
 </template>
 
 <script>
@@ -417,37 +416,25 @@ export default {
 </script> 
 
 <style scoped>
-@font-face { font-family: SuezOne-Regular; 
-  src: url('../../assets/SuezOne-Regular.ttf'); } 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 body{
-  background-color:#464545;
-  font-family: SuezOne-Regular; 
+  font-family: Montserrat, sans-serif;  
   font-size: 25px;
-  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  min-height: 400px;
 }
-.button{
-  margin: 10px 120px;
-  }
 .col-25 {
   float: left;
   width: 45%;
   text-align: right;
-  font-family: SuezOne-Regular; 
+  font-family: Montserrat, sans-serif;  
   margin-bottom: 15px;
 }
 .col-75 {
   float: right;
   width: 45%;
-  margin-bottom: 10px;
-}
-.col-85 {
-  float: right;
-  width: 25%;
-  margin-bottom: 10px;
-}
-.col-90 {
-  float: right;
-  width: 20%;
   margin-bottom: 10px;
 }
 .row{
@@ -461,15 +448,21 @@ body{
   padding: 2px;
 }
 .form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
   width: 600px;
   background-color: #F9F6F2;
   border: 36px solid orange;
   border-radius: 10px;
+  margin: 30px;
+  padding: 10px;
+  
   border-image:
       url("../../assets/Form-bg.png")
       70 / 50px    
-      round;   
-                
+      round;                  
 }
 
 @media screen and (max-width: 800px) {
@@ -482,6 +475,7 @@ body{
   color: red;
   margin-bottom: 15px;
 }
+
 .vsa-item__trigger:focus, .vsa-item__trigger:hover{
   color:black
 }
@@ -501,14 +495,14 @@ body{
 @media (min-width: 650px) {
   .substat {
     display: flex;
-    font-family: SuezOne-Regular; 
+    font-family: Montserrat, sans-serif;  
   }
 }
 
 @media (min-width: 720px) {
   .substat {
     display: block;
-    font-family: SuezOne-Regular; 
+    font-family: Montserrat, sans-serif;  
 
   }
 }
@@ -516,7 +510,7 @@ body{
 @media (min-width: 850px) {
   .substat {
     display: flex;
-    font-family: SuezOne-Regular; 
+    font-family: Montserrat, sans-serif;  
   }
   .substat .formulate-input {
     margin-right: 1.5em;

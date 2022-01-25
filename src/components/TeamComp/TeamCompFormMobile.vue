@@ -403,21 +403,18 @@ export default {
 
 
 <style scoped>
-@font-face { font-family: SuezOne-Regular; 
-  src: url('../../assets/SuezOne-Regular.ttf'); } 
 body{
-  background-color:#464545;
-  font-family: SuezOne-Regular; 
-  font-size: 20px;
+  font-family: Montserrat, sans-serif; 
+  font-size: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .col-25 {
   float: left;
-  width: 35%;
+  width: 0%;
   text-align: right;
-  font-family: SuezOne-Regular; 
+  font-family: Montserrat, sans-serif; 
   margin-bottom: 15px;
 }
 .col-75 {
@@ -454,15 +451,14 @@ body{
                 
 }
 .mobile-button {
-    background-color: #464545;
-    color: white;
-    padding: 10px 80px;
-    text-align: center;
-    font-size: 25px;
-    /* margin: auto; */
-    cursor: pointer;
-    border-radius: 4px;
-    font-family: SuezOne-Regular;
+  background-color: rgb(28, 34, 58);
+  color: white;
+  padding: 50px 280px;
+  text-align: center;
+  font-size: 60px;
+  font-family: Montserrat, sans-serif; 
+  cursor: pointer;
+  border-radius: 15px;
 }
 .valid {
   font-size: 16px;
@@ -488,19 +484,19 @@ body{
 @media (min-width: 650px) {
   .substat {
     display: flex;
-    font-family: SuezOne-Regular; 
+   font-family: Montserrat, sans-serif; 
   }
 }
 @media (min-width: 720px) {
   .substat {
     display: block;
-    font-family: SuezOne-Regular; 
+   font-family: Montserrat, sans-serif; 
   }
 }
 @media (min-width: 850px) {
   .substat {
     display: flex;
-    font-family: SuezOne-Regular; 
+    font-family: Montserrat, sans-serif;  
   }
   .substat .formulate-input {
     margin-right: 1.5em;
@@ -536,5 +532,15 @@ body{
 }
 li {
   margin-bottom: 1em;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
 }
 </style>

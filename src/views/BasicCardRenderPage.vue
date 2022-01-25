@@ -1,39 +1,34 @@
 <template>
-  <div class="BasicCardRender">
-    <div class='body'>
-      <div class="center">
-        <div v-if="!isMobile()">
-          <br>
-          <div class='top-gap'/>
-            <div class ='card'>
-              <BasicRender/>
-            </div>
-          <div class = "savetext">
-            Please right-click  on image and select "Save Image As" to save to your device.
-            <br>
-            Please save the image and upload it to twitter manually. We have not yet implemented auto upload! Thank you!
-          </div>
-          <Footer/>
+    <div v-if="!isMobile()">
+      <Navbar/>
+      <body>
+        <div class ='card'>
+          <BasicRender/>
         </div>
-        <div v-else>
-          <meta name="viewport" content="width=device-width,initial-scale=0.28,maximum-scale=2" />
-          <div class='mobile-top-gap'/>
+        <div class = "savetext">
+        </div>
+      </body>
+      <Footer/>
+    </div>
+    <div v-else>
+      <meta name="viewport" content="width=device-width,initial-scale=0.28,maximum-scale=2"/>
+      <NavbarRenderMobile/>
+      <div class ="BodyMobile">
+        <div class ='MobileCard'>
           <MobileRender/>
-          <br>
-          <div class='social'>
-            <MobileFooter/>
-          </div>
         </div>
       </div>
+      <FooterRenderMobile/>
     </div>
-  </div>
 </template>
 
 <script>
 import BasicRender from '@/components/BasicForm/BasicRender.vue'
 import MobileRender from '@/components/BasicForm/BasicRender-Mobile.vue'
-import Footer from '@/components/Footer.vue'
-import MobileFooter from '@/components/MobileFooter.vue'
+import Navbar from '../components/CommonPageComponents/Navbar.vue';
+import Footer from '../components/CommonPageComponents/Footer.vue';
+import NavbarRenderMobile from '../components/CommonPageComponents/NavbarRenderMobile.vue';
+import FooterRenderMobile from '../components/CommonPageComponents/FooterRenderMobile.vue';
 
 export default {
   name: 'BasicCardRender',
@@ -41,7 +36,9 @@ export default {
     BasicRender,
     MobileRender,
     Footer,
-    MobileFooter
+    Navbar,
+    NavbarRenderMobile,
+    FooterRenderMobile
   },
   methods: {
     isMobile() {
@@ -51,110 +48,46 @@ export default {
         return false
       }
     }
-  },
-   data() {
-    return {
-      share: {
-        twitter: {
-          size: "2x",
-        },
-        facebook: {
-          size: "2x"
-        }
-      } 
-    }
-   }
+  }
 }
-
 </script>
 
 <style scoped>
 
-@font-face { font-family: roboto-regular; 
-  src: url('../assets/SuezOne-Regular.ttf'); } 
   
-body{
-  background-color:#464545;
-  font-family: SuezOne-Regular; 
-  font-size: 30px;
-}
-.card {
-  padding-top: 50px;
-}
-.top-gap {
-  margin: 200px;
-}
-.mobile-top-gap {
-  height: 100px;
-}
-.header {
-  top: 0;
-  padding: 0px;
-  font-size: 40px;
-  height: 280px;
-  text-align: center;
-}
 .savetext {
   font-size: 15px;
-  padding: 30px;
-  font-family: SuezOne-Regular; 
-  color: grey;
+  font-family: Montserrat, sans-serif;
+  color: rgb(24, 24, 24);
   top: 20px;
 }
 
-.body {
-  font-size: 25px;
-  padding: 40px;
-  font-family: SuezOne-Regular; 
-
+body {
+  height: 1000px;
 }
-.footer {
-
-  height: 20px;
-  font-size: 15px;
-  color: rgb(36, 34, 34);
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  margin: -200px -5px;
-}
-button {
-  background-color: #3b3b3b;
-  color: white;
-  padding: 10px 150px;
-  text-align: center;
-  font-size: 30px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-family: SuezOne-Regular; 
+.card {
+  display: flex;
+  justify-content: center;
   align-items: center;
-}
-.mobile-button {
-  background-color: #3b3b3b;
-  color: white;
-  padding: 10px 50px;
   text-align: center;
-  font-size: 25px;
-  border-radius: 4px;
-  font-family: SuezOne-Regular; 
-  margin: 10px 10px;
+  min-height: 100vh;
+}
+.MobileCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 50vh;
 }
 app {
   height:0%
 }
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
+canvas {
+  width: 500px;
+  height: auto;
 }
-.social {
-  position: relative;
-  top: 10px;
+.BodyMobile {
+  height: 80vh;
 }
 
 </style>
