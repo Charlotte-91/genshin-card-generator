@@ -20,7 +20,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 .footer {
-    position: relative;
+    position: fixed;
     overflow: hidden;
     margin: -10px -8.3px;
     background-color: rgb(28, 34, 58);
@@ -28,6 +28,8 @@
     color: white;
     font-family: Montserrat, sans-serif; 
     text-align: center;
+    bottom: 0;
+    width: 100%;
 }
 * {
   box-sizing: border-box;
