@@ -3,7 +3,7 @@
     <body>
         <div class='centered'>
             <h1>Frequently asked questions</h1>
-            <a href="#home" class="active"><router-link to="/"><img src="../../src/assets/Donate.png"></router-link></a>
+            <a href="https://ko-fi.com/charnyam"><img src="../../src/assets/Donate.png"></a>
             <div class='question-wrap'>
                 <h2>Does Genshin Card Generator save user infomation/data?</h2>
                 <p>No. Genshin Card Generator does not save your infomation in anyway. 

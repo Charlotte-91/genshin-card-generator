@@ -8,6 +8,7 @@
                 <div class="column2">
                     <p><router-link to="/contact">Contact</router-link></p>
                     <p><router-link to="/faq">FAQ</router-link></p>
+                    <a href="https://ko-fi.com/charnyam"><img src="../../../src/assets/Donate.png"></a>
                 </div>
             </div>
         </div>
@@ -87,6 +88,10 @@ a:hover {
         width: 15%;
         font-size: 70%;
     }
+    img {
+    max-width: 100%;  
+    height: auto;  
+}
 }
     @media screen and (max-width: 500px) {
     .column {
@@ -97,5 +102,10 @@ a:hover {
         width: 30%;
         font-size: 70%;
     }
+    img {
+    max-width: 100%;  
+    height: auto;  
 }
+}
+
 </style>
