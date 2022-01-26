@@ -80,6 +80,21 @@ a:hover {
     text-shadow: 0 0 20px #38a6c2; 
 }
 
+@media screen and (max-height: 1100px) {
+    .footer {
+        position: static;
+        overflow: hidden;
+        margin: -10px -8.3px;
+        background-color: rgb(28, 34, 58);
+        filter: drop-shadow(0px 2px 5px #000000);
+        color: white;
+        font-family: Montserrat, sans-serif; 
+        text-align: center;
+        bottom: 0;
+        width: 101%;
+}
+}
+
 @media screen and (max-width: 1000px) {
     .column {
         width: 55%;
