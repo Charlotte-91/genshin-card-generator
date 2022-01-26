@@ -2,6 +2,7 @@
   <div v-if="!isMobile()">
      <Navbar/>
     <team-comp-form/>
+      <div class ="block"/>
       <Footer/>
   </div>
   <div v-else>
@@ -39,5 +40,14 @@ export default {
 </script>
 
 <style scoped>
+body {
+  justify-content: center;
+  font-size: 25px;
+  padding: 20px;
+  font-family: Montserrat, sans-serif;
+}
 
+.block {
+  height: 200px;
+}
 </style>

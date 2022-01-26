@@ -3,6 +3,7 @@
     <div v-if="!isMobile()">
       <Navbar/>
       <CharaBuildForm/>
+      <div class ="block"/>
       <Footer/>
     </div>
     <div v-else>
@@ -49,5 +50,7 @@ body {
   padding: 20px;
   font-family: Montserrat, sans-serif;
 }
-
+.block {
+  height: 200px;
+}
 </style>
