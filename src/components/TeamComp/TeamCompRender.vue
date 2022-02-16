@@ -2,15 +2,15 @@
   <div className="App">
     <v-stage ref="stage" :config="stageSize">
       <v-layer v-if="this.$route.params.playerName == undefined" ref="layer">
-          <v-text :config="{text: `An Error occurred, please go back to the Home page`, fontSize: 25, x: 300, y:350, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
+          <v-text :config="{text: `An Error occurred, please go back to the Home page`, fontSize: 25, x: 300, y:350, fill:'black', opacity: 0.7,  fontFamily:'roboto-regular'}"></v-text>
       </v-layer>
       <v-layer v-else-if="this.$route.params.platform == undefined" ref="layer">
         <v-image :config="{image: cardBg}"/>
         <v-image :config="{image: card}"/>
-        <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 30, x: 200, y: 110, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.AR}`, fontSize: 30, x: 560, y:110, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `${this.$route.params.SA}`, fontSize: 30, x: 900, y:110, fill:'#7b7166', fontFamily:'SuezOne-Regular'}"></v-text>
-        <v-text :config="{text: `genshin-card-generator.com`, fontSize: 16, x: 38, y:655, fill:'black', opacity: 0.7,  fontFamily:'SuezOne-Regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.playerName}`, fontSize: 30, x: 200, y: 110, fill:'#7b7166', fontFamily:'roboto-regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.AR}`, fontSize: 30, x: 560, y:110, fill:'#7b7166', fontFamily:'roboto-regular'}"></v-text>
+        <v-text :config="{text: `${this.$route.params.SA}`, fontSize: 30, x: 900, y:110, fill:'#7b7166', fontFamily:'roboto-regular'}"></v-text>
+        <v-text :config="{text: `genshin-card-generator.com`, fontSize: 16, x: 38, y:655, fill:'black', opacity: 0.7,  fontFamily:'roboto-regular'}"></v-text>
         <v-image :config="{image: team1, x: 140, y:215}"/>
         <v-image :config="{image: team2, x: 370, y:215}"/>
         <v-image :config="{image: team3, x: 610, y:215}"/>

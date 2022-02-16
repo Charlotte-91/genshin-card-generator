@@ -8,6 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Async storage for params 
 - Auto upload of card image to twitter #
 
+## [5.0.1] - 2021-02-16
+
+## Added
+
+- Added Yae Miko character cards, skills and constellations
+- Added Kaguras Verity and Oathsworn Eye
+- Added missing 'Save as font'
+
+## Fixed
+
+- Card Font 
+
+
 ## [5.0.0] - 2021-01-25
 
 ## Added

@@ -6,6 +6,7 @@
           <BasicRender/>
         </div>
         <div class = "savetext">
+          Please right-click  on image and select "Save Image As" to save to your device.
         </div>
       </body>
       <Footer/>

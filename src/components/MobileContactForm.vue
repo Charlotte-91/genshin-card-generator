@@ -16,7 +16,7 @@
 body {
   font-size: 25px;
   padding: 20px;
-  font-family: SuezOne-Regular; 
+  font-family: roboto-regular; 
 }
 
 .centered {
