@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Async storage for params 
 - Auto upload of card image to twitter #
 
+## [5.0.3] - 2021-05-31
+
+## Added
+
+- Added Yelan character cards, skills and constellations
+- Added Aqua Simulacra and Fading Twilight
+
 ## [5.0.2] - 2021-03-29
 
 ## Added
